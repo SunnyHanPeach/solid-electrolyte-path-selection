@@ -1,0 +1,134 @@
+{
+  "experiment": "Four complete migration paths per data arm, two separate candidate blocks.",
+  "scope": "Retrospective selection pilot with experiment-held-out oxide materials from the source Train split. Initial structures/BVSE only at freeze. Independence from foundation pretraining is unverified. The original Test and previous four sealed materials are not scored. The source Test is not added to training.",
+  "candidates": {
+    "pool_materials": 32,
+    "pool_chemistries": 29,
+    "rule": "Highest BVSE forward barrier within each slot, set before DFT labels. This is a frozen simple comparator, not a claim of predictive validity.",
+    "random": "Uniform independently among all eligible candidates in each slot with the recorded seed. Shared selections stay in both arms without redraw."
+  },
+  "matched_cost": {
+    "by_block": {
+      "batch1": {
+        "random_and_rule_shared_paths": 1,
+        "images": 22,
+        "atom_images": 2762,
+        "strata": [
+          [
+            111,
+            5
+          ],
+          [
+            111,
+            7
+          ],
+          [
+            95,
+            5
+          ],
+          [
+            191,
+            5
+          ]
+        ],
+        "pool_paths": 16,
+        "BVSE_mean_eV": {
+          "BVSE": 3.512598051910232,
+          "random": 2.539218744765826
+        }
+      },
+      "batch2": {
+        "random_and_rule_shared_paths": 1,
+        "images": 22,
+        "atom_images": 2762,
+        "strata": [
+          [
+            111,
+            5
+          ],
+          [
+            111,
+            7
+          ],
+          [
+            95,
+            5
+          ],
+          [
+            191,
+            5
+          ]
+        ],
+        "pool_paths": 16,
+        "BVSE_mean_eV": {
+          "BVSE": 3.079940599751006,
+          "random": 1.2509318735032764
+        }
+      }
+    },
+    "nonidentical_blocks": [
+      "batch1",
+      "batch2"
+    ],
+    "boundary": "Each arm matches exact atom counts and exact image counts within slots. Historical actual DFT core-hours and same-cost prospective evidence are unavailable. Composition may differ within a stratum."
+  },
+  "counts": {
+    "history_fitted_edges": 104,
+    "history_evaluated_or_reserved_edges": 643,
+    "history_materials_excluded": 621,
+    "eligible_candidates_after_near_distinct_materials": 149,
+    "init_frames_scanned": 5954,
+    "geometry_scan_passes": 3,
+    "materials_near_history_excluded": 0,
+    "periodic_matches": 0,
+    "remaining_source_test_materials": 26,
+    "remaining_source_test_in_chemistries_unseen_to_all_history_fits": 0,
+    "remaining_source_test_outside_actual_D0_and_pool_chemistries": 6,
+    "evaluation_materials": 91,
+    "evaluation_chemistries": 61,
+    "evaluation_images": 501
+  },
+  "geometry_rule": "Existing periodic Init matcher at 0.03 angstrom displacement and 0.5% lattice strain; includes prior and shortlisted materials. Exact composition and atom-count matching do not rule out duplicate supercell multiples.",
+  "recipe": {
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "batch_size": 2,
+    "lr": 0.0001,
+    "energy_weight": 1.0,
+    "forces_weight": 100.0,
+    "clip_norm": 10.0,
+    "optimizer": "torch.optim.Adam defaults plus the recorded learning rate",
+    "atomic_reference": "unchanged checkpoint E0",
+    "d0_frames": 278,
+    "effective_schedule": "5 full epochs + 15 steps",
+    "optimizer_steps": 710
+  },
+  "configuration_sha256": {
+    "recipe": "b7ca0381f37f967d78b9e5ab68e2b3946d9b7d57d5b6565f1107f81931e7c9ea",
+    "D0_design": "b351921f5f0ffd66b65314d1576a2ca94919109c85343082d3e4c2ecd24ec2f0",
+    "foundation_checkpoint": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+    "init_archive": "b7a99d89337902e9e1da319f57547170fdb132bf15bf6ffef03a0140e2207d7f",
+    "feature_file": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7",
+    "previous_frozen_panel": "17690b82d9b42f782c124fceb32440969b468b4a7c35576ff9c24f17548c6ad2",
+    "database": "247c55b481a0d53b9a797f142303ef0248e084c817850d032deaec170bfe7f48",
+    "independent106_manifest_package": "84e80a4fb6d0e6f0850f6c3352d0476c926a928ee9cbfe8332911abf3278800a"
+  },
+  "measurements": {
+    "sign": "A=error(augmented)-error(D0), negative favors the data arm. S=error(random)-error(BVSE), positive favors BVSE.",
+    "target": "Forward migration barrier MAE at the frozen DFT reference images.",
+    "practical_margin_meV": 0.25,
+    "interval": "Within each cohort resample materials with aligned D0/random/BVSE and average across fixed paired seeds. Report each seed, point estimate, and 95% material interval.",
+    "gate": "First require absolute improvement against D0 in both candidate blocks, each with upper 95% bound below -0.25 meV and three negative seed effects. A rule advantage requires the paired rule-vs-random lower interval above +0.25 meV in both blocks and three positive seed effects, plus absolute benefit of the rule arm. Otherwise result remains exploratory/inconclusive. No adaptive switch of candidates, rule, or panel."
+  },
+  "dft_energies_or_forces_read": false,
+  "source_test_scored": false,
+  "gpu_used": false,
+  "frozen_members_sha256": {
+    "candidate_pool.csv": "89895a2b2a411a5d9772859b428a0783c22678f863afef117b39497886f9c752",
+    "frozen_training_arms.csv": "f81aec64a354ea87b33c9cbd078eb9f23ba444531fcc937b6be1a4ad663dea51",
+    "evaluation_materials.csv": "44ebff841ddbe7b9324a0758ac9f4fa7025ad057c28c36fbb34786fb7f4bec64"
+  }
+}

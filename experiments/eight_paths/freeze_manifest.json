@@ -1,0 +1,33 @@
+{
+  "parent_candidate_lock_sha256": "95ea5b6717ff9bdebfe9553db2c5cf41f272e774f4b196a481db68bed96db4c1",
+  "parent_run_bundle_sha256": "50457d16bbe54497d57f6dca6f47d91936fb48fb07f0e3b968ff432c5082b8c3",
+  "heldout_geometry_sha256": "0d173a098a85e573c639c3836541494dde66ea098fa69a388cc1a140f3b4fd34",
+  "candidate_blocks": {
+    "batch1": {
+      "shared_between_selection_arms": 6
+    },
+    "batch2": {
+      "shared_between_selection_arms": 5
+    }
+  },
+  "fits": 12,
+  "optimizer_steps": 710,
+  "training_frames": 322,
+  "new_images_each_arm": 44,
+  "new_atomic_images_each_arm": 5524,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "analysis": "Estimate 8-vs-4 within each preexisting block, strategy, and seed. Report 8-vs-D0 and 8-BVSE vs 8-random. Both augmentation batches reuse the same 91 already analyzed materials. This is a dose sensitivity diagnostic with those materials, not fresh generalization evidence. Practical margin 0.25 meV. Use paired material bootstrap and retain fixed-seed signs.",
+  "causal_limit": "Increasing paths at fixed 710 optimization steps also changes D0 sampling exposure. The comparison estimates the net change under the frozen schedule.",
+  "rule": "Retain original four and add one in each frozen matched stratum. BVSE adds the best remaining forward BVSE candidate. Random draws once from remaining candidates within each stratum using the frozen deterministic seed.",
+  "dft_energies_or_forces_read_to_select": false,
+  "previously_sealed_Test_included": false,
+  "frozen_members_sha256": {
+    "candidate_pool.csv": "89895a2b2a411a5d9772859b428a0783c22678f863afef117b39497886f9c752",
+    "evaluation_materials.csv": "44ebff841ddbe7b9324a0758ac9f4fa7025ad057c28c36fbb34786fb7f4bec64",
+    "frozen_training_arms.csv": "5714a768364c655f3ac446f6f0577f9c1c26116d53bf07fef721e1070016947e"
+  }
+}

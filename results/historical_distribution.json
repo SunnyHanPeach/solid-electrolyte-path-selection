@@ -1,0 +1,267 @@
+{
+  "candidate_edges": 38,
+  "common_panel_candidate_edges": 34,
+  "common_panel_pairs": 17,
+  "interval_scope": "Archived 95% material bootstrap intervals conditional on seeds 17/29/43; point and interval summaries describe fixed, paired candidates. They are marginal, not simultaneous. Rows of the same candidate or pair are not independent. Main96 and support112 reuse the original trained arms on different materials; new106 uses reconstructed trained arms on a third material panel. Earliest four candidates have only their two historical scopes.",
+  "thresholds": "0.25 meV is the existing project pilot margin. 1 and 2 meV are descriptive sensitivity levels only. No multiplicity correction or inference on the prevalence of positive candidates is applied.",
+  "distribution": {
+    "early_holdout": {
+      "paths": 4,
+      "min_meV": -1.056987925594097,
+      "max_meV": 1.9782651107801432,
+      "q25_median_q75_meV": [
+        0.031079825714122156,
+        1.1513329124131353,
+        1.9262388392020924
+      ],
+      "negative_point": 1,
+      "positive_point": 3,
+      "zero_point": 0,
+      "within_0_25_by_point": 0,
+      "interval_width_median_meV": 4.39923795424439,
+      "negative_with_every_leave_one_out_mean_still_negative": 1,
+      "negative_with_majority_materials_improved": 0,
+      "classifications": {
+        "degraded": 1,
+        "unresolved": 3
+      },
+      "by_margin_meV": {
+        "0.25": {
+          "excludes_improvement_at_margin": 1,
+          "interval_allows_improvement": 3
+        },
+        "1": {
+          "excludes_improvement_at_margin": 2,
+          "interval_allows_improvement": 2
+        },
+        "2": {
+          "excludes_improvement_at_margin": 1,
+          "within_equivalence_bounds": 1,
+          "interval_allows_improvement": 2
+        }
+      },
+      "marginal_intervals_allow_reduction_at_least_meV": {
+        "0.25": 3,
+        "1": 2,
+        "2": 2
+      },
+      "marginal_intervals_exclude_reduction_at_least_meV": {
+        "0.25": 1,
+        "1": 2,
+        "2": 2
+      }
+    },
+    "early_validation": {
+      "paths": 4,
+      "min_meV": -1.0730925028092135,
+      "max_meV": 1.5653439867524201,
+      "q25_median_q75_meV": [
+        0.11351655855554443,
+        0.9285075765580584,
+        1.4023076772673446
+      ],
+      "negative_point": 1,
+      "positive_point": 3,
+      "zero_point": 0,
+      "within_0_25_by_point": 0,
+      "interval_width_median_meV": 3.2465697731803758,
+      "negative_with_every_leave_one_out_mean_still_negative": 1,
+      "negative_with_majority_materials_improved": 1,
+      "classifications": {
+        "degraded": 1,
+        "unresolved": 3
+      },
+      "by_margin_meV": {
+        "0.25": {
+          "excludes_improvement_at_margin": 1,
+          "interval_allows_improvement": 3
+        },
+        "1": {
+          "excludes_improvement_at_margin": 1,
+          "interval_allows_improvement": 3
+        },
+        "2": {
+          "excludes_improvement_at_margin": 2,
+          "interval_allows_improvement": 2
+        }
+      },
+      "marginal_intervals_allow_reduction_at_least_meV": {
+        "0.25": 3,
+        "1": 3,
+        "2": 2
+      },
+      "marginal_intervals_exclude_reduction_at_least_meV": {
+        "0.25": 1,
+        "1": 1,
+        "2": 2
+      }
+    },
+    "main96": {
+      "paths": 34,
+      "min_meV": -13.848332410076361,
+      "max_meV": 2.892744809568702,
+      "q25_median_q75_meV": [
+        -0.7506925426572252,
+        -0.11790061130135934,
+        0.37009556830438733
+      ],
+      "negative_point": 19,
+      "positive_point": 15,
+      "zero_point": 0,
+      "within_0_25_by_point": 9,
+      "interval_width_median_meV": 2.942103627281284,
+      "negative_with_every_leave_one_out_mean_still_negative": 3,
+      "negative_with_majority_materials_improved": 4,
+      "classifications": {
+        "unresolved": 34
+      },
+      "by_margin_meV": {
+        "0.25": {
+          "interval_allows_improvement": 34
+        },
+        "1": {
+          "interval_allows_improvement": 19,
+          "within_equivalence_bounds": 8,
+          "excludes_improvement_at_margin": 7
+        },
+        "2": {
+          "interval_allows_improvement": 15,
+          "within_equivalence_bounds": 17,
+          "excludes_improvement_at_margin": 2
+        }
+      },
+      "marginal_intervals_allow_reduction_at_least_meV": {
+        "0.25": 34,
+        "1": 19,
+        "2": 15
+      },
+      "marginal_intervals_exclude_reduction_at_least_meV": {
+        "0.25": 0,
+        "1": 15,
+        "2": 19
+      }
+    },
+    "support112": {
+      "paths": 34,
+      "min_meV": -6.91209459833092,
+      "max_meV": 2.714273228117274,
+      "q25_median_q75_meV": [
+        0.06611020600728802,
+        1.4125413619550742,
+        1.9009423592992207
+      ],
+      "negative_point": 8,
+      "positive_point": 26,
+      "zero_point": 0,
+      "within_0_25_by_point": 2,
+      "interval_width_median_meV": 3.525871188812228,
+      "negative_with_every_leave_one_out_mean_still_negative": 0,
+      "negative_with_majority_materials_improved": 0,
+      "classifications": {
+        "unresolved": 21,
+        "degraded": 13
+      },
+      "by_margin_meV": {
+        "0.25": {
+          "interval_allows_improvement": 15,
+          "excludes_improvement_at_margin": 19
+        },
+        "1": {
+          "interval_allows_improvement": 14,
+          "excludes_improvement_at_margin": 20
+        },
+        "2": {
+          "interval_allows_improvement": 9,
+          "excludes_improvement_at_margin": 23,
+          "within_equivalence_bounds": 2
+        }
+      },
+      "marginal_intervals_allow_reduction_at_least_meV": {
+        "0.25": 15,
+        "1": 14,
+        "2": 9
+      },
+      "marginal_intervals_exclude_reduction_at_least_meV": {
+        "0.25": 19,
+        "1": 20,
+        "2": 25
+      }
+    },
+    "new106": {
+      "paths": 34,
+      "min_meV": -3.375582354806283,
+      "max_meV": 13.757886434751073,
+      "q25_median_q75_meV": [
+        -0.12407969284365798,
+        0.25658499336689844,
+        1.3704636404281056
+      ],
+      "negative_point": 15,
+      "positive_point": 19,
+      "zero_point": 0,
+      "within_0_25_by_point": 12,
+      "interval_width_median_meV": 2.793810749106221,
+      "negative_with_every_leave_one_out_mean_still_negative": 6,
+      "negative_with_majority_materials_improved": 2,
+      "classifications": {
+        "unresolved": 33,
+        "degraded": 1
+      },
+      "by_margin_meV": {
+        "0.25": {
+          "interval_allows_improvement": 28,
+          "excludes_improvement_at_margin": 6
+        },
+        "1": {
+          "interval_allows_improvement": 17,
+          "within_equivalence_bounds": 6,
+          "excludes_improvement_at_margin": 11
+        },
+        "2": {
+          "interval_allows_improvement": 12,
+          "within_equivalence_bounds": 15,
+          "excludes_improvement_at_margin": 7
+        }
+      },
+      "marginal_intervals_allow_reduction_at_least_meV": {
+        "0.25": 28,
+        "1": 17,
+        "2": 12
+      },
+      "marginal_intervals_exclude_reduction_at_least_meV": {
+        "0.25": 6,
+        "1": 17,
+        "2": 22
+      }
+    }
+  },
+  "panel_sign_patterns": {
+    "-+-": 11,
+    "++-": 3,
+    "+++": 10,
+    "---": 1,
+    "--+": 5,
+    "-++": 2,
+    "+-+": 2
+  },
+  "paired_panel_agreement": {
+    "main96/support112": {
+      "absolute_sign_agreement": 19,
+      "absolute_spearman": 0.2699770817417876,
+      "relative_sign_agreement": 12,
+      "relative_spearman": 0.38970588235294124
+    },
+    "main96/new106": {
+      "absolute_sign_agreement": 24,
+      "absolute_spearman": 0.2491978609625668,
+      "relative_sign_agreement": 12,
+      "relative_spearman": 0.2916666666666667
+    },
+    "support112/new106": {
+      "absolute_sign_agreement": 13,
+      "absolute_spearman": -0.4255156608097784,
+      "relative_sign_agreement": 13,
+      "relative_spearman": 0.7720588235294118
+    }
+  }
+}

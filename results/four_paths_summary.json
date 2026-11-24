@@ -1,0 +1,115 @@
+{
+  "metrics": {
+    "batch1": {
+      "random_vs_D0": {
+        "mean_meV": 23.96971622739211,
+        "interval_95_meV": [
+          9.086715712468697,
+          40.38192555393615
+        ],
+        "by_seed_meV": [
+          27.346703162774308,
+          23.428985519402246,
+          21.133459999999772
+        ],
+        "passes_lower_error_gate": false
+      },
+      "BVSE_vs_D0": {
+        "mean_meV": 12.8439245192297,
+        "interval_95_meV": [
+          0.5080868429762246,
+          25.86336158979993
+        ],
+        "by_seed_meV": [
+          14.582420398350584,
+          14.178649364696737,
+          9.770703794641792
+        ],
+        "passes_lower_error_gate": false
+      },
+      "BVSE_vs_random": {
+        "mean_meV": -11.125791708162405,
+        "interval_95_meV": [
+          -23.043948728131863,
+          -2.0543695806147033
+        ],
+        "by_seed_meV": [
+          -12.764282764423724,
+          -9.25033615470551,
+          -11.362756205357982
+        ],
+        "passes_lower_error_gate": true
+      }
+    },
+    "batch2": {
+      "random_vs_D0": {
+        "mean_meV": 13.991127768142576,
+        "interval_95_meV": [
+          6.700919057770773,
+          21.28363136617151
+        ],
+        "by_seed_meV": [
+          16.313822344607736,
+          12.563849173247846,
+          13.095711786572142
+        ],
+        "passes_lower_error_gate": false
+      },
+      "BVSE_vs_D0": {
+        "mean_meV": 6.890040425823677,
+        "interval_95_meV": [
+          -4.104823361042733,
+          17.712280927476584
+        ],
+        "by_seed_meV": [
+          9.319747361778504,
+          7.566948582588599,
+          3.7834253331039283
+        ],
+        "passes_lower_error_gate": false
+      },
+      "BVSE_vs_random": {
+        "mean_meV": -7.101087342318897,
+        "interval_95_meV": [
+          -16.02986450829816,
+          1.8076221547761393
+        ],
+        "by_seed_meV": [
+          -6.994074982829231,
+          -4.996900590659247,
+          -9.312286453468214
+        ],
+        "passes_lower_error_gate": false
+      }
+    }
+  },
+  "repeated": {
+    "random_vs_D0": false,
+    "BVSE_vs_D0": false,
+    "BVSE_vs_random": false
+  },
+  "rule_supported": false,
+  "cloud_completion_utc": "2026-11-24T15:18:51Z",
+  "inference_and_training_wall_seconds": 1934.5125872455537,
+  "fit_wall_median_seconds": 128.72433876432478,
+  "max_training_peak_gib": 7.365464687347412,
+  "models": 15,
+  "materials": 91,
+  "environment": {
+    "ase": "3.29.0",
+    "device": "cuda",
+    "driver": "595.71.05",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti",
+    "mace": "0.3.14",
+    "numpy": "2.2.6",
+    "torch": "2.8.0+cu128"
+  },
+  "test_previously_sealed_labels_read": false,
+  "arm_MAE_meV": {
+    "D0": 241.167262454206,
+    "batch1_random": 265.13697868159807,
+    "batch1_BVSE": 254.0111869734357,
+    "batch2_random": 255.15839022234854,
+    "batch2_BVSE": 248.05730288002968
+  }
+}
