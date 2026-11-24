@@ -1,0 +1,219 @@
+{
+  "samples": 91,
+  "trainings": 12,
+  "gpu": {
+    "ase": "3.29.0",
+    "device": "cuda",
+    "driver": "595.71.05",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti",
+    "mace": "0.3.14",
+    "numpy": "2.2.6",
+    "torch": "2.8.0+cu128"
+  },
+  "training_and_blind_evaluation_wall_seconds": 1583.2036478221416,
+  "median_fit_wall_seconds": 131.6989400666207,
+  "max_formal_gpu_allocation_GiB": 7.37033224105835,
+  "absolute_D0_MAE_meV": 241.167262454206,
+  "statistics": {
+    "batch1_random": {
+      "eight_vs_four": {
+        "mean_meV": 7.129292341174223,
+        "interval_95_meV": [
+          0.6248736138751232,
+          13.770808907430379
+        ],
+        "by_seed_meV": [
+          5.444387971325481,
+          7.349957606455783,
+          8.593531445741403
+        ],
+        "passes_lower_error_gate": false
+      },
+      "eight_vs_D0": {
+        "mean_meV": 31.099008568566326,
+        "interval_95_meV": [
+          10.867498481505573,
+          52.66440259238223
+        ],
+        "by_seed_meV": [
+          32.79109113409979,
+          30.77894312585803,
+          29.726991445741177
+        ],
+        "passes_lower_error_gate": false
+      },
+      "four_vs_D0": {
+        "mean_meV": 23.96971622739211,
+        "interval_95_meV": [
+          9.086715712468697,
+          40.38192555393615
+        ],
+        "by_seed_meV": [
+          27.346703162774308,
+          23.428985519402246,
+          21.133459999999772
+        ],
+        "passes_lower_error_gate": false
+      },
+      "eight_worse_than_four": true
+    },
+    "batch1_BVSE": {
+      "eight_vs_four": {
+        "mean_meV": 11.47287361177921,
+        "interval_95_meV": [
+          4.8890422060371375,
+          18.979262011961694
+        ],
+        "by_seed_meV": [
+          11.98322220724609,
+          10.015676813187023,
+          12.419721814904523
+        ],
+        "passes_lower_error_gate": false
+      },
+      "eight_vs_D0": {
+        "mean_meV": 24.31679813100892,
+        "interval_95_meV": [
+          7.11338662816791,
+          42.76936310768566
+        ],
+        "by_seed_meV": [
+          26.565642605596672,
+          24.19432617788376,
+          22.190425609546313
+        ],
+        "passes_lower_error_gate": false
+      },
+      "four_vs_D0": {
+        "mean_meV": 12.8439245192297,
+        "interval_95_meV": [
+          0.5080868429762246,
+          25.86336158979993
+        ],
+        "by_seed_meV": [
+          14.582420398350584,
+          14.178649364696737,
+          9.770703794641792
+        ],
+        "passes_lower_error_gate": false
+      },
+      "eight_worse_than_four": true
+    },
+    "batch2_random": {
+      "eight_vs_four": {
+        "mean_meV": -0.5679028608634097,
+        "interval_95_meV": [
+          -10.568973158826116,
+          7.485923433414596
+        ],
+        "by_seed_meV": [
+          0.2957348454671504,
+          -1.9581688684761152,
+          -0.0412745595812649
+        ],
+        "passes_lower_error_gate": false
+      },
+      "eight_vs_D0": {
+        "mean_meV": 13.423224907279163,
+        "interval_95_meV": [
+          -0.6535826213179134,
+          26.01670630930754
+        ],
+        "by_seed_meV": [
+          16.609557190074884,
+          10.60568030477173,
+          13.054437226990878
+        ],
+        "passes_lower_error_gate": false
+      },
+      "four_vs_D0": {
+        "mean_meV": 13.991127768142576,
+        "interval_95_meV": [
+          6.700919057770773,
+          21.28363136617151
+        ],
+        "by_seed_meV": [
+          16.313822344607736,
+          12.563849173247846,
+          13.095711786572142
+        ],
+        "passes_lower_error_gate": false
+      },
+      "eight_worse_than_four": false
+    },
+    "batch2_BVSE": {
+      "eight_vs_four": {
+        "mean_meV": 9.568627375801038,
+        "interval_95_meV": [
+          -0.7944279812772918,
+          18.50814880894353
+        ],
+        "by_seed_meV": [
+          10.772791138392776,
+          7.615362366929011,
+          10.317728622081322
+        ],
+        "passes_lower_error_gate": false
+      },
+      "eight_vs_D0": {
+        "mean_meV": 16.458667801624713,
+        "interval_95_meV": [
+          -0.2512118966278455,
+          31.960857053299193
+        ],
+        "by_seed_meV": [
+          20.09253850017128,
+          15.182310949517609,
+          14.10115395518525
+        ],
+        "passes_lower_error_gate": false
+      },
+      "four_vs_D0": {
+        "mean_meV": 6.890040425823677,
+        "interval_95_meV": [
+          -4.104823361042733,
+          17.712280927476584
+        ],
+        "by_seed_meV": [
+          9.319747361778504,
+          7.566948582588599,
+          3.7834253331039283
+        ],
+        "passes_lower_error_gate": false
+      },
+      "eight_worse_than_four": false
+    }
+  },
+  "BVSE_minus_random_at_eight": {
+    "batch1": {
+      "mean_meV": -6.782210437557416,
+      "interval_95_meV": [
+        -17.18363741706063,
+        0.47593422448726946
+      ],
+      "by_seed_meV": [
+        -6.225448528503116,
+        -6.584616947974269,
+        -7.536565836194863
+      ],
+      "passes_lower_error_gate": false
+    },
+    "batch2": {
+      "mean_meV": 3.035442894345548,
+      "interval_95_meV": [
+        -4.898218081916139,
+        11.34699265554146
+      ],
+      "by_seed_meV": [
+        3.4829813100963953,
+        4.5766306447458796,
+        1.0467167281943717
+      ],
+      "passes_lower_error_gate": false
+    }
+  },
+  "old_four_path_archive_hash": "d869a4ab6d176ace9993d33f741ba95a45a3433ea3c251a6eb6e4c2a4303457e",
+  "eight_path_archive_hash": "eb848ae3d35529ae41233a281bce71833499e378b84fb55df203abc45c68d0d1",
+  "interpretation": "Reuses the original 91-material panel and the paired seeds. Increasing path count at fixed steps also changes D0 exposure.",
+  "previously_sealed_test_labels_read": false
+}
