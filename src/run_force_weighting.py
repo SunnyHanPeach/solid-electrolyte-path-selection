@@ -19,6 +19,8 @@ from run_ef import build_batch, fit, make_graphs, write_csv
 
 TREATMENTS = ("full", "energy_weighted", "uniform_weighted")
 MILESTONES = (400, 807)
+BATCH2_STRENGTH = 0.75
+BATCH2_ARM = "protected8_batch2_random"
 
 
 def load_bundle(path):
@@ -74,9 +76,9 @@ def force_weights(frames, order, added, strength=0.5):
     return {"full": {}, "energy_weighted": energy, "uniform_weighted": uniform}, details
 
 
-def frozen_schedules(frames, files, seed):
+def frozen_schedules(frames, files, seed, augmented_arm=ARMS[1]):
     jobs = {cell["seed"]: cell["jobs"] for cell in json.loads(files["jobs.json"])}[seed]
-    replay, augmented = (jobs[arm] for arm in ARMS)
+    replay, augmented = jobs[ARMS[0]], jobs[augmented_arm]
     changes = [step for step, (a, b) in enumerate(zip(replay, augmented), 1) if a != b]
     atoms = [int(row["n_atoms"]) for row in frames]
     if (len(replay) != len(augmented) or len(augmented) != 807 or len(changes) != 97
@@ -96,6 +98,22 @@ def frozen_experiment(frames, files, seed, strength=0.5):
     _, augmented, added = frozen_schedules(frames, files, seed)
     weights, details = force_weights(frames, augmented, added, strength)
     return augmented, weights, details
+
+
+def batch2_experiment(frames, files, seed):
+    replay, augmented, added = frozen_schedules(frames, files, seed, BATCH2_ARM)
+    _, _, first_added = frozen_schedules(frames, files, seed)
+    if {frames[i]["material_id"] for i in added} & {frames[i]["material_id"] for i in first_added}:
+        raise ValueError("Batch 2 overlaps the materials used for strength selection")
+    weights, details = force_weights(frames, augmented, added, BATCH2_STRENGTH)
+    matrix = {}
+    for arm in (*TREATMENTS, "replay"):
+        order = replay if arm == "replay" else augmented
+        matrix[arm] = (order, weights.get(arm, {}), dict(
+            cohort=BATCH2_ARM, strength=BATCH2_STRENGTH, schedule=sha(json.dumps(order).encode()),
+            weights=details if arm in ("energy_weighted", "uniform_weighted") else {},
+        ))
+    return matrix
 
 
 def omit_frames(frames, files, seed, region):
@@ -281,6 +299,11 @@ def score(args):
     implementations = defaultdict(set)
     environments = set()
     experiments = {arm: (args.output, arm) for arm in TREATMENTS}
+    if args.replicate_batch2:
+        experiments["replay"] = (args.output, "replay")
+        _, files = load_bundle(args.bundle)
+        frames = rows(files["training_frames.csv"])
+        designs = {seed: batch2_experiment(frames, files, seed) for seed in SEEDS}
     for item in args.compare:
         label, sep, job = item.partition("=")
         directory, tag, source_arm = job.rpartition("@")
@@ -298,6 +321,10 @@ def score(args):
             if (marker["arm"] != source_arm or marker["seed"] != seed or marker["bundle"] != bundle_hash
                     or marker["optimizer_steps"] < args.until):
                 raise ValueError(f"Unexpected run identity: {folder}")
+            if args.replicate_batch2 and any(
+                marker.get(k) != v for k, v in designs[seed][arm][2].items()
+            ):
+                raise ValueError(f"Changed batch 2 design: {folder}")
             implementations[arm].add(marker["implementation"])
             environments.add(json.dumps(marker["environment"], sort_keys=True))
             path = folder / f"predictions_{args.until}.csv"
@@ -327,7 +354,8 @@ def score(args):
                                     high_profile_mae_meV=float(1000 * abs(pred-ref)[high].mean())))
     if len(environments) != 1 or any(len(h) != 1 for h in implementations.values()):
         raise ValueError("Treatment matrix contains mixed execution environments or code within an arm")
-    if len({next(iter(implementations[arm])) for arm in TREATMENTS}) != 1:
+    same_code = experiments if args.replicate_batch2 else TREATMENTS
+    if len({next(iter(implementations[arm])) for arm in same_code}) != 1:
         raise ValueError("Original matrix contains mixed code")
     metrics = ("barrier_abs_error_meV", "barrier_signed_error_meV", "high_profile_mae_meV")
     cells = {(r["panel"], r["edge"], r["seed"], r["arm"]): r for r in results}
@@ -335,7 +363,9 @@ def score(args):
     arm_metrics = {}
     contrasts = [("energy_weighted", "full"), ("uniform_weighted", "full"),
                  ("energy_weighted", "uniform_weighted")]
-    for arm in sorted(experiments.keys() - set(TREATMENTS)):
+    if args.replicate_batch2:
+        contrasts += [(arm, "replay") for arm in TREATMENTS]
+    for arm in sorted(experiments.keys() - {*TREATMENTS, "replay"}):
         contrasts.extend([(arm, "full"), (arm, "energy_weighted")])
     if {"omit_high", "omit_other"} <= experiments.keys():
         contrasts.append(("omit_high", "omit_other"))
@@ -372,6 +402,8 @@ def score(args):
                   implementations={arm: next(iter(h)) for arm, h in implementations.items()},
                   environment=json.loads(environments.pop()),
                   interval="Paired material bootstrap conditional on the two seeds")
+    if args.replicate_batch2:
+        report.update(cohort=BATCH2_ARM, strength=BATCH2_STRENGTH)
     atomic_json(out / f"summary_{args.until}.json", report)
     print(json.dumps(report), flush=True)
 
@@ -383,7 +415,9 @@ def main():
     p.add_argument("--seed", type=int, choices=SEEDS, default=17)
     p.add_argument("--device", choices=("cpu", "cuda"), default="cpu")
     p.add_argument("--threads", type=int, default=4)
-    p.add_argument("--arm", action="append", choices=TREATMENTS)
+    p.add_argument("--arm", action="append", choices=(*TREATMENTS, "replay"))
+    p.add_argument("--replicate-batch2", action="store_true",
+                   help="Use the locked second eight-path block plus matched replay at strength 0.75")
     p.add_argument("--strength", type=float, default=0.5, help="Force-weight reduction at the peak")
     p.add_argument("--omit", choices=("high", "other"), help="Omit matched interior presentations")
     p.add_argument("--compare", action="append", default=[], metavar="LABEL=DIRECTORY@SOURCE_ARM")
@@ -395,6 +429,10 @@ def main():
     modes.add_argument("--smoke", type=int, metavar="STEPS")
     modes.add_argument("--project", type=Path, help="Score completed arms against local labels")
     args = p.parse_args()
+    if args.replicate_batch2 and (args.omit or args.strength != 0.5 or args.compare):
+        p.error("batch 2 replication has its own fixed strength, treatments and controls")
+    if not args.replicate_batch2 and args.arm and "replay" in args.arm:
+        p.error("replay is an arm of the batch 2 replication")
     if args.project:
         score(args)
         return
@@ -404,6 +442,21 @@ def main():
         p.error("smoke must include the first path insertion and use 8 to 200 steps")
     plan, files = load_bundle(args.bundle)
     frames = rows(files["training_frames.csv"])
+    if args.replicate_batch2:
+        matrix = batch2_experiment(frames, files, args.seed)
+        identity = dict(seed=args.seed, bundle=file_sha(args.bundle),
+                        implementation=file_sha(Path(__file__)))
+        if args.preflight:
+            print(json.dumps({arm: details for arm, (_, _, details) in matrix.items()},
+                             indent=2, allow_nan=False))
+            return
+        chosen = args.arm or tuple(matrix)
+        # Each arm has one immutable batch schedule and one force-weight map.
+        for arm in chosen:
+            order, weights, details = matrix[arm]
+            args.arm = (arm,)
+            train(args, files, frames, plan["training"], order, {arm: weights}, identity | details)
+        return
     if args.omit:
         if args.arm or args.strength != 0.5:
             p.error("omission uses original force weights and its own treatment name")
