@@ -43,6 +43,36 @@ At the replay model's existing peak image, the augmented energy was lower by 43.
 
 All outputs were generated without new training or GPU use. The first step is an audit of the training effect under the fixed MACE setup. The separate project goal is to improve path selection on future materials under equal realized DFT core-hours.
 
+## Should high-energy images be omitted?
+
+The audit locates the prediction drift on high-energy held-out images. The effect of withholding high-energy training images is a separate question.
+
+| Primary source | Result relevant to this project | Boundary |
+| --- | --- | --- |
+| [Dembitskiy et al., LiTraj, 2025](https://doi.org/10.1038/s41524-025-01571-z) | Using only configurations sampled during vacancy-endpoint optimization to fine-tune SevenNet (SevenNet-ft-vac) led to pronounced migration-barrier underestimation. | Their intervention removed coverage of the migration interior. It does not isolate the effect of thinning the highest quarter of the interior images in our MACE protocol. |
+| [Deng et al., systematic softening, 2025](https://doi.org/10.1038/s41524-024-01500-6) | The three tested universal potentials exhibited energy and force underprediction. In the focused CHGNet example, fine-tuning with high-energy configurations reduced force error on the same material. | The fine-tuning example used an AIMD-derived, material-specific dataset, so it cannot establish cross-material transfer from our eight paths. |
+| [High-throughput CHGNet-NEB study, 2025](https://doi.org/10.1039/D5TA05355B) | Fine-tuning with transition-state configurations reduced the separate-test barrier MAE from 0.23 to 0.09 eV. | Those DFT references were single-point energies at CHGNet-predicted structures. The comparison used a pretrained control. |
+| [Ge et al., simulation-oriented training, 2024](https://doi.org/10.1021/acs.jpclett.4c00746) | Energy weighting on a glycine PES improved the mean saddle-point error from 0.19 to 0.055 kcal/mol across five ANI fits, even as the test RMSE increased. | This supports testing weights against the downstream observable. The specific weights and energy scale are molecule- and task-specific. |
+| [Gibson et al., 2025](https://doi.org/10.1103/PhysRevMaterials.9.043802) | Training on an overly broad potential-energy landscape degraded relevant predictions for a finite-capacity linear Si-N potential. | The result supports testing a task-specific change in data composition. It provides no universal cutoff for relevant saddle-region samples. |
+
+### CPU force audit
+
+Use steps 8, 200 and 400 from both existing arms. Compare model forces with the unprojected DFT atomic forces on the original DFT-NEB images. Keep the published image regions and aggregate paired changes by material. Report migrating-Li and all-atom RMSE within each region, and the signed force-error projection along the full configuration path on the approach to the high-energy region. The projection includes moving atoms other than Li. A barrier-height error can accrue on the approach and coexist with a small local force error at the peak. Report force–barrier associations per seed and panel. This analysis can locate a correlation. Causation requires a training intervention. [FP-DeErr protocol](https://mogroupumd.github.io/FP-DeErr/ion-migration-neb.html)
+
+### Minimal controlled training ablation
+
+Freeze the existing eight paths and use each path's DFT energy relative to its own initial image. Predefine the high-energy region as the highest quarter of the interior frames rounded up, with a deterministic tie rule. Match eligibilities and counts across the two pruning arms. Keep both endpoints in all arms.
+
+1. **Full path.** Use the complete existing paths.
+2. **Omit selected high-energy images.** Replace a fixed number of highest interior-image presentations with atom-count-matched D₀ replay.
+3. **Omit other interior images.** Replace the same number of non-high interior-image presentations from the same paths with matched D₀ replay under a frozen sampling rule.
+
+Hold fixed the base D₀ batch sequence, total updates, matched replacement exposure, initialization, seeds 17 and 29, and the original energy/force weights, optimizer and clipping. Preserve the evaluation images, including peak-region images, and the full forward barrier metric. The comparison between the two omission arms tests specificity to the high-energy region. Verify whether any improvement on the main panel comes with deterioration in the auxiliary panel or an increase in barrier underestimation. Report both seed effects and paired material intervals. Use the same-runtime full-path control when available. A continuation from step 200 would test only omissions after step 200.
+
+If both omissions behave alike, reduced new-data exposure is an alternative explanation. If high-energy omission raises barrier underestimation, preserve those images. With evidence specific to high-energy images, a second ablation can reduce only their force-loss weight while retaining energy supervision, with the same reduction on matched other-interior configurations as a control. The Adam 2×2 intervention remains a separate test of history, using the same continuation batches and measuring change from each model's own starting point.
+
+These are training-time interventions with existing labels. Any future claim about avoiding DFT work requires a separate acquisition experiment. Adaptive Gaussian-process NEB provides a precedent for reducing individual evaluations while targeting poorly known parts of a path. [Koistinen et al., 2017](https://doi.org/10.1063/1.4986787)
+
 ## Reproduction
 
 Run from the repository root with Python and NumPy. The signed CSV is already included.
