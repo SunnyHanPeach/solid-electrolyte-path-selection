@@ -1,0 +1,206 @@
+{
+  "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+  "panel": "7656d334e9391f2e64007835c35b266a587f0004d66a2d0dfb96c6ed450bd117",
+  "frame_manifest": "b4f0037e4c59400d4ca13fde1561daf6907271e24fbfa71fc0e4cf0a45fc52a8",
+  "candidates": [
+    "mp-1277232_0_3_0_0_0",
+    "mp-13725_0_4_1_0_0",
+    "mp-753143_5_13_0_0_0",
+    "mp-753520_2_6_0_0_0",
+    "mp-758054_0_0_1_-1_0",
+    "mp-759652_8_12_0_0_0",
+    "mp-768690_0_0_1_0_0"
+  ],
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "jobs": {
+    "17/mp-1277232_0_3_0_0_0/path": {
+      "path": "results/seed17/path1/model_745.pt",
+      "sha256": "a1c1215fda79d32f0e59e2a6951045b1f8009dea34320395cfb5a6dd4770ac06"
+    },
+    "29/mp-1277232_0_3_0_0_0/path": {
+      "path": "results/seed29/path1/model_745.pt",
+      "sha256": "4a23f9409d1fbfdc7cf8b292c146dcd4b47d8bfe465ce0f777ca93e044776c87"
+    },
+    "43/mp-1277232_0_3_0_0_0/path": {
+      "path": "results/seed43/path1/model_745.pt",
+      "sha256": "ead5a10f745c3e59e9d58e4eef8f33e490a76717db029c2ff3216cd2b9a49874"
+    },
+    "17/mp-1277232_0_3_0_0_0/replay": {
+      "path": "results/seed17/replay1/model_745.pt",
+      "sha256": "0c741da1e4a4e4ec34c52f056e9300254348e5af5f22c31e2a5f76c41f283919"
+    },
+    "29/mp-1277232_0_3_0_0_0/replay": {
+      "path": "results/seed29/replay1/model_745.pt",
+      "sha256": "bc526102eaf76a7d6240f288d1eede8eafc85d39f67114ddb699aae09f9e74d9"
+    },
+    "43/mp-1277232_0_3_0_0_0/replay": {
+      "path": "results/seed43/replay1/model_745.pt",
+      "sha256": "e1d5c5d813b3eae0a0764cfb7eeff9257102ce771e52c185a8e3d6c4d94b4cc1"
+    },
+    "17/mp-13725_0_4_1_0_0/path": {
+      "path": "results/seed17/path2/model_735.pt",
+      "sha256": "6c7799984e1bed773ebc28884f3cfb3ac30ba56177d24d58936ce3a7cc898e00"
+    },
+    "29/mp-13725_0_4_1_0_0/path": {
+      "path": "results/seed29/path2/model_735.pt",
+      "sha256": "326a96dbee3555cce871ea57ad14f14d22f4f31960564a0cc3ad7d4e15823ea6"
+    },
+    "43/mp-13725_0_4_1_0_0/path": {
+      "path": "results/seed43/path2/model_735.pt",
+      "sha256": "ff087c83abe1670a58a3f10ccb1afa88d07e43cb0a35f8045ff940c8d6daa784"
+    },
+    "17/mp-13725_0_4_1_0_0/replay": {
+      "path": "results/seed17/replay2/model_735.pt",
+      "sha256": "e6338fc8b23e3b9912f40586f657157f7dd4b996ce5bd2864cd4c097eea99666"
+    },
+    "29/mp-13725_0_4_1_0_0/replay": {
+      "path": "results/seed29/replay2/model_735.pt",
+      "sha256": "f6903a7add97223bd4f8bf95906da7cb364bd0b7a6613ac6c6c92a9cc54bb776"
+    },
+    "43/mp-13725_0_4_1_0_0/replay": {
+      "path": "results/seed43/replay2/model_735.pt",
+      "sha256": "b23fd2dd11ed2e4e52344ca923fcdb8b7cae63a39798e838eea64969b9ab98c2"
+    },
+    "17/mp-753143_5_13_0_0_0/path": {
+      "path": "results/seed17/path3/model_735.pt",
+      "sha256": "a353c5f5f9f9fe1b81b9f735c4719df73bbe6c4636be6cf1acf912ed7e53eba6"
+    },
+    "29/mp-753143_5_13_0_0_0/path": {
+      "path": "results/seed29/path3/model_735.pt",
+      "sha256": "dfd9ed101ea08a1188281e6df0a97f757868c60d186693481ccc2cc7e21df0fa"
+    },
+    "43/mp-753143_5_13_0_0_0/path": {
+      "path": "results/seed43/path3/model_735.pt",
+      "sha256": "de7f0ffbe9d466ae623c0d4306ed58410ebc9a76f42aefd3fd9b6f7a0c2ba498"
+    },
+    "17/mp-753143_5_13_0_0_0/replay": {
+      "path": "results/seed17/replay3/model_735.pt",
+      "sha256": "49bda572439c448992eca9c2d855ecdfb8caef7a83e2bf00d9033c9ee1fdd9d3"
+    },
+    "29/mp-753143_5_13_0_0_0/replay": {
+      "path": "results/seed29/replay3/model_735.pt",
+      "sha256": "b0f03bbf7d682793703b985758a206cc7a76c9c91bb5eb6c6e43dcb21d8ce3b2"
+    },
+    "43/mp-753143_5_13_0_0_0/replay": {
+      "path": "results/seed43/replay3/model_735.pt",
+      "sha256": "82b83cbe10eb0f47aaed1992a8f2241b6f3e1fcee1dfa012f4758d579bd7dd38"
+    },
+    "17/mp-753520_2_6_0_0_0/path": {
+      "path": "transfer/seed17/path/model_735.pt",
+      "sha256": "4a03ee3e373c5ba5bab176aeeee62e647fedad1c3c1ca59c3e50cae9d680819b"
+    },
+    "29/mp-753520_2_6_0_0_0/path": {
+      "path": "transfer/seed29/path/model_735.pt",
+      "sha256": "618df27f0be688c3f90400ead3abf71dfa32ee26ced9c36ad5a9a1bf76d874c2"
+    },
+    "43/mp-753520_2_6_0_0_0/path": {
+      "path": "transfer/seed43/path/model_735.pt",
+      "sha256": "c7d098de51ec661367654c7f5255b3f82fbc6616dd7588b9d9f2d930d49df365"
+    },
+    "17/mp-753520_2_6_0_0_0/replay": {
+      "path": "transfer/seed17/replay/model_735.pt",
+      "sha256": "7dd7a36dc5ba098554131adddecb75b508f79cdb01a679dc40544da3aeae9792"
+    },
+    "29/mp-753520_2_6_0_0_0/replay": {
+      "path": "transfer/seed29/replay/model_735.pt",
+      "sha256": "d5415aa11c4bc81382eb2d7564a221b9c3bc290d4c15128cd4938314f581a2cc"
+    },
+    "43/mp-753520_2_6_0_0_0/replay": {
+      "path": "transfer/seed43/replay/model_735.pt",
+      "sha256": "1f4547d5394193800f36df72891896536a795e8c8c33463c9d8abdedade625b8"
+    },
+    "17/mp-758054_0_0_1_-1_0/path": {
+      "path": "next_block/new_anion/seed17/path/model_745.pt",
+      "sha256": "b9684dc3392ffdd8f9e3200021bee07cb5114281703ea6aa3f502db23c2cf54e"
+    },
+    "29/mp-758054_0_0_1_-1_0/path": {
+      "path": "next_block/new_anion/seed29/path/model_745.pt",
+      "sha256": "11f4cee340d9c10d6d0b557d1ab1e540056066834a2fb3de81f7ca05200b630b"
+    },
+    "43/mp-758054_0_0_1_-1_0/path": {
+      "path": "next_block/new_anion/seed43/path/model_745.pt",
+      "sha256": "c51ed2de19a9c8db1d43c9616da5b1aa2d14d6169d6423b540e8072677ffd34c"
+    },
+    "17/mp-758054_0_0_1_-1_0/replay": {
+      "path": "next_block/new_anion/seed17/replay/model_745.pt",
+      "sha256": "feb8f4c14f00bb926e4addaca1051e377af0ddf6dbc891806fdf2d62cf4c71f9"
+    },
+    "29/mp-758054_0_0_1_-1_0/replay": {
+      "path": "next_block/new_anion/seed29/replay/model_745.pt",
+      "sha256": "98ccbb18668849fd8eb034bbc596116b0cf0bf7d32b2d3056228c09141e1d235"
+    },
+    "43/mp-758054_0_0_1_-1_0/replay": {
+      "path": "next_block/new_anion/seed43/replay/model_745.pt",
+      "sha256": "4647f49b14908e09c80fe9c634bb0a33161b6397c555bef03071fff99dc8144e"
+    },
+    "17/mp-759652_8_12_0_0_0/path": {
+      "path": "next_block/near_geometry/seed17/path/model_735.pt",
+      "sha256": "2f29aab702e0d55ed06b656b25200be42a1d6e4d50a6286e1daa6f8336ad9691"
+    },
+    "29/mp-759652_8_12_0_0_0/path": {
+      "path": "next_block/near_geometry/seed29/path/model_735.pt",
+      "sha256": "a63d7e41d4162bb917ae3365a69823dc631f82b68be9ea09bbb1532e8be87178"
+    },
+    "43/mp-759652_8_12_0_0_0/path": {
+      "path": "next_block/near_geometry/seed43/path/model_735.pt",
+      "sha256": "caa12d878d9a52b4474f4576871ef863f5d76ac9910fcf0e128bc7d6c6dde168"
+    },
+    "17/mp-759652_8_12_0_0_0/replay": {
+      "path": "next_block/near_geometry/seed17/replay/model_735.pt",
+      "sha256": "49bda572439c448992eca9c2d855ecdfb8caef7a83e2bf00d9033c9ee1fdd9d3"
+    },
+    "29/mp-759652_8_12_0_0_0/replay": {
+      "path": "next_block/near_geometry/seed29/replay/model_735.pt",
+      "sha256": "b0f03bbf7d682793703b985758a206cc7a76c9c91bb5eb6c6e43dcb21d8ce3b2"
+    },
+    "43/mp-759652_8_12_0_0_0/replay": {
+      "path": "next_block/near_geometry/seed43/replay/model_735.pt",
+      "sha256": "82b83cbe10eb0f47aaed1992a8f2241b6f3e1fcee1dfa012f4758d579bd7dd38"
+    },
+    "17/mp-768690_0_0_1_0_0/path": {
+      "path": "next_block/feature_gap/seed17/path/model_745.pt",
+      "sha256": "2d1875a83ec69fd84ab99c4777cbdec85bd1cefacc9a22a2f006593e203f5a32"
+    },
+    "29/mp-768690_0_0_1_0_0/path": {
+      "path": "next_block/feature_gap/seed29/path/model_745.pt",
+      "sha256": "554730fb77f73c0490b30e856f1bf905b00227bb7808dc3a0d8d68c9531cf086"
+    },
+    "43/mp-768690_0_0_1_0_0/path": {
+      "path": "next_block/feature_gap/seed43/path/model_745.pt",
+      "sha256": "74cc28097e2fdc12555edbeea8b5b26f552e9d93388b9747e8382f3c81bf31a9"
+    },
+    "17/mp-768690_0_0_1_0_0/replay": {
+      "path": "next_block/feature_gap/seed17/replay/model_745.pt",
+      "sha256": "1585113755b74b887f4ea9a848128fd4b801126af5e771e063c928ba108d5d5a"
+    },
+    "29/mp-768690_0_0_1_0_0/replay": {
+      "path": "next_block/feature_gap/seed29/replay/model_745.pt",
+      "sha256": "e07903a40c6deea51ce0028c8dde8f16fcd87f2da0684b77a779037bf0378914"
+    },
+    "43/mp-768690_0_0_1_0_0/replay": {
+      "path": "next_block/feature_gap/seed43/replay/model_745.pt",
+      "sha256": "6a1852ea6f067646ff49a12d9a56536f72f6ad5cebc4f33b16e7defe1df64fd7"
+    },
+    "17/pure": {
+      "path": "results/seed17/pure/model_710.pt",
+      "sha256": "28e646d936601e2ebc9427243b72b802eefdccd7d7eee852960eb165e6266902"
+    },
+    "29/pure": {
+      "path": "results/seed29/pure/model_710.pt",
+      "sha256": "b05724923d2630462799b77afc4f6e54049d7f97084cf5e05a3b589d0a1b8ad4"
+    },
+    "43/pure": {
+      "path": "results/seed43/pure/model_710.pt",
+      "sha256": "6debc32d0435cc30dfbf6360143e6d953d5b295f948e4ec64197e2a70b92c15d"
+    }
+  },
+  "question": "Do other completed Phase 1 paths improve the same 26-material panel?",
+  "scope": "Secondary comparison on a panel already scored for mp-753143. Individual intervals are exploratory.",
+  "metric": "Control minus path forward barrier MAE in meV. Report both matched replay and pure D0.",
+  "sensitivity": "Repeat estimates omitting mp-1277814 for every path, and report every leave-one-system-out mean range.",
+  "decision": "Use the results to identify replication candidates. A new positive claim needs another independent material panel."
+}

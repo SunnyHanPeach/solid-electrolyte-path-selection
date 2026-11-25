@@ -36,6 +36,15 @@ def checkpoint(runs, seed, arm, bundle_hash):
 
 
 def predict(args):
+    bundle_hash = file_sha(args.bundle)
+    jobs = {}
+    for seed in SEEDS:
+        for arm in ARMS:
+            jobs[f"{seed}/{arm}"] = checkpoint(args.runs, seed, arm, bundle_hash)
+    predict_checkpoints(args.bundle, args.panel, args.output, jobs)
+
+
+def predict_checkpoints(bundle, panel_path, output, jobs):
     os.environ.setdefault("TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD", "1")
     import torch
     from ase.io import read
@@ -45,14 +54,14 @@ def predict(args):
     torch.set_num_threads(4)
     torch.set_default_dtype(torch.float32)
     torch.backends.cuda.matmul.allow_tf32 = False
-    _, files = load_bundle(args.bundle)
-    bundle_hash = file_sha(args.bundle)
-    _, panel = blind_panel(args.panel)
+    _, files = load_bundle(bundle)
+    bundle_hash = file_sha(bundle)
+    _, panel = blind_panel(panel_path)
     refs = rows(panel["frames.csv"])
     atoms = read(io.StringIO(panel["blind.xyz"].decode()), index=":", format="extxyz")
     if len(atoms) != len(refs):
         raise ValueError("Wrong panel shape")
-    with tempfile.TemporaryDirectory(dir=args.output.parent) as tmp:
+    with tempfile.TemporaryDirectory(dir=output.parent) as tmp:
         foundation = Path(tmp) / "foundation.model"
         foundation.write_bytes(files["foundation.model"])
         calc = MACECalculator(model_paths=str(foundation), device="cuda", default_dtype="float32")
@@ -66,32 +75,27 @@ def predict(args):
             graphs[i] = data.AtomicData.from_config(
                 config, z_table=calc.z_table, cutoff=calc.r_max, heads=calc.available_heads)
         evidence, predictions = {}, []
-        for seed in SEEDS:
-            for arm in ARMS:
-                weight, digest = checkpoint(args.runs, seed, arm, bundle_hash)
-                if file_sha(weight) != digest:
-                    raise ValueError(f"Weight checksum failed: {weight}")
-                model.load_state_dict(torch.load(weight, map_location="cpu", weights_only=True), strict=True)
-                values = score_profiles(model, graphs, refs, "cuda", torch)
-                predictions.extend(dict(r, arm=arm, seed=seed) for r in values)
-                evidence[f"{seed}/{arm}"] = digest
-                print(f"{seed}/{arm}: {len(values)} predictions", flush=True)
+        for label, (weight, digest) in jobs.items():
+            seed, arm = label.split("/", 1)
+            if file_sha(weight) != digest:
+                raise ValueError(f"Weight checksum failed: {weight}")
+            model.load_state_dict(torch.load(weight, map_location="cpu", weights_only=True), strict=True)
+            values = score_profiles(model, graphs, refs, "cuda", torch)
+            predictions.extend(dict(r, arm=arm, seed=seed) for r in values)
+            evidence[label] = digest
+            print(f"{label}: {len(values)} predictions", flush=True)
         raw = csv_bytes(predictions)
-        with ZipFile(args.output, "x", compression=ZIP_DEFLATED) as archive:
+        with ZipFile(output, "x", compression=ZIP_DEFLATED) as archive:
             archive.writestr("predictions.csv", raw)
             archive.writestr("proof.json", json.dumps(dict(
-                bundle=bundle_hash, panel=file_sha(args.panel), weights=evidence,
+                bundle=bundle_hash, panel=file_sha(panel_path), weights=evidence,
                 predictions=sha(raw), hardware=torch.cuda.get_device_name(), torch=str(torch.__version__),
             ), indent=2))
 
 
 def score(args):
-    sys.path.insert(0, str(args.project / "experiment2"))
-    from prepare_data import NEB, metadata, raw_frames
-
     lock, panel = blind_panel(args.panel)
     bundle_hash = file_sha(args.bundle)
-    known = {(r["edge_id"], int(r["frame"])): r["material_id"] for r in rows(panel["frames.csv"])}
     with ZipFile(args.predictions) as archive:
         raw = archive.read("predictions.csv")
         proof = json.loads(archive.read("proof.json"))
@@ -103,6 +107,29 @@ def score(args):
                         for seed in SEEDS for arm in ARMS}
     if proof["weights"] != expected_weights:
         raise ValueError("Predictions differ from the previous training checkpoints")
+    materials, errors = read_barrier_errors(args.project, panel, raw, expected_weights)
+    edges = [r["edge_id"] for r in materials]
+    systems, w = bootstrap_weights(materials)
+    outcomes, table = {}, []
+    for name, control in (("net", "replay3"), ("absolute", "pure")):
+        delta = np.asarray([[errors[e,s,control]-errors[e,s,"path3"] for e in edges] for s in SEEDS])
+        outcomes[name] = estimates(delta, w)
+        for i, seed in enumerate(SEEDS):
+            table.extend(dict(r, seed=seed, metric=name, gain_meV=float(x))
+                         for r, x in zip(materials, delta[i]))
+    args.output.mkdir(exist_ok=True)
+    atomic_json(args.output / "summary.json", dict(lock=lock, proof=proof,
+                materials=len(materials), exact_chemistries=len(systems), results=outcomes))
+    (args.output / "paired_materials.csv").write_bytes(csv_bytes(table))
+    print(json.dumps(outcomes,indent=2),flush=True)
+
+
+def read_barrier_errors(project, panel, raw, jobs):
+    sys.path.insert(0, str(project / "experiment2"))
+    from prepare_data import NEB, metadata, raw_frames
+
+    known = {(r["edge_id"], int(r["frame"])): r["material_id"] for r in rows(panel["frames.csv"])}
+    seed_arms = [(int(seed), arm) for seed, arm in (key.split("/", 1) for key in jobs)]
     curves = defaultdict(dict)
     for r in rows(raw):
         edge, i, arm, seed = r["edge_id"], int(r["frame"]), r["arm"], int(r["seed"])
@@ -113,7 +140,7 @@ def score(args):
         c[i] = value
     materials = rows(panel["panel.csv"])
     edges = [r["edge_id"] for r in materials]
-    if len(set(edges)) != len(edges) or set(curves) != {(e,s,a) for e in edges for s in SEEDS for a in ARMS}:
+    if len(set(edges)) != len(edges) or set(curves) != {(e,s,a) for e in edges for s,a in seed_arms}:
         raise ValueError("Missing models or materials")
 
     if file_sha(NEB) != REFERENCE_SHA256:
@@ -126,36 +153,31 @@ def score(args):
             if set(ref) != {i for e, i in known if e == edge}:
                 raise ValueError("Reference images differ")
             truth = max(ref.values()) - ref[1]
-            for seed in SEEDS:
-                for arm in ARMS:
-                    c = curves[edge, seed, arm]
-                    if c.keys() != ref.keys():
-                        raise ValueError("Incomplete predicted curve")
-                    errors[edge, seed, arm] = 1000 * abs(max(c.values()) - c[1] - truth)
+            for seed, arm in seed_arms:
+                c = curves[edge, seed, arm]
+                if c.keys() != ref.keys():
+                    raise ValueError("Incomplete predicted curve")
+                errors[edge, seed, arm] = 1000 * abs(max(c.values()) - c[1] - truth)
+    return materials, errors
 
+
+def bootstrap_weights(materials):
     systems = sorted({r["chemsys"] for r in materials})
     clusters = [systems.index(r["chemsys"]) for r in materials]
     w = np.random.default_rng(20261125).multinomial(
         len(systems), np.full(len(systems), 1/len(systems)), size=10000)[:, clusters]
-    outcomes, table = {}, []
-    for name, control in (("net", "replay3"), ("absolute", "pure")):
-        delta = np.asarray([[errors[e,s,control]-errors[e,s,"path3"] for e in edges] for s in SEEDS])
-        avg = delta.mean(axis=0)
-        lo, hi = np.quantile((w @ avg)/w.sum(axis=1), [.025, .975])
-        seeds = delta.mean(axis=1)
-        loo = (avg.sum()-avg)/(len(avg)-1)
-        outcomes[name] = dict(mean_meV=float(avg.mean()), interval95_meV=[float(lo), float(hi)],
-            seed_means_meV=seeds.tolist(), favorable_materials=int((avg > 0).sum()),
-            leave_one_out_meV=[float(loo.min()), float(loo.max())],
-            practical_positive=bool(lo > .25 and seeds.min() > 0 and loo.min() > 0))
-        for i, seed in enumerate(SEEDS):
-            table.extend(dict(r, seed=seed, metric=name, gain_meV=float(x))
-                         for r, x in zip(materials, delta[i]))
-    args.output.mkdir(exist_ok=True)
-    atomic_json(args.output / "summary.json", dict(lock=lock, proof=proof,
-                materials=len(materials), exact_chemistries=len(systems), results=outcomes))
-    (args.output / "paired_materials.csv").write_bytes(csv_bytes(table))
-    print(json.dumps(outcomes,indent=2),flush=True)
+    return systems, w
+
+
+def estimates(delta, w, tail=.025):
+    avg = delta.mean(axis=0)
+    lo, hi = np.quantile((w @ avg)/w.sum(axis=1), [tail, 1-tail])
+    seeds = delta.mean(axis=1)
+    loo = (avg.sum()-avg)/(len(avg)-1)
+    return dict(mean_meV=float(avg.mean()), interval95_meV=[float(lo), float(hi)],
+        seed_means_meV=seeds.tolist(), favorable_materials=int((avg > 0).sum()),
+        leave_one_out_meV=[float(loo.min()), float(loo.max())],
+        practical_positive=bool(lo > .25 and seeds.min() > 0 and loo.min() > 0))
 
 
 if __name__ == "__main__":
