@@ -73,6 +73,14 @@ If both omissions behave alike, reduced new-data exposure is an alternative expl
 
 These are training-time interventions with existing labels. Any future claim about avoiding DFT work requires a separate acquisition experiment. Adaptive Gaussian-process NEB provides a precedent for reducing individual evaluations while targeting poorly known parts of a path. [Koistinen et al., 2017](https://doi.org/10.1063/1.4986787)
 
+### Energy-dependent force weighting as a separate hypothesis
+
+Test a nonzero floor before considering removal. For an interior training image i, let its excess energy be the positive part of its DFT energy above the lower of the two endpoint energies. Divide by the largest excess energy among interior images of that path to obtain s_i in [0,1]. With zero interior excess, keep all weights at one. The first fixed exploratory schedule is w_F(i) = 1 - 0.5 s_i for added interior images. Keep energy supervision, both endpoints, and every D₀ image at the original weight. This is a path-relative training heuristic with the existing DFT labels.
+
+Compare three arms with the same images, optimizer, training sequence and seeds. Use the original weights, energy-dependent force weights, and a uniform force-weight reduction for the same eligible interior images. Set the uniform reduction separately for each path so it matches the total force-loss coefficient of the energy-dependent arm. Account for repeated image presentations and the original batch and atom-count normalization, and keep D₀ exposure and its loss coefficients fixed. This tests whether energy-based placement of reduced weights improves the outcome beyond an equal reduction in force supervision.
+
+Use the full-path barrier MAE as the main endpoint, including the original highest-energy evaluation images. Report signed barrier bias, high-energy profile error, and paired material and seed effects on both panels. A higher barrier-underestimation risk, or equal performance for the two reduced-weight arms, limits the case for energy-dependent weighting. A favorable historical result needs confirmation on unused materials before adoption. The coefficient 0.5 is a fixed exploratory dose, not an estimated optimum. [Ge et al., task-oriented energy weighting](https://doi.org/10.1021/acs.jpclett.4c00746) · [Deng et al., high-energy supervision and softening](https://doi.org/10.1038/s41524-024-01500-6)
+
 ## Reproduction
 
 Run from the repository root with Python and NumPy. The signed CSV is already included.
