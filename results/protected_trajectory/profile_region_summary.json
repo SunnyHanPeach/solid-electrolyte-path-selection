@@ -1,0 +1,1663 @@
+{
+  "high_interior": "Per path, the highest DFT relative-energy quarter of interior images, rounded up. Ties use the lower image index.",
+  "fixed_peak_identity": "The augmented barrier change equals the relative-energy change at the replay peak plus a nonnegative increase from letting the augmented model choose another peak.",
+  "aggregation": "Average between seeds per material, then between materials. Missing interior regions are omitted only for the corresponding metric.",
+  "results": [
+    {
+      "step": 8,
+      "panel": "primary91",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": 0.05475301124713771,
+          "seed_means": [
+            0.031051837225647062,
+            0.07845418526862837
+          ],
+          "material_interval95": [
+            -0.1284304794803125,
+            0.24255768399138558
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 91,
+          "mean": -0.005198049021291209,
+          "seed_means": [
+            -0.06640088427197802,
+            0.05600478622939561
+          ],
+          "material_interval95": [
+            -0.19333388779189561,
+            0.17522874769273689
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": 0.13733713448705753,
+          "seed_means": [
+            0.31156364912521395,
+            -0.036889380151098904
+          ],
+          "material_interval95": [
+            -0.17212304605360448,
+            0.43990605912496833
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 91,
+          "mean": 0.8265736338856456,
+          "seed_means": [
+            1.607538579584478,
+            0.045608688186813184
+          ],
+          "material_interval95": [
+            0.5532463828285972,
+            1.1090331025175995
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 91,
+          "mean": 1.0444724952781594,
+          "seed_means": [
+            1.9930326021634615,
+            0.09591238839285714
+          ],
+          "material_interval95": [
+            0.726884276002318,
+            1.3836913056425995
+          ]
+        },
+        "peak_changed": {
+          "materials": 91,
+          "mean": 0.005494505494505495,
+          "seed_means": [
+            0.01098901098901099,
+            0.0
+          ],
+          "material_interval95": [
+            0.0,
+            0.016483516483516484
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 91,
+          "mean": 0.013749678056318682,
+          "seed_means": [
+            0.027499356112637364,
+            0.0
+          ],
+          "material_interval95": [
+            0.0,
+            0.04124903416895604
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": 0.19724639780792122,
+          "seed_means": [
+            0.39438100961538464,
+            0.00011178600045787048
+          ],
+          "material_interval95": [
+            -0.007352724180116771,
+            0.4013955811441163
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 91,
+          "mean": 0.3692850525125916,
+          "seed_means": [
+            0.7311922289949634,
+            0.007377876030219773
+          ],
+          "material_interval95": [
+            0.1587920136504121,
+            0.5832469507014794
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 91,
+          "mean": 0.9011069496909341,
+          "seed_means": [
+            1.7361483731112637,
+            0.0660655262706044
+          ],
+          "material_interval95": [
+            0.5962623344672905,
+            1.2304326990148522
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 91,
+          "mean": 1.0307228172218406,
+          "seed_means": [
+            1.9655332460508241,
+            0.09591238839285714
+          ],
+          "material_interval95": [
+            0.7043985220102164,
+            1.3597090165693682
+          ]
+        }
+      }
+    },
+    {
+      "step": 8,
+      "panel": "historical_support",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": 0.2361928870739534,
+          "seed_means": [
+            0.3839169176131918,
+            0.088468856534715
+          ],
+          "material_interval95": [
+            -0.055802952037547524,
+            0.5277305929617655
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 88,
+          "mean": -0.013524835759943182,
+          "seed_means": [
+            0.08322975852272728,
+            -0.11027943004261363
+          ],
+          "material_interval95": [
+            -0.31228498979048297,
+            0.27656988664106885
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": 0.4833529871707366,
+          "seed_means": [
+            0.8670036594444561,
+            0.09970231489701704
+          ],
+          "material_interval95": [
+            0.013338435779918336,
+            0.9799722093435099
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 88,
+          "mean": 1.2476660988547585,
+          "seed_means": [
+            2.3741288618607954,
+            0.12120333584872159
+          ],
+          "material_interval95": [
+            0.8516311645507812,
+            1.6994497992775657
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 88,
+          "mean": 1.367915760387074,
+          "seed_means": [
+            2.533652565696023,
+            0.202178955078125
+          ],
+          "material_interval95": [
+            0.9316531094637784,
+            1.8530758944424717
+          ]
+        },
+        "peak_changed": {
+          "materials": 88,
+          "mean": 0.005681818181818182,
+          "seed_means": [
+            0.0,
+            0.011363636363636364
+          ],
+          "material_interval95": [
+            0.0,
+            0.017045454545454544
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 88,
+          "mean": 0.0,
+          "seed_means": [
+            0.0,
+            0.0
+          ],
+          "material_interval95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": 0.5727370709045296,
+          "seed_means": [
+            1.008838621567582,
+            0.13663552024147727
+          ],
+          "material_interval95": [
+            0.21021150665300561,
+            0.9726661624330463
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 88,
+          "mean": 0.8599252411813448,
+          "seed_means": [
+            1.6436721339370266,
+            0.07617834842566289
+          ],
+          "material_interval95": [
+            0.5057645566535718,
+            1.2628490274602715
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 88,
+          "mean": 0.9215961803089489,
+          "seed_means": [
+            1.8286271528764204,
+            0.014565207741477272
+          ],
+          "material_interval95": [
+            0.5236322229558771,
+            1.3110420920632102
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 88,
+          "mean": 1.367915760387074,
+          "seed_means": [
+            2.533652565696023,
+            0.202178955078125
+          ],
+          "material_interval95": [
+            0.9181239388205789,
+            1.863132823597301
+          ]
+        }
+      }
+    },
+    {
+      "step": 64,
+      "panel": "primary91",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": -0.9187967204680108,
+          "seed_means": [
+            -0.5597381292933118,
+            -1.2778553116427096
+          ],
+          "material_interval95": [
+            -2.5978703087557817,
+            0.8336797944390217
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 91,
+          "mean": 0.3779484675480769,
+          "seed_means": [
+            0.8481203854739011,
+            -0.09222345037774725
+          ],
+          "material_interval95": [
+            -1.285431411240127,
+            2.1892338008671013
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": -3.4662962049296664,
+          "seed_means": [
+            -4.397673358948101,
+            -2.5349190509112325
+          ],
+          "material_interval95": [
+            -6.329278871909297,
+            -1.0085935736202105
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 91,
+          "mean": 0.7436563680460165,
+          "seed_means": [
+            2.9613788311298075,
+            -1.4740660950377746
+          ],
+          "material_interval95": [
+            -2.3190299233237464,
+            3.4236698360233517
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 91,
+          "mean": 1.0910872574690933,
+          "seed_means": [
+            3.9344200721153846,
+            -1.7522455571771978
+          ],
+          "material_interval95": [
+            -2.4241436968792924,
+            4.2892330295436984
+          ]
+        },
+        "peak_changed": {
+          "materials": 91,
+          "mean": 0.027472527472527472,
+          "seed_means": [
+            0.04395604395604396,
+            0.01098901098901099
+          ],
+          "material_interval95": [
+            0.005494505494505495,
+            0.06043956043956044
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 91,
+          "mean": 0.0712635752918956,
+          "seed_means": [
+            0.1297835465315934,
+            0.012743604052197802
+          ],
+          "material_interval95": [
+            0.0033535800137362635,
+            0.1551030756353022
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": -2.2003572079607476,
+          "seed_means": [
+            -2.3194487220971145,
+            -2.0812656938243808
+          ],
+          "material_interval95": [
+            -4.467973173198981,
+            -0.13753328257761957
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 91,
+          "mean": -0.3357492523752289,
+          "seed_means": [
+            0.7205166659512361,
+            -1.3920151707016943
+          ],
+          "material_interval95": [
+            -2.8770768162095064,
+            1.9454830295436984
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 91,
+          "mean": 1.536610362293956,
+          "seed_means": [
+            3.571562714629121,
+            -0.49834199004120877
+          ],
+          "material_interval95": [
+            -1.412255423409598,
+            4.102300287603022
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 91,
+          "mean": 1.0198236821771978,
+          "seed_means": [
+            3.804636525583791,
+            -1.7649891612293955
+          ],
+          "material_interval95": [
+            -2.4893875960465315,
+            4.187523139702094
+          ]
+        }
+      }
+    },
+    {
+      "step": 64,
+      "panel": "historical_support",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": -1.4198143980828284,
+          "seed_means": [
+            -1.955233465909342,
+            -0.8843953302563147
+          ],
+          "material_interval95": [
+            -2.6236833763763974,
+            -0.3384243989815682
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 88,
+          "mean": -0.4255121404474432,
+          "seed_means": [
+            1.1374733664772727,
+            -1.9884976473721592
+          ],
+          "material_interval95": [
+            -1.6757228157737039,
+            0.7355950095436783
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": -1.6860310404845016,
+          "seed_means": [
+            -3.6587497128033935,
+            0.2866876318343905
+          ],
+          "material_interval95": [
+            -6.643359644993296,
+            2.7555451963969793
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 88,
+          "mean": 0.5526109175248579,
+          "seed_means": [
+            5.375428633256392,
+            -4.270206798206676
+          ],
+          "material_interval95": [
+            -4.634865847500888,
+            5.315368825739079
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 88,
+          "mean": 1.1485706676136365,
+          "seed_means": [
+            5.480679598721591,
+            -3.1835382634943183
+          ],
+          "material_interval95": [
+            -4.453143206509678,
+            6.345350092107598
+          ]
+        },
+        "peak_changed": {
+          "materials": 88,
+          "mean": 0.005681818181818182,
+          "seed_means": [
+            0.011363636363636364,
+            0.0
+          ],
+          "material_interval95": [
+            0.0,
+            0.017045454545454544
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 88,
+          "mean": 0.016645951704545456,
+          "seed_means": [
+            0.03329190340909091,
+            0.0
+          ],
+          "material_interval95": [
+            0.0,
+            0.04993785511363636
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": 1.4280290038320147,
+          "seed_means": [
+            0.22010428681300487,
+            2.6359537208510257
+          ],
+          "material_interval95": [
+            -1.6983757019009116,
+            5.006683471723742
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 88,
+          "mean": 1.3441894993637549,
+          "seed_means": [
+            5.885037508877841,
+            -3.1966585101503315
+          ],
+          "material_interval95": [
+            -1.837944984436035,
+            5.003932750586306
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 88,
+          "mean": -0.5096088756214489,
+          "seed_means": [
+            1.9995949485085227,
+            -3.0188126997514204
+          ],
+          "material_interval95": [
+            -5.541888150301847,
+            3.1958580017089817
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 88,
+          "mean": 1.1319247159090908,
+          "seed_means": [
+            5.4473876953125,
+            -3.1835382634943183
+          ],
+          "material_interval95": [
+            -4.6866416931152335,
+            6.177334351973099
+          ]
+        }
+      }
+    },
+    {
+      "step": 200,
+      "panel": "primary91",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": -4.282983276527955,
+          "seed_means": [
+            -4.308569252231422,
+            -4.257397300824488
+          ],
+          "material_interval95": [
+            -10.146111340734377,
+            0.7342446850644199
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 91,
+          "mean": -0.36772004850618134,
+          "seed_means": [
+            -0.045944046188186816,
+            -0.6894960508241759
+          ],
+          "material_interval95": [
+            -6.111643864558293,
+            5.069342812339027
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": 5.303747573402239,
+          "seed_means": [
+            4.509151623883904,
+            6.098343522920573
+          ],
+          "material_interval95": [
+            -6.5860446057382225,
+            15.700985079292424
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 91,
+          "mean": -18.148736639337226,
+          "seed_means": [
+            -17.66179682134272,
+            -18.63567645733173
+          ],
+          "material_interval95": [
+            -32.39032200404576,
+            -5.721593165135648
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 91,
+          "mean": -21.363646119505493,
+          "seed_means": [
+            -21.00078876201923,
+            -21.72650347699176
+          ],
+          "material_interval95": [
+            -36.43061040521978,
+            -8.279980669964802
+          ]
+        },
+        "peak_changed": {
+          "materials": 91,
+          "mean": 0.016483516483516484,
+          "seed_means": [
+            0.02197802197802198,
+            0.01098901098901099
+          ],
+          "material_interval95": [
+            0.0,
+            0.04395604395604396
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 91,
+          "mean": 0.025319529103708792,
+          "seed_means": [
+            0.009390024038461538,
+            0.04124903416895604
+          ],
+          "material_interval95": [
+            0.0,
+            0.07528787130837912
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": -3.684316677182463,
+          "seed_means": [
+            -4.368311210363915,
+            -3.0003221440010117
+          ],
+          "material_interval95": [
+            -13.906727222481107,
+            4.77918197283452
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 91,
+          "mean": -8.527567098428914,
+          "seed_means": [
+            -8.27087849487752,
+            -8.784255701980312
+          ],
+          "material_interval95": [
+            -19.215551662794397,
+            0.475207178583948
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 91,
+          "mean": -15.253087976476648,
+          "seed_means": [
+            -14.734959864354396,
+            -15.771216088598901
+          ],
+          "material_interval95": [
+            -28.811553284362123,
+            -4.031208583286832
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 91,
+          "mean": -21.388965648609204,
+          "seed_means": [
+            -21.010178786057693,
+            -21.767752511160715
+          ],
+          "material_interval95": [
+            -36.94976555122124,
+            -8.259804694207169
+          ]
+        }
+      }
+    },
+    {
+      "step": 200,
+      "panel": "historical_support",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": -2.5850833465054537,
+          "seed_means": [
+            -2.910500641872008,
+            -2.2596660511389
+          ],
+          "material_interval95": [
+            -12.91882321198075,
+            7.907536786131296
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 88,
+          "mean": -0.8761666037819602,
+          "seed_means": [
+            -1.6531510786576704,
+            -0.09918212890625
+          ],
+          "material_interval95": [
+            -11.594438552856445,
+            9.317168322476471
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": -6.393699086912492,
+          "seed_means": [
+            -7.068873568445352,
+            -5.718524605379633
+          ],
+          "material_interval95": [
+            -28.74609429232212,
+            10.794468468248262
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 88,
+          "mean": -35.419464111328125,
+          "seed_means": [
+            -34.921299327503554,
+            -35.917628895152696
+          ],
+          "material_interval95": [
+            -56.47776777094061,
+            -20.181827111677688
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 88,
+          "mean": -36.77402843128551,
+          "seed_means": [
+            -36.25973788174716,
+            -37.28831898082387
+          ],
+          "material_interval95": [
+            -59.372308037497774,
+            -21.025874397971418
+          ]
+        },
+        "peak_changed": {
+          "materials": 88,
+          "mean": 0.022727272727272728,
+          "seed_means": [
+            0.022727272727272728,
+            0.022727272727272728
+          ],
+          "material_interval95": [
+            0.0,
+            0.056818181818181816
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 88,
+          "mean": 0.6481517444957386,
+          "seed_means": [
+            0.7636330344460227,
+            0.5326704545454546
+          ],
+          "material_interval95": [
+            0.0,
+            1.8570639870383523
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": 0.9283426902084796,
+          "seed_means": [
+            0.4374305150633979,
+            1.4192548653535613
+          ],
+          "material_interval95": [
+            -9.78325465548218,
+            11.164256570768265
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 88,
+          "mean": -17.955404339414653,
+          "seed_means": [
+            -18.01537022446141,
+            -17.8954384543679
+          ],
+          "material_interval95": [
+            -28.718143520933207,
+            -8.89294147491455
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 88,
+          "mean": -26.10293301669034,
+          "seed_means": [
+            -25.910810990767047,
+            -26.295055042613637
+          ],
+          "material_interval95": [
+            -49.331873113458805,
+            -8.54164470325817
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 88,
+          "mean": -37.42218017578125,
+          "seed_means": [
+            -37.02337091619318,
+            -37.82098943536932
+          ],
+          "material_interval95": [
+            -59.39277735623446,
+            -21.45374038002708
+          ]
+        }
+      }
+    },
+    {
+      "step": 400,
+      "panel": "primary91",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": -3.3436471003582042,
+          "seed_means": [
+            -2.879089138904529,
+            -3.8082050618118797
+          ],
+          "material_interval95": [
+            -12.644615480099981,
+            4.215258524416533
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 91,
+          "mean": -1.123616983602335,
+          "seed_means": [
+            -0.8742783095810439,
+            -1.3729556576236264
+          ],
+          "material_interval95": [
+            -9.723281860351562,
+            7.614601051414404
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": 16.161271864483787,
+          "seed_means": [
+            13.42278719479819,
+            18.899756534169384
+          ],
+          "material_interval95": [
+            0.2549084888184783,
+            32.13966667761758
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 91,
+          "mean": -23.536011412903502,
+          "seed_means": [
+            -18.96868695269574,
+            -28.103335873111263
+          ],
+          "material_interval95": [
+            -41.14679818624979,
+            -8.472878592354911
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 91,
+          "mean": -24.708003788203982,
+          "seed_means": [
+            -19.22339135473901,
+            -30.192616221668956
+          ],
+          "material_interval95": [
+            -44.15785401732057,
+            -8.314681839156941
+          ]
+        },
+        "peak_changed": {
+          "materials": 91,
+          "mean": 0.005494505494505495,
+          "seed_means": [
+            0.0,
+            0.01098901098901099
+          ],
+          "material_interval95": [
+            0.0,
+            0.016483516483516484
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 91,
+          "mean": 0.1463837675995879,
+          "seed_means": [
+            0.0,
+            0.2927675351991758
+          ],
+          "material_interval95": [
+            0.0,
+            0.43915130279876374
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": 2.2064645595104744,
+          "seed_means": [
+            1.7025324327506004,
+            2.7103966862703497
+          ],
+          "material_interval95": [
+            -10.462583879407791,
+            12.754665716793362
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 91,
+          "mean": -7.543794401399382,
+          "seed_means": [
+            -5.291837475675365,
+            -9.795751327123398
+          ],
+          "material_interval95": [
+            -21.448736924391525,
+            3.779043120778959
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 91,
+          "mean": -21.391480833619507,
+          "seed_means": [
+            -17.069386911916208,
+            -25.713574755322803
+          ],
+          "material_interval95": [
+            -37.926080724695225,
+            -8.114892309838602
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 91,
+          "mean": -24.854387555803573,
+          "seed_means": [
+            -19.22339135473901,
+            -30.48538375686813
+          ],
+          "material_interval95": [
+            -44.60704929226048,
+            -8.661043774950638
+          ]
+        }
+      }
+    },
+    {
+      "step": 400,
+      "panel": "historical_support",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": -3.8908427676693176,
+          "seed_means": [
+            -3.766171955791461,
+            -4.015513579547174
+          ],
+          "material_interval95": [
+            -17.256840674084696,
+            9.366702050662342
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 88,
+          "mean": -1.3533505526455967,
+          "seed_means": [
+            -2.1823536265980112,
+            -0.5243474786931818
+          ],
+          "material_interval95": [
+            -14.78564522483132,
+            11.727731878107242
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": -5.586645724429735,
+          "seed_means": [
+            -6.8755188805043455,
+            -4.297772568355123
+          ],
+          "material_interval95": [
+            -33.16515207838429,
+            16.094176138693875
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 88,
+          "mean": -47.998081554066054,
+          "seed_means": [
+            -40.757959539240055,
+            -55.23820356889205
+          ],
+          "material_interval95": [
+            -77.39677645943382,
+            -26.146351207386367
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 88,
+          "mean": -50.091656771573156,
+          "seed_means": [
+            -42.337244207208805,
+            -57.8460693359375
+          ],
+          "material_interval95": [
+            -81.3833540136164,
+            -27.087289636785336
+          ]
+        },
+        "peak_changed": {
+          "materials": 88,
+          "mean": 0.06818181818181818,
+          "seed_means": [
+            0.06818181818181818,
+            0.06818181818181818
+          ],
+          "material_interval95": [
+            0.022727272727272728,
+            0.125
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 88,
+          "mean": 1.3427734375,
+          "seed_means": [
+            0.9404962713068182,
+            1.7450506036931819
+          ],
+          "material_interval95": [
+            0.20287253639914773,
+            3.033577312122689
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": 0.06663460034955646,
+          "seed_means": [
+            0.5898937684952787,
+            -0.45662456779616734
+          ],
+          "material_interval95": [
+            -12.81869493163617,
+            12.478685221199214
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 88,
+          "mean": -22.084900827118847,
+          "seed_means": [
+            -17.79596733324456,
+            -26.37383432099313
+          ],
+          "material_interval95": [
+            -36.44593845714222,
+            -9.7758047508471
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 88,
+          "mean": -35.30086170543324,
+          "seed_means": [
+            -29.848272150213067,
+            -40.75345126065341
+          ],
+          "material_interval95": [
+            -66.77452000704677,
+            -12.25635355169123
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 88,
+          "mean": -51.434430209073156,
+          "seed_means": [
+            -43.277740478515625,
+            -59.59111993963068
+          ],
+          "material_interval95": [
+            -83.19722522388805,
+            -27.984610470858495
+          ]
+        }
+      }
+    },
+    {
+      "step": 600,
+      "panel": "primary91",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": -1.8166180520256103,
+          "seed_means": [
+            -1.8512246565928312,
+            -1.7820114474583892
+          ],
+          "material_interval95": [
+            -11.611762276407289,
+            6.13886693728824
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 91,
+          "mean": -1.2542389251373627,
+          "seed_means": [
+            -1.0731456043956045,
+            -1.435332245879121
+          ],
+          "material_interval95": [
+            -9.84505873460036,
+            8.136866642878601
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": 20.15068954348355,
+          "seed_means": [
+            20.50890254335482,
+            19.792476543612285
+          ],
+          "material_interval95": [
+            4.297247891247511,
+            36.152369018372056
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 91,
+          "mean": -32.53383426875858,
+          "seed_means": [
+            -32.75592510516827,
+            -32.3117434323489
+          ],
+          "material_interval95": [
+            -49.78892567393544,
+            -18.6945799942855
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 91,
+          "mean": -33.86528937371222,
+          "seed_means": [
+            -33.92716292496566,
+            -33.80341582245879
+          ],
+          "material_interval95": [
+            -53.329828283288975,
+            -18.153951456258607
+          ]
+        },
+        "peak_changed": {
+          "materials": 91,
+          "mean": 0.02197802197802198,
+          "seed_means": [
+            0.02197802197802198,
+            0.02197802197802198
+          ],
+          "material_interval95": [
+            0.0,
+            0.054945054945054944
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 91,
+          "mean": 0.3673846905048077,
+          "seed_means": [
+            0.35547948145604397,
+            0.37928989955357145
+          ],
+          "material_interval95": [
+            0.0,
+            1.0786790114182692
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": 5.095544408484388,
+          "seed_means": [
+            4.901253272094807,
+            5.289835544873968
+          ],
+          "material_interval95": [
+            -7.335051592390995,
+            14.691675885180873
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 91,
+          "mean": -10.201255043784341,
+          "seed_means": [
+            -10.13485415951236,
+            -10.267655928056318
+          ],
+          "material_interval95": [
+            -23.400231944772347,
+            0.4746915656568343
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 91,
+          "mean": -31.82027628133585,
+          "seed_means": [
+            -32.22186748798077,
+            -31.418685074690934
+          ],
+          "material_interval95": [
+            -48.69539030305632,
+            -18.94519931667454
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 91,
+          "mean": -34.232674064217036,
+          "seed_means": [
+            -34.2826424064217,
+            -34.182705722012365
+          ],
+          "material_interval95": [
+            -53.70962121984461,
+            -18.336817982432606
+          ]
+        }
+      }
+    },
+    {
+      "step": 600,
+      "panel": "historical_support",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": -4.971104663973526,
+          "seed_means": [
+            -5.3859537526622345,
+            -4.556255575284819
+          ],
+          "material_interval95": [
+            -17.45979763458882,
+            6.646332199571661
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 88,
+          "mean": -0.07369301535866478,
+          "seed_means": [
+            0.27708573774857953,
+            -0.4244717684659091
+          ],
+          "material_interval95": [
+            -12.240197441794656,
+            12.190550023859185
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": -3.0275169125065884,
+          "seed_means": [
+            -3.448004782047643,
+            -2.607029042965533
+          ],
+          "material_interval95": [
+            -30.575640058111922,
+            18.788356258365077
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 88,
+          "mean": -56.306058710271664,
+          "seed_means": [
+            -55.009495128284804,
+            -57.60262229225852
+          ],
+          "material_interval95": [
+            -89.0912727876143,
+            -31.703795086253777
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 88,
+          "mean": -61.87959150834517,
+          "seed_means": [
+            -61.06810136274858,
+            -62.69108165394176
+          ],
+          "material_interval95": [
+            -98.99728948419744,
+            -35.028813102028586
+          ]
+        },
+        "peak_changed": {
+          "materials": 88,
+          "mean": 0.045454545454545456,
+          "seed_means": [
+            0.045454545454545456,
+            0.045454545454545456
+          ],
+          "material_interval95": [
+            0.011363636363636364,
+            0.09090909090909091
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 88,
+          "mean": 1.3885498046875,
+          "seed_means": [
+            1.3420798561789773,
+            1.4350197531960227
+          ],
+          "material_interval95": [
+            0.11860240589488637,
+            3.4024758772416535
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": -4.684534811715934,
+          "seed_means": [
+            -4.959456142726261,
+            -4.409613480705608
+          ],
+          "material_interval95": [
+            -19.794953443009693,
+            8.692867132548336
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 88,
+          "mean": -24.263526454116356,
+          "seed_means": [
+            -23.022680571584985,
+            -25.504372336647727
+          ],
+          "material_interval95": [
+            -41.21870272087329,
+            -10.081289031288843
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 88,
+          "mean": -43.60303011807528,
+          "seed_means": [
+            -43.2708046653054,
+            -43.93525557084517
+          ],
+          "material_interval95": [
+            -78.89884168451484,
+            -19.26630193536932
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 88,
+          "mean": -63.26814131303267,
+          "seed_means": [
+            -62.410181218927555,
+            -64.12610140713778
+          ],
+          "material_interval95": [
+            -100.22218877618964,
+            -36.44579974087802
+          ]
+        }
+      }
+    },
+    {
+      "step": 807,
+      "panel": "primary91",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": -1.5886391354730063,
+          "seed_means": [
+            -1.7945580056655692,
+            -1.3827202652804431
+          ],
+          "material_interval95": [
+            -11.576143657441754,
+            6.372995636911112
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 91,
+          "mean": -0.9956779060782966,
+          "seed_means": [
+            -0.9822635860233516,
+            -1.0090922261332418
+          ],
+          "material_interval95": [
+            -9.348611517266912,
+            8.634688828017685
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": 26.595231070784422,
+          "seed_means": [
+            27.329078217290263,
+            25.861383924278584
+          ],
+          "material_interval95": [
+            8.66054632420233,
+            45.387120283256614
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 91,
+          "mean": -40.85909665285886,
+          "seed_means": [
+            -42.2643305181147,
+            -39.45386278760302
+          ],
+          "material_interval95": [
+            -60.094468672196946,
+            -24.860820141467425
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 91,
+          "mean": -42.74741371909341,
+          "seed_means": [
+            -44.491946042239015,
+            -41.0028813959478
+          ],
+          "material_interval95": [
+            -64.47169125735105,
+            -25.07769406496824
+          ]
+        },
+        "peak_changed": {
+          "materials": 91,
+          "mean": 0.038461538461538464,
+          "seed_means": [
+            0.04395604395604396,
+            0.03296703296703297
+          ],
+          "material_interval95": [
+            0.005494505494505495,
+            0.08241758241758242
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 91,
+          "mean": 0.6827888907967034,
+          "seed_means": [
+            0.6834596067994505,
+            0.6821181747939561
+          ],
+          "material_interval95": [
+            0.049632984203296704,
+            1.539293226304945
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 91,
+          "mean": 3.6548484737035163,
+          "seed_means": [
+            3.3752491735384744,
+            3.9344477738685586
+          ],
+          "material_interval95": [
+            -8.772206228826489,
+            13.672414694534096
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 91,
+          "mean": -15.49292484045902,
+          "seed_means": [
+            -16.60111535599817,
+            -14.38473432491987
+          ],
+          "material_interval95": [
+            -28.504463866516783,
+            -4.410942832192226
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 91,
+          "mean": -40.082156003176515,
+          "seed_means": [
+            -41.333209027300825,
+            -38.8311029790522
+          ],
+          "material_interval95": [
+            -59.411671397450206,
+            -24.838302947662694
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 91,
+          "mean": -43.43020260989011,
+          "seed_means": [
+            -45.17540564903846,
+            -41.68499957074176
+          ],
+          "material_interval95": [
+            -64.65516981187757,
+            -25.55118602710766
+          ]
+        }
+      }
+    },
+    {
+      "step": 807,
+      "panel": "historical_support",
+      "metrics": {
+        "endpoint_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": -6.868781726740022,
+          "seed_means": [
+            -7.096236827059308,
+            -6.641326626420736
+          ],
+          "material_interval95": [
+            -17.704187849096698,
+            2.5971620279979946
+          ]
+        },
+        "endpoint_shift_meV": {
+          "materials": 88,
+          "mean": 1.6791603781960227,
+          "seed_means": [
+            1.8969449129971592,
+            1.4613758433948865
+          ],
+          "material_interval95": [
+            -8.59988819469105,
+            12.407519600608131
+          ]
+        },
+        "high_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": 0.4554031054714807,
+          "seed_means": [
+            0.6123104403431253,
+            0.2984957705998361
+          ],
+          "material_interval95": [
+            -24.956019452699316,
+            20.394491762575093
+          ]
+        },
+        "high_interior_shift_meV": {
+          "materials": 88,
+          "mean": -60.60114773837003,
+          "seed_means": [
+            -62.18442049893466,
+            -59.0178749778054
+          ],
+          "material_interval95": [
+            -99.26951798525724,
+            -33.56590270996094
+          ]
+        },
+        "observed_barrier_shift_meV": {
+          "materials": 88,
+          "mean": -69.16843761097302,
+          "seed_means": [
+            -71.05948708274148,
+            -67.27738813920455
+          ],
+          "material_interval95": [
+            -112.31212182478471,
+            -38.45016306096858
+          ]
+        },
+        "peak_changed": {
+          "materials": 88,
+          "mean": 0.056818181818181816,
+          "seed_means": [
+            0.056818181818181816,
+            0.056818181818181816
+          ],
+          "material_interval95": [
+            0.011363636363636364,
+            0.11363636363636363
+          ]
+        },
+        "peak_reassignment_uplift_meV": {
+          "materials": 88,
+          "mean": 1.6150041060014204,
+          "seed_means": [
+            1.6999678178267046,
+            1.5300403941761365
+          ],
+          "material_interval95": [
+            0.11998956853693182,
+            4.081700064919207
+          ]
+        },
+        "remaining_interior_abs_error_delta_meV": {
+          "materials": 88,
+          "mean": -8.29939813121406,
+          "seed_means": [
+            -8.410366706024,
+            -8.188429556404119
+          ],
+          "material_interval95": [
+            -24.543850034900842,
+            4.359968351022031
+          ]
+        },
+        "remaining_interior_shift_meV": {
+          "materials": 88,
+          "mean": -25.898846712979402,
+          "seed_means": [
+            -26.736403956557766,
+            -25.06128946940104
+          ],
+          "material_interval95": [
+            -44.59983002055775,
+            -9.884137095827048
+          ]
+        },
+        "shift_at_dft_peak_meV": {
+          "materials": 88,
+          "mean": -48.9227988503196,
+          "seed_means": [
+            -50.27979070490057,
+            -47.56580699573863
+          ],
+          "material_interval95": [
+            -87.80991380864923,
+            -22.33787449923429
+          ]
+        },
+        "shift_at_replay_peak_meV": {
+          "materials": 88,
+          "mean": -70.78344171697444,
+          "seed_means": [
+            -72.75945490056819,
+            -68.80742853338069
+          ],
+          "material_interval95": [
+            -112.85703398964621,
+            -40.887576883489444
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -21,9 +21,23 @@ A shared mean shift qualitatively reproduces main-panel degradation. It also pre
 
 The early bias groups are defined using step-8 replay, a model that has seen only D₀ or D₀ replay; its signed errors are averaged across the two seeds. Early underprediction is below −25 meV and early overprediction is at least +25 meV. All three groups in the main panel degrade on average at step 807. The early-overprediction group in the auxiliary panel (49 materials) improves by 34.19 meV, whereas the corresponding main-panel group (37 materials) degrades by 31.45 meV. The corresponding replay-to-augmented group mean signed errors are +133.70 to +39.15 meV on the auxiliary panel and +40.10 to −24.40 meV on the main panel. These are group means. Balancing the panels on the three early-bias bins reduces the endpoint difference from 32.48 to 27.66 meV, so the early-bias bin proportions explain only a small part of the point difference.
 
+## Spatial localization along fixed NEB images
+
+The average signed change concentrates in high-energy interior images. The high-energy region uses the highest quarter of the DFT relative energies among interior images of each path, rounded up.
+
+| Step 807 relative-energy change (meV) | Main (91) | Auxiliary (88) |
+| --- | ---: | ---: |
+| High-energy interior | −40.86 | −60.60 |
+| Remaining interior | −15.49 | −25.90 |
+| Final endpoint | −1.00 | +1.68 |
+
+Relative to replay, the high-energy interior absolute error on the main panel increased by 16.16 meV at step 400 and 26.60 meV at step 807. The other interior images increased by 2.21 and 3.66 meV.
+
+At the replay model's existing peak image, the augmented energy was lower by 43.43 meV (main) and 70.78 meV (auxiliary) on average at step 807. Letting the augmented prediction choose a different peak added only +0.68 and +1.61 meV. The barrier-height decrease is therefore present at the original peak, with peak reassignment slightly offsetting it. This analysis locates the error within the energy profiles and does not identify its training cause.
+
 ## Remaining explanations worth testing
 
-1. **Task-specific energy-profile drift.** Added paths may progressively change relative energies near high-energy images. Existing main-panel results show +9.32 meV in profile MAE, −1.59 meV in endpoint difference MAE and a −0.55 percentage point change in peak-image match rates at step 807. Compare the change at the common step-200 and step-400 checkpoints in the interior relative-energy profile and in force RMSE over fixed images, separating migrating Li and all atoms. This can establish where in the profile the additional error develops.
+1. **Task-specific energy-profile drift.** Added paths may progressively change relative energies near high-energy images. Existing main-panel results show +9.32 meV in profile MAE, −1.59 meV in endpoint difference MAE and a −0.55 percentage point change in peak-image match rates at step 807. With the high-energy profile drift localized, compare the step-200 and step-400 checkpoints on force RMSE over fixed images, separating migrating Li and all atoms. This can test whether force errors worsen in the same images and time window.
 2. **Material-dependent correction or overshoot.** Evaluate which cases account for large useful or harmful downward shifts, comparing r and d on both panels and using chemistry and barrier range as predeclared descriptive strata. The current group means and shuffled reference support heterogeneous signed drift. They do not identify a chemical cause.
 3. **Optimizer history.** If a follow-on update experiment is warranted, start at step 200, run fixed batches, and cross the two stored model weights with both Adam states. This separates intervention on history from the already accrued parameter changes. With only two seeds and historical panels, no general Adam or force-loss mechanism is claimed.
 
@@ -38,3 +52,7 @@ Run from the repository root with Python and NumPy. The signed CSV is already in
 To reconstruct the signed CSV from local archives, supply the original protected-run GPU bundle, the blind trajectory predictions archive, and the project root holding the audited LiTraj dataset and preparation code.
 
     python src/audit_signed_barriers.py extract PROTECTED_BUNDLE.zip BLIND_PREDICTIONS.tar.gz PROJECT_ROOT results/protected_trajectory/trajectory_paired_materials.csv signed.csv
+
+To reproduce the fixed-image localization from the same archives:
+
+    python src/check_barrier_profile_regions.py PROTECTED_BUNDLE.zip BLIND_PREDICTIONS.tar.gz PROJECT_ROOT profile_region_summary.json

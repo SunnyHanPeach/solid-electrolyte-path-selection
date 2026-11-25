@@ -63,32 +63,28 @@ def load_frozen_data(bundle, project):
                         for i, _, _, header, _ in raw_frames(z, f"nebDFT2k/{edge}_relaxed.xyz")}
             if sorted(energies) != list(range(1, int(r["images"]) + 1)):
                 raise ValueError(f"Incomplete DFT path: {edge}")
-            truth[r["panel"], edge] = max(energies.values()) - energies[1]
+            curve = np.array([energies[i] for i in sorted(energies)])
+            truth[r["panel"], edge] = curve - curve[0]
     return frames, schedules, truth
 
 
-def extract(args):
-    frames, schedules, truth = load_frozen_data(args.bundle, args.project)
-    bundle_hash = file_sha(args.bundle)
+def trajectory_profiles(bundle, predictions, project):
+    frames, schedules, truth = load_frozen_data(bundle, project)
+    bundle_hash = file_sha(bundle)
 
     def key(row):
         return row["panel"], row["edge_id"], row["material_id"], int(row["frame"])
 
     expected = {key(r) for r in frames}
     material_ids = {(panel, edge): material for panel, edge, material, _ in expected}
-    # Validate signed derivation against the previously published absolute differences.
-    with args.absolute.open(newline="", encoding="utf-8") as f:
-        old = {(r["panel"], int(r["step"]), int(r["seed"]), r["edge"]): float(r["delta_meV"])
-               for r in csv.DictReader(f)}
-    signed = []
-    with tarfile.open(args.predictions, "r:*") as z:
+    with tarfile.open(predictions, "r:*") as z:
         def read(member):
             with z.extractfile(member) as f:
                 return f.read()
 
         for step in STEPS:
             for seed in SEEDS:
-                errors = {}
+                profiles = {}
                 for arm in ARMS:
                     path = f"results/seed{seed}/{arm}/step{step:04}"
                     record = json.loads(read(f"{path}/result.json"))
@@ -109,12 +105,26 @@ def extract(args):
                         if not np.isfinite(val):
                             raise ValueError(f"Nonfinite energy: {path}/{edge}")
                         energy[panel, edge][i] = val
-                    errors[arm] = {k: 1000 * (max(e.values()) - e[1] - truth[k]) for k, e in energy.items()}
-                for panel, edge in sorted(truth):
-                    r, a = (errors[arm][panel, edge] for arm in ARMS)
-                    np.testing.assert_allclose(abs(a) - abs(r), old[panel, step, seed, edge],
-                                               atol=1e-8, rtol=0)
-                    signed.append([panel, step, seed, edge, material_ids[panel, edge], r, a])
+                    profiles[arm] = {
+                        k: np.array([values[i] for i in sorted(values)]) - values[1]
+                        for k, values in energy.items()
+                    }
+                yield step, seed, profiles, material_ids, truth
+
+
+def extract(args):
+    # Validate signed derivation against the previously published absolute differences.
+    with args.absolute.open(newline="", encoding="utf-8") as f:
+        old = {(r["panel"], int(r["step"]), int(r["seed"]), r["edge"]): float(r["delta_meV"])
+               for r in csv.DictReader(f)}
+    signed = []
+    for step, seed, profiles, material_ids, truth in trajectory_profiles(args.bundle, args.predictions, args.project):
+        for panel, edge in sorted(truth):
+            key = (panel, edge)
+            barrier = max(truth[key])
+            r, a = (1000 * (max(profiles[arm][key]) - barrier) for arm in ARMS)
+            np.testing.assert_allclose(abs(a) - abs(r), old[panel, step, seed, edge], atol=1e-8, rtol=0)
+            signed.append([panel, step, seed, edge, material_ids[key], r, a])
     if len(signed) != len(old):
         raise ValueError("Signed coverage differs from the earlier score audit")
     with args.output.open("w", newline="", encoding="utf-8") as f:
