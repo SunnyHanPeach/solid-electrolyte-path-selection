@@ -208,7 +208,8 @@ def score(args):
     if len(env)!=1:
         raise ValueError("Scoring requires a common run environment")
     edge_order = sorted(e for _,e in refs)
-    metadata = {r["edge_id"]:r for r in rows(files["evaluation_panels.csv"])}
+    with ZipFile(args.bundle) as archive:
+        metadata = {r["edge_id"]: r for r in rows(archive.read("evaluation_panels.csv"))}
     families = sorted({metadata[e]["chemsys"] for e in edge_order})
     cluster = np.array([families.index(metadata[e]["chemsys"]) for e in edge_order])
     weights = np.random.default_rng(20261125).multinomial(
