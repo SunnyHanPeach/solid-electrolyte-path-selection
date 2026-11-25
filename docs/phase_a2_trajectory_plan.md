@@ -30,3 +30,12 @@ Pair stages by edge, representation and setting. Report both excess-peak change 
 ## Outputs
 
 Produce the parameter and reference tables with image identities, peak and stage comparison tables, robustness summary, alignment table, and a report with observed runtime and input provenance. Compare A2 baseline profiles to A1 before interpreting the results.
+
+## Reproduction
+
+Use the [A1 environment](phase_a1_descriptors.md), the original three source inputs, and a new output directory. The A0–A1 result directories and checkpoint ZIP are read-only inputs. One SOAP worker is supported on hosts without process spawning.
+
+```text
+python -m unittest discover -s tests -v
+python src/phase_a2_robustness.py NEB_ZIP INDEX_CSV PHASE1_BUNDLE RESULTS_A0 RESULTS_A01 RESULTS_A1 CHECKPOINTS_ZIP NEW_RESULTS_A2 --soap-workers 4 --threads 4
+```

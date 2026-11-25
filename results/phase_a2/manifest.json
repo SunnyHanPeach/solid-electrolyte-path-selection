@@ -1,0 +1,173 @@
+{
+  "quota_per_material": 8,
+  "draws": 16,
+  "seed": 20261126,
+  "raw_environments": 9517,
+  "deduplicated_environments": 2469,
+  "materials": 50,
+  "index_sha256": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7",
+  "soap_parameters": {
+    "baseline": {
+      "r_cut": 4.0,
+      "n_max": 5,
+      "l_max": 3,
+      "sigma": 0.4,
+      "periodic": true,
+      "dtype": "float64"
+    },
+    "cutoff_3.5": {
+      "r_cut": 3.5,
+      "n_max": 5,
+      "l_max": 3,
+      "sigma": 0.4,
+      "periodic": true,
+      "dtype": "float64"
+    },
+    "cutoff_4.5": {
+      "r_cut": 4.5,
+      "n_max": 5,
+      "l_max": 3,
+      "sigma": 0.4,
+      "periodic": true,
+      "dtype": "float64"
+    },
+    "sigma_0.30": {
+      "r_cut": 4.0,
+      "n_max": 5,
+      "l_max": 3,
+      "sigma": 0.3,
+      "periodic": true,
+      "dtype": "float64"
+    },
+    "sigma_0.50": {
+      "r_cut": 4.0,
+      "n_max": 5,
+      "l_max": 3,
+      "sigma": 0.5,
+      "periodic": true,
+      "dtype": "float64"
+    },
+    "n_4": {
+      "r_cut": 4.0,
+      "n_max": 4,
+      "l_max": 3,
+      "sigma": 0.4,
+      "periodic": true,
+      "dtype": "float64"
+    },
+    "n_6": {
+      "r_cut": 4.0,
+      "n_max": 6,
+      "l_max": 3,
+      "sigma": 0.4,
+      "periodic": true,
+      "dtype": "float64"
+    },
+    "l_2": {
+      "r_cut": 4.0,
+      "n_max": 5,
+      "l_max": 2,
+      "sigma": 0.4,
+      "periodic": true,
+      "dtype": "float64"
+    },
+    "l_4": {
+      "r_cut": 4.0,
+      "n_max": 5,
+      "l_max": 4,
+      "sigma": 0.4,
+      "periodic": true,
+      "dtype": "float64"
+    },
+    "cutoff_3.5_sigma_0.30": {
+      "r_cut": 3.5,
+      "n_max": 5,
+      "l_max": 3,
+      "sigma": 0.3,
+      "periodic": true,
+      "dtype": "float64"
+    }
+  },
+  "rdf_parameters": {
+    "baseline": [
+      0.15,
+      0.12
+    ],
+    "grid_0.10": [
+      0.1,
+      0.12
+    ],
+    "grid_0.20": [
+      0.2,
+      0.12
+    ],
+    "sigma_0.08": [
+      0.15,
+      0.08
+    ],
+    "sigma_0.18": [
+      0.15,
+      0.18
+    ]
+  },
+  "coordination_parameters": {
+    "baseline": 3.0,
+    "cutoff_2.8": 2.8,
+    "cutoff_3.2": 3.2
+  },
+  "mace_layers": [
+    "baseline",
+    "layer_1",
+    "layer_2"
+  ],
+  "a1_baseline_max_abs_difference": {
+    "coordination_hard": 0.0,
+    "coordination_smooth": 4.440892098500626e-16,
+    "mace_invariants": 7.771561172376096e-16,
+    "rdf_elements": 5.551115123125783e-16,
+    "rdf_geometry": 6.661338147750939e-16,
+    "soap_elements": 1.3322676295501878e-15,
+    "soap_geometry": 7.771561172376096e-16
+  },
+  "elapsed_seconds": 185.11077490029857,
+  "component_wall_seconds": {
+    "radial_and_coordination": 7.227629099972546,
+    "mace": 172.27537400042638,
+    "soap_baseline": 1.7560729999095201,
+    "soap_cutoff_3.5": 1.4971889001317322,
+    "soap_cutoff_4.5": 1.7440992998890579,
+    "soap_sigma_0.30": 1.5299110999330878,
+    "soap_sigma_0.50": 1.520319000352174,
+    "soap_n_4": 1.1614958001300693,
+    "soap_n_6": 2.0119783002883196,
+    "soap_l_2": 1.168015199713409,
+    "soap_l_4": 1.8855039002373815,
+    "soap_cutoff_3.5_sigma_0.30": 1.380244500003755
+  },
+  "soap_workers": 4,
+  "torch_threads": 4,
+  "reference_exclusions": {
+    "mp-753143_5_13_0_0_0": {
+      "exclude_target_material": 0,
+      "exclude_exact_chemistry": 0,
+      "exclude_anion_family": 1957
+    },
+    "mp-1177833_2_3_0_0_1": {
+      "exclude_target_material": 0,
+      "exclude_exact_chemistry": 0,
+      "exclude_anion_family": 1327
+    },
+    "mp-768690_0_0_1_0_0": {
+      "exclude_target_material": 0,
+      "exclude_exact_chemistry": 0,
+      "exclude_anion_family": 1327
+    }
+  },
+  "inputs_sha256": {
+    "a0_manifest": "75f4303c22cf3218dc4488e34fdb6a3a1f2ce7c88b5c8122d9f0f553ea1ad63e",
+    "a01_representatives": "fd42a5cd62a40056774f64ca3c7961aa244dae2fe82527a6b767cc62bd9965e2",
+    "a1_manifest": "f779833458644e6cba6e67605009585862d99ed74e220832877f3e7451acfcf9",
+    "a1_profiles": "83ab150a5c943c3ee83575cb3ae45ee6c1466e4fcfbc58b3fc124427b2e07d2a"
+  },
+  "mace_checkpoint_sha256": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a"
+}
