@@ -1,0 +1,44 @@
+{
+  "mp-1277232_0_3_0_0_0": {
+    "absolute": {
+      "favorable_materials": 39,
+      "median_meV": -1.52587890625,
+      "loo_min": -5.954391247298828,
+      "loo_max": -4.149439645490652
+    },
+    "net": {
+      "favorable_materials": 39,
+      "median_meV": -0.8951822916666666,
+      "loo_min": -4.772872515969775,
+      "loo_max": -3.208606718996504
+    }
+  },
+  "mp-13725_0_4_1_0_0": {
+    "absolute": {
+      "favorable_materials": 41,
+      "median_meV": -0.3865559895833333,
+      "loo_min": -1.0029534873722485,
+      "loo_max": -0.7378920069280663
+    },
+    "net": {
+      "favorable_materials": 46,
+      "median_meV": -0.040690104166666664,
+      "loo_min": -0.2325235161163237,
+      "loo_max": 0.009121960986663756
+    }
+  },
+  "mp-753143_5_13_0_0_0": {
+    "absolute": {
+      "favorable_materials": 49,
+      "median_meV": 0.0,
+      "loo_min": -0.0688085016214622,
+      "loo_max": 0.2083448494005504
+    },
+    "net": {
+      "favorable_materials": 71,
+      "median_meV": 0.54931640625,
+      "loo_min": 1.0121663411458328,
+      "loo_max": 1.2707980173938673
+    }
+  }
+}
