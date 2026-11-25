@@ -1,0 +1,51 @@
+{
+  "case": "v2.0/pair_1",
+  "priority_edge": "mp-1177833_2_3_0_0_1",
+  "matched_alternative_edge": "mp-771389_2_3_0_0_0",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "selection": "Fixed-geometry, project-held-out audit. Candidate P had negative mean effects in all three historical panels.",
+  "primary": "P minus archived pure D0 forward barrier MAE. Q is a matched alternative and diagnostic.",
+  "gate": "Upper paired 95% interval below -0.25 meV, all three seed means below zero and all leave-one-material-out means below zero.",
+  "stop": "Run exposure-matched retraining only when the archived-weight audit supports a repeatable improvement.",
+  "historical_edges": {
+    "training": 125,
+    "evaluated": 734
+  },
+  "unique_excluded_materials": 733,
+  "pool_materials": 108,
+  "near_exclusions": 0,
+  "near_pairs": 0,
+  "structures_scanned": 5701,
+  "duplicate_scan_passes": 3,
+  "materially_distinct_paths": 107,
+  "material_families": {
+    "O": 61,
+    "S": 12,
+    "F": 12,
+    "F-O": 18,
+    "N": 3,
+    "O-S": 1
+  },
+  "chemistry_new_vs_project_training": 29,
+  "exact_chemistry_cap": 4,
+  "images": 595,
+  "caveat": "Source Train split, project-held-out by the audited inventory. No foundation-pretraining isolation claim.",
+  "source_sha256": {
+    "init_features": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7",
+    "archive": "b7a99d89337902e9e1da319f57547170fdb132bf15bf6ffef03a0140e2207d7f",
+    "historical_pair_data": "247c55b481a0d53b9a797f142303ef0248e084c817850d032deaec170bfe7f48",
+    "matcher": "1b7912a7181074ae17d374932d87a2cceb52e6314eacb70ba8cb4cc297c37f4c",
+    "MACE_\u72ec\u7acb\u6750\u6599\u8bc4\u4f30\u9762\u677f_\u9501\u5b9a.zip": "84e80a4fb6d0e6f0850f6c3352d0476c926a928ee9cbfe8332911abf3278800a",
+    "MACE_protected_D0_night_GPU_bundle.zip": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+    "LiNiOTi_\u72ec\u7acb\u4e0e\u8865\u5145\u9762\u677f_\u76f2\u5316\u9501\u5b9a.zip": "17690b82d9b42f782c124fceb32440969b468b4a7c35576ff9c24f17548c6ad2"
+  },
+  "assets_sha256": {
+    "panel.csv": "00c08a0afe2ecb332a77fffdbe130b0fffd096e8bf4ab518f208c740f375e5eb",
+    "frames.csv": "7d788a2e3885140eadf7d47367cd3465c01d47c2a6f43de3d246e9e33d7fe558",
+    "blind.xyz": "9f2f6691dc40d6206c391c3d9439be6e4ed986e7062946c5ed7f611a76fcd98e"
+  }
+}
