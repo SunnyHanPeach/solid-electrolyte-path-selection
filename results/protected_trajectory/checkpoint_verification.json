@@ -1,0 +1,225 @@
+{
+  "archive": "trajectory_checkpoints.tar.xz",
+  "sha256": "9f66d1d44e1731ef554a7b62ecba320412226ae365c55b5e07cc6aedc9cbc370",
+  "checkpoints": 24,
+  "device": "cpu",
+  "torch_version": "2.10.0+cpu",
+  "records": [
+    {
+      "seed": 17,
+      "arm": "protected_replay",
+      "step": 8,
+      "bytes": 47028471,
+      "sha256": "cd3ddb26db7e139c89c4bfac7ba01054dd1ec3e284f2e4c296b105f20a46ff43",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 17,
+      "arm": "protected_replay",
+      "step": 64,
+      "bytes": 47030903,
+      "sha256": "ca48b38a36769fb073b88e676a08578ee4397d778841226d14d238d654e5c488",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 17,
+      "arm": "protected_replay",
+      "step": 200,
+      "bytes": 47036727,
+      "sha256": "3879afc8b864795982a59717ac443be2a91422de8495f9dab7d457fae7cf0aa3",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 17,
+      "arm": "protected_replay",
+      "step": 400,
+      "bytes": 47045495,
+      "sha256": "c0bf1a495dbe3d5fd11b8ddaab9f4625a1f7e2018fe83a63d096401dd427f767",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 17,
+      "arm": "protected_replay",
+      "step": 600,
+      "bytes": 47054327,
+      "sha256": "81ec1cb505a7b43872d2486426ecf4a5b15f653028efe2891244b3660d4db524",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 17,
+      "arm": "protected_replay",
+      "step": 807,
+      "bytes": 47063415,
+      "sha256": "3d576110c5007dd0d3378c396a6a712cab2ced6f2d3e82a5d588898ee7a139eb",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 17,
+      "arm": "protected8_batch1_random",
+      "step": 8,
+      "bytes": 47028471,
+      "sha256": "e3f6a058babd4dcadcd345aef280f4897a86704ea74731c3054716abdb1f58ad",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 17,
+      "arm": "protected8_batch1_random",
+      "step": 64,
+      "bytes": 47030903,
+      "sha256": "715758f0e42978036b74a996cad345350dba85b9068cef660ddf68f303307f0c",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 17,
+      "arm": "protected8_batch1_random",
+      "step": 200,
+      "bytes": 47036727,
+      "sha256": "6cb47359c3fb8e10302ea22e962d914b3a45d14cd146113ac40f804504441231",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 17,
+      "arm": "protected8_batch1_random",
+      "step": 400,
+      "bytes": 47045495,
+      "sha256": "8710faba9d3485c3d1a7e2a7a57328f34e017912ee23d38bdbc1c59259cb7344",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 17,
+      "arm": "protected8_batch1_random",
+      "step": 600,
+      "bytes": 47054327,
+      "sha256": "34b19c4fa0ce7555d209dfe0088bd5fce0e43fc1cb34ff9f80b1ec664d9b75b5",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 17,
+      "arm": "protected8_batch1_random",
+      "step": 807,
+      "bytes": 47063415,
+      "sha256": "27f9b83c3f6a75b1ccc72c5e2ba7a90faf728f424b26df18c57f1f2f59b42c0d",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected_replay",
+      "step": 8,
+      "bytes": 47028471,
+      "sha256": "db9c48b7bb2fe5530277842fd958f4b2ce04cf9777bd7d7fbcbe143cd88299f2",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected_replay",
+      "step": 64,
+      "bytes": 47030903,
+      "sha256": "f546d8d332e50fe9bd9b797ba509d5684423f1857e534af6b25b2ead421bfc13",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected_replay",
+      "step": 200,
+      "bytes": 47036727,
+      "sha256": "eb6648d6a08aeab4a17be39ded545aa89e64fc3b5b411ffec18296ac73f68d90",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected_replay",
+      "step": 400,
+      "bytes": 47045495,
+      "sha256": "e9077d9beb4bbd194b4844bf975c9f3bac82225fae5bafbf941d59fae9c5f7ae",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected_replay",
+      "step": 600,
+      "bytes": 47054327,
+      "sha256": "3db9bbeac73f713ce6368f729a854bb853ded66a904cf0db1917543277a31494",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected_replay",
+      "step": 807,
+      "bytes": 47063415,
+      "sha256": "fd314f350cfd802971c8ff3bf2c0da859435734653ef6b1ae83c415bde827f6b",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected8_batch1_random",
+      "step": 8,
+      "bytes": 47028471,
+      "sha256": "2dbd15b02d4a8f5954c43e555a78ffdd275049f80ba6b6e81bea7dd1e29e9ef5",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected8_batch1_random",
+      "step": 64,
+      "bytes": 47030903,
+      "sha256": "1c27a1cbd22e91844ee2df5a05267d826d543e3a60887a1e4d6feec57848c3e8",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected8_batch1_random",
+      "step": 200,
+      "bytes": 47036727,
+      "sha256": "a19fe7c8908f8faaa181b953ed99437f8bf2e419317ab2d48e05dc5a68c7be31",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected8_batch1_random",
+      "step": 400,
+      "bytes": 47045495,
+      "sha256": "8df49f067a220140c554d5eb74fe4f41aa50855da60db1ad2070d2760817e21e",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected8_batch1_random",
+      "step": 600,
+      "bytes": 47054327,
+      "sha256": "28e991ff40f76b5defac2c5f6d09a450f3986a2b5085dec7ef7f737b7d61b320",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    },
+    {
+      "seed": 29,
+      "arm": "protected8_batch1_random",
+      "step": 807,
+      "bytes": 47063415,
+      "sha256": "13c5b643ce88b1351b071579a2637d809e89bfd7531b63bf25be08840f5ff368",
+      "model_tensors": 69,
+      "adam_parameter_states": 26
+    }
+  ]
+}

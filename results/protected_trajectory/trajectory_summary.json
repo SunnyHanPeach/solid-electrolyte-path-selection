@@ -1,0 +1,187 @@
+{
+  "loss": "forward barrier MAE, augmented minus exposure-matched replay",
+  "interval": "paired bootstrap over materials conditional on the two frozen seeds",
+  "earliest_two_consecutive_positive_checkpoints": 400,
+  "evaluations": [
+    {
+      "panel": "primary91",
+      "step": 8,
+      "n_materials": 91,
+      "delta_meV": 0.0758069741595546,
+      "interval_95_meV": [
+        -0.3053434602506868,
+        0.44524352502841263
+      ],
+      "seed_deltas_meV": [
+        0.12210244419823009,
+        0.02951150412087912
+      ],
+      "both_seeds_and_interval_above_025": false
+    },
+    {
+      "panel": "historical_support",
+      "step": 8,
+      "n_materials": 88,
+      "delta_meV": 0.6566561740932932,
+      "interval_95_meV": [
+        0.14777681753511987,
+        1.1954420983189158
+      ],
+      "seed_deltas_meV": [
+        1.2547426260622077,
+        0.05856972212437871
+      ],
+      "both_seeds_and_interval_above_025": false
+    },
+    {
+      "panel": "primary91",
+      "step": 64,
+      "n_materials": 91,
+      "delta_meV": -2.7620188783480395,
+      "interval_95_meV": [
+        -6.151829555889464,
+        0.2674417774831843
+      ],
+      "seed_deltas_meV": [
+        -3.2077200412084412,
+        -2.3163177154876373
+      ],
+      "both_seeds_and_interval_above_025": false
+    },
+    {
+      "panel": "historical_support",
+      "step": 64,
+      "n_materials": 88,
+      "delta_meV": -1.8503446626451394,
+      "interval_95_meV": [
+        -7.619663795676568,
+        3.137725547723453
+      ],
+      "seed_deltas_meV": [
+        -1.599961805755935,
+        -2.100727519534344
+      ],
+      "both_seeds_and_interval_above_025": false
+    },
+    {
+      "panel": "primary91",
+      "step": 200,
+      "n_materials": 91,
+      "delta_meV": 6.372819752746532,
+      "interval_95_meV": [
+        -5.951642181931689,
+        17.10209242593949
+      ],
+      "seed_deltas_meV": [
+        5.9558369127749,
+        6.789802592718163
+      ],
+      "both_seeds_and_interval_above_025": false
+    },
+    {
+      "panel": "historical_support",
+      "step": 200,
+      "n_materials": 88,
+      "delta_meV": -9.277114960936347,
+      "interval_95_meV": [
+        -33.20849448098887,
+        8.013734501453417
+      ],
+      "seed_deltas_meV": [
+        -10.243273741121005,
+        -8.310956180751687
+      ],
+      "both_seeds_and_interval_above_025": false
+    },
+    {
+      "panel": "primary91",
+      "step": 400,
+      "n_materials": 91,
+      "delta_meV": 19.208455652902174,
+      "interval_95_meV": [
+        1.6989536193233685,
+        37.7394537970591
+      ],
+      "seed_deltas_meV": [
+        16.484978253778046,
+        21.9319330520263
+      ],
+      "both_seeds_and_interval_above_025": true
+    },
+    {
+      "panel": "historical_support",
+      "step": 400,
+      "n_materials": 88,
+      "delta_meV": -12.588728063297532,
+      "interval_95_meV": [
+        -41.11903684270702,
+        8.983100617935705
+      ],
+      "seed_deltas_meV": [
+        -14.511770084340014,
+        -10.66568604225505
+      ],
+      "both_seeds_and_interval_above_025": false
+    },
+    {
+      "panel": "primary91",
+      "step": 600,
+      "n_materials": 91,
+      "delta_meV": 24.101495466603176,
+      "interval_95_meV": [
+        6.631820463051593,
+        43.23392321191377
+      ],
+      "seed_deltas_meV": [
+        24.66268389680583,
+        23.540307036400517
+      ],
+      "both_seeds_and_interval_above_025": true
+    },
+    {
+      "panel": "historical_support",
+      "step": 600,
+      "n_materials": 88,
+      "delta_meV": -8.718945284090038,
+      "interval_95_meV": [
+        -34.58493701238732,
+        12.592156200684549
+      ],
+      "seed_deltas_meV": [
+        -8.529341684126477,
+        -8.9085488840536
+      ],
+      "both_seeds_and_interval_above_025": false
+    },
+    {
+      "panel": "primary91",
+      "step": 807,
+      "n_materials": 91,
+      "delta_meV": 30.085087421015995,
+      "interval_95_meV": [
+        10.483966797775869,
+        51.44096845433789
+      ],
+      "seed_deltas_meV": [
+        30.82622860405171,
+        29.343946237980283
+      ],
+      "both_seeds_and_interval_above_025": true
+    },
+    {
+      "panel": "historical_support",
+      "step": 807,
+      "n_materials": 88,
+      "delta_meV": -2.3962802814245587,
+      "interval_95_meV": [
+        -27.476228962230596,
+        18.38532177160462
+      ],
+      "seed_deltas_meV": [
+        -2.2133636470145617,
+        -2.5791969158345553
+      ],
+      "both_seeds_and_interval_above_025": false
+    }
+  ]
+}

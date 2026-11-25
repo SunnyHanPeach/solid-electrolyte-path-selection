@@ -1,0 +1,358 @@
+panel,pair_key,method,vs_D0_meV
+main96,v2.0/pair_1,BVSE,-13.848332410076361
+main96,v2.0/pair_2,BVSE,-0.14444454644133328
+main96,v3.0/pair_1,BVSE,-0.6769127064348228
+main96,v3.0/pair_2,BVSE,0.41038197808123617
+main96,v4.0/pair_01,BVSE,-0.1414245777727135
+main96,v4.0/pair_02,BVSE,0.01762504435139552
+main96,v4.0/pair_03,BVSE,0.6237370332833336
+main96,v4.0/pair_04,BVSE,0.3053373280160877
+main96,v4.0/pair_05,BVSE,0.49646888549680235
+main96,v4.0/pair_06,BVSE,-1.671661606987445
+main96,v4.0/pair_07,BVSE,0.3372343048763721
+main96,v4.0/pair_08,BVSE,0.5838655900056722
+main96,v4.0/pair_09,BVSE,-0.5909371893986461
+main96,v4.0/pair_10,BVSE,-11.33417329820574
+main96,v4.0/pair_11,BVSE,0.7818250576438541
+main96,v4.0/pair_12,BVSE,-2.8322513001851255
+main96,v4.0/pair_13,BVSE,-0.19327035834414297
+main96,v2.0/pair_1,BVSE + D0 coverage,-10.385669842259501
+main96,v2.0/pair_2,BVSE + D0 coverage,-0.1716242644589114
+main96,v3.0/pair_1,BVSE + D0 coverage,-0.6769127064348228
+main96,v3.0/pair_2,BVSE + D0 coverage,-0.14735855129701905
+main96,v4.0/pair_01,BVSE + D0 coverage,-0.030215556098451342
+main96,v4.0/pair_02,BVSE + D0 coverage,0.01762504435139552
+main96,v4.0/pair_03,BVSE + D0 coverage,0.6237370332833336
+main96,v4.0/pair_04,BVSE + D0 coverage,0.3053373280160877
+main96,v4.0/pair_05,BVSE + D0 coverage,0.49646888549680235
+main96,v4.0/pair_06,BVSE + D0 coverage,-1.4264613438581049
+main96,v4.0/pair_07,BVSE + D0 coverage,0.3372343048763721
+main96,v4.0/pair_08,BVSE + D0 coverage,0.5838655900056722
+main96,v4.0/pair_09,BVSE + D0 coverage,-0.7752858213980258
+main96,v4.0/pair_10,BVSE + D0 coverage,-11.33417329820574
+main96,v4.0/pair_11,BVSE + D0 coverage,0.7818250576438541
+main96,v4.0/pair_12,BVSE + D0 coverage,-2.8322513001851255
+main96,v4.0/pair_13,BVSE + D0 coverage,-0.19327035834414297
+main96,v2.0/pair_1,BVSE + target coverage,-13.848332410076361
+main96,v2.0/pair_2,BVSE + target coverage,-0.1716242644589114
+main96,v3.0/pair_1,BVSE + target coverage,-0.09437664483000516
+main96,v3.0/pair_2,BVSE + target coverage,0.41038197808123617
+main96,v4.0/pair_01,BVSE + target coverage,-0.1414245777727135
+main96,v4.0/pair_02,BVSE + target coverage,0.01762504435139552
+main96,v4.0/pair_03,BVSE + target coverage,0.6237370332833336
+main96,v4.0/pair_04,BVSE + target coverage,0.3053373280160877
+main96,v4.0/pair_05,BVSE + target coverage,0.49646888549680235
+main96,v4.0/pair_06,BVSE + target coverage,-1.671661606987445
+main96,v4.0/pair_07,BVSE + target coverage,0.3372343048763721
+main96,v4.0/pair_08,BVSE + target coverage,0.5838655900056722
+main96,v4.0/pair_09,BVSE + target coverage,-0.5909371893986461
+main96,v4.0/pair_10,BVSE + target coverage,-11.33417329820574
+main96,v4.0/pair_11,BVSE + target coverage,0.7818250576438541
+main96,v4.0/pair_12,BVSE + target coverage,-2.8322513001851255
+main96,v4.0/pair_13,BVSE + target coverage,-0.19327035834414297
+main96,v2.0/pair_1,Structural novelty,-13.848332410076361
+main96,v2.0/pair_2,Structural novelty,-0.14444454644133328
+main96,v3.0/pair_1,Structural novelty,-0.09437664483000516
+main96,v3.0/pair_2,Structural novelty,0.41038197808123617
+main96,v4.0/pair_01,Structural novelty,-0.1414245777727135
+main96,v4.0/pair_02,Structural novelty,0.255937659640024
+main96,v4.0/pair_03,Structural novelty,0.8592716781943781
+main96,v4.0/pair_04,Structural novelty,0.3381146576602292
+main96,v4.0/pair_05,Structural novelty,1.4745948299138927
+main96,v4.0/pair_06,Structural novelty,-1.671661606987445
+main96,v4.0/pair_07,Structural novelty,0.38075587185244014
+main96,v4.0/pair_08,Structural novelty,0.5838655900056722
+main96,v4.0/pair_09,Structural novelty,-0.5909371893986461
+main96,v4.0/pair_10,Structural novelty,-9.773094734837587
+main96,v4.0/pair_11,Structural novelty,2.892744809568705
+main96,v4.0/pair_12,Structural novelty,-2.8322513001851255
+main96,v4.0/pair_13,Structural novelty,-0.2680950115284809
+main96,v2.0/pair_1,Force disagreement,-13.848332410076361
+main96,v2.0/pair_2,Force disagreement,-0.14444454644133328
+main96,v3.0/pair_1,Force disagreement,-0.6769127064348228
+main96,v3.0/pair_2,Force disagreement,0.41038197808123617
+main96,v4.0/pair_01,Force disagreement,-0.1414245777727135
+main96,v4.0/pair_02,Force disagreement,0.01762504435139552
+main96,v4.0/pair_03,Force disagreement,0.6237370332833336
+main96,v4.0/pair_04,Force disagreement,0.3053373280160877
+main96,v4.0/pair_05,Force disagreement,0.49646888549680235
+main96,v4.0/pair_06,Force disagreement,-1.671661606987445
+main96,v4.0/pair_07,Force disagreement,0.38075587185244014
+main96,v4.0/pair_08,Force disagreement,0.5838655900056722
+main96,v4.0/pair_09,Force disagreement,-0.7752858213980258
+main96,v4.0/pair_10,Force disagreement,-9.773094734837587
+main96,v4.0/pair_11,Force disagreement,0.7818250576438541
+main96,v4.0/pair_12,Force disagreement,-2.8322513001851255
+main96,v4.0/pair_13,Force disagreement,-0.19327035834414297
+main96,v2.0/pair_1,Random,-12.117001126167931
+main96,v2.0/pair_2,Random,-0.15803440545012234
+main96,v3.0/pair_1,Random,-0.385644675632414
+main96,v3.0/pair_2,Random,0.13151171339210854
+main96,v4.0/pair_01,Random,-0.08582006693558242
+main96,v4.0/pair_02,Random,0.13678135199570976
+main96,v4.0/pair_03,Random,0.7415043557388559
+main96,v4.0/pair_04,Random,0.32172599283815845
+main96,v4.0/pair_05,Random,0.9855318577053476
+main96,v4.0/pair_06,Random,-1.549061475422775
+main96,v4.0/pair_07,Random,0.35899508836440613
+main96,v4.0/pair_08,Random,0.32770242723185244
+main96,v4.0/pair_09,Random,-0.683111505398336
+main96,v4.0/pair_10,Random,-10.553634016521663
+main96,v4.0/pair_11,Random,1.8372849336062795
+main96,v4.0/pair_12,Random,-2.8306226458071473
+main96,v4.0/pair_13,Random,-0.23068268493631194
+main96,v2.0/pair_1,Keep D0,0.0
+main96,v2.0/pair_2,Keep D0,0.0
+main96,v3.0/pair_1,Keep D0,0.0
+main96,v3.0/pair_2,Keep D0,0.0
+main96,v4.0/pair_01,Keep D0,0.0
+main96,v4.0/pair_02,Keep D0,0.0
+main96,v4.0/pair_03,Keep D0,0.0
+main96,v4.0/pair_04,Keep D0,0.0
+main96,v4.0/pair_05,Keep D0,0.0
+main96,v4.0/pair_06,Keep D0,0.0
+main96,v4.0/pair_07,Keep D0,0.0
+main96,v4.0/pair_08,Keep D0,0.0
+main96,v4.0/pair_09,Keep D0,0.0
+main96,v4.0/pair_10,Keep D0,0.0
+main96,v4.0/pair_11,Keep D0,0.0
+main96,v4.0/pair_12,Keep D0,0.0
+main96,v4.0/pair_13,Keep D0,0.0
+support112,v2.0/pair_1,BVSE,-6.2526691413230155
+support112,v2.0/pair_2,BVSE,1.510329146087418
+support112,v3.0/pair_1,BVSE,1.021321287084442
+support112,v3.0/pair_2,BVSE,1.7783636852437028
+support112,v4.0/pair_01,BVSE,1.2986515305281425
+support112,v4.0/pair_02,BVSE,0.29371264811166903
+support112,v4.0/pair_03,BVSE,2.0964157020774197
+support112,v4.0/pair_04,BVSE,2.042089051223056
+support112,v4.0/pair_05,BVSE,0.2290757591584311
+support112,v4.0/pair_06,BVSE,1.363939551940992
+support112,v4.0/pair_07,BVSE,1.4078437131456125
+support112,v4.0/pair_08,BVSE,2.118902407341731
+support112,v4.0/pair_09,BVSE,2.0181291509686616
+support112,v4.0/pair_10,BVSE,-4.289075323428159
+support112,v4.0/pair_11,BVSE,-6.255281512624476
+support112,v4.0/pair_12,BVSE,-6.793161448684481
+support112,v4.0/pair_13,BVSE,2.7142732281172735
+support112,v2.0/pair_1,BVSE + D0 coverage,-6.1725269924207415
+support112,v2.0/pair_2,BVSE + D0 coverage,1.4824909386608927
+support112,v3.0/pair_1,BVSE + D0 coverage,1.021321287084442
+support112,v3.0/pair_2,BVSE + D0 coverage,1.4272613240549281
+support112,v4.0/pair_01,BVSE + D0 coverage,1.417239010764536
+support112,v4.0/pair_02,BVSE + D0 coverage,0.29371264811166903
+support112,v4.0/pair_03,BVSE + D0 coverage,2.0964157020774197
+support112,v4.0/pair_04,BVSE + D0 coverage,2.042089051223056
+support112,v4.0/pair_05,BVSE + D0 coverage,0.2290757591584311
+support112,v4.0/pair_06,BVSE + D0 coverage,1.8090665902825602
+support112,v4.0/pair_07,BVSE + D0 coverage,1.4078437131456125
+support112,v4.0/pair_08,BVSE + D0 coverage,2.118902407341731
+support112,v4.0/pair_09,BVSE + D0 coverage,2.135749121904274
+support112,v4.0/pair_10,BVSE + D0 coverage,-4.289075323428159
+support112,v4.0/pair_11,BVSE + D0 coverage,-6.255281512624476
+support112,v4.0/pair_12,BVSE + D0 coverage,-6.793161448684481
+support112,v4.0/pair_13,BVSE + D0 coverage,2.7142732281172735
+support112,v2.0/pair_1,BVSE + target coverage,-6.2526691413230155
+support112,v2.0/pair_2,BVSE + target coverage,1.4824909386608927
+support112,v3.0/pair_1,BVSE + target coverage,1.3322837072158629
+support112,v3.0/pair_2,BVSE + target coverage,1.7783636852437028
+support112,v4.0/pair_01,BVSE + target coverage,1.2986515305281425
+support112,v4.0/pair_02,BVSE + target coverage,0.29371264811166903
+support112,v4.0/pair_03,BVSE + target coverage,2.0964157020774197
+support112,v4.0/pair_04,BVSE + target coverage,2.042089051223056
+support112,v4.0/pair_05,BVSE + target coverage,0.2290757591584311
+support112,v4.0/pair_06,BVSE + target coverage,1.363939551940992
+support112,v4.0/pair_07,BVSE + target coverage,1.4078437131456125
+support112,v4.0/pair_08,BVSE + target coverage,2.118902407341731
+support112,v4.0/pair_09,BVSE + target coverage,2.0181291509686616
+support112,v4.0/pair_10,BVSE + target coverage,-4.289075323428159
+support112,v4.0/pair_11,BVSE + target coverage,-6.255281512624476
+support112,v4.0/pair_12,BVSE + target coverage,-6.793161448684481
+support112,v4.0/pair_13,BVSE + target coverage,2.7142732281172735
+support112,v2.0/pair_1,Structural novelty,-6.2526691413230155
+support112,v2.0/pair_2,Structural novelty,1.510329146087418
+support112,v3.0/pair_1,Structural novelty,1.3322837072158629
+support112,v3.0/pair_2,Structural novelty,1.7783636852437028
+support112,v4.0/pair_01,Structural novelty,1.2986515305281425
+support112,v4.0/pair_02,Structural novelty,0.01178835495690713
+support112,v4.0/pair_03,Structural novelty,2.385709905596622
+support112,v4.0/pair_04,Structural novelty,1.92831028785314
+support112,v4.0/pair_05,Structural novelty,1.2099906739415527
+support112,v4.0/pair_06,Structural novelty,1.363939551940992
+support112,v4.0/pair_07,Structural novelty,1.5560074953486134
+support112,v4.0/pair_08,Structural novelty,2.118902407341731
+support112,v4.0/pair_09,Structural novelty,2.0181291509686616
+support112,v4.0/pair_10,Structural novelty,-5.0398224761676955
+support112,v4.0/pair_11,Structural novelty,-5.947082751696425
+support112,v4.0/pair_12,Structural novelty,-6.793161448684481
+support112,v4.0/pair_13,Structural novelty,2.2939753329582335
+support112,v2.0/pair_1,Force disagreement,-6.2526691413230155
+support112,v2.0/pair_2,Force disagreement,1.510329146087418
+support112,v3.0/pair_1,Force disagreement,1.021321287084442
+support112,v3.0/pair_2,Force disagreement,1.7783636852437028
+support112,v4.0/pair_01,Force disagreement,1.2986515305281425
+support112,v4.0/pair_02,Force disagreement,0.29371264811166903
+support112,v4.0/pair_03,Force disagreement,2.0964157020774197
+support112,v4.0/pair_04,Force disagreement,2.042089051223056
+support112,v4.0/pair_05,Force disagreement,0.2290757591584311
+support112,v4.0/pair_06,Force disagreement,1.363939551940992
+support112,v4.0/pair_07,Force disagreement,1.5560074953486134
+support112,v4.0/pair_08,Force disagreement,2.118902407341731
+support112,v4.0/pair_09,Force disagreement,2.135749121904274
+support112,v4.0/pair_10,Force disagreement,-5.0398224761676955
+support112,v4.0/pair_11,Force disagreement,-6.255281512624476
+support112,v4.0/pair_12,Force disagreement,-6.793161448684481
+support112,v4.0/pair_13,Force disagreement,2.7142732281172735
+support112,v2.0/pair_1,Random,-6.2125980668718785
+support112,v2.0/pair_2,Random,1.4964100423741553
+support112,v3.0/pair_1,Random,1.1768024971501525
+support112,v3.0/pair_2,Random,1.6028125046493154
+support112,v4.0/pair_01,Random,1.3579452706463393
+support112,v4.0/pair_02,Random,0.15275050153428807
+support112,v4.0/pair_03,Random,2.241062803837021
+support112,v4.0/pair_04,Random,1.985199669538098
+support112,v4.0/pair_05,Random,0.7195332165499919
+support112,v4.0/pair_06,Random,1.586503071111776
+support112,v4.0/pair_07,Random,1.481925604247113
+support112,v4.0/pair_08,Random,1.9688704904895968
+support112,v4.0/pair_09,Random,2.0769391364364678
+support112,v4.0/pair_10,Random,-4.664448899797927
+support112,v4.0/pair_11,Random,-6.101182132160451
+support112,v4.0/pair_12,Random,-6.852628023507702
+support112,v4.0/pair_13,Random,2.5041242805377535
+support112,v2.0/pair_1,Keep D0,0.0
+support112,v2.0/pair_2,Keep D0,0.0
+support112,v3.0/pair_1,Keep D0,0.0
+support112,v3.0/pair_2,Keep D0,0.0
+support112,v4.0/pair_01,Keep D0,0.0
+support112,v4.0/pair_02,Keep D0,0.0
+support112,v4.0/pair_03,Keep D0,0.0
+support112,v4.0/pair_04,Keep D0,0.0
+support112,v4.0/pair_05,Keep D0,0.0
+support112,v4.0/pair_06,Keep D0,0.0
+support112,v4.0/pair_07,Keep D0,0.0
+support112,v4.0/pair_08,Keep D0,0.0
+support112,v4.0/pair_09,Keep D0,0.0
+support112,v4.0/pair_10,Keep D0,0.0
+support112,v4.0/pair_11,Keep D0,0.0
+support112,v4.0/pair_12,Keep D0,0.0
+support112,v4.0/pair_13,Keep D0,0.0
+new106,v2.0/pair_1,BVSE,3.7523304213345336
+new106,v2.0/pair_2,BVSE,-0.06467811566458209
+new106,v3.0/pair_1,BVSE,-0.2789558434057579
+new106,v3.0/pair_2,BVSE,0.39338200275158314
+new106,v4.0/pair_01,BVSE,-0.047674826798053495
+new106,v4.0/pair_02,BVSE,0.6055830439266077
+new106,v4.0/pair_03,BVSE,1.0231189450668348
+new106,v4.0/pair_04,BVSE,1.1518984185826664
+new106,v4.0/pair_05,BVSE,1.4132112976605937
+new106,v4.0/pair_06,BVSE,-3.3755823548062835
+new106,v4.0/pair_07,BVSE,-0.1758955866745175
+new106,v4.0/pair_08,BVSE,0.9513269145535783
+new106,v4.0/pair_09,BVSE,-0.11725065325331543
+new106,v4.0/pair_10,BVSE,6.173735339034637
+new106,v4.0/pair_11,BVSE,10.976372332942898
+new106,v4.0/pair_12,BVSE,4.857589254618448
+new106,v4.0/pair_13,BVSE,-0.02843741819071751
+new106,v2.0/pair_1,BVSE + D0 coverage,-1.1822889121478237
+new106,v2.0/pair_2,BVSE + D0 coverage,-0.12139474670821417
+new106,v3.0/pair_1,BVSE + D0 coverage,-0.2789558434057579
+new106,v3.0/pair_2,BVSE + D0 coverage,0.1197879839822138
+new106,v4.0/pair_01,BVSE + D0 coverage,-0.12349748083725333
+new106,v4.0/pair_02,BVSE + D0 coverage,0.6055830439266077
+new106,v4.0/pair_03,BVSE + D0 coverage,1.0231189450668348
+new106,v4.0/pair_04,BVSE + D0 coverage,1.1518984185826664
+new106,v4.0/pair_05,BVSE + D0 coverage,1.4132112976605937
+new106,v4.0/pair_06,BVSE + D0 coverage,-2.2919289745490996
+new106,v4.0/pair_07,BVSE + D0 coverage,-0.1758955866745175
+new106,v4.0/pair_08,BVSE + D0 coverage,0.9513269145535783
+new106,v4.0/pair_09,BVSE + D0 coverage,-0.20461072769188568
+new106,v4.0/pair_10,BVSE + D0 coverage,6.173735339034637
+new106,v4.0/pair_11,BVSE + D0 coverage,10.976372332942898
+new106,v4.0/pair_12,BVSE + D0 coverage,4.857589254618448
+new106,v4.0/pair_13,BVSE + D0 coverage,-0.02843741819071751
+new106,v2.0/pair_1,BVSE + target coverage,3.7523304213345336
+new106,v2.0/pair_2,BVSE + target coverage,-0.12139474670821417
+new106,v3.0/pair_1,BVSE + target coverage,0.07247614116578298
+new106,v3.0/pair_2,BVSE + target coverage,0.39338200275158314
+new106,v4.0/pair_01,BVSE + target coverage,-0.047674826798053495
+new106,v4.0/pair_02,BVSE + target coverage,0.6055830439266077
+new106,v4.0/pair_03,BVSE + target coverage,1.0231189450668348
+new106,v4.0/pair_04,BVSE + target coverage,1.1518984185826664
+new106,v4.0/pair_05,BVSE + target coverage,1.4132112976605937
+new106,v4.0/pair_06,BVSE + target coverage,-3.3755823548062835
+new106,v4.0/pair_07,BVSE + target coverage,-0.1758955866745175
+new106,v4.0/pair_08,BVSE + target coverage,0.9513269145535783
+new106,v4.0/pair_09,BVSE + target coverage,-0.11725065325331543
+new106,v4.0/pair_10,BVSE + target coverage,6.173735339034637
+new106,v4.0/pair_11,BVSE + target coverage,10.976372332942898
+new106,v4.0/pair_12,BVSE + target coverage,4.857589254618448
+new106,v4.0/pair_13,BVSE + target coverage,-0.02843741819071751
+new106,v2.0/pair_1,Structural novelty,3.7523304213345336
+new106,v2.0/pair_2,Structural novelty,-0.06467811566458209
+new106,v3.0/pair_1,Structural novelty,0.07247614116578298
+new106,v3.0/pair_2,Structural novelty,0.39338200275158314
+new106,v4.0/pair_01,Structural novelty,-0.047674826798053495
+new106,v4.0/pair_02,Structural novelty,0.6803240109080297
+new106,v4.0/pair_03,Structural novelty,1.2422206687306414
+new106,v4.0/pair_04,Structural novelty,0.9300392799236447
+new106,v4.0/pair_05,Structural novelty,2.138819499557213
+new106,v4.0/pair_06,Structural novelty,-3.3755823548062835
+new106,v4.0/pair_07,Structural novelty,-0.12427376351245945
+new106,v4.0/pair_08,Structural novelty,0.9513269145535783
+new106,v4.0/pair_09,Structural novelty,-0.11725065325331543
+new106,v4.0/pair_10,Structural novelty,4.681387437844561
+new106,v4.0/pair_11,Structural novelty,13.757886434751075
+new106,v4.0/pair_12,Structural novelty,4.857589254618448
+new106,v4.0/pair_13,Structural novelty,-0.14351066799446136
+new106,v2.0/pair_1,Force disagreement,3.7523304213345336
+new106,v2.0/pair_2,Force disagreement,-0.06467811566458209
+new106,v3.0/pair_1,Force disagreement,-0.2789558434057579
+new106,v3.0/pair_2,Force disagreement,0.39338200275158314
+new106,v4.0/pair_01,Force disagreement,-0.047674826798053495
+new106,v4.0/pair_02,Force disagreement,0.6055830439266077
+new106,v4.0/pair_03,Force disagreement,1.0231189450668348
+new106,v4.0/pair_04,Force disagreement,1.1518984185826664
+new106,v4.0/pair_05,Force disagreement,1.4132112976605937
+new106,v4.0/pair_06,Force disagreement,-3.3755823548062835
+new106,v4.0/pair_07,Force disagreement,-0.12427376351245945
+new106,v4.0/pair_08,Force disagreement,0.9513269145535783
+new106,v4.0/pair_09,Force disagreement,-0.20461072769188568
+new106,v4.0/pair_10,Force disagreement,4.681387437844561
+new106,v4.0/pair_11,Force disagreement,10.976372332942898
+new106,v4.0/pair_12,Force disagreement,4.857589254618448
+new106,v4.0/pair_13,Force disagreement,-0.02843741819071751
+new106,v2.0/pair_1,Random,1.285020754593355
+new106,v2.0/pair_2,Random,-0.09303643118639812
+new106,v3.0/pair_1,Random,-0.10323985111998746
+new106,v3.0/pair_2,Random,0.25658499336689844
+new106,v4.0/pair_01,Random,-0.08558615381765342
+new106,v4.0/pair_02,Random,0.6429535274173187
+new106,v4.0/pair_03,Random,1.132669806898738
+new106,v4.0/pair_04,Random,1.0409688492531555
+new106,v4.0/pair_05,Random,1.7760153986089033
+new106,v4.0/pair_06,Random,-2.8337556646776916
+new106,v4.0/pair_07,Random,-0.15008467509348847
+new106,v4.0/pair_08,Random,0.20595800879521525
+new106,v4.0/pair_09,Random,-0.16093069047260056
+new106,v4.0/pair_10,Random,5.427561388439599
+new106,v4.0/pair_11,Random,12.367129383846986
+new106,v4.0/pair_12,Random,4.769059487887906
+new106,v4.0/pair_13,Random,-0.08597404309258944
+new106,v2.0/pair_1,Keep D0,0.0
+new106,v2.0/pair_2,Keep D0,0.0
+new106,v3.0/pair_1,Keep D0,0.0
+new106,v3.0/pair_2,Keep D0,0.0
+new106,v4.0/pair_01,Keep D0,0.0
+new106,v4.0/pair_02,Keep D0,0.0
+new106,v4.0/pair_03,Keep D0,0.0
+new106,v4.0/pair_04,Keep D0,0.0
+new106,v4.0/pair_05,Keep D0,0.0
+new106,v4.0/pair_06,Keep D0,0.0
+new106,v4.0/pair_07,Keep D0,0.0
+new106,v4.0/pair_08,Keep D0,0.0
+new106,v4.0/pair_09,Keep D0,0.0
+new106,v4.0/pair_10,Keep D0,0.0
+new106,v4.0/pair_11,Keep D0,0.0
+new106,v4.0/pair_12,Keep D0,0.0
+new106,v4.0/pair_13,Keep D0,0.0

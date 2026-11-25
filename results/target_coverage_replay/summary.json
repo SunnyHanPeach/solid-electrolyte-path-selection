@@ -1,0 +1,84 @@
+{
+  "scope": "Retrospective CPU; same path choice and atom-images proxy, not actual DFT core hours.",
+  "panel": "new106 historical",
+  "target_source": "holdout_v20_common96 initial geometries only",
+  "target_materials": 96,
+  "target_rejected": {},
+  "pairs": 17,
+  "groups": 16,
+  "best_after_the_fact_mean_meV": -0.3614792480723144,
+  "metrics": {
+    "Random": {
+      "mean_vs_D0_meV": 1.493606711155745,
+      "mean_three_way_regret_meV": 1.8550859592280595
+    },
+    "Keep D0": {
+      "mean_vs_D0_meV": 0.0,
+      "mean_three_way_regret_meV": 0.3614792480723144
+    },
+    "BVSE": {
+      "mean_vs_D0_meV": 1.76421101608749,
+      "mean_three_way_regret_meV": 2.1256902641598043
+    },
+    "BVSE + D0 coverage": {
+      "mean_vs_D0_meV": 1.5086545848218462,
+      "mean_three_way_regret_meV": 1.8701338328941604
+    },
+    "BVSE + target coverage": {
+      "mean_vs_D0_meV": 1.8736747458119523,
+      "mean_three_way_regret_meV": 2.235153993884267
+    },
+    "Structural novelty": {
+      "mean_vs_D0_meV": 1.740283040241761,
+      "mean_three_way_regret_meV": 2.1017622883140756
+    },
+    "Force disagreement": {
+      "mean_vs_D0_meV": 1.5107051187772098,
+      "mean_three_way_regret_meV": 1.872184366849524
+    }
+  },
+  "proposed_minus_baseline": {
+    "Random": {
+      "mean_group_paired_delta_meV": 0.4006592661309342,
+      "fixed_prediction_group_interval_95_meV": [
+        0.12281528563642458,
+        0.7653641592437991
+      ]
+    },
+    "Keep D0": {
+      "mean_group_paired_delta_meV": 1.9953321696578254,
+      "fixed_prediction_group_interval_95_meV": [
+        0.44357214065258016,
+        4.00239451050499
+      ]
+    },
+    "BVSE": {
+      "mean_group_paired_delta_meV": 0.11630521283224134,
+      "fixed_prediction_group_interval_95_meV": [
+        0.0,
+        0.28118730223065
+      ]
+    },
+    "BVSE + D0 coverage": {
+      "mean_group_paired_delta_meV": 0.38510391872578265,
+      "fixed_prediction_group_interval_95_meV": [
+        0.02019643786534489,
+        1.0381575682636672
+      ]
+    },
+    "Structural novelty": {
+      "mean_group_paired_delta_meV": 0.1381326481119615,
+      "fixed_prediction_group_interval_95_meV": [
+        -0.05150604906766842,
+        0.38247857504763877
+      ]
+    },
+    "Force disagreement": {
+      "mean_group_paired_delta_meV": 0.38292522639820886,
+      "fixed_prediction_group_interval_95_meV": [
+        0.067728336266074,
+        0.7983428253903051
+      ]
+    }
+  }
+}

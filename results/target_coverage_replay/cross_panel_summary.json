@@ -1,0 +1,206 @@
+{
+  "fit_panel": "main96",
+  "fixed_decisions_on": [
+    "support112",
+    "new106"
+  ],
+  "holdout": "Leave one connected chemical-system group out on main96; historical panels only.",
+  "groups": 16,
+  "panel_results": {
+    "main96": {
+      "BVSE": {
+        "mean_vs_D0_meV": -1.6398195748289164,
+        "mean_regret_meV": 0.23471686919135698,
+        "proposed_minus_baseline_group_weighted_meV": 0.03470977147420247,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.0050961971282958984,
+          0.1092255115509033
+        ]
+      },
+      "BVSE + D0 coverage": {
+        "mean_vs_D0_meV": -1.4604193999333133,
+        "mean_regret_meV": 0.4141170440869599,
+        "proposed_minus_baseline_group_weighted_meV": -0.1616638091023562,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.6530524584112838,
+          0.14098485310872394
+        ]
+      },
+      "BVSE + target coverage": {
+        "mean_vs_D0_meV": -1.607151554617902,
+        "mean_regret_meV": 0.2673848894023711,
+        "proposed_minus_baseline_group_weighted_meV": 0.0,
+        "proposed_minus_baseline_interval_95_meV": [
+          0.0,
+          0.0
+        ]
+      },
+      "Structural novelty": {
+        "mean_vs_D0_meV": -1.3040559380671246,
+        "mean_regret_meV": 0.5704805059531486,
+        "proposed_minus_baseline_group_weighted_meV": -0.32437736299721165,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.6634473122769275,
+          -0.050337867596968636
+        ]
+      },
+      "Force disagreement": {
+        "mean_vs_D0_meV": -1.5562753690439255,
+        "mean_regret_meV": 0.31826107497634776,
+        "proposed_minus_baseline_group_weighted_meV": -0.05981684192233079,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.2927022306315289,
+          0.10582804679870604
+        ]
+      },
+      "Random": {
+        "mean_vs_D0_meV": -1.3972102871411511,
+        "mean_regret_meV": 0.4773261568791223,
+        "proposed_minus_baseline_group_weighted_meV": -0.2271121792750439,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.5087799646497088,
+          0.00036432813672140777
+        ]
+      },
+      "Keep D0": {
+        "mean_vs_D0_meV": 0.0,
+        "mean_regret_meV": 1.8745364440202734,
+        "proposed_minus_baseline_group_weighted_meV": -1.6830920409145589,
+        "proposed_minus_baseline_interval_95_meV": [
+          -3.996003124663959,
+          0.07302525399624928
+        ]
+      }
+    },
+    "support112": {
+      "BVSE": {
+        "mean_vs_D0_meV": -0.21747885676656353,
+        "mean_regret_meV": 1.2213368919655605,
+        "proposed_minus_baseline_group_weighted_meV": 0.017695263294055977,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.005219663892473497,
+          0.05830545377464143
+        ]
+      },
+      "BVSE + D0 coverage": {
+        "mean_vs_D0_meV": -0.19497673501359022,
+        "mean_regret_meV": 1.243839013718534,
+        "proposed_minus_baseline_group_weighted_meV": -0.0025376169767403894,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.08496489621112599,
+          0.07868530549555906
+        ]
+      },
+      "BVSE + target coverage": {
+        "mean_vs_D0_meV": -0.2008244913133344,
+        "mean_regret_meV": 1.2379912574187897,
+        "proposed_minus_baseline_group_weighted_meV": 0.0,
+        "proposed_minus_baseline_interval_95_meV": [
+          0.0,
+          0.0
+        ]
+      },
+      "Structural novelty": {
+        "mean_vs_D0_meV": -0.18978556399353155,
+        "mean_regret_meV": 1.2490301847385923,
+        "proposed_minus_baseline_group_weighted_meV": -0.024863169501010456,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.20070448245077535,
+          0.13320850633533987
+        ]
+      },
+      "Force disagreement": {
+        "mean_vs_D0_meV": -0.24600611556661783,
+        "mean_regret_meV": 1.1928096331655063,
+        "proposed_minus_baseline_group_weighted_meV": 0.05168109986085155,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.023935984831270823,
+          0.1612840211197695
+        ]
+      },
+      "Random": {
+        "mean_vs_D0_meV": -0.20470459019034648,
+        "mean_regret_meV": 1.2341111585417774,
+        "proposed_minus_baseline_group_weighted_meV": -0.0006067375091657595,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.09953764175651442,
+          0.08989239817243598
+        ]
+      },
+      "Keep D0": {
+        "mean_vs_D0_meV": 0.0,
+        "mean_regret_meV": 1.438815748732124,
+        "proposed_minus_baseline_group_weighted_meV": -0.36126359636685335,
+        "proposed_minus_baseline_interval_95_meV": [
+          -2.0690256803342755,
+          1.137817776587277
+        ]
+      }
+    },
+    "new106": {
+      "BVSE": {
+        "mean_vs_D0_meV": 1.6005925395105383,
+        "mean_regret_meV": 1.9620717875828524,
+        "proposed_minus_baseline_group_weighted_meV": 0.018419709595494303,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.010634368320681015,
+          0.06589349710716391
+        ]
+      },
+      "BVSE + D0 coverage": {
+        "mean_vs_D0_meV": 1.3450361082448947,
+        "mean_regret_meV": 1.7065153563172089,
+        "proposed_minus_baseline_group_weighted_meV": 0.28721841548903554,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.14443276335078792,
+          0.9765137572985879
+        ]
+      },
+      "BVSE + target coverage": {
+        "mean_vs_D0_meV": 1.617928736776886,
+        "mean_regret_meV": 1.9794079848492003,
+        "proposed_minus_baseline_group_weighted_meV": 0.0,
+        "proposed_minus_baseline_interval_95_meV": [
+          0.0,
+          0.0
+        ]
+      },
+      "Structural novelty": {
+        "mean_vs_D0_meV": 1.740283040241761,
+        "mean_regret_meV": 2.1017622883140756,
+        "proposed_minus_baseline_group_weighted_meV": -0.13359748648779662,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.5680091159821896,
+          0.21480644861317105
+        ]
+      },
+      "Force disagreement": {
+        "mean_vs_D0_meV": 1.5107051187772098,
+        "mean_regret_meV": 1.872184366849524,
+        "proposed_minus_baseline_group_weighted_meV": 0.11119509179845075,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.008723601511717997,
+          0.31665465066412785
+        ]
+      },
+      "Random": {
+        "mean_vs_D0_meV": 1.493606711155745,
+        "mean_regret_meV": 1.8550859592280595,
+        "proposed_minus_baseline_group_weighted_meV": 0.12892913153117608,
+        "proposed_minus_baseline_interval_95_meV": [
+          -0.21460527401932272,
+          0.5320346788577215
+        ]
+      },
+      "Keep D0": {
+        "mean_vs_D0_meV": 0.0,
+        "mean_regret_meV": 0.3614792480723144,
+        "proposed_minus_baseline_group_weighted_meV": 1.7236020350580674,
+        "proposed_minus_baseline_interval_95_meV": [
+          0.2808963904262381,
+          3.422405415792625
+        ]
+      }
+    }
+  }
+}
