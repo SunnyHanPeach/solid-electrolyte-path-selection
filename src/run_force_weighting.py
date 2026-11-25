@@ -289,6 +289,29 @@ def save_csv(path, records):
     stage.replace(path)
 
 
+def matches_batch2_design(marker, design):
+    if any(marker.get(k) != design[k] for k in ("cohort", "strength", "schedule")):
+        return False
+    observed = marker.get("weights", {})
+    expected = design["weights"]
+    if observed.keys() != expected.keys():
+        return False
+    # Python 3.10 and 3.12 may sum exposure coefficients with different rounding.
+    for edge, target in expected.items():
+        record = observed[edge]
+        if record.keys() != target.keys() or record["frames"] != target["frames"]:
+            return False
+        if not np.array_equal(np.asarray(record["energy_multipliers"], dtype=np.float32),
+                              np.asarray(target["energy_multipliers"], dtype=np.float32)):
+            return False
+        if np.float32(record["uniform_multiplier"]) != np.float32(target["uniform_multiplier"]):
+            return False
+        if any(not math.isclose(record[k], target[k], rel_tol=0, abs_tol=1e-12)
+               for k in ("force_coefficient_before", "force_coefficient_after")):
+            return False
+    return True
+
+
 def score(args):
     eval_rows, _, truth = load_frozen_data(args.bundle, args.project)
     bundle_hash = file_sha(args.bundle)
@@ -321,9 +344,7 @@ def score(args):
             if (marker["arm"] != source_arm or marker["seed"] != seed or marker["bundle"] != bundle_hash
                     or marker["optimizer_steps"] < args.until):
                 raise ValueError(f"Unexpected run identity: {folder}")
-            if args.replicate_batch2 and any(
-                marker.get(k) != v for k, v in designs[seed][arm][2].items()
-            ):
+            if args.replicate_batch2 and not matches_batch2_design(marker, designs[seed][arm][2]):
                 raise ValueError(f"Changed batch 2 design: {folder}")
             implementations[arm].add(marker["implementation"])
             environments.add(json.dumps(marker["environment"], sort_keys=True))
