@@ -13,6 +13,7 @@ from src.phase_a0_geometry import (
     minimum_vectors,
     reaction_coordinate,
     split_shells,
+    validate_sequence,
 )
 
 
@@ -52,6 +53,18 @@ class GeometryTests(unittest.TestCase):
         np.testing.assert_array_equal(second, [2, 0])
         self.assertEqual(tuple(map(len, split_shells(np.array([]), .35))), (0, 0))
         self.assertEqual(exchange({1, 3}, {3, 6}), ([6], [1]))
+
+    def test_explicit_init_site_identity_is_checked_on_every_frame(self):
+        first = Atoms("LiOO", [[0., 0., 0.], [0., 2., 0.], [0., 4., 0.]], cell=[10.] * 3, pbc=True)
+        first.new_array("index", np.array([1, 2, 3]))
+        first.new_array("offset", np.zeros((3, 3), dtype=int))
+        steps = [first.copy() for _ in range(3)]
+        steps[1].positions[0, 0] += .5
+        steps[2].positions[0, 0] += 1.
+        self.assertEqual(validate_sequence(steps, 0, "init")[0], [0, 0, 0])
+        steps[2].arrays["offset"][1, 0] = 1
+        with self.assertRaisesRegex(ValueError, "site identity changed"):
+            validate_sequence(steps, 0, "init")
 
     def test_local_fingerprint_uses_shape_and_is_invariant(self):
         xyz = np.array([[0., 0., 0.], [2., 0., 0.], [0., 2., 0.], [0., 0., 8.]])

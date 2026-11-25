@@ -17,3 +17,10 @@ For Init, check the explicit site IDs and periodic offsets in the source. For Re
 ## Verification
 
 Run synthetic skew-cell and boundary-crossing checks, site-label and species-permutation checks, empty and split shell cases, coordination exchange and fingerprint symmetry checks. Verify the raw three-case output against input cardinality, periodic displacements, mapping status, D₀ provenance and Cartesian force completeness. Keep all outputs in a new directory. Run on CPU with Python, ASE, NumPy, SciPy and Matplotlib.
+
+From the repository root, supply the original NEB ZIP, the audited Init feature index and the canonical Phase 1 bundle. The output directory must be new.
+
+```text
+python -m unittest discover -s tests -v
+python src/phase_a0_geometry.py NEBDFT2K_ZIP INIT_FEATURES_CSV PHASE1_BUNDLE_ZIP NEW_OUTPUT_DIRECTORY
+```
