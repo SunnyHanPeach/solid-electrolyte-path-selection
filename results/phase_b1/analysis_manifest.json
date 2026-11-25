@@ -1,0 +1,22 @@
+{
+  "input_manifest_sha256": "2d326af680d3f140774f99bf02817670fa18f9bafb5771ac81ac4849917a79c1",
+  "script_sha256": "95852f868f3f2b36d10ec7762564a57a15c67e43c2f13e3246298f13f0c6c51a",
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.8"
+  },
+  "feature_source": "A1 nearest deduplicated; A2 raw, material-balanced, and target-excluded sensitivity",
+  "correlation": "Spearman per path, equal-weight mean, no iid image p-values",
+  "outputs": {
+    "image_disagreement.csv": "2158248246a55e57dbd549388ccccecadb1797af2a0360ac7cac6c5e012e1f17",
+    "path_summary.csv": "68e4ba9d54011dfb55e2d42337a5733a4fd289dddf0848cfd446a61c339772ba",
+    "per_seed_barriers.csv": "9bd5c3094a1bc7b7ffc33df0f9baf5c3a8afbb84da23087e3e9b9a33f8841659",
+    "correlations.csv": "7b4c8e176d05e340fb2921305436c3e95656aae8b890f09c8cf70be8bbd3b453",
+    "leave_one_path_out.csv": "9a08ccd4ba5e57a87b5d0a2365afecd18eb5889aeb9a0f4d9ba2a08b93577a6e",
+    "top_image_overlap.csv": "d5910c67ac871e0d1f662ff1fb666be554bc4184237ff76aefbd156dc0f0b5aa",
+    "descriptor_disagreement.png": "8bf1a86e351f9ad33a939011bb7d75c62e6e1739353febfbe73bd97053a14aa2",
+    "energy_force_disagreement.png": "4b2adfd1ffe2a87fdfc7987168e8c774e89331980dae4290369c2665e9d6fed5",
+    "path_profiles.png": "38fb9a36c0a161047e38500e56ae971bf7cf24a433133136cca1cc779c5bb699"
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "status": "pass",
+  "smoke_image": {
+    "edge_id": "mp-753143_5_13_0_0_0",
+    "stage": "init",
+    "image": 3,
+    "feature_row_0based": 2,
+    "n_atoms": 119,
+    "Li_1based": 1,
+    "arc_A": 1.5828949554611977,
+    "reaction_coordinate": 0.49439342311971,
+    "Li_unwrapped_x_A": 4.07261907,
+    "Li_unwrapped_y_A": 3.17649343,
+    "Li_unwrapped_z_A": 5.20280966,
+    "tangent_x": 0.5005810106356032,
+    "tangent_y": 0.4805629427575755,
+    "tangent_z": -0.7200541020223532
+  },
+  "threads_selected": 16,
+  "timings": [
+    {
+      "threads": 1,
+      "seconds": [
+        1.6966959000565112,
+        1.5591072998940945,
+        1.4114010999910533
+      ],
+      "median_seconds": 1.5591072998940945,
+      "max_abs_diff": 1.1368683772161603e-13
+    },
+    {
+      "threads": 2,
+      "seconds": [
+        1.0651620998978615,
+        1.072481700219214,
+        1.0720210000872612
+      ],
+      "median_seconds": 1.0720210000872612,
+      "max_abs_diff": 8.881784197001252e-16
+    },
+    {
+      "threads": 4,
+      "seconds": [
+        0.6093553001992404,
+        0.6207633996382356,
+        0.623651800211519
+      ],
+      "median_seconds": 0.6207633996382356,
+      "max_abs_diff": 2.220446049250313e-16
+    },
+    {
+      "threads": 8,
+      "seconds": [
+        0.41518930019810796,
+        0.4260648996569216,
+        0.41818640008568764
+      ],
+      "median_seconds": 0.41818640008568764,
+      "max_abs_diff": 1.1102230246251565e-15
+    },
+    {
+      "threads": 12,
+      "seconds": [
+        0.39594369987025857,
+        0.40755479969084263,
+        0.3797358996234834
+      ],
+      "median_seconds": 0.39594369987025857,
+      "max_abs_diff": 1.1368683772161603e-13
+    },
+    {
+      "threads": 16,
+      "seconds": [
+        0.37538790004327893,
+        0.3753224997781217,
+        0.38961049960926175
+      ],
+      "median_seconds": 0.37538790004327893,
+      "max_abs_diff": 1.0685896612017132e-15
+    }
+  ],
+  "checks": [
+    {
+      "seed": 17,
+      "energy_eV": -562.7793069081778,
+      "n_force_vectors": 119,
+      "moving_Li_force": [
+        0.4653132726933127,
+        -0.6533537418630517,
+        -0.13966881800528202
+      ],
+      "repeat_abs_errors": {
+        "energy_eV": 0.0,
+        "atomic_energy_eV": 0.0,
+        "force_eV_per_A": 0.0
+      },
+      "translate_wrap_abs_errors": {
+        "energy_eV": 1.1368683772161603e-13,
+        "atomic_energy_eV": 2.6645352591003757e-15,
+        "force_eV_per_A": 9.547918011776346e-15
+      },
+      "repeated_seconds": 0.395800800062716
+    },
+    {
+      "seed": 29,
+      "energy_eV": -563.0720661580885,
+      "n_force_vectors": 119,
+      "moving_Li_force": [
+        0.46325988783022654,
+        -0.6493275351857258,
+        -0.1317730090072669
+      ],
+      "repeat_abs_errors": {
+        "energy_eV": 0.0,
+        "atomic_energy_eV": 0.0,
+        "force_eV_per_A": 0.0
+      },
+      "translate_wrap_abs_errors": {
+        "energy_eV": 0.0,
+        "atomic_energy_eV": 3.552713678800501e-15,
+        "force_eV_per_A": 9.43689570931383e-15
+      },
+      "repeated_seconds": 0.4600414000451565
+    },
+    {
+      "seed": 43,
+      "energy_eV": -562.9663697875953,
+      "n_force_vectors": 119,
+      "moving_Li_force": [
+        0.46784089998015477,
+        -0.6535374379734893,
+        -0.13074410688388707
+      ],
+      "repeat_abs_errors": {
+        "energy_eV": 0.0,
+        "atomic_energy_eV": 0.0,
+        "force_eV_per_A": 0.0
+      },
+      "translate_wrap_abs_errors": {
+        "energy_eV": 0.0,
+        "atomic_energy_eV": 2.6645352591003757e-15,
+        "force_eV_per_A": 9.43689570931383e-15
+      },
+      "repeated_seconds": 0.4543554997071624
+    }
+  ],
+  "repeat_absolute_tolerance": 1e-09,
+  "periodic_absolute_tolerance": 1e-08,
+  "provenance": {
+    "source_commit": "e898b1288983552461ac4f31ae64e7f5426ca8b7",
+    "script_sha256": {
+      "phase_b1_inference.py": "0fbf680c2d41e0c6649ae3ae9087e6f1cba046ed0b4e8fc12079697760244904",
+      "phase_a0_geometry.py": "8905d452f655e02249a246668300fedc25d50f1366a223c0143bdd32cee374bf",
+      "audit_phase_b0.py": "922d7832272a480b08fbe232bd46abbeb19f367e71166876aee96c51db0ce485"
+    },
+    "inputs_sha256": {
+      "neb": "b7a99d89337902e9e1da319f57547170fdb132bf15bf6ffef03a0140e2207d7f",
+      "index": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7",
+      "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+      "results/phase_a0/geometry_manifest.csv": "75f4303c22cf3218dc4488e34fdb6a3a1f2ce7c88b5c8122d9f0f553ea1ad63e",
+      "results/phase_a1/manifest.json": "f779833458644e6cba6e67605009585862d99ed74e220832877f3e7451acfcf9",
+      "results/phase_a1/feature_index.csv": "34eb2970a474c8211470754526cee2703e826c1f96e1f7a2e5d3f4caa5fd69c9",
+      "results/phase_a1/novelty_profiles.csv": "83ab150a5c943c3ee83575cb3ae45ee6c1466e4fcfbc58b3fc124427b2e07d2a",
+      "results/phase_a1/path_features.npz": "9c82a274fe56c010f7bbf174b52b8769fe41e48c25fb7c5f2e064c3766bf6376",
+      "results/phase_a2/manifest.json": "b317424eedb24e1ac4741c88f46d1b310792b22e93a8f1fbf0749b10c0916518",
+      "results/phase_a2/reference_sensitivity.csv": "fa6277361933436a3a251afe52b6a3141d9bad0a4af52bfcd6e7fdd99ca82700",
+      "results/phase_b0/checkpoint_inventory.csv": "c6aa39fb74a89c7f71212f644f4af3c3a04fbfc1db069d5a5c736cfe0ca7238b",
+      "results/phase_b0/checkpoint_provenance.csv": "7bb01e2d6273d3a139dbc684cb249da11adec36a6bdb73e7053a51cea3a961a8",
+      "weights_archive": "80085675d14efde2160f4b2f8c384406da096077114d797d2f84d613c626de45",
+      "training_archive": "d93a0d05b766da721037a405cdbf5c4f325f03514f2e9af9c78984f36fc48a01",
+      "training_protocol_archive": "e42b6a4dc09db0dc25ea297b0b1190a6298adc625cb0551a2eb5916aa1733483"
+    },
+    "trajectory_member_sha256": {
+      "nebDFT2k/mp-753143_5_13_0_0_0_init.xyz": "cefb0fb7df10da56676acce3c01597412afc7986050d1ffa738c0862ebb1f7e2",
+      "nebDFT2k/mp-1177833_2_3_0_0_1_init.xyz": "1f58fab8abba64af58dcdba4320285eeedc603dd7d77de93c094b4215d51063e",
+      "nebDFT2k/mp-768690_0_0_1_0_0_init.xyz": "67206f9d29e6aa022e8e62dab815240849da73bcee6bd2fac4fb7f02257d87eb"
+    },
+    "training_protocol": {
+      "settings": {
+        "seeds": [
+          17,
+          29,
+          43
+        ],
+        "epochs": 5,
+        "batch_size": 2,
+        "lr": 0.0001,
+        "energy_weight": 1.0,
+        "forces_weight": 100.0,
+        "clip_norm": 10.0
+      },
+      "optimizer": "Adam",
+      "original_e0": true,
+      "steps": 710,
+      "initialization_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+      "D0_sha256": "dda468e74c0dbd46c3d5b07121b900184a917dd319415e826af6e25b56ee7081",
+      "D0_frames": 278,
+      "architecture": "mace.modules.models.ScaleShiftMACE",
+      "source_protocol_sha256": "b7ca0381f37f967d78b9e5ab68e2b3946d9b7d57d5b6565f1107f81931e7c9ea"
+    },
+    "checkpoints": [
+      {
+        "checkpoint_id": "e0-A-17",
+        "member": "D0_17.pt",
+        "sha256": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a",
+        "order_sha256": "e0fd4462a8d7617cad9147f4cbe44fb10851d00922887f204d42f9696a2bfd33",
+        "training_runtime": {
+          "device": "cuda",
+          "hardware": "NVIDIA GeForce RTX 4090",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "ase": "3.29.0",
+          "numpy": "2.2.6",
+          "cuda": "12.8",
+          "driver": "595.71.05"
+        }
+      },
+      {
+        "checkpoint_id": "e0-A-29",
+        "member": "D0_29.pt",
+        "sha256": "381053e366b56dc07bcb38ae00dce5eae75db22f6ef51cbca26a52b582deb449",
+        "order_sha256": "d5ffb56834a62ea6a4762fe4e6098b1bd3b0a2519751d0513343a7e9509bcb59",
+        "training_runtime": {
+          "device": "cuda",
+          "hardware": "NVIDIA GeForce RTX 4090",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "ase": "3.29.0",
+          "numpy": "2.2.6",
+          "cuda": "12.8",
+          "driver": "595.71.05"
+        }
+      },
+      {
+        "checkpoint_id": "e0-A-43",
+        "member": "D0_43.pt",
+        "sha256": "a626b7220c9ee8c29be911ce5727d585c2dd3bd1c776154388702b0117bbb644",
+        "order_sha256": "81a288b0583939463affe6fffafaa3574fb3d842f7b4f366b532deb6c2f9ad8b",
+        "training_runtime": {
+          "device": "cuda",
+          "hardware": "NVIDIA GeForce RTX 4090",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "ase": "3.29.0",
+          "numpy": "2.2.6",
+          "cuda": "12.8",
+          "driver": "595.71.05"
+        }
+      }
+    ]
+  },
+  "runtime": {
+    "device": "cpu",
+    "dtype": "float64",
+    "torch_interop_threads": 1,
+    "logical_cpus": 20,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.20",
+    "torch": "2.10.0+cpu",
+    "packages": {
+      "mace-torch": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "e3nn": "0.4.4"
+    }
+  }
+}

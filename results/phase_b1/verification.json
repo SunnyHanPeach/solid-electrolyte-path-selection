@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "inputs": {
+    "predictions": 51,
+    "images": 17,
+    "atomic_rows": 5277,
+    "paths": 3
+  },
+  "max_absolute_difference": {
+    "node_to_total_eV": 1.1368683772161603e-13,
+    "barrier_meV": 1.1368683772161603e-10,
+    "barrier_mean_meV": 3.7971403799019754e-11,
+    "barrier_sd_meV": 5.865774532765045e-11,
+    "Li_force_sd_eV_per_A": 1.3877787807814457e-17,
+    "Li_tangent_sd_eV_per_A": 3.8207284558389176e-16,
+    "Li_normal_sd_eV_per_A": 1.0408340855860843e-17,
+    "energy_raw_sd_meV": 6.130562724138144e-11,
+    "energy_centered_sd_meV": 1.5305090528272558e-10,
+    "energy_from_start_sd_meV": 6.472777869248603e-11
+  },
+  "verification_script_sha256": "59a368db17913a855629e4e5184a2235049fc72e34b04177dbf290047c0e1c12"
+}
