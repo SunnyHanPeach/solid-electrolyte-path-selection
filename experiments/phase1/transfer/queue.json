@@ -1,0 +1,32 @@
+{
+  "planned_fits": 18,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "previous_transfer_sha256": "90fec24e21ee807f260aef5056f8dfb9a3d9f8d1c18755b2e857adde63bd80ce",
+  "paths": [
+    {
+      "arm": "new_anion",
+      "path": "mp-758054_0_0_1_-1_0",
+      "chemistry": "Ag-F-Li",
+      "delta_sha256": "25643eb4b1e845b4fe779fc9482ed513e943f4c95729eaaa9bb0e66b7066c762",
+      "selection_rule": "Uncovered anion category. Maximize minimum IQR-scaled feature distance."
+    },
+    {
+      "arm": "near_geometry",
+      "path": "mp-759652_8_12_0_0_0",
+      "chemistry": "Co-F-Li-O",
+      "delta_sha256": "abf78a34b9e53fc87cf920cd50d363b425e10c778d579a0fcab9e8c12478e805",
+      "selection_rule": "Nearest IQR-scaled BVSE Init features to the F\u2013Li\u2013Ni\u2013O path with different coordination range and chemistry. Prefer the same anion category."
+    },
+    {
+      "arm": "feature_gap",
+      "path": "mp-768690_0_0_1_0_0",
+      "chemistry": "Cr-Ga-Li-O",
+      "delta_sha256": "a6709ed149701f6f67ccf8298e561488a0147e1effd84c9b27ac61c219c5c112",
+      "selection_rule": "Maximize minimum IQR-scaled distance to prior choices, with distinct material and exact chemistry."
+    }
+  ]
+}
