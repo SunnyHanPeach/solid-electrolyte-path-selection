@@ -90,6 +90,14 @@ Run both seed commands with the original protected-run bundle. The new compariso
 
 Add `--device cuda` to both training commands for a GPU run. Keep the device and thread count the same across the matrix. The scorer validates the common execution environment and checksums before comparing predictions. Raw models and training logs stay in the run directory.
 
+### Follow-up decisions
+
+When the first treatment reduces the primary-panel error without a clear auxiliary-panel MAE or signed-bias penalty, compare peak discounts of 0.25 and 0.75 to the original curve and to the original unit weights. The discount is the `--strength` parameter. A favorable historical dose is exploratory. Verify a matched uniform reduction at the selected strength before attributing the effect to energy placement. Reuse the initial arms on the same GPU and software, and keep these comparisons separate from any later untouched-material verification.
+
+If the initial force weighting has no favorable error trade-off, compare `--omit high` and `--omit other` with the original full arm. Both omissions replace the same count of training presentations in each path and batch atom-count stratum. The replay indices come from the previously frozen schedule. Original endpoints, D₀ batches and evaluation images are retained. The primary ablation contrast is high minus other omission. If it does not favor high-energy omission, use both panels and signed profiles to determine which alternative mechanism merits testing.
+
+Additional arms use separate output directories. For local scoring, append arguments such as `--compare alpha025=OUT025@energy_weighted --compare alpha075=OUT075@energy_weighted --score-output FOLLOWUP` to a scoring command for the original run directory.
+
 ## Reproduction
 
 Run from the repository root with Python and NumPy. The signed CSV is already included.
