@@ -1,0 +1,1286 @@
+{
+  "definition": "Signed error is predicted minus reference forward barrier. Positive absolute-error delta is harm.",
+  "reference_groups": "Step 8 replay only, averaged over seeds before defining groups below -25, near zero, above +25 meV.",
+  "uncertainty": "Paired material bootstrap conditional on fixed seeds and estimated shifts. Historical exploratory audit.",
+  "interpretation": "Counterfactuals apply a uniform shift or permute the observed paired shifts across materials. Permutation intervals are descriptive, conditional on the panel, and do not imply causation.",
+  "steps": [
+    {
+      "step": 8,
+      "pooled_uniform_signed_shift_per_seed_meV": [
+        2.2588122490398046,
+        0.14815516978002793
+      ],
+      "panels": {
+        "primary91": {
+          "signed_shift": {
+            "mean_meV": 1.0444724952781594,
+            "interval95_meV": [
+              0.7268758920522836,
+              1.375978071611006
+            ]
+          },
+          "actual": {
+            "mean_meV": 0.0758069741595546,
+            "interval95_meV": [
+              -0.3105452996007673,
+              0.4466984644145817
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": 0.09525555230385543,
+            "interval95_meV": [
+              -0.1450005244536935,
+              0.33435907860473707
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": 0.11204478746399489,
+            "interval95_meV": [
+              -0.16260398316924884,
+              0.38484327803592244
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": -0.01944857814430083,
+            "interval95_meV": [
+              -0.3509961864485203,
+              0.29918115138874024
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 0.12723257375978841,
+            "shuffled_reference_interval95_meV": [
+              -0.18821147505987326,
+              0.44451703082074173
+            ],
+            "actual_minus_shuffled_mean_meV": -0.05142559960023381
+          },
+          "lower_barriers_materials": 14,
+          "increased_absolute_error_materials": 49,
+          "seed_actual_meV": [
+            0.12210244419823009,
+            0.02951150412087912
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 35,
+              "actual_delta_meV": -1.0458809988839286,
+              "signed_barrier_shift_meV": 1.0458809988839286,
+              "replay_signed_error_meV": -97.97222291295091,
+              "augmented_signed_error_meV": -96.92634191406698,
+              "seed_means_meV": [
+                -2.003696986607143,
+                -0.08806501116071429
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 19,
+              "actual_delta_meV": 0.003289323606287852,
+              "signed_barrier_shift_meV": 0.789441560444079,
+              "replay_signed_error_meV": 2.769565020565479,
+              "augmented_signed_error_meV": 3.5590065810095584,
+              "seed_means_meV": [
+                -0.06891220393874009,
+                0.07549085115131579
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 37,
+              "actual_delta_meV": 1.1741019584037162,
+              "signed_barrier_shift_meV": 1.1741019584037162,
+              "replay_signed_error_meV": 519.7867155173228,
+              "augmented_signed_error_meV": 520.9608174757265,
+              "seed_means_meV": [
+                2.231082400760135,
+                0.1171215160472973
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": 0.1965415933029091
+        },
+        "historical_support": {
+          "signed_shift": {
+            "mean_meV": 1.367915760387074,
+            "interval95_meV": [
+              0.92731389132413,
+              1.8603671680797222
+            ]
+          },
+          "actual": {
+            "mean_meV": 0.6566561740932932,
+            "interval95_meV": [
+              0.1516971555956688,
+              1.2068528977804047
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": 0.32910830994075724,
+            "interval95_meV": [
+              0.08778721037465706,
+              0.5651039843783852
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": 0.28272139191760143,
+            "interval95_meV": [
+              0.07212161462566125,
+              0.4867865521410522
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": 0.327547864152536,
+            "interval95_meV": [
+              -0.1168543171444446,
+              0.8134622398101015
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 0.41301768252222465,
+            "shuffled_reference_interval95_meV": [
+              -0.050281773172144995,
+              0.8369906193170673
+            ],
+            "actual_minus_shuffled_mean_meV": 0.2436384915710686
+          },
+          "lower_barriers_materials": 18,
+          "increased_absolute_error_materials": 53,
+          "seed_actual_meV": [
+            1.2547426260622077,
+            0.05856972212437871
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 28,
+              "actual_delta_meV": -1.1247907366071428,
+              "signed_barrier_shift_meV": 1.1247907366071428,
+              "replay_signed_error_meV": -201.5123656724224,
+              "augmented_signed_error_meV": -200.38757493581525,
+              "seed_means_meV": [
+                -2.0294189453125,
+                -0.22016252790178573
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 11,
+              "actual_delta_meV": 0.835136377831573,
+              "signed_barrier_shift_meV": 0.7990056818181818,
+              "replay_signed_error_meV": -2.2603236363713886,
+              "augmented_signed_error_meV": -1.4613179545532065,
+              "seed_means_meV": [
+                1.4985677840658438,
+                0.1717049715973024
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 49,
+              "actual_delta_meV": 1.6345588528380102,
+              "signed_barrier_shift_meV": 1.6345588528380102,
+              "replay_signed_error_meV": 671.0417581792087,
+              "augmented_signed_error_meV": 672.6763170320468,
+              "seed_means_meV": [
+                3.0766701211734695,
+                0.19244758450255103
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": 0.529409699847855
+        }
+      },
+      "gap_main_minus_support": {
+        "actual": {
+          "interval95_meV": [
+            -1.2532449928828893,
+            0.053944692257283815
+          ],
+          "mean_meV": -0.5808491999337386
+        },
+        "shared_shift_only": {
+          "interval95_meV": [
+            -0.5756887948732777,
+            0.11612705081985314
+          ],
+          "mean_meV": -0.2338527576369018
+        },
+        "residual": {
+          "interval95_meV": [
+            -0.9263741517227969,
+            0.2060418651151745
+          ],
+          "mean_meV": -0.34699644229683685
+        }
+      },
+      "gap_after_step8_bias_balance_meV": -0.3328681065449459
+    },
+    {
+      "step": 64,
+      "pooled_uniform_signed_shift_per_seed_meV": [
+        4.694592353351955,
+        -2.455897837377793
+      ],
+      "panels": {
+        "primary91": {
+          "signed_shift": {
+            "mean_meV": 1.0910872574690933,
+            "interval95_meV": [
+              -2.4580316229180976,
+              4.326642214596925
+            ]
+          },
+          "actual": {
+            "mean_meV": -2.7620188783480395,
+            "interval95_meV": [
+              -6.083592557134813,
+              0.29511656756495647
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": -0.33095704269563303,
+            "interval95_meV": [
+              -0.5559831108959187,
+              -0.0837167855440221
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": -0.3249201728735487,
+            "interval95_meV": [
+              -0.5679745059627906,
+              -0.05876786814702373
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": -2.4310618356524065,
+            "interval95_meV": [
+              -5.7586777073367115,
+              0.6223256938617449
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 0.5083961518540615,
+            "shuffled_reference_interval95_meV": [
+              -2.4585226146328565,
+              3.1061051037734324
+            ],
+            "actual_minus_shuffled_mean_meV": -3.270415030202101
+          },
+          "lower_barriers_materials": 40,
+          "increased_absolute_error_materials": 43,
+          "seed_actual_meV": [
+            -3.2077200412084412,
+            -2.3163177154876373
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 35,
+              "actual_delta_meV": -2.2991561830362377,
+              "signed_barrier_shift_meV": 1.8781389508928572,
+              "replay_signed_error_meV": -191.6180271819241,
+              "augmented_signed_error_meV": -189.73988823103127,
+              "seed_means_meV": [
+                -4.687249308036761,
+                0.08893694196428571
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 19,
+              "actual_delta_meV": -1.3451827199835527,
+              "signed_barrier_shift_meV": 0.3429212068256579,
+              "replay_signed_error_meV": -86.13777718749373,
+              "augmented_signed_error_meV": -85.79485598066807,
+              "seed_means_meV": [
+                -2.7947676809210527,
+                0.10440224095394737
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 37,
+              "actual_delta_meV": -3.927426482262588,
+              "signed_barrier_shift_meV": 0.7307722761824325,
+              "replay_signed_error_meV": 283.80294427049,
+              "augmented_signed_error_meV": 284.53371654667245,
+              "seed_means_meV": [
+                -2.0202219467886904,
+                -5.834631017736487
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": -2.9215698246110176
+        },
+        "historical_support": {
+          "signed_shift": {
+            "mean_meV": 1.1485706676136365,
+            "interval95_meV": [
+              -4.527369412508878,
+              6.327113238247951
+            ]
+          },
+          "actual": {
+            "mean_meV": -1.8503446626451394,
+            "interval95_meV": [
+              -7.319342006336559,
+              3.2135001545711352
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": -0.020481536099182452,
+            "interval95_meV": [
+              -0.27979334412316187,
+              0.2463390197123106
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": -0.041900591058931076,
+            "interval95_meV": [
+              -0.2849894114182602,
+              0.2085202700131898
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": -1.829863126545957,
+            "interval95_meV": [
+              -7.326984661659373,
+              3.213665624268514
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 1.2265688571328626,
+            "shuffled_reference_interval95_meV": [
+              -4.032712291658992,
+              5.63050288072624
+            ],
+            "actual_minus_shuffled_mean_meV": -3.076913519778002
+          },
+          "lower_barriers_materials": 40,
+          "increased_absolute_error_materials": 43,
+          "seed_actual_meV": [
+            -1.599961805755935,
+            -2.100727519534344
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 28,
+              "actual_delta_meV": -1.4081682477678572,
+              "signed_barrier_shift_meV": 1.4081682477678572,
+              "replay_signed_error_meV": -361.1138496986501,
+              "augmented_signed_error_meV": -359.70568145088225,
+              "seed_means_meV": [
+                -4.98199462890625,
+                2.1656581333705356
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 11,
+              "actual_delta_meV": -0.2163973721590909,
+              "signed_barrier_shift_meV": 0.2108487215909091,
+              "replay_signed_error_meV": -116.88712139915548,
+              "augmented_signed_error_meV": -116.67627267756457,
+              "seed_means_meV": [
+                -2.1417791193181817,
+                1.708984375
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 49,
+              "actual_delta_meV": -2.4698213935004545,
+              "signed_barrier_shift_meV": 1.2107382015306123,
+              "replay_signed_error_meV": 414.0217809988836,
+              "augmented_signed_error_meV": 415.23251920041423,
+              "seed_means_meV": [
+                0.4542608370480148,
+                -5.393903624048924
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": -1.7184981039954572
+        }
+      },
+      "gap_main_minus_support": {
+        "actual": {
+          "interval95_meV": [
+            -7.0474521759546125,
+            5.347506762863823
+          ],
+          "mean_meV": -0.9116742157029001
+        },
+        "shared_shift_only": {
+          "interval95_meV": [
+            -0.6783865213486394,
+            0.047076076605460905
+          ],
+          "mean_meV": -0.31047550659645057
+        },
+        "residual": {
+          "interval95_meV": [
+            -6.760692032669852,
+            5.667128933914721
+          ],
+          "mean_meV": -0.6011987091064495
+        }
+      },
+      "gap_after_step8_bias_balance_meV": -1.2030717206155603
+    },
+    {
+      "step": 200,
+      "pooled_uniform_signed_shift_per_seed_meV": [
+        -28.50239503317039,
+        -29.377004953736034
+      ],
+      "panels": {
+        "primary91": {
+          "signed_shift": {
+            "mean_meV": -21.363646119505493,
+            "interval95_meV": [
+              -36.96451711130666,
+              -8.236149379185274
+            ]
+          },
+          "actual": {
+            "mean_meV": 6.372819752746532,
+            "interval95_meV": [
+              -5.475815903051252,
+              17.45063523788154
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": 15.760523662053329,
+            "interval95_meV": [
+              10.723057105854606,
+              20.53968958137401
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": 20.473541606821566,
+            "interval95_meV": [
+              14.202596052581137,
+              26.417330481344564
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": -9.3877039093068,
+            "interval95_meV": [
+              -20.715961760579745,
+              1.9185848217870858
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 16.481696633372934,
+            "shuffled_reference_interval95_meV": [
+              5.211590416381113,
+              23.5945568249234
+            ],
+            "actual_minus_shuffled_mean_meV": -10.108876880626402
+          },
+          "lower_barriers_materials": 63,
+          "increased_absolute_error_materials": 63,
+          "seed_actual_meV": [
+            5.9558369127749,
+            6.789802592718163
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 35,
+              "actual_delta_meV": 12.987409319196429,
+              "signed_barrier_shift_meV": -11.798095703125,
+              "replay_signed_error_meV": -223.49232963728127,
+              "augmented_signed_error_meV": -235.29042534040627,
+              "seed_means_meV": [
+                12.158203125,
+                13.816615513392858
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 19,
+              "actual_delta_meV": 13.379862298518818,
+              "signed_barrier_shift_meV": -13.365093030427632,
+              "replay_signed_error_meV": -120.51502585114504,
+              "augmented_signed_error_meV": -133.88011888157268,
+              "seed_means_meV": [
+                12.880337730262239,
+                13.879386866775397
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 37,
+              "actual_delta_meV": -3.482435468751302,
+              "signed_barrier_shift_meV": -34.51950485641892,
+              "replay_signed_error_meV": 159.6834176393667,
+              "augmented_signed_error_meV": 125.16391278294779,
+              "seed_means_meV": [
+                -3.4670910050666666,
+                -3.4977799324359373
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": 5.140297238839819
+        },
+        "historical_support": {
+          "signed_shift": {
+            "mean_meV": -36.77402843128551,
+            "interval95_meV": [
+              -59.085412458939985,
+              -20.980847965587298
+            ]
+          },
+          "actual": {
+            "mean_meV": -9.277114960936347,
+            "interval95_meV": [
+              -32.84777270186839,
+              8.19592560233905
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": 8.450845024701534,
+            "interval95_meV": [
+              2.534866741238707,
+              14.274314037923569
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": 6.212465471035158,
+            "interval95_meV": [
+              1.8461345708798207,
+              10.486287100949708
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": -17.72795998563788,
+            "interval95_meV": [
+              -39.42546157112468,
+              -1.9975422994103
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 16.496609331054124,
+            "shuffled_reference_interval95_meV": [
+              -0.8025515952174993,
+              26.285817578725553
+            ],
+            "actual_minus_shuffled_mean_meV": -25.77372429199047
+          },
+          "lower_barriers_materials": 71,
+          "increased_absolute_error_materials": 51,
+          "seed_actual_meV": [
+            -10.243273741121005,
+            -8.310956180751687
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 28,
+              "actual_delta_meV": 28.740474155970983,
+              "signed_barrier_shift_meV": -28.740474155970983,
+              "replay_signed_error_meV": -442.478072633918,
+              "augmented_signed_error_meV": -471.21854678988893,
+              "seed_means_meV": [
+                27.485438755580358,
+                29.995509556361608
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 11,
+              "actual_delta_meV": 13.824462890625,
+              "signed_barrier_shift_meV": -13.830011541193182,
+              "replay_signed_error_meV": -159.19003333097365,
+              "augmented_signed_error_meV": -173.02004487216684,
+              "seed_means_meV": [
+                11.452414772727273,
+                16.196511008522727
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 49,
+              "actual_delta_meV": -36.187520096458385,
+              "signed_barrier_shift_meV": -46.515328543526785,
+              "replay_signed_error_meV": 276.2395868223848,
+              "augmented_signed_error_meV": 229.72425827885803,
+              "seed_means_meV": [
+                -36.672998711732625,
+                -35.70204148118415
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": -4.9538713393882645
+        }
+      },
+      "gap_main_minus_support": {
+        "actual": {
+          "interval95_meV": [
+            -5.928507069353504,
+            41.71714406004549
+          ],
+          "mean_meV": 15.649934713682878
+        },
+        "shared_shift_only": {
+          "interval95_meV": [
+            -0.268303896880881,
+            14.79151792960536
+          ],
+          "mean_meV": 7.309678637351794
+        },
+        "residual": {
+          "interval95_meV": [
+            -11.509865726717889,
+            32.453950095883165
+          ],
+          "mean_meV": 8.34025607633108
+        }
+      },
+      "gap_after_step8_bias_balance_meV": 10.094168578228084
+    },
+    {
+      "step": 400,
+      "pooled_uniform_signed_shift_per_seed_meV": [
+        -30.586626276623605,
+        -43.78760993147696
+      ],
+      "panels": {
+        "primary91": {
+          "signed_shift": {
+            "mean_meV": -24.708003788203982,
+            "interval95_meV": [
+              -44.24770061786358,
+              -8.579212230640461
+            ]
+          },
+          "actual": {
+            "mean_meV": 19.208455652902174,
+            "interval95_meV": [
+              2.2913397908360476,
+              37.50504817457031
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": 22.03909400151156,
+            "interval95_meV": [
+              15.838152804515511,
+              27.784796281382125
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": 30.54696515645823,
+            "interval95_meV": [
+              22.350374017744958,
+              38.10527375745064
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": -2.8306383486093916,
+            "interval95_meV": [
+              -19.201270590846885,
+              15.545259937346469
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 20.706007981856178,
+            "shuffled_reference_interval95_meV": [
+              8.467525074562362,
+              28.92733364882499
+            ],
+            "actual_minus_shuffled_mean_meV": -1.4975523289540043
+          },
+          "lower_barriers_materials": 59,
+          "increased_absolute_error_materials": 65,
+          "seed_actual_meV": [
+            16.484978253778046,
+            21.9319330520263
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 35,
+              "actual_delta_meV": 19.138016982144887,
+              "signed_barrier_shift_meV": -15.95458984375,
+              "replay_signed_error_meV": -257.32150095424555,
+              "augmented_signed_error_meV": -273.27609079799555,
+              "seed_means_meV": [
+                15.225663466519888,
+                23.050370497769887
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 19,
+              "actual_delta_meV": 17.253261042349934,
+              "signed_barrier_shift_meV": -17.51949912623355,
+              "replay_signed_error_meV": -144.79818400287203,
+              "augmented_signed_error_meV": -162.31768312910557,
+              "seed_means_meV": [
+                14.091955518091183,
+                20.414566566608684
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 37,
+              "actual_delta_meV": 20.279105682010215,
+              "signed_barrier_shift_meV": -36.679654508023646,
+              "replay_signed_error_meV": 85.13557267526198,
+              "augmented_signed_error_meV": 48.45591816723834,
+              "seed_means_meV": [
+                18.905071484374965,
+                21.653139879645465
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": 19.370368658092204
+        },
+        "historical_support": {
+          "signed_shift": {
+            "mean_meV": -50.091656771573156,
+            "interval95_meV": [
+              -81.83643601157449,
+              -27.140734412453405
+            ]
+          },
+          "actual": {
+            "mean_meV": -12.588728063297532,
+            "interval95_meV": [
+              -41.00389956479401,
+              9.444297119721542
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": 14.39546105322131,
+            "interval95_meV": [
+              7.032478890839309,
+              21.393217455189877
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": 9.361862238963015,
+            "interval95_meV": [
+              4.492364325128003,
+              14.038638516024998
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": -26.984189116518845,
+            "interval95_meV": [
+              -52.56972865860129,
+              -7.333330848199384
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 28.772561437583175,
+            "shuffled_reference_interval95_meV": [
+              6.665043532475356,
+              41.15492100079989
+            ],
+            "actual_minus_shuffled_mean_meV": -41.36128950088071
+          },
+          "lower_barriers_materials": 70,
+          "increased_absolute_error_materials": 53,
+          "seed_actual_meV": [
+            -14.511770084340014,
+            -10.66568604225505
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 28,
+              "actual_delta_meV": 34.551892961774556,
+              "signed_barrier_shift_meV": -34.551892961774556,
+              "replay_signed_error_meV": -505.73283773575946,
+              "augmented_signed_error_meV": -540.284730697534,
+              "seed_means_meV": [
+                28.422764369419642,
+                40.681021554129465
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 11,
+              "actual_delta_meV": 19.864896164780145,
+              "signed_barrier_shift_meV": -17.450506036931817,
+              "replay_signed_error_meV": -194.2186643679055,
+              "augmented_signed_error_meV": -211.6691704048373,
+              "seed_means_meV": [
+                14.759410511363637,
+                24.970381818196653
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 49,
+              "actual_delta_meV": -46.81173327168269,
+              "signed_barrier_shift_meV": -66.29912707270408,
+              "replay_signed_error_meV": 188.1350273716514,
+              "augmented_signed_error_meV": 121.83590029894731,
+              "seed_means_meV": [
+                -45.61687113042186,
+                -48.006595412943526
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": -7.000519105192794
+        }
+      },
+      "gap_main_minus_support": {
+        "actual": {
+          "interval95_meV": [
+            3.078550220085477,
+            64.76467630092475
+          ],
+          "mean_meV": 31.797183716199704
+        },
+        "shared_shift_only": {
+          "interval95_meV": [
+            -1.5915590749877069,
+            16.921415424804724
+          ],
+          "mean_meV": 7.643632948290252
+        },
+        "residual": {
+          "interval95_meV": [
+            -2.249194797046976,
+            55.40619766551895
+          ],
+          "mean_meV": 24.153550767909454
+        }
+      },
+      "gap_after_step8_bias_balance_meV": 26.370887763284998
+    },
+    {
+      "step": 600,
+      "pooled_uniform_signed_shift_per_seed_meV": [
+        -47.27019411225559,
+        -48.005173326204606
+      ],
+      "panels": {
+        "primary91": {
+          "signed_shift": {
+            "mean_meV": -33.86528937371222,
+            "interval95_meV": [
+              -53.19021874731714,
+              -17.761729313777074
+            ]
+          },
+          "actual": {
+            "mean_meV": 24.101495466603176,
+            "interval95_meV": [
+              6.778361665189437,
+              42.80421277968335
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": 29.6772006886884,
+            "interval95_meV": [
+              22.218553610262372,
+              36.66667509378837
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": 39.78776336548106,
+            "interval95_meV": [
+              30.309090669465,
+              48.546840264477574
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": -5.575705222085229,
+            "interval95_meV": [
+              -21.768735224796878,
+              12.843291741533665
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 25.96962760031498,
+            "shuffled_reference_interval95_meV": [
+              13.809750699154424,
+              33.729156568722146
+            ],
+            "actual_minus_shuffled_mean_meV": -1.8681321337118035
+          },
+          "lower_barriers_materials": 64,
+          "increased_absolute_error_materials": 71,
+          "seed_actual_meV": [
+            24.66268389680583,
+            23.540307036400517
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 35,
+              "actual_delta_meV": 28.527396065848215,
+              "signed_barrier_shift_meV": -24.706595284598215,
+              "replay_signed_error_meV": -272.4403451227723,
+              "augmented_signed_error_meV": -297.14694040737055,
+              "seed_means_meV": [
+                28.586251395089285,
+                28.468540736607142
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 19,
+              "actual_delta_meV": 22.142825201477105,
+              "signed_barrier_shift_meV": -22.41114566200658,
+              "replay_signed_error_meV": -153.51014946339834,
+              "augmented_signed_error_meV": -175.92129512540492,
+              "seed_means_meV": [
+                21.672212023023157,
+                22.61343837993105
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 37,
+              "actual_delta_meV": 20.92063638724693,
+              "signed_barrier_shift_meV": -48.4107764991554,
+              "replay_signed_error_meV": 60.31777086466233,
+              "augmented_signed_error_meV": 11.906994365506922,
+              "seed_means_meV": [
+                22.486848847128805,
+                19.35442392736506
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": 23.802711941318364
+        },
+        "historical_support": {
+          "signed_shift": {
+            "mean_meV": -61.87959150834517,
+            "interval95_meV": [
+              -98.65703149275348,
+              -34.99687368219549
+            ]
+          },
+          "actual": {
+            "mean_meV": -8.718945284090038,
+            "interval95_meV": [
+              -35.03257251908778,
+              13.084334449634476
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": 19.92182864013596,
+            "interval95_meV": [
+              10.79989613093478,
+              28.763383037032234
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": 13.79262994795643,
+            "interval95_meV": [
+              7.170511995447009,
+              20.164215301063845
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": -28.640773924226004,
+            "interval95_meV": [
+              -51.301436421770994,
+              -10.125992800462342
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 37.73654887467856,
+            "shuffled_reference_interval95_meV": [
+              15.036736130569297,
+              50.09865831596701
+            ],
+            "actual_minus_shuffled_mean_meV": -46.4554941587686
+          },
+          "lower_barriers_materials": 75,
+          "increased_absolute_error_materials": 55,
+          "seed_actual_meV": [
+            -8.529341684126477,
+            -8.9085488840536
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 28,
+              "actual_delta_meV": 41.36603219168527,
+              "signed_barrier_shift_meV": -41.36603219168527,
+              "replay_signed_error_meV": -533.4406188462506,
+              "augmented_signed_error_meV": -574.8066510379358,
+              "seed_means_meV": [
+                41.41998291015625,
+                41.312081473214285
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 11,
+              "actual_delta_meV": 23.81830969460969,
+              "signed_barrier_shift_meV": -21.881103515625,
+              "replay_signed_error_meV": -211.4610960085305,
+              "augmented_signed_error_meV": -233.3421995241555,
+              "seed_means_meV": [
+                23.476340553977273,
+                24.160278835242107
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 49,
+              "actual_delta_meV": -44.64321414301668,
+              "signed_barrier_shift_meV": -82.58087781010842,
+              "replay_signed_error_meV": 156.93578620057357,
+              "augmented_signed_error_meV": 74.35490839046517,
+              "seed_means_meV": [
+                -44.25676195471949,
+                -45.02966633131388
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": -2.897805013323861
+        }
+      },
+      "gap_main_minus_support": {
+        "actual": {
+          "interval95_meV": [
+            4.372879078654555,
+            64.55208017567652
+          ],
+          "mean_meV": 32.820440750693216
+        },
+        "shared_shift_only": {
+          "interval95_meV": [
+            -1.6226353646288614,
+            21.131829506681658
+          ],
+          "mean_meV": 9.755372048552442
+        },
+        "residual": {
+          "interval95_meV": [
+            -1.9505870670666703,
+            51.90163700524699
+          ],
+          "mean_meV": 23.065068702140774
+        }
+      },
+      "gap_after_step8_bias_balance_meV": 26.700516954642225
+    },
+    {
+      "step": 807,
+      "pooled_uniform_signed_shift_per_seed_meV": [
+        -57.553083537011176,
+        -53.91995733676676
+      ],
+      "panels": {
+        "primary91": {
+          "signed_shift": {
+            "mean_meV": -42.74741371909341,
+            "interval95_meV": [
+              -63.97267855130709,
+              -24.70530834826794
+            ]
+          },
+          "actual": {
+            "mean_meV": 30.085087421015995,
+            "interval95_meV": [
+              11.09510164853342,
+              51.24433313517321
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": 35.39404944581881,
+            "interval95_meV": [
+              26.84704120404254,
+              43.375727066544854
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": 45.388647706912224,
+            "interval95_meV": [
+              35.17495888773028,
+              54.9378614273138
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": -5.308962024802817,
+            "interval95_meV": [
+              -23.111508258532893,
+              15.22223997248103
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 32.30999492492438,
+            "shuffled_reference_interval95_meV": [
+              19.816929494781593,
+              40.494945955378434
+            ],
+            "actual_minus_shuffled_mean_meV": -2.224907503908387
+          },
+          "lower_barriers_materials": 70,
+          "increased_absolute_error_materials": 72,
+          "seed_actual_meV": [
+            30.82622860405171,
+            29.343946237980283
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 35,
+              "actual_delta_meV": 31.596156529017858,
+              "signed_barrier_shift_meV": -28.610665457589285,
+              "replay_signed_error_meV": -281.600414179692,
+              "augmented_signed_error_meV": -310.2110796372813,
+              "seed_means_meV": [
+                32.407924107142854,
+                30.784388950892858
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 19,
+              "actual_delta_meV": 24.649282078533027,
+              "signed_barrier_shift_meV": -26.420994808799342,
+              "replay_signed_error_meV": -158.99287330180294,
+              "augmented_signed_error_meV": -185.4138681106023,
+              "seed_means_meV": [
+                25.596130094569208,
+                23.70243406249684
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 37,
+              "actual_delta_meV": 31.447057224451438,
+              "signed_barrier_shift_meV": -64.50385016364021,
+              "replay_signed_error_meV": 40.104411753598136,
+              "augmented_signed_error_meV": -24.399438410042066,
+              "seed_means_meV": [
+                32.01575641680786,
+                30.87835803209502
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": 30.360241592105808
+        },
+        "historical_support": {
+          "signed_shift": {
+            "mean_meV": -69.16843761097302,
+            "interval95_meV": [
+              -111.29795421253552,
+              -39.15952335704457
+            ]
+          },
+          "actual": {
+            "mean_meV": -2.3962802814245587,
+            "interval95_meV": [
+              -28.097277316216722,
+              18.446932913694244
+            ]
+          },
+          "pooled_shared_shift_only": {
+            "mean_meV": 27.314704987547316,
+            "interval95_meV": [
+              17.02049861057817,
+              37.165503393098916
+            ]
+          },
+          "opposite_panel_shift_only": {
+            "mean_meV": 20.740095295277186,
+            "interval95_meV": [
+              12.72603031155066,
+              28.267750342526764
+            ]
+          },
+          "residual_after_shared_shift": {
+            "mean_meV": -29.710985268971875,
+            "interval95_meV": [
+              -51.13591729045013,
+              -12.745993987589001
+            ]
+          },
+          "randomized_material_assignment": {
+            "shuffled_mean_meV": 45.41008680130774,
+            "shuffled_reference_interval95_meV": [
+              22.8626099155081,
+              57.677235588375794
+            ],
+            "actual_minus_shuffled_mean_meV": -47.8063670827323
+          },
+          "lower_barriers_materials": 76,
+          "increased_absolute_error_materials": 55,
+          "seed_actual_meV": [
+            -2.2133636470145617,
+            -2.5791969158345553
+          ],
+          "grouped_at_step8_replay": [
+            {
+              "group": "underpredicted",
+              "materials": 28,
+              "actual_delta_meV": 42.683192661830354,
+              "signed_barrier_shift_meV": -42.683192661830354,
+              "replay_signed_error_meV": -550.3337332086948,
+              "augmented_signed_error_meV": -593.0169258705251,
+              "seed_means_meV": [
+                44.872828892299104,
+                40.493556431361604
+              ]
+            },
+            {
+              "group": "near_zero",
+              "materials": 11,
+              "actual_delta_meV": 24.47232333096591,
+              "signed_barrier_shift_meV": -23.523504083806817,
+              "replay_signed_error_meV": -224.41719508523502,
+              "augmented_signed_error_meV": -247.94069916904184,
+              "seed_means_meV": [
+                25.945490056818183,
+                22.999156605113637
+              ]
+            },
+            {
+              "group": "overpredicted",
+              "materials": 49,
+              "actual_delta_meV": -34.187706447698694,
+              "signed_barrier_shift_meV": -94.54968510841837,
+              "replay_signed_error_meV": 133.70412415098812,
+              "augmented_signed_error_meV": 39.154439042569756,
+              "seed_means_meV": [
+                -35.441134705033804,
+                -32.93427819036359
+              ]
+            }
+          ],
+          "actual_balanced_for_step8_bins_meV": 2.69870437498437
+        }
+      },
+      "gap_main_minus_support": {
+        "actual": {
+          "interval95_meV": [
+            2.9357653654116516,
+            65.37316356967445
+          ],
+          "mean_meV": 32.48136770244055
+        },
+        "shared_shift_only": {
+          "interval95_meV": [
+            -4.7640704227419315,
+            21.165636350517353
+          ],
+          "mean_meV": 8.079344458271493
+        },
+        "residual": {
+          "interval95_meV": [
+            -1.446012964171442,
+            53.57554471428422
+          ],
+          "mean_meV": 24.402023244169058
+        }
+      },
+      "gap_after_step8_bias_balance_meV": 27.661537217121438
+    }
+  ]
+}

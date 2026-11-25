@@ -13,6 +13,9 @@ Which complete migration paths improve forward-barrier predictions on held-out m
 - On the 91 project-held-out oxides, changes in mean absolute error relative to D₀ were +23.97 and +12.84 meV for the first random and BVSE arms, and +13.99 and +6.89 meV for the second. Positive values indicate higher error. BVSE reproducibility across the two candidate blocks remains unresolved.
 - The eight-path pilot retains the original four paths and adds one matched path per stratum. The analysis reuses the same 91 materials. The dose-sensitivity experiment is complete. See [paired results](results/eight_paths_summary.json). In the first candidate block, moving from four to eight paths increased MAE by 7.13 meV for random selection and 11.47 meV for BVSE. Both second-block intervals for the four-to-eight-path comparison span zero. All four eight-path arms have higher point-estimate MAE than pure D₀.
 
+- The historical 17-pair strategy replay retains BVSE alone as the reference and records target coverage as exploratory. See [replay evidence](results/target_coverage_replay/README.md).
+- The [protected-exposure trajectory and signed-error analysis](docs/training_degradation.md) trace the reproduced degradation and compare the different responses of the two historical panels.
+
 ## Data and code
 
 - experiments/ contains frozen candidate selections, evaluation IDs and baseline frame IDs.
