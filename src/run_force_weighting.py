@@ -1,0 +1,341 @@
+"""Test energy-dependent force weighting on the frozen eight-path schedules."""
+import argparse
+from collections import defaultdict
+from copy import deepcopy
+import io
+import json
+import math
+import os
+from pathlib import Path
+import tempfile
+import time
+from zipfile import ZipFile
+
+import numpy as np
+
+from audit_signed_barriers import ARMS, SEEDS, file_sha, load_frozen_data, rows, sha
+from run_ef import build_batch, fit, make_graphs, write_csv
+
+
+TREATMENTS = ("full", "energy_weighted", "uniform_weighted")
+MILESTONES = (400, 807)
+
+
+def load_bundle(path):
+    with ZipFile(path) as archive:
+        plan = json.loads(archive.read("plan.json"))
+        names = ("training_frames.csv", "training.xyz", "evaluation_frames.csv",
+                 "evaluation.xyz", "jobs.json", "foundation.model")
+        files = {name: archive.read(name) for name in names}
+    for name, raw in files.items():
+        if sha(raw) != plan["sha256"][name]:
+            raise ValueError(f"Frozen file changed: {name}")
+    return plan, files
+
+
+def force_weights(frames, order, added):
+    """Match the force coefficient per path after batch atom-count reduction."""
+    edges = {frames[i]["edge_id"] for i in added}
+    paths = defaultdict(list)
+    for i, frame in enumerate(frames):
+        if frame["edge_id"] in edges:
+            paths[frame["edge_id"]].append(i)
+    atoms = [int(frame["n_atoms"]) for frame in frames]
+    exposures = defaultdict(float)
+    for batch in order:
+        count = sum(atoms[i] for i in batch)
+        for i in batch:
+            if i in added:
+                exposures[i] += atoms[i] / count
+    energy, uniform, details = {}, {}, {}
+    for edge, ids in sorted(paths.items()):
+        ids.sort(key=lambda i: int(frames[i]["frame"]))
+        if [int(frames[i]["frame"]) for i in ids] != list(range(1, len(ids) + 1)):
+            raise ValueError(f"Incomplete frozen training path {edge}")
+        if not set(ids).issubset(added) or len(ids) < 3:
+            raise ValueError(f"Expected a complete newly added path: {edge}")
+        e = [float(frames[i]["energy_eV"]) for i in ids]
+        excess = [max(0.0, v - min(e[0], e[-1])) for v in e[1:-1]]
+        maximum = max(excess)
+        interior = ids[1:-1]
+        energy.update({i: 1.0 - 0.5 * v / maximum if maximum else 1.0
+                       for i, v in zip(interior, excess)})
+        total = sum(exposures[i] for i in interior)
+        weighted = sum(exposures[i] * energy[i] for i in interior)
+        if not total:
+            raise ValueError(f"No interior presentations for {edge}")
+        uniform.update(dict.fromkeys(interior, weighted / total))
+        if not math.isclose(sum(exposures[i] * uniform[i] for i in interior), weighted,
+                            abs_tol=1e-12, rel_tol=0):
+            raise ValueError(f"Force exposure mismatch for {edge}")
+        details[edge] = dict(frames=interior, energy_multipliers=[energy[i] for i in interior],
+                             uniform_multiplier=weighted / total,
+                             force_coefficient_before=total, force_coefficient_after=weighted)
+    return {"full": {}, "energy_weighted": energy, "uniform_weighted": uniform}, details
+
+
+def frozen_experiment(frames, files, seed):
+    jobs = {cell["seed"]: cell["jobs"] for cell in json.loads(files["jobs.json"])}[seed]
+    replay, augmented = (jobs[arm] for arm in ARMS)
+    changes = [step for step, (a, b) in enumerate(zip(replay, augmented), 1) if a != b]
+    atoms = [int(row["n_atoms"]) for row in frames]
+    if (len(replay) != len(augmented) or len(augmented) != 807 or len(changes) != 97
+            or changes[0] != 8):
+        raise ValueError("Unexpected frozen schedule")
+    for a, b in zip(replay, augmented):
+        if len(a) != 2 or len(b) != 2 or [atoms[i] for i in a] != [atoms[i] for i in b]:
+            raise ValueError("Frozen replay does not match batch atom counts")
+    original = {i for batch in replay for i in batch}
+    added = {i for batch in augmented for i in batch} - original
+    if len({frames[i]["edge_id"] for i in added}) != 8:
+        raise ValueError("The augmented schedule must add the original eight paths")
+    weights, details = force_weights(frames, augmented, added)
+    return augmented, weights, details
+
+
+def atomic_json(path, value):
+    temp = path.with_suffix(".partial")
+    temp.write_text(json.dumps(value, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    temp.replace(path)
+
+
+def score_profiles(model, graphs, eval_rows, device, torch):
+    predictions = []
+    mode = model.training
+    try:
+        model.eval()
+        with torch.no_grad():
+            for start in range(0, len(eval_rows), 2):
+                ids = list(range(start, min(start + 2, len(eval_rows))))
+                pred = model(build_batch(graphs, ids, device).to_dict(),
+                             training=False, compute_force=False)["energy"]
+                if not torch.isfinite(pred).all():
+                    raise ValueError("Nonfinite held-out energy")
+                predictions.extend(dict(eval_rows[i], energy_eV=value)
+                                   for i, value in zip(ids, pred.cpu().tolist()))
+    finally:
+        model.train(mode)
+    return predictions
+
+
+def train(args, files, frames, config, order, weights, identity):
+    os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
+    os.environ.setdefault("TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD", "1")
+    import ase
+    from ase.io import read
+    import torch
+    import mace
+    from mace import data
+    from mace.calculators import MACECalculator
+
+    if (mace.__version__, ase.__version__, np.__version__) != ("0.3.14", "3.29.0", "2.2.6"):
+        raise RuntimeError("Expected MACE 0.3.14, ASE 3.29.0 and NumPy 2.2.6")
+    if args.device == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError("CUDA is not available")
+    torch.set_num_threads(args.threads)
+    torch.set_default_dtype(torch.float32)
+    torch.backends.cuda.matmul.allow_tf32 = False
+    torch.use_deterministic_algorithms(True)
+    environment = dict(torch=str(torch.__version__), mace=mace.__version__, ase=ase.__version__,
+                       numpy=np.__version__, device=args.device, threads=args.threads)
+    if args.device == "cuda":
+        environment["gpu"] = torch.cuda.get_device_name()
+    identity = dict(identity, environment=environment)
+    max_step = args.smoke or args.until
+    args.output.mkdir(parents=True, exist_ok=True)
+    start = time.monotonic()
+    with tempfile.TemporaryDirectory(dir=args.output) as work:
+        foundation_path = Path(work) / "foundation.model"
+        foundation_path.write_bytes(files["foundation.model"])
+        calc = MACECalculator(model_paths=str(foundation_path), device=args.device, default_dtype="float32")
+        model = calc.models[0].eval()
+        train_atoms = read(io.StringIO(files["training.xyz"].decode()), index=":", format="extxyz")
+        graphs = make_graphs(train_atoms, frames, sorted({i for b in order[:max_step] for i in b}), calc)
+        for graph in graphs.values():
+            for key in ("weight", "energy_weight", "forces_weight"):
+                if graph[key].numel() != 1 or graph[key].item() != 1:
+                    raise ValueError(f"Expected original unit graph coefficient for {key}")
+        eval_rows = rows(files["evaluation_frames.csv"])
+        eval_graphs = {}
+        if not args.smoke:
+            blind = read(io.StringIO(files["evaluation.xyz"].decode()), index=":", format="extxyz")
+            if len(blind) != len(eval_rows):
+                raise ValueError("Held-out geometry count changed")
+            spec = data.KeySpecification()
+            for i, (atoms, row) in enumerate(zip(blind, eval_rows)):
+                if (atoms.info or atoms.calc or set(atoms.arrays) != {"positions", "numbers"}
+                        or len(atoms) != int(row["n_atoms"])):
+                    raise ValueError("Invalid blind geometry")
+                conf = data.config_from_atoms(atoms, key_specification=spec, head_name=calc.head)
+                eval_graphs[i] = data.AtomicData.from_config(
+                    conf, z_table=calc.z_table, cutoff=calc.r_max, heads=calc.available_heads
+                )
+        print(f"Prepared {len(graphs)} training graphs and {len(eval_graphs)} evaluation graphs "
+              f"in {time.monotonic()-start:.1f}s", flush=True)
+        for arm in args.arm or TREATMENTS:
+            task = dict(identity, arm=arm, optimizer_steps=max_step)
+            folder = args.output / f"seed{args.seed}" / arm
+            marker = folder / f"done_{max_step}.json"
+            if marker.exists() and not args.smoke:
+                old = json.loads(marker.read_bytes())
+                if any(old[k] != v for k, v in task.items()) or any(
+                    file_sha(folder / k) != h for k, h in old["files"].items()
+                ):
+                    raise ValueError(f"Completed run differs from its saved identity: {folder}")
+                continue
+            weighted_graphs = dict(graphs)
+            for i, factor in weights[arm].items():
+                if i in graphs:
+                    weighted_graphs[i] = deepcopy(graphs[i])
+                    weighted_graphs[i].forces_weight.mul_(factor)
+
+            def after_step(step, current):
+                if step not in MILESTONES:
+                    return
+                prediction = score_profiles(current, eval_graphs, eval_rows, args.device, torch)
+                save_csv(folder / f"predictions_{step}.csv", prediction)
+                target = folder / f"model_{step}.pt"
+                stage = target.with_suffix(".partial")
+                torch.save({key: value.cpu() for key, value in current.state_dict().items()}, stage)
+                stage.replace(target)
+                print(f"seed {args.seed} {arm} step {step} scored", flush=True)
+
+            folder.mkdir(parents=True, exist_ok=True)
+            _, trace, _, grad, _, elapsed = fit(
+                model, weighted_graphs, list(range(len(frames))), order[:max_step], config,
+                args.seed, args.device, bool(args.smoke), None if args.smoke else after_step
+            )
+            print(json.dumps(dict(seed=args.seed, arm=arm, updates=max_step, seconds=elapsed,
+                                  seconds_per_step=elapsed / max_step, smoke_force_gradient=grad)),
+                  flush=True)
+            if not args.smoke:
+                save_csv(folder / f"training_{max_step}.csv", trace)
+                names = [f"training_{max_step}.csv"] + [
+                    f"{kind}_{step}.{suffix}" for step in MILESTONES if step <= max_step
+                    for kind, suffix in (("predictions", "csv"), ("model", "pt"))
+                ]
+                atomic_json(marker, dict(task, seconds=elapsed, files={
+                    name: file_sha(folder / name) for name in names
+                }))
+
+
+def save_csv(path, records):
+    stage = path.with_suffix(".partial")
+    write_csv(stage, records)
+    stage.replace(path)
+
+
+def score(args):
+    eval_rows, _, truth = load_frozen_data(args.bundle, args.project)
+    bundle_hash = file_sha(args.bundle)
+    expected = {(r["panel"], r["edge_id"], int(r["frame"])) for r in eval_rows}
+    materials = {(r["panel"], r["edge_id"]): r["material_id"] for r in eval_rows}
+    if len(materials.values()) != len(set(materials.values())):
+        raise ValueError("Multiple paths per evaluation material require grouped resampling")
+    execution = set()
+    results = []
+    for arm in TREATMENTS:
+        for seed in SEEDS:
+            folder = args.output / f"seed{seed}" / arm
+            done = folder / "done_807.json"
+            if not done.exists():
+                done = folder / f"done_{args.until}.json"
+            marker = json.loads(done.read_bytes())
+            if (marker["arm"] != arm or marker["seed"] != seed or marker["bundle"] != bundle_hash
+                    or marker["optimizer_steps"] < args.until):
+                raise ValueError(f"Unexpected run identity: {folder}")
+            execution.add((marker["implementation"], json.dumps(marker["environment"], sort_keys=True)))
+            path = folder / f"predictions_{args.until}.csv"
+            if file_sha(path) != marker["files"][path.name]:
+                raise ValueError(f"Changed predictions: {path}")
+            data = defaultdict(dict)
+            records = rows(path.read_bytes())
+            found = {(r["panel"], r["edge_id"], int(r["frame"])) for r in records}
+            if found != expected or len(records) != len(expected):
+                raise ValueError(f"Changed evaluation frames: {path}")
+            for row in records:
+                key = row["panel"], row["edge_id"]
+                if materials[key] != row["material_id"]:
+                    raise ValueError(f"Changed material ID: {key}")
+                data[key][int(row["frame"])] = float(row["energy_eV"])
+            for key, ref in truth.items():
+                energies = np.array([data[key][i] for i in range(1, len(ref) + 1)])
+                if not np.isfinite(energies).all():
+                    raise ValueError(f"Nonfinite evaluation energy: {key}")
+                pred = energies - energies[0]
+                error = float(1000 * (pred.max() - ref.max()))
+                high = sorted(range(1, len(ref) - 1), key=lambda i: (-ref[i], i))
+                high = high[:math.ceil(len(high) / 4)]
+                results.append(dict(panel=key[0], edge=key[1], material_id=materials[key],
+                                    seed=seed, arm=arm, barrier_signed_error_meV=error,
+                                    barrier_abs_error_meV=abs(error),
+                                    high_profile_mae_meV=float(1000 * abs(pred-ref)[high].mean())))
+    if len(execution) != 1:
+        raise ValueError("Treatment matrix contains mixed code or execution environments")
+    implementation, environment = execution.pop()
+    metrics = ("barrier_abs_error_meV", "barrier_signed_error_meV", "high_profile_mae_meV")
+    cells = {(r["panel"], r["edge"], r["seed"], r["arm"]): r for r in results}
+    comparisons = {}
+    arm_metrics = {}
+    for panel in sorted({key[0] for key in truth}):
+        edges = sorted(edge for p, edge in truth if p == panel)
+        draws = np.random.default_rng(20261125).integers(len(edges), size=(10000, len(edges)))
+        panels = comparisons[panel] = {}
+        arm_metrics[panel] = {
+            arm: {metric: float(np.mean([cells[panel, edge, seed, arm][metric]
+                                         for edge in edges for seed in SEEDS]))
+                  for metric in metrics}
+            for arm in TREATMENTS
+        }
+        for test, control in (("energy_weighted", "full"), ("uniform_weighted", "full"),
+                              ("energy_weighted", "uniform_weighted")):
+            summary = panels[f"{test}_minus_{control}"] = {}
+            for metric in metrics:
+                diff = np.array([
+                    [cells[panel, edge, seed, test][metric] - cells[panel, edge, seed, control][metric]
+                     for edge in edges] for seed in SEEDS
+                ])
+                summary[metric] = dict(mean=float(diff.mean()), seed_means=diff.mean(axis=1).tolist(),
+                                       interval95=np.quantile(diff.mean(axis=0)[draws].mean(axis=1),
+                                                              [.025, .975]).tolist())
+    save_csv(args.output / f"per_material_{args.until}.csv", results)
+    report = dict(step=args.until, seeds=SEEDS, arms=arm_metrics, contrasts=comparisons,
+                  implementation=implementation, environment=json.loads(environment),
+                  interval="Paired material bootstrap conditional on the two seeds")
+    atomic_json(args.output / f"summary_{args.until}.json", report)
+    print(json.dumps(report), flush=True)
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("bundle", type=Path)
+    p.add_argument("output", type=Path)
+    p.add_argument("--seed", type=int, choices=SEEDS, default=17)
+    p.add_argument("--device", choices=("cpu", "cuda"), default="cpu")
+    p.add_argument("--threads", type=int, default=4)
+    p.add_argument("--arm", action="append", choices=TREATMENTS)
+    p.add_argument("--until", type=int, choices=MILESTONES, default=807)
+    modes = p.add_mutually_exclusive_group()
+    modes.add_argument("--preflight", action="store_true")
+    modes.add_argument("--smoke", type=int, metavar="STEPS")
+    modes.add_argument("--project", type=Path, help="Score completed arms against local labels")
+    args = p.parse_args()
+    if args.project:
+        score(args)
+        return
+    if args.smoke is not None and not 8 <= args.smoke <= 200:
+        p.error("smoke must include the first path insertion and use 8 to 200 steps")
+    plan, files = load_bundle(args.bundle)
+    frames = rows(files["training_frames.csv"])
+    order, weights, details = frozen_experiment(frames, files, args.seed)
+    identity = dict(seed=args.seed, bundle=file_sha(args.bundle),
+                    schedule=sha(json.dumps(order).encode()), implementation=file_sha(Path(__file__)),
+                    weights=details)
+    if args.preflight:
+        print(json.dumps(identity, indent=2, allow_nan=False))
+        return
+    train(args, files, frames, plan["training"], order, weights, identity)
+
+
+if __name__ == "__main__":
+    main()

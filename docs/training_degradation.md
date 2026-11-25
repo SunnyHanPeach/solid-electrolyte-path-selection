@@ -81,6 +81,15 @@ Compare three arms with the same images, optimizer, training sequence and seeds.
 
 Use the full-path barrier MAE as the main endpoint, including the original highest-energy evaluation images. Report signed barrier bias, high-energy profile error, and paired material and seed effects on both panels. A higher barrier-underestimation risk, or equal performance for the two reduced-weight arms, limits the case for energy-dependent weighting. A favorable historical result needs confirmation on unused materials before adoption. The coefficient 0.5 is a fixed exploratory dose, not an estimated optimum. [Ge et al., task-oriented energy weighting](https://doi.org/10.1021/acs.jpclett.4c00746) · [Deng et al., high-energy supervision and softening](https://doi.org/10.1038/s41524-024-01500-6)
 
+Run both seed commands with the original protected-run bundle. The new comparison uses the same frozen augmented schedule in all three arms. Step 807 is the primary endpoint and step 400 describes the trajectory. Both panels were used previously. The independently held test materials remain outside this run. Use the existing 0.25 meV practical threshold for the exploratory comparison against both controls. Inspect both seed effects and the paired material intervals alongside the auxiliary-panel and signed-error results.
+
+    python src/run_force_weighting.py PROTECTED_BUNDLE.zip OUTPUT --seed 17
+    python src/run_force_weighting.py PROTECTED_BUNDLE.zip OUTPUT --seed 29
+    python src/run_force_weighting.py PROTECTED_BUNDLE.zip OUTPUT --project PROJECT_ROOT --until 400
+    python src/run_force_weighting.py PROTECTED_BUNDLE.zip OUTPUT --project PROJECT_ROOT
+
+Add `--device cuda` to both training commands for a GPU run. Keep the device and thread count the same across the matrix. The scorer validates the common execution environment and checksums before comparing predictions. Raw models and training logs stay in the run directory.
+
 ## Reproduction
 
 Run from the repository root with Python and NumPy. The signed CSV is already included.
