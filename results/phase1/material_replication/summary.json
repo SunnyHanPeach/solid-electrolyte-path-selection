@@ -1,0 +1,125 @@
+{
+  "lock": {
+    "case": "Phase 1/mp-753143 material replication",
+    "priority_edge": "mp-753143_5_13_0_0_0",
+    "matched_alternative_edge": null,
+    "seeds": [
+      17,
+      29,
+      43,
+      53,
+      67
+    ],
+    "selection": "All deduplicated, project-unused original test materials under the locked cap. The separately sealed four materials are excluded.",
+    "primary": "Matched replay minus path forward barrier MAE. Pure D0 minus path is the absolute gain.",
+    "gate": "Report +0.25 meV practical gain only if the paired 95% chemical-system bootstrap lower bound exceeds it, all five seed means are positive and leave-one-material-out means stay positive.",
+    "stop": "Characterize transfer on this panel. No training or parameter selection on these results.",
+    "historical_edges": {
+      "training": 125,
+      "evaluated": 841
+    },
+    "unique_excluded_materials": 840,
+    "pool_materials": 26,
+    "near_exclusions": 0,
+    "near_pairs": 0,
+    "structures_scanned": 5627,
+    "duplicate_scan_passes": 2,
+    "materially_distinct_paths": 26,
+    "material_families": {
+      "N": 1,
+      "S": 4,
+      "F-O": 9,
+      "O": 5,
+      "F": 5,
+      "Cl-N": 1,
+      "Cl": 1
+    },
+    "chemistry_new_vs_project_training": 0,
+    "exact_chemistry_cap": 4,
+    "images": 144,
+    "caveat": "Original Test split, newly held out by audited project inventory. No foundation-pretraining isolation claim. The small panel is a replication probe.",
+    "source_sha256": {
+      "init_features": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7",
+      "archive": "b7a99d89337902e9e1da319f57547170fdb132bf15bf6ffef03a0140e2207d7f",
+      "historical_pair_data": "247c55b481a0d53b9a797f142303ef0248e084c817850d032deaec170bfe7f48",
+      "matcher": "1b7912a7181074ae17d374932d87a2cceb52e6314eacb70ba8cb4cc297c37f4c",
+      "MACE_\u72ec\u7acb\u6750\u6599\u8bc4\u4f30\u9762\u677f_\u9501\u5b9a.zip": "84e80a4fb6d0e6f0850f6c3352d0476c926a928ee9cbfe8332911abf3278800a",
+      "MACE_protected_D0_night_GPU_bundle.zip": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+      "LiNiOTi_\u72ec\u7acb\u4e0e\u8865\u5145\u9762\u677f_\u76f2\u5316\u9501\u5b9a.zip": "17690b82d9b42f782c124fceb32440969b468b4a7c35576ff9c24f17548c6ad2",
+      "panel_blind.zip": "0f0cb53e4a70542e0d43be50379723d055079378a7b936599e438ba5ca5d1585"
+    },
+    "assets_sha256": {
+      "panel.csv": "7da65c47ed092facdab78699be862b09f367de310c6441576c9aaa5d7a4bcfde",
+      "frames.csv": "b4f0037e4c59400d4ca13fde1561daf6907271e24fbfa71fc0e4cf0a45fc52a8",
+      "blind.xyz": "20b21e78716a8378e00a7ed83560ac344a8bac87c3ed1ca4c626d50352d1c406"
+    }
+  },
+  "proof": {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "panel": "7656d334e9391f2e64007835c35b266a587f0004d66a2d0dfb96c6ed450bd117",
+    "weights": {
+      "17/pure": "28e646d936601e2ebc9427243b72b802eefdccd7d7eee852960eb165e6266902",
+      "17/replay3": "49bda572439c448992eca9c2d855ecdfb8caef7a83e2bf00d9033c9ee1fdd9d3",
+      "17/path3": "a353c5f5f9f9fe1b81b9f735c4719df73bbe6c4636be6cf1acf912ed7e53eba6",
+      "29/pure": "b05724923d2630462799b77afc4f6e54049d7f97084cf5e05a3b589d0a1b8ad4",
+      "29/replay3": "b0f03bbf7d682793703b985758a206cc7a76c9c91bb5eb6c6e43dcb21d8ce3b2",
+      "29/path3": "dfd9ed101ea08a1188281e6df0a97f757868c60d186693481ccc2cc7e21df0fa",
+      "43/pure": "6debc32d0435cc30dfbf6360143e6d953d5b295f948e4ec64197e2a70b92c15d",
+      "43/replay3": "82b83cbe10eb0f47aaed1992a8f2241b6f3e1fcee1dfa012f4758d579bd7dd38",
+      "43/path3": "de7f0ffbe9d466ae623c0d4306ed58410ebc9a76f42aefd3fd9b6f7a0c2ba498",
+      "53/pure": "970c2e919dbb253844827401c405b1b4c557c045f2f29f243d8eec0f8ffd333f",
+      "53/replay3": "0b6e706bbe2d0bba553245336d4bb18019f53253a3a1a2ef624bd8eb892bdc73",
+      "53/path3": "b30eef7a793d6ae498b932bcb47a4d2d480ce910a3d9941f9b3841e1bb7dcb91",
+      "67/pure": "b187787974662a3f265d1ea2d25bfdbb3f8ecba3f14cb8839909e1c942787b07",
+      "67/replay3": "70c0792a03498c12cb1f713d12633c248079148408bb2b3fb18de2b41f4154bc",
+      "67/path3": "984ea3a5e74145b7a306afaa3078db3986a7207a86cc0dca70e89fd1188d5581"
+    },
+    "predictions": "f27b2124c980dc279ebae8a4163dbc6e1fab998b19ce5c877e4cfc2da0225943",
+    "hardware": "NVIDIA GeForce RTX 4090",
+    "torch": "2.8.0+cu128"
+  },
+  "materials": 26,
+  "exact_chemistries": 18,
+  "results": {
+    "net": {
+      "mean_meV": 5.529315655048077,
+      "interval95_meV": [
+        0.4602172157981179,
+        14.473741771556712
+      ],
+      "seed_means_meV": [
+        5.288931039663462,
+        5.973229041466346,
+        5.55419921875,
+        7.031954251802885,
+        3.7982647235576925
+      ],
+      "favorable_materials": 19,
+      "leave_one_out_meV": [
+        2.1455078125,
+        5.90869140625
+      ],
+      "practical_positive": true
+    },
+    "absolute": {
+      "mean_meV": 5.312208224158719,
+      "interval95_meV": [
+        0.14678721961856536,
+        15.099946985859377
+      ],
+      "seed_means_meV": [
+        4.836046754808019,
+        5.953275240384615,
+        5.545982947716346,
+        5.979097806490385,
+        4.246638371394231
+      ],
+      "favorable_materials": 16,
+      "leave_one_out_meV": [
+        1.430946553125068,
+        5.610634053125068
+      ],
+      "practical_positive": false
+    }
+  }
+}
