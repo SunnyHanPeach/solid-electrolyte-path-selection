@@ -1,0 +1,55 @@
+{
+  "case": "Phase 1/mp-753143 material replication",
+  "priority_edge": "mp-753143_5_13_0_0_0",
+  "matched_alternative_edge": null,
+  "seeds": [
+    17,
+    29,
+    43,
+    53,
+    67
+  ],
+  "selection": "All deduplicated, project-unused original test materials under the locked cap. The separately sealed four materials are excluded.",
+  "primary": "Matched replay minus path forward barrier MAE. Pure D0 minus path is the absolute gain.",
+  "gate": "Report +0.25 meV practical gain only if the paired 95% chemical-system bootstrap lower bound exceeds it, all five seed means are positive and leave-one-material-out means stay positive.",
+  "stop": "Characterize transfer on this panel. No training or parameter selection on these results.",
+  "historical_edges": {
+    "training": 125,
+    "evaluated": 841
+  },
+  "unique_excluded_materials": 840,
+  "pool_materials": 26,
+  "near_exclusions": 0,
+  "near_pairs": 0,
+  "structures_scanned": 5627,
+  "duplicate_scan_passes": 2,
+  "materially_distinct_paths": 26,
+  "material_families": {
+    "N": 1,
+    "S": 4,
+    "F-O": 9,
+    "O": 5,
+    "F": 5,
+    "Cl-N": 1,
+    "Cl": 1
+  },
+  "chemistry_new_vs_project_training": 0,
+  "exact_chemistry_cap": 4,
+  "images": 144,
+  "caveat": "Original Test split, newly held out by audited project inventory. No foundation-pretraining isolation claim. The small panel is a replication probe.",
+  "source_sha256": {
+    "init_features": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7",
+    "archive": "b7a99d89337902e9e1da319f57547170fdb132bf15bf6ffef03a0140e2207d7f",
+    "historical_pair_data": "247c55b481a0d53b9a797f142303ef0248e084c817850d032deaec170bfe7f48",
+    "matcher": "1b7912a7181074ae17d374932d87a2cceb52e6314eacb70ba8cb4cc297c37f4c",
+    "MACE_\u72ec\u7acb\u6750\u6599\u8bc4\u4f30\u9762\u677f_\u9501\u5b9a.zip": "84e80a4fb6d0e6f0850f6c3352d0476c926a928ee9cbfe8332911abf3278800a",
+    "MACE_protected_D0_night_GPU_bundle.zip": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+    "LiNiOTi_\u72ec\u7acb\u4e0e\u8865\u5145\u9762\u677f_\u76f2\u5316\u9501\u5b9a.zip": "17690b82d9b42f782c124fceb32440969b468b4a7c35576ff9c24f17548c6ad2",
+    "panel_blind.zip": "0f0cb53e4a70542e0d43be50379723d055079378a7b936599e438ba5ca5d1585"
+  },
+  "assets_sha256": {
+    "panel.csv": "7da65c47ed092facdab78699be862b09f367de310c6441576c9aaa5d7a4bcfde",
+    "frames.csv": "b4f0037e4c59400d4ca13fde1561daf6907271e24fbfa71fc0e4cf0a45fc52a8",
+    "blind.xyz": "20b21e78716a8378e00a7ed83560ac344a8bac87c3ed1ca4c626d50352d1c406"
+  }
+}

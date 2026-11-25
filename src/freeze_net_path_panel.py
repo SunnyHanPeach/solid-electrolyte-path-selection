@@ -24,6 +24,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("project", "history", "archives", "output"):
         parser.add_argument(name, type=Path)
+    parser.add_argument("--mp753143-confirmation", action="store_true")
     args = parser.parse_args()
     source = args.history / "work/label-diagnostics"
     history = args.history / "outputs"
@@ -42,6 +43,8 @@ def main():
         (args.archives / "LiNiOTi_独立与补充面板_盲化锁定.zip",
          ("strict_original_test/manifest.csv", "project_unseen_train_pilot/manifest.csv")),
     )
+    if args.mp753143_confirmation:
+        exclusions += ((args.archives / "net-path-panel/panel_blind.zip", ("panel.csv",)),)
     for source_zip, members in exclusions:
         with ZipFile(source_zip) as archive:
             for member in members:
@@ -51,7 +54,8 @@ def main():
     known = [meta[edge] for edge in sorted(trained | evaluated)]
     known_materials = {r["material_id"] for r in known}
     training_systems = {meta[edge]["chemsys"] for edge in trained}
-    pool = [r for r in meta.values() if r["split"] == "train" and r["material_id"] not in known_materials]
+    split = "test" if args.mp753143_confirmation else "train"
+    pool = [r for r in meta.values() if r["split"] == split and r["material_id"] not in known_materials]
 
     args.output.mkdir(parents=True, exist_ok=True)
     prior.HERE = args.output.resolve()
@@ -61,8 +65,9 @@ def main():
         )
     counts = Counter()
     selected, blocked = [], set(near)
+    salt = "mp753143-test-replication-v1:" if args.mp753143_confirmation else "net-path-panel-v1:"
     def order(row):
-        return hashlib.sha256(("net-path-panel-v1:" + row["edge_id"]).encode()).digest()
+        return hashlib.sha256((salt + row["edge_id"]).encode()).digest()
     for row in sorted(pool, key=order):
         material = row["material_id"]
         if material in blocked or counts[row["chemsys"]] >= 4:
@@ -72,7 +77,7 @@ def main():
         counts[row["chemsys"]] += 1
         selected.append(row)
     selected.sort(key=lambda row: row["edge_id"])
-    if len(selected) < 24:
+    if not selected or (not args.mp753143_confirmation and len(selected) < 24):
         raise ValueError(f"Only {len(selected)} clean materials")
     manifest = csv_bytes([dict(
         edge_id=r["edge_id"], material_id=r["material_id"], chemsys=r["chemsys"],
@@ -102,6 +107,18 @@ def main():
         assets_sha256={name:sha(data) for name,data in
                        (("panel.csv",manifest),("frames.csv",frames),("blind.xyz",xyz))},
     )
+    if args.mp753143_confirmation:
+        protocol.update(
+            case="Phase 1/mp-753143 material replication",
+            priority_edge="mp-753143_5_13_0_0_0",
+            matched_alternative_edge=None,
+            seeds=[17, 29, 43, 53, 67],
+            selection="All deduplicated, project-unused original test materials under the locked cap. The separately sealed four materials are excluded.",
+            primary="Matched replay minus path forward barrier MAE. Pure D0 minus path is the absolute gain.",
+            gate="Report +0.25 meV practical gain only if the paired 95% chemical-system bootstrap lower bound exceeds it, all five seed means are positive and leave-one-material-out means stay positive.",
+            stop="Characterize transfer on this panel. No training or parameter selection on these results.",
+            caveat="Original Test split, newly held out by audited project inventory. No foundation-pretraining isolation claim. The small panel is a replication probe.",
+        )
     with ZipFile(args.output / "panel_blind.zip", "x", compression=ZIP_DEFLATED) as archive:
         for name, raw in (("panel.csv", manifest), ("frames.csv", frames), ("blind.xyz", xyz),
                           ("lock.json", (json.dumps(protocol, indent=2)+"\n").encode())):
