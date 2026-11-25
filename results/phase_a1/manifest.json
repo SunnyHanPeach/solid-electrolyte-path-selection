@@ -1,0 +1,165 @@
+{
+  "checkpoint": "D0_17.pt",
+  "checkpoint_sha256": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a",
+  "layers": 2,
+  "mace": "scalar invariants from each interaction layer",
+  "ase": "3.29.0",
+  "torch": "2.10.0+cpu",
+  "dscribe": "2.1.2",
+  "runtime_dtype": "float64",
+  "methods": {
+    "rdf_geometry": [
+      "geometry",
+      "cosine"
+    ],
+    "soap_geometry": [
+      "geometry",
+      "cosine"
+    ],
+    "coordination_hard": [
+      "chemistry",
+      "euclidean"
+    ],
+    "coordination_smooth": [
+      "chemistry",
+      "euclidean"
+    ],
+    "rdf_elements": [
+      "chemistry",
+      "cosine"
+    ],
+    "soap_elements": [
+      "chemistry",
+      "cosine"
+    ],
+    "mace_invariants": [
+      "model",
+      "cosine"
+    ]
+  },
+  "shapes": {
+    "coordination_hard": [
+      34,
+      32
+    ],
+    "coordination_smooth": [
+      34,
+      32
+    ],
+    "rdf_geometry": [
+      34,
+      27
+    ],
+    "rdf_elements": [
+      34,
+      864
+    ],
+    "soap_geometry": [
+      34,
+      60
+    ],
+    "soap_elements": [
+      34,
+      3200
+    ],
+    "mace_invariants": [
+      34,
+      256
+    ]
+  },
+  "species": [
+    "Ag",
+    "Al",
+    "As",
+    "B",
+    "Bi",
+    "Br",
+    "Ca",
+    "Cl",
+    "Co",
+    "Cr",
+    "Cu",
+    "Eu",
+    "F",
+    "Fe",
+    "Ga",
+    "I",
+    "In",
+    "Li",
+    "Mn",
+    "N",
+    "Na",
+    "Nb",
+    "Ni",
+    "O",
+    "P",
+    "S",
+    "Si",
+    "Sn",
+    "Ti",
+    "V",
+    "Zn",
+    "Zr"
+  ],
+  "rdf_grid_A": [
+    1.0,
+    1.15,
+    1.2999999999999998,
+    1.4499999999999997,
+    1.5999999999999996,
+    1.7499999999999996,
+    1.8999999999999995,
+    2.0499999999999994,
+    2.1999999999999993,
+    2.349999999999999,
+    2.499999999999999,
+    2.649999999999999,
+    2.799999999999999,
+    2.949999999999999,
+    3.0999999999999988,
+    3.2499999999999987,
+    3.3999999999999986,
+    3.5499999999999985,
+    3.6999999999999984,
+    3.8499999999999983,
+    3.9999999999999982,
+    4.149999999999999,
+    4.299999999999998,
+    4.4499999999999975,
+    4.599999999999998,
+    4.749999999999998,
+    4.899999999999998
+  ],
+  "soap_settings": {
+    "r_cut": 4.0,
+    "n_max": 5,
+    "l_max": 3,
+    "sigma": 0.4,
+    "periodic": true,
+    "dtype": "float64"
+  },
+  "coordination_A": {
+    "hard": 3.0,
+    "smooth": [
+      2.6,
+      3.4
+    ]
+  },
+  "rdf_sigma_A": 0.12,
+  "rdf_upper_taper_A": [
+    4.6,
+    5.0
+  ],
+  "chemical_soap_compression": "mu1nu1",
+  "reference_dedup_radius_A": 3.0,
+  "references_raw": 9517,
+  "references_dedup": 2469,
+  "materials": 50,
+  "source_stage_policy": {
+    "init": "pre-DFT",
+    "relaxed": "diagnostic only"
+  },
+  "A0_manifest_sha256": "75f4303c22cf3218dc4488e34fdb6a3a1f2ce7c88b5c8122d9f0f553ea1ad63e",
+  "A01_materials_sha256": "fd42a5cd62a40056774f64ca3c7961aa244dae2fe82527a6b767cc62bd9965e2",
+  "elapsed_seconds": 213.807
+}
