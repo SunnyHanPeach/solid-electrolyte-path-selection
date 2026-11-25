@@ -339,6 +339,12 @@ def score(args):
         contrasts.extend([(arm, "full"), (arm, "energy_weighted")])
     if {"omit_high", "omit_other"} <= experiments.keys():
         contrasts.append(("omit_high", "omit_other"))
+    for requested in args.pair:
+        test, sep, control = requested.partition("=")
+        if not sep or test == control or not {test, control} <= experiments.keys():
+            raise ValueError(f"Unknown or unpaired contrast: {requested}")
+        if (test, control) not in contrasts:
+            contrasts.append((test, control))
     for panel in sorted({key[0] for key in truth}):
         edges = sorted(edge for p, edge in truth if p == panel)
         draws = np.random.default_rng(20261125).integers(len(edges), size=(10000, len(edges)))
@@ -381,6 +387,7 @@ def main():
     p.add_argument("--strength", type=float, default=0.5, help="Force-weight reduction at the peak")
     p.add_argument("--omit", choices=("high", "other"), help="Omit matched interior presentations")
     p.add_argument("--compare", action="append", default=[], metavar="LABEL=DIRECTORY@SOURCE_ARM")
+    p.add_argument("--pair", action="append", default=[], metavar="TREATMENT=CONTROL")
     p.add_argument("--score-output", type=Path)
     p.add_argument("--until", type=int, choices=MILESTONES, default=807)
     modes = p.add_mutually_exclusive_group()
