@@ -1,0 +1,302 @@
+{
+  "protocol": {
+    "case": "v2.0/pair_1",
+    "priority_edge": "mp-1177833_2_3_0_0_1",
+    "matched_alternative_edge": "mp-771389_2_3_0_0_0",
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "selection": "Fixed-geometry, project-held-out audit. Candidate P had negative mean effects in all three historical panels.",
+    "primary": "P minus archived pure D0 forward barrier MAE. Q is a matched alternative and diagnostic.",
+    "gate": "Upper paired 95% interval below -0.25 meV, all three seed means below zero and all leave-one-material-out means below zero.",
+    "stop": "Run exposure-matched retraining only when the archived-weight audit supports a repeatable improvement.",
+    "historical_edges": {
+      "training": 125,
+      "evaluated": 734
+    },
+    "unique_excluded_materials": 733,
+    "pool_materials": 108,
+    "near_exclusions": 0,
+    "near_pairs": 0,
+    "structures_scanned": 5701,
+    "duplicate_scan_passes": 3,
+    "materially_distinct_paths": 107,
+    "material_families": {
+      "O": 61,
+      "S": 12,
+      "F": 12,
+      "F-O": 18,
+      "N": 3,
+      "O-S": 1
+    },
+    "chemistry_new_vs_project_training": 29,
+    "exact_chemistry_cap": 4,
+    "images": 595,
+    "caveat": "Source Train split, project-held-out by the audited inventory. No foundation-pretraining isolation claim.",
+    "source_sha256": {
+      "init_features": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7",
+      "archive": "b7a99d89337902e9e1da319f57547170fdb132bf15bf6ffef03a0140e2207d7f",
+      "historical_pair_data": "247c55b481a0d53b9a797f142303ef0248e084c817850d032deaec170bfe7f48",
+      "matcher": "1b7912a7181074ae17d374932d87a2cceb52e6314eacb70ba8cb4cc297c37f4c",
+      "MACE_\u72ec\u7acb\u6750\u6599\u8bc4\u4f30\u9762\u677f_\u9501\u5b9a.zip": "84e80a4fb6d0e6f0850f6c3352d0476c926a928ee9cbfe8332911abf3278800a",
+      "MACE_protected_D0_night_GPU_bundle.zip": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+      "LiNiOTi_\u72ec\u7acb\u4e0e\u8865\u5145\u9762\u677f_\u76f2\u5316\u9501\u5b9a.zip": "17690b82d9b42f782c124fceb32440969b468b4a7c35576ff9c24f17548c6ad2"
+    },
+    "assets_sha256": {
+      "panel.csv": "00c08a0afe2ecb332a77fffdbe130b0fffd096e8bf4ab518f208c740f375e5eb",
+      "frames.csv": "7d788a2e3885140eadf7d47367cd3465c01d47c2a6f43de3d246e9e33d7fe558",
+      "blind.xyz": "9f2f6691dc40d6206c391c3d9439be6e4ed986e7062946c5ed7f611a76fcd98e"
+    }
+  },
+  "provenance": {
+    "panel": "0f0cb53e4a70542e0d43be50379723d055079378a7b936599e438ba5ca5d1585",
+    "weights": {
+      "D0_17.pt": {
+        "sha256": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a",
+        "order": "e0fd4462a8d7617cad9147f4cbe44fb10851d00922887f204d42f9696a2bfd33",
+        "training": {
+          "device": "cuda",
+          "hardware": "NVIDIA GeForce RTX 4090",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "ase": "3.29.0",
+          "numpy": "2.2.6",
+          "cuda": "12.8",
+          "driver": "595.71.05"
+        }
+      },
+      "D0_29.pt": {
+        "sha256": "381053e366b56dc07bcb38ae00dce5eae75db22f6ef51cbca26a52b582deb449",
+        "order": "d5ffb56834a62ea6a4762fe4e6098b1bd3b0a2519751d0513343a7e9509bcb59",
+        "training": {
+          "device": "cuda",
+          "hardware": "NVIDIA GeForce RTX 4090",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "ase": "3.29.0",
+          "numpy": "2.2.6",
+          "cuda": "12.8",
+          "driver": "595.71.05"
+        }
+      },
+      "D0_43.pt": {
+        "sha256": "a626b7220c9ee8c29be911ce5727d585c2dd3bd1c776154388702b0117bbb644",
+        "order": "81a288b0583939463affe6fffafaa3574fb3d842f7b4f366b532deb6c2f9ad8b",
+        "training": {
+          "device": "cuda",
+          "hardware": "NVIDIA GeForce RTX 4090",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "ase": "3.29.0",
+          "numpy": "2.2.6",
+          "cuda": "12.8",
+          "driver": "595.71.05"
+        }
+      },
+      "P_17.pt": {
+        "sha256": "78631209fd40f39adbfb423b5eb7721d23f78e35fb0f4e31ae3898e84a5ca6b8",
+        "order": "4c47a4116522b106575368304da07d76aae608eee45954a6632622b3245d2702",
+        "training": {
+          "device": "cuda",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "numpy": "2.2.6",
+          "ase": "3.29.0",
+          "hardware": "NVIDIA GeForce RTX 3090",
+          "driver": "580.105.08"
+        }
+      },
+      "P_29.pt": {
+        "sha256": "4e527c9bf8b258908a34f8efaf6ce5ce5940045839964635c5bb255c9813796f",
+        "order": "9139c1b78378e32b229bcf40faae7a6bf7f3fef39d8d3dbca2fa7ebe856ae725",
+        "training": {
+          "device": "cuda",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "numpy": "2.2.6",
+          "ase": "3.29.0",
+          "hardware": "NVIDIA GeForce RTX 3090",
+          "driver": "580.105.08"
+        }
+      },
+      "P_43.pt": {
+        "sha256": "83a03a49b37d8d34f7637a099bb8b91301da9efb03392ebdb8e9b18bcfa29f31",
+        "order": "1d7745e08b20e3e3ba773d453ab04e5edd60f1b786b43c15f936897f5c43b83e",
+        "training": {
+          "device": "cuda",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "numpy": "2.2.6",
+          "ase": "3.29.0",
+          "hardware": "NVIDIA GeForce RTX 3090",
+          "driver": "580.105.08"
+        }
+      },
+      "Q_17.pt": {
+        "sha256": "b2fac21ee3248a845d27f496f1fa76402c018035114f69b98a851f69d445f201",
+        "order": "4c47a4116522b106575368304da07d76aae608eee45954a6632622b3245d2702",
+        "training": {
+          "device": "cuda",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "numpy": "2.2.6",
+          "ase": "3.29.0",
+          "hardware": "NVIDIA GeForce RTX 3090",
+          "driver": "580.105.08"
+        }
+      },
+      "Q_29.pt": {
+        "sha256": "241d74e0cf2fa7109fd4b09fec48907b2e224fc2b600d0594f9592635b6e92d1",
+        "order": "9139c1b78378e32b229bcf40faae7a6bf7f3fef39d8d3dbca2fa7ebe856ae725",
+        "training": {
+          "device": "cuda",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "numpy": "2.2.6",
+          "ase": "3.29.0",
+          "hardware": "NVIDIA GeForce RTX 3090",
+          "driver": "580.105.08"
+        }
+      },
+      "Q_43.pt": {
+        "sha256": "910bbe0e3ec66218838bf1e7d2c1a9fcaef00249a338027239217cf67ee1aba7",
+        "order": "1d7745e08b20e3e3ba773d453ab04e5edd60f1b786b43c15f936897f5c43b83e",
+        "training": {
+          "device": "cuda",
+          "torch": "2.8.0+cu128",
+          "mace": "0.3.14",
+          "numpy": "2.2.6",
+          "ase": "3.29.0",
+          "hardware": "NVIDIA GeForce RTX 3090",
+          "driver": "580.105.08"
+        }
+      }
+    },
+    "prediction": "f5a62d0786dbfc57847e76d024bb5a05ec9a80a686c025b705a62ed24a830539",
+    "device": "cuda",
+    "torch": "2.8.0+cu128",
+    "hardware": "NVIDIA GeForce RTX 4090"
+  },
+  "panels": {
+    "all": {
+      "materials": 107,
+      "contrasts": {
+        "P_minus_D0": {
+          "mean_meV": 8.682210050867745,
+          "interval95": [
+            1.8157374841585157,
+            18.353518642159703
+          ],
+          "seed_means": [
+            8.495206698307387,
+            6.820447644569068,
+            10.730975809726779
+          ],
+          "majority_improved": 29,
+          "leave_one_out": [
+            5.020436175070114,
+            9.88463103306933
+          ],
+          "confirms": false
+        },
+        "Q_minus_D0": {
+          "mean_meV": 11.034411505307414,
+          "interval95": [
+            1.9163575564346007,
+            24.18398141026661
+          ],
+          "seed_means": [
+            10.961426306222107,
+            9.070762517524676,
+            13.071045692175465
+          ],
+          "majority_improved": 29,
+          "leave_one_out": [
+            6.004455027271793,
+            12.840200592818176
+          ],
+          "confirms": false
+        },
+        "P_minus_Q": {
+          "mean_meV": -2.3522014544396708,
+          "interval95": [
+            -6.013876181153864,
+            0.33668383036365745
+          ],
+          "seed_means": [
+            -2.4662196079147196,
+            -2.2503148729556073,
+            -2.340069882448686
+          ],
+          "majority_improved": 74,
+          "leave_one_out": [
+            -2.95556955974885,
+            -0.9840188522016803
+          ],
+          "confirms": false
+        }
+      }
+    },
+    "new_exact_chemistry": {
+      "materials": 29,
+      "contrasts": {
+        "P_minus_D0": {
+          "mean_meV": 17.652840449892242,
+          "interval95": [
+            -5.386554235699533,
+            51.5767152282013
+          ],
+          "seed_means": [
+            19.320783943965516,
+            11.369376346982758,
+            22.26836105872845
+          ],
+          "majority_improved": 8,
+          "leave_one_out": [
+            4.110790434337799,
+            22.525242396763392
+          ],
+          "confirms": false
+        },
+        "Q_minus_D0": {
+          "mean_meV": 23.299644733297413,
+          "interval95": [
+            -8.087587904656068,
+            69.29154670101474
+          ],
+          "seed_means": [
+            25.149641365840516,
+            17.175082502693964,
+            27.574210331357758
+          ],
+          "majority_improved": 7,
+          "leave_one_out": [
+            4.69571068173363,
+            30.573890322730655
+          ],
+          "confirms": false
+        },
+        "P_minus_Q": {
+          "mean_meV": -5.646804283405172,
+          "interval95": [
+            -18.13077378547054,
+            3.4036132110946467
+          ],
+          "seed_means": [
+            -5.828857421875,
+            -5.805706155711207,
+            -5.3058492726293105
+          ],
+          "majority_improved": 20,
+          "leave_one_out": [
+            -8.048647925967261,
+            -0.5849202473958327
+          ],
+          "confirms": false
+        }
+      }
+    }
+  }
+}
