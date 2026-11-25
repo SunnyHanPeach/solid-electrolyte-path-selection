@@ -1,0 +1,48 @@
+{
+  "path": {
+    "edge_id": "mp-768690_0_0_1_0_0",
+    "material_id": "mp-768690",
+    "chemsys": "Cr-Ga-Li-O",
+    "anion_family": "O",
+    "init_images": "7",
+    "atoms_per_image": "127",
+    "bvse_forward_eV": "9.412896205700243",
+    "hop_displacement_A": "5.140494",
+    "min_Li_anion_distance_A": "1.4289204110662364",
+    "coordination_range": "4",
+    "path_excess_length_A": "0.3360279010113407",
+    "total_turn_deg": "111.50418735964337",
+    "eligible": "1"
+  },
+  "materials": 107,
+  "results": {
+    "absolute": {
+      "mean": -12.613781599251851,
+      "interval95": [
+        -22.855664177052677,
+        -1.701792259665206
+      ],
+      "seed_means": [
+        -12.95191595064378,
+        -13.210409636392065,
+        -11.679019210719714
+      ],
+      "positive": false,
+      "negative": true
+    },
+    "net": {
+      "mean": -12.096148075108086,
+      "interval95": [
+        -21.96503185872464,
+        -1.60740732640958
+      ],
+      "seed_means": [
+        -12.115387029790947,
+        -12.505451452249371,
+        -11.667605743283938
+      ],
+      "positive": false,
+      "negative": true
+    }
+  }
+}

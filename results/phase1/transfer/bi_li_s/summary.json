@@ -1,0 +1,48 @@
+{
+  "path": {
+    "edge_id": "mp-753520_2_6_0_0_0",
+    "material_id": "mp-753520",
+    "chemsys": "Bi-Li-S",
+    "anion_family": "S",
+    "init_images": "5",
+    "atoms_per_image": "111",
+    "bvse_forward_eV": "0.2211020650677087",
+    "hop_displacement_A": "3.012383346342011",
+    "min_Li_anion_distance_A": "2.2876544094970073",
+    "coordination_range": "2",
+    "path_excess_length_A": "0.14084880729013838",
+    "total_turn_deg": "46.76449966200856",
+    "eligible": "1"
+  },
+  "materials": 107,
+  "results": {
+    "absolute": {
+      "mean": -0.9344463407807634,
+      "interval95": [
+        -1.560181924375461,
+        -0.28513006700161375
+      ],
+      "seed_means": [
+        -1.2766044830607477,
+        -0.9828371422313084,
+        -0.5438973970502337
+      ],
+      "positive": false,
+      "negative": true
+    },
+    "net": {
+      "mean": 0.25317230699961063,
+      "interval95": [
+        -1.0002421880484482,
+        1.4040514550616996
+      ],
+      "seed_means": [
+        0.25726033148364486,
+        0.2852110105140187,
+        0.21704557900116822
+      ],
+      "positive": false,
+      "negative": false
+    }
+  }
+}

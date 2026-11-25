@@ -1,0 +1,158 @@
+[
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "delta": "90fec24e21ee807f260aef5056f8dfb9a3d9f8d1c18755b2e857adde63bd80ce",
+    "seed": 17,
+    "schedule": "8d11c867c9f46e453ce510386917971dd6fc6b60a1f615fe014c3aa80e838a10",
+    "implementation": "da365a8f4b73081420f14138cd0edeab9669b401bbc4df81eb4d2c73d4a6afe4",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "path",
+    "optimizer_steps": 735,
+    "seconds": 222.54372657090425,
+    "files": {
+      "training_735.csv": "0eb3d753ebf2c70be2e1136a4656afc312c2dceca584eda2a1775578e9409db9",
+      "predictions_400.csv": "1c86a8a5a0e8dad890ede1aac1f215bf3d6c326b45e8743794118abd1a21fbd0",
+      "model_400.pt": "cd65ceea3f2432ff0d0131318abe7d3629366a404eb15d1a2ddf12a6148a0e90",
+      "predictions_735.csv": "d0e22732f78e18d173f72e80d0480269d6e7fc2f690cd9ecdf1dc63082a679ce",
+      "model_735.pt": "4a03ee3e373c5ba5bab176aeeee62e647fedad1c3c1ca59c3e50cae9d680819b"
+    }
+  },
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "delta": "90fec24e21ee807f260aef5056f8dfb9a3d9f8d1c18755b2e857adde63bd80ce",
+    "seed": 17,
+    "schedule": "bb6d77e8c391ffe334c541e7ca98b4d7dfbbe3f7af3b1e13331e1dbe2e916fce",
+    "implementation": "da365a8f4b73081420f14138cd0edeab9669b401bbc4df81eb4d2c73d4a6afe4",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "replay",
+    "optimizer_steps": 735,
+    "seconds": 223.07624083012342,
+    "files": {
+      "training_735.csv": "2a4a6fb583fbb4fde337aa495db2b930e1ee0ef6c516fd4c36c41de8e50e1622",
+      "predictions_400.csv": "0a5222d84548877e6778a9ab953d0508f8ec453e449f592088936f3a44ef9dec",
+      "model_400.pt": "55ea90cf10c6156837c8f795891c5de3e9dd3610468dc36cf957d0e496b9a738",
+      "predictions_735.csv": "5f3e367c0de84327a77a1f22cb7d57846f0065935deb328b2201293df0cb9912",
+      "model_735.pt": "7dd7a36dc5ba098554131adddecb75b508f79cdb01a679dc40544da3aeae9792"
+    }
+  },
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "delta": "90fec24e21ee807f260aef5056f8dfb9a3d9f8d1c18755b2e857adde63bd80ce",
+    "seed": 29,
+    "schedule": "a5638c8062b228f233a43d5cf7b13bd25afeb5bb52ebc4028a9d0f92b1e61045",
+    "implementation": "da365a8f4b73081420f14138cd0edeab9669b401bbc4df81eb4d2c73d4a6afe4",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "path",
+    "optimizer_steps": 735,
+    "seconds": 222.45057881623507,
+    "files": {
+      "training_735.csv": "3733856dd57be94b2b752d5e76fe15c1feca07a2fd5879147a3c7a4020abc3ad",
+      "predictions_400.csv": "3f22d52f22c68d3727be6c90792d31adcf9f814110c9b7b683e3a57065cdab6c",
+      "model_400.pt": "85af78330b45cadf4c9ae437b0bcdef8dfde0cb05e692ec731089785702c298a",
+      "predictions_735.csv": "fdbeee941b97f9506b57405e0ca54cf4fcfecaadacac79584eaf0b0ab20e8d33",
+      "model_735.pt": "618df27f0be688c3f90400ead3abf71dfa32ee26ced9c36ad5a9a1bf76d874c2"
+    }
+  },
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "delta": "90fec24e21ee807f260aef5056f8dfb9a3d9f8d1c18755b2e857adde63bd80ce",
+    "seed": 29,
+    "schedule": "400c56f4edc02a6a5918220f64840852a259d4be615d67176ef78b7c1783b05b",
+    "implementation": "da365a8f4b73081420f14138cd0edeab9669b401bbc4df81eb4d2c73d4a6afe4",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "replay",
+    "optimizer_steps": 735,
+    "seconds": 220.3404726907611,
+    "files": {
+      "training_735.csv": "166666dc0998906be4e1125f08f339abed589a8d5ff6a171d0d5f806d894e554",
+      "predictions_400.csv": "3c2ccfcdea6b1465da4f46b431a30cc3f34cf5eac0eb4eff4ffc3c9b03434cb5",
+      "model_400.pt": "62982842899e6a931c9a1d24682483035511420ad0e05e979776869d96b0a142",
+      "predictions_735.csv": "9516cc003264a61332f83f604702dc1893e1c66f3260cc32235c939090a1adb4",
+      "model_735.pt": "d5415aa11c4bc81382eb2d7564a221b9c3bc290d4c15128cd4938314f581a2cc"
+    }
+  },
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "delta": "90fec24e21ee807f260aef5056f8dfb9a3d9f8d1c18755b2e857adde63bd80ce",
+    "seed": 43,
+    "schedule": "2d120b1976acfd32a12fe7060701432d5e4e9a0e2f6fd3fd7973350e6662e994",
+    "implementation": "da365a8f4b73081420f14138cd0edeab9669b401bbc4df81eb4d2c73d4a6afe4",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "path",
+    "optimizer_steps": 735,
+    "seconds": 222.31644212454557,
+    "files": {
+      "training_735.csv": "d128720c47e4b0b9231b030b83e301cede12964f2210513525a386878e0709e0",
+      "predictions_400.csv": "1194359c2a1bc91c763738f724861549e0ba1d9a96f2ef9e10503a7b48cc7e3e",
+      "model_400.pt": "d623dbb7802027d53a0ba7082ae9ab97fe4019f1468073948ff74385a2d10a1d",
+      "predictions_735.csv": "e23da1e9eeead4039df29e36943772aac2caab2a6d51db8b4408a798cfea9786",
+      "model_735.pt": "c7d098de51ec661367654c7f5255b3f82fbc6616dd7588b9d9f2d930d49df365"
+    }
+  },
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "delta": "90fec24e21ee807f260aef5056f8dfb9a3d9f8d1c18755b2e857adde63bd80ce",
+    "seed": 43,
+    "schedule": "744385f39ef661e0eba4617195eb8dee6f1483ce64b5d2942c16a033fb8c7974",
+    "implementation": "da365a8f4b73081420f14138cd0edeab9669b401bbc4df81eb4d2c73d4a6afe4",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "replay",
+    "optimizer_steps": 735,
+    "seconds": 223.06005637347698,
+    "files": {
+      "training_735.csv": "e0868bc18345e08acc50283a0402c6ac702f42d6e01770c5a17b6fc5dc23f416",
+      "predictions_400.csv": "c3979963ff591e4ad7d258b6f37a3c712cf42bdea8172c8fc7c384d0453c5cde",
+      "model_400.pt": "c010e30c5efaabd54f32d395bd7c69a37a072971d2f4ffc7489bcd771197c1da",
+      "predictions_735.csv": "19e0c902d9fce75e76b3cc03c5e585b6bb6e947ebeb7107cc831085bbc25ca6b",
+      "model_735.pt": "1f4547d5394193800f36df72891896536a795e8c8c33463c9d8abdedade625b8"
+    }
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "path": {
+    "edge_id": "mp-759652_8_12_0_0_0",
+    "material_id": "mp-759652",
+    "chemsys": "Co-F-Li-O",
+    "anion_family": "F-O",
+    "init_images": "5",
+    "atoms_per_image": "119",
+    "bvse_forward_eV": "1.2294630004046139",
+    "hop_displacement_A": "2.8821332313313817",
+    "min_Li_anion_distance_A": "1.450420863213977",
+    "coordination_range": "1",
+    "path_excess_length_A": "0.0006975294031472679",
+    "total_turn_deg": "5.380208188901831",
+    "eligible": "1"
+  },
+  "materials": 107,
+  "results": {
+    "absolute": {
+      "mean": -1.891709562402648,
+      "interval95": [
+        -3.0371089846248407,
+        -0.9151960275161466
+      ],
+      "seed_means": [
+        -2.1174065420560746,
+        -1.9810756790303738,
+        -1.5766464661214954
+      ],
+      "positive": false,
+      "negative": true
+    },
+    "net": {
+      "mean": -0.8823477961935356,
+      "interval95": [
+        -2.0788251050062017,
+        0.15226894926951887
+      ],
+      "seed_means": [
+        -0.6152001496787384,
+        -0.9988089588200935,
+        -1.0330342800817758
+      ],
+      "positive": false,
+      "negative": false
+    }
+  }
+}

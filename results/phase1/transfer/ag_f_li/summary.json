@@ -1,0 +1,48 @@
+{
+  "path": {
+    "edge_id": "mp-758054_0_0_1_-1_0",
+    "material_id": "mp-758054",
+    "chemsys": "Ag-F-Li",
+    "anion_family": "F",
+    "init_images": "7",
+    "atoms_per_image": "95",
+    "bvse_forward_eV": "0.3995502752554022",
+    "hop_displacement_A": "5.785937993981555",
+    "min_Li_anion_distance_A": "1.6507762635310002",
+    "coordination_range": "4",
+    "path_excess_length_A": "0.0016009614112153514",
+    "total_turn_deg": "7.267490287091236",
+    "eligible": "1"
+  },
+  "materials": 107,
+  "results": {
+    "absolute": {
+      "mean": -0.36416051353283413,
+      "interval95": [
+        -1.267428561227891,
+        0.683080310443318
+      ],
+      "seed_means": [
+        -0.5039728825934864,
+        -0.6587540004394239,
+        0.07024534243440786
+      ],
+      "positive": false,
+      "negative": false
+    },
+    "net": {
+      "mean": 0.5864182975559985,
+      "interval95": [
+        -0.17004753717239868,
+        1.389498502228965
+      ],
+      "seed_means": [
+        0.5407550489193641,
+        0.7250013617114202,
+        0.4934984820372116
+      ],
+      "positive": false,
+      "negative": false
+    }
+  }
+}
