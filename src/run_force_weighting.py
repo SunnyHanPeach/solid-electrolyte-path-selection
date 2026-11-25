@@ -182,7 +182,7 @@ def score_profiles(model, graphs, eval_rows, device, torch):
     return predictions
 
 
-def train(args, files, frames, config, order, weights, identity):
+def train(args, files, frames, config, order, weights, identity, milestones=MILESTONES):
     os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
     os.environ.setdefault("TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD", "1")
     import ase
@@ -254,7 +254,7 @@ def train(args, files, frames, config, order, weights, identity):
                     weighted_graphs[i].forces_weight.mul_(factor)
 
             def after_step(step, current):
-                if step not in MILESTONES:
+                if step not in milestones:
                     return
                 prediction = score_profiles(current, eval_graphs, eval_rows, args.device, torch)
                 save_csv(folder / f"predictions_{step}.csv", prediction)
@@ -275,7 +275,7 @@ def train(args, files, frames, config, order, weights, identity):
             if not args.smoke:
                 save_csv(folder / f"training_{max_step}.csv", trace)
                 names = [f"training_{max_step}.csv"] + [
-                    f"{kind}_{step}.{suffix}" for step in MILESTONES if step <= max_step
+                    f"{kind}_{step}.{suffix}" for step in milestones if step <= max_step
                     for kind, suffix in (("predictions", "csv"), ("model", "pt"))
                 ]
                 atomic_json(marker, dict(task, seconds=elapsed, files={

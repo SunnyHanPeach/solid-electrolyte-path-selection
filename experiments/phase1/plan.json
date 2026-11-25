@@ -1,0 +1,68 @@
+{
+  "training": {
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "epochs": 5,
+    "batch_size": 2,
+    "lr": 0.0001,
+    "energy_weight": 1.0,
+    "forces_weight": 100.0,
+    "clip_norm": 10.0
+  },
+  "selected": [
+    "mp-1277232_0_3_0_0_0",
+    "mp-13725_0_4_1_0_0",
+    "mp-753143_5_13_0_0_0"
+  ],
+  "centers_sensitivity": {
+    "3": [
+      "mp-1277232_0_3_0_0_0",
+      "mp-13725_0_4_1_0_0",
+      "mp-753143_5_13_0_0_0"
+    ],
+    "4": [
+      "mp-1277232_0_3_0_0_0",
+      "mp-753520_2_6_0_0_0",
+      "mp-760164_0_2_0_0_1",
+      "mp-768431_11_21_0_1_0"
+    ],
+    "5": [
+      "mp-1277232_0_3_0_0_0",
+      "mp-1303832_0_0_1_-1_0",
+      "mp-753520_2_6_0_0_0",
+      "mp-760164_0_2_0_0_1",
+      "mp-768431_11_21_0_1_0"
+    ]
+  },
+  "path_feature_groups": [
+    [
+      "bvse_forward_eV",
+      "hop_displacement_A"
+    ],
+    [
+      "min_Li_anion_distance_A",
+      "coordination_range"
+    ],
+    [
+      "path_excess_length_A",
+      "total_turn_deg"
+    ]
+  ],
+  "primary_effect_margin_meV": 0.25,
+  "feature_file_sha256": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7",
+  "evaluation_panel_sha256": "0f0cb53e4a70542e0d43be50379723d055079378a7b936599e438ba5ca5d1585",
+  "source_bundle_sha256": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+  "selection_basis": "BVSE Init only",
+  "sha256": {
+    "training_frames.csv": "b269f90a5d0d2d2e0e7ea04743a87f3ae1798bb076e5492de211f18349121dd3",
+    "training.xyz": "e2095f64bdd950b992e681445f1be30f9f1cbcf97a9fa0274bb02ca10b30d4d9",
+    "evaluation_frames.csv": "ac513324a93f73cc3e76fe5a2a93a8aa84a7bbd48fb88cae3ef064e1b318f03a",
+    "evaluation_panels.csv": "d195d3640365ac3ea8d4399f51e4e10515b57668e2e452d06434d3e770aebf06",
+    "evaluation.xyz": "9f2f6691dc40d6206c391c3d9439be6e4ed986e7062946c5ed7f611a76fcd98e",
+    "foundation.model": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+    "jobs.json": "67eb2066d704e7feaf875b42fca27de8672b0571aeb0ef54b084cb757d336274"
+  }
+}
