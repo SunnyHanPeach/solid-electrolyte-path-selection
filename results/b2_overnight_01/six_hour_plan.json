@@ -1,0 +1,476 @@
+{
+  "id": "B2-Overnight-01-six_hour",
+  "base_bundle_sha256": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+  "d0_sha256": "dda468e74c0dbd46c3d5b07121b900184a917dd319415e826af6e25b56ee7081",
+  "foundation_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "training": {
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "epochs": 5,
+    "batch_size": 2,
+    "lr": 0.0001,
+    "energy_weight": 1.0,
+    "forces_weight": 100.0,
+    "clip_norm": 10.0
+  },
+  "score_panel": "project_holdout107",
+  "planned_fits": 88,
+  "reserved_end_seconds": 1800,
+  "max_window_seconds": 25200,
+  "candidate_pool_sha256": "468fb6b37be2b5355d7a2df451504052720be99f94ff1696540f2b76d4907764",
+  "features_sha256": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7",
+  "reference_archive_sha256": "b7a99d89337902e9e1da319f57547170fdb132bf15bf6ffef03a0140e2207d7f",
+  "selection_rule": "Three sequential maximin rounds. Prefer anion families not yet represented, require a distinct material and exact chemistry, then maximize the nearest IQR-scaled RMS distance across equally weighted frozen BVSE Init feature groups. Break ties by edge ID. Historical experiment inclusion uses path IDs only.",
+  "quality_policy": {
+    "init_min_Li_contact_A": 1.2,
+    "relaxed_min_any_contact_A": 1.0,
+    "policy": "Gross geometry and label integrity gates for new paths. Historical references are retained if relaxed geometry/labels pass."
+  },
+  "feature_groups": [
+    [
+      "bvse_forward_eV",
+      "hop_displacement_A"
+    ],
+    [
+      "min_Li_anion_distance_A",
+      "coordination_range"
+    ],
+    [
+      "path_excess_length_A",
+      "total_turn_deg"
+    ]
+  ],
+  "feature_iqr_scale": {
+    "bvse_forward_eV": 0.8675668882057719,
+    "hop_displacement_A": 1.9673853826131453,
+    "min_Li_anion_distance_A": 0.1851233418384719,
+    "coordination_range": 1.0,
+    "path_excess_length_A": 0.24453712557830265,
+    "total_turn_deg": 40.94186072970947
+  },
+  "excluded_prior_matched_ids": [
+    "mp-1177833_2_3_0_0_1",
+    "mp-1277232_0_3_0_0_0",
+    "mp-13725_0_4_1_0_0",
+    "mp-753143_5_13_0_0_0",
+    "mp-753520_2_6_0_0_0",
+    "mp-758054_0_0_1_-1_0",
+    "mp-759652_8_12_0_0_0",
+    "mp-768690_0_0_1_0_0"
+  ],
+  "candidates": [
+    {
+      "slot": 1,
+      "cohort": "historical_reference",
+      "edge_id": "mp-753143_5_13_0_0_0",
+      "material_id": "mp-753143",
+      "chemsys": "F-Li-Ni-O",
+      "anion_family": "F-O",
+      "images": 5,
+      "atoms": "119",
+      "optimizer_steps": 735,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        278,
+        279,
+        280,
+        281,
+        282
+      ],
+      "prior_comparability": "Phase1 protected single-path; same schedule after frame-ID remap",
+      "init_sha256": "cefb0fb7df10da56676acce3c01597412afc7986050d1ffa738c0862ebb1f7e2",
+      "relaxed_sha256": "c9b49dc3c1be5f6aed0118b89d1a4a18cb21ae9dd59f35c5ac9ec9176d3332bf",
+      "init_Li_min_contact_A": 1.5630132078951442,
+      "relaxed_min_any_contact_A": 1.7442370527838962,
+      "largest_DFT_force_component_eV_A": 0.36619283
+    },
+    {
+      "slot": 2,
+      "cohort": "historical_reference",
+      "edge_id": "mp-1177833_2_3_0_0_1",
+      "material_id": "mp-1177833",
+      "chemsys": "Bi-Li-O-V",
+      "anion_family": "O",
+      "images": 5,
+      "atoms": "55",
+      "optimizer_steps": 735,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        283,
+        284,
+        285,
+        286,
+        287
+      ],
+      "prior_comparability": "Prior v2.0 P-versus-Q at 710 steps is a separate protocol",
+      "init_sha256": "1f58fab8abba64af58dcdba4320285eeedc603dd7d77de93c094b4215d51063e",
+      "relaxed_sha256": "6b0c79d1032b4c9e50389931e9616d6a65c9993eb3e5d789cb5e44b3c86c47db",
+      "init_Li_min_contact_A": 2.013205522306611,
+      "relaxed_min_any_contact_A": 1.7637824961178787,
+      "largest_DFT_force_component_eV_A": 0.39418824
+    },
+    {
+      "slot": 3,
+      "cohort": "historical_reference",
+      "edge_id": "mp-768690_0_0_1_0_0",
+      "material_id": "mp-768690",
+      "chemsys": "Cr-Ga-Li-O",
+      "anion_family": "O",
+      "images": 7,
+      "atoms": "127",
+      "optimizer_steps": 745,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294
+      ],
+      "prior_comparability": "Phase1 protected single-path; same schedule after frame-ID remap",
+      "init_sha256": "67206f9d29e6aa022e8e62dab815240849da73bcee6bd2fac4fb7f02257d87eb",
+      "relaxed_sha256": "0a070a1565ea6e79e6c5faa2b9e5826a1d05160a27c62473c8ff508f7562da4a",
+      "init_Li_min_contact_A": 1.142065570663886,
+      "relaxed_min_any_contact_A": 1.7242676536469552,
+      "largest_DFT_force_component_eV_A": 2.06458374
+    },
+    {
+      "slot": 4,
+      "cohort": "new_matched_label",
+      "edge_id": "mp-753677_0_1_0_0_0",
+      "material_id": "mp-753677",
+      "chemsys": "Bi-Li-S",
+      "anion_family": "S",
+      "images": 5,
+      "atoms": "111",
+      "optimizer_steps": 735,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        295,
+        296,
+        297,
+        298,
+        299
+      ],
+      "prior_comparability": "No prior identical protected-schedule experiment selected",
+      "init_sha256": "013b5307bbb7814fb14fc5ad3be6974e2125c332ff44912b65c47d0b42cdb1de",
+      "relaxed_sha256": "f0ee44230dc80feb35c6fb3e468f39d8062c99cbbade0b3e0a3c5b6336d4acb5",
+      "init_Li_min_contact_A": 2.2050679128201884,
+      "relaxed_min_any_contact_A": 2.361008470781419,
+      "largest_DFT_force_component_eV_A": 0.25762252
+    },
+    {
+      "slot": 5,
+      "cohort": "new_matched_label",
+      "edge_id": "mp-765559_1_0_0_0_1",
+      "material_id": "mp-765559",
+      "chemsys": "Ag-F-Li",
+      "anion_family": "F",
+      "images": 7,
+      "atoms": "95",
+      "optimizer_steps": 745,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306
+      ],
+      "prior_comparability": "No prior identical protected-schedule experiment selected",
+      "init_sha256": "c978510077c13365fc122007289824bb56899f1606bb726a6c585bd8a25f6da5",
+      "relaxed_sha256": "9ed07df0046892bbd7f67079d959d322e2014ada72258604c5fdd9cc8833cf24",
+      "init_Li_min_contact_A": 1.5936622296185812,
+      "relaxed_min_any_contact_A": 1.7648916486327215,
+      "largest_DFT_force_component_eV_A": 0.89533747
+    },
+    {
+      "slot": 6,
+      "cohort": "new_matched_label",
+      "edge_id": "mp-6326_3_4_0_0_0",
+      "material_id": "mp-6326",
+      "chemsys": "Al-Li-O-Si",
+      "anion_family": "O",
+      "images": 5,
+      "atoms": "83",
+      "optimizer_steps": 735,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        307,
+        308,
+        309,
+        310,
+        311
+      ],
+      "prior_comparability": "No prior identical protected-schedule experiment selected",
+      "init_sha256": "21d62567bd7a8bf946576975585b4ad3b80768eb80d3ac1868c8b119a2d6e4ca",
+      "relaxed_sha256": "df339d86c96cf64a08e421cdae261871eb9d610c709254370fd484ebbac470d3",
+      "init_Li_min_contact_A": 1.9161271478389077,
+      "relaxed_min_any_contact_A": 1.5954741216077295,
+      "largest_DFT_force_component_eV_A": 0.07965614
+    },
+    {
+      "slot": 7,
+      "cohort": "new_matched_label",
+      "edge_id": "mp-35822_2_5_1_0_0",
+      "material_id": "mp-35822",
+      "chemsys": "Li-O-Si",
+      "anion_family": "O",
+      "images": 5,
+      "atoms": "143",
+      "optimizer_steps": 735,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        312,
+        313,
+        314,
+        315,
+        316
+      ],
+      "prior_comparability": "No prior identical protected-schedule experiment selected",
+      "init_sha256": "6706dd34167063a87ac926b8f1f7b2c1a11ae36c8cc0afc0ecc3c82dbe31dd07",
+      "relaxed_sha256": "240a223847a911a4d16a02f818ee6181c27fe97269f704dcc461441dc88a2daa",
+      "init_Li_min_contact_A": "1.7633682674226263",
+      "relaxed_min_any_contact_A": "1.6202606219247666",
+      "largest_DFT_force_component_eV_A": "0.4256233"
+    },
+    {
+      "slot": 8,
+      "cohort": "new_matched_label",
+      "edge_id": "mp-1298695_3_6_1_0_0",
+      "material_id": "mp-1298695",
+      "chemsys": "Li-Ni-O-Ti",
+      "anion_family": "O",
+      "images": 5,
+      "atoms": "127",
+      "optimizer_steps": 735,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        317,
+        318,
+        319,
+        320,
+        321
+      ],
+      "prior_comparability": "No prior identical protected-schedule experiment selected",
+      "init_sha256": "f46a24b68984ae8f2c14e4dc4c174524c993b1df6d7ca49ba8a1b0938577022a",
+      "relaxed_sha256": "37d4400251ad117c8117c7b40476337a929bb96ebbefc086d2e71f654af4b697",
+      "init_Li_min_contact_A": "1.6760946519683737",
+      "relaxed_min_any_contact_A": "1.8007488064385901",
+      "largest_DFT_force_component_eV_A": "0.0954404"
+    },
+    {
+      "slot": 9,
+      "cohort": "new_matched_label",
+      "edge_id": "mp-760164_0_2_0_0_1",
+      "material_id": "mp-760164",
+      "chemsys": "Fe-Li-O-P-V",
+      "anion_family": "O",
+      "images": 7,
+      "atoms": "87",
+      "optimizer_steps": 745,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328
+      ],
+      "prior_comparability": "No prior identical protected-schedule experiment selected",
+      "init_sha256": "79d50bf447b6288da4bff63ec8a20c2b9004b3f3f7c20b5d1d416dd71270b884",
+      "relaxed_sha256": "bedf72f8a29476b9aa4092ac86c8eae2a32ceeccabce168549400128ad36f9e0",
+      "init_Li_min_contact_A": "1.9939101241552475",
+      "relaxed_min_any_contact_A": "1.4968015840594282",
+      "largest_DFT_force_component_eV_A": "0.51884733"
+    },
+    {
+      "slot": 10,
+      "cohort": "new_matched_label",
+      "edge_id": "mp-2878_1_10_0_0_0",
+      "material_id": "mp-2878",
+      "chemsys": "Li-O-P",
+      "anion_family": "O",
+      "images": 5,
+      "atoms": "127",
+      "optimizer_steps": 735,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        329,
+        330,
+        331,
+        332,
+        333
+      ],
+      "prior_comparability": "No prior identical protected-schedule experiment selected",
+      "init_sha256": "3bea63d127ef96613355bb19a390a58ef87622f437c22dbfcc7d4f94b901ea71",
+      "relaxed_sha256": "8ab7e379820869a2cf15026fe775ae17aae6eec011653bf0dac19bed412adc87",
+      "init_Li_min_contact_A": "1.726600207127175",
+      "relaxed_min_any_contact_A": "1.5310059156656857",
+      "largest_DFT_force_component_eV_A": "0.35824576"
+    },
+    {
+      "slot": 11,
+      "cohort": "new_matched_label",
+      "edge_id": "mp-1176988_4_6_0_0_0",
+      "material_id": "mp-1176988",
+      "chemsys": "Li-Mn-O-P-V",
+      "anion_family": "O",
+      "images": 5,
+      "atoms": "79",
+      "optimizer_steps": 735,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        334,
+        335,
+        336,
+        337,
+        338
+      ],
+      "prior_comparability": "No prior identical protected-schedule experiment selected",
+      "init_sha256": "d69fb26753c82b439591521af4cc05fdb4ddd40f3696a579418262167fd5d46e",
+      "relaxed_sha256": "a608d884b39e3562cf3a1b05c71dd4f38ea1c8fa34e61c3accc2334e48078a82",
+      "init_Li_min_contact_A": "1.8463162126515624",
+      "relaxed_min_any_contact_A": "1.509191554946299",
+      "largest_DFT_force_component_eV_A": "0.311603"
+    },
+    {
+      "slot": 12,
+      "cohort": "new_matched_label",
+      "edge_id": "mp-4657_19_31_0_0_0",
+      "material_id": "mp-4657",
+      "chemsys": "Ga-Li-O",
+      "anion_family": "O",
+      "images": 5,
+      "atoms": "79",
+      "optimizer_steps": 735,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        339,
+        340,
+        341,
+        342,
+        343
+      ],
+      "prior_comparability": "No prior identical protected-schedule experiment selected",
+      "init_sha256": "af7b38cc773eb824cfb6fcf6107bc292c8606e9a28940ba2fc35f5f74e0a8d05",
+      "relaxed_sha256": "44ec8aab69f49ea750ea2b3a6570818a7e8fc9787e70ee09aea4b6dd99929193",
+      "init_Li_min_contact_A": "1.7351022929024082",
+      "relaxed_min_any_contact_A": "1.778651016477654",
+      "largest_DFT_force_component_eV_A": "0.44882396"
+    },
+    {
+      "slot": 13,
+      "cohort": "new_matched_label",
+      "edge_id": "mp-771365_12_15_0_0_0",
+      "material_id": "mp-771365",
+      "chemsys": "Cr-Li-O-Ti",
+      "anion_family": "O",
+      "images": 5,
+      "atoms": "143",
+      "optimizer_steps": 735,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        344,
+        345,
+        346,
+        347,
+        348
+      ],
+      "prior_comparability": "No prior identical protected-schedule experiment selected",
+      "init_sha256": "e438364452b21762bb5f69b6b1e206496f2377ac1986a1084be60f6832c02cdf",
+      "relaxed_sha256": "4a515243ba24cde6c5409c3f21dd7460a2c80394c8c603a07594888043599a5b",
+      "init_Li_min_contact_A": "1.7958854335832108",
+      "relaxed_min_any_contact_A": "1.7811766120946733",
+      "largest_DFT_force_component_eV_A": "0.46390487"
+    },
+    {
+      "slot": 14,
+      "cohort": "new_matched_label",
+      "edge_id": "mp-1290989_0_1_1_-1_0",
+      "material_id": "mp-1290989",
+      "chemsys": "Li-O-V-Zn",
+      "anion_family": "O",
+      "images": 7,
+      "atoms": "111",
+      "optimizer_steps": 745,
+      "path_presentations_per_image": 5,
+      "selected_ids": [
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355
+      ],
+      "prior_comparability": "No prior identical protected-schedule experiment selected",
+      "init_sha256": "1200634eeac94b27e9a9317a2b33b46bec286a1d2c38db1664586de727d357ed",
+      "relaxed_sha256": "6fcc0b90da6cafa958aed82ef1c335ffa68d5f5d94d17c3c5a45ca7f9eae041e",
+      "init_Li_min_contact_A": "1.670084854042521",
+      "relaxed_min_any_contact_A": "1.7562959511355103",
+      "largest_DFT_force_component_eV_A": "0.8493902"
+    }
+  ],
+  "sha256": {
+    "added.xyz": "3ae40e394a8569b3a2d2454f38928edc6fac11469de02512497f0f88cacb8c95",
+    "added_frames.csv": "c4a784e02eff4d03eed78c75e69c7847c92dee0f04f44c79a4e31b624a6cf466",
+    "orders.json": "8b76d8cc900473c4d84b5db37cabbcc8e47ab01583ce70ae92a0151b060fdffa",
+    "reference_barriers.csv": "225540fceba80dfe036a2d8ae99a86bdca2f72d30aabdf1b5eaa7febd2eeed8d",
+    "baselines.json": "cd2e369ae15305cc487ab03557fc8aea48a0dbd65eef251f73a2a042dd58ad5a"
+  },
+  "extra_seeds": [
+    53,
+    67
+  ],
+  "earlier_matrix_sha256": "4cac835af15d47dfe4f6d3f71bb428692f6dd8c3a83073321c608203d198be8d",
+  "confirmation_sha256": "f35c94f6f5abc56604cd63be7ce54c34634c8508ae3718c4922bc1e349cb748a",
+  "revised_groups": [
+    [
+      "coordination_start",
+      "coordination_end",
+      "coordination_range",
+      "min_Li_anion_distance_A"
+    ],
+    [
+      "hop_displacement_A",
+      "path_excess_length_A",
+      "total_turn_deg"
+    ],
+    [
+      "path_length_A"
+    ],
+    [
+      "rdf_novelty"
+    ]
+  ],
+  "rdf_reference_sites": 2469,
+  "rdf_tertiles": [
+    0.030444511388014118,
+    0.038932449998170825
+  ],
+  "revised_iqr_scale": {
+    "coordination_start": 2.0,
+    "coordination_end": 2.0,
+    "coordination_range": 1.0,
+    "min_Li_anion_distance_A": 0.1851233418384719,
+    "hop_displacement_A": 1.9673853826131453,
+    "path_excess_length_A": 0.24453712557830265,
+    "total_turn_deg": 40.94186072970947,
+    "path_length_A": 2.0362922632864198,
+    "rdf_novelty": 0.013352858571468743
+  },
+  "revised_selection_rule": "Keep the frozen slots. For added slots, prefer uncovered anion, then the least represented RDF novelty tertile, then maximin over scaled coordination, geometry, arc length and novelty.",
+  "compatible_matrix_sha256_slots": {
+    "bbe4ad2a2da42534b77a2f2fd51dc012b426fffcd4dbea6c13e001dc2002c7de": 10
+  }
+}
