@@ -1,0 +1,274 @@
+{
+  "step": 807,
+  "seeds": [
+    17,
+    29
+  ],
+  "arms": {
+    "historical_support": {
+      "full": {
+        "barrier_abs_error_meV": 379.295588097476,
+        "barrier_signed_error_meV": -197.87979487304466,
+        "high_profile_mae_meV": 360.081038770642
+      },
+      "energy_weighted": {
+        "barrier_abs_error_meV": 378.3105292262935,
+        "barrier_signed_error_meV": -193.34845470747294,
+        "high_profile_mae_meV": 359.4940955777265
+      },
+      "uniform_weighted": {
+        "barrier_abs_error_meV": 378.35422484951795,
+        "barrier_signed_error_meV": -194.06284346812635,
+        "high_profile_mae_meV": 359.395433634811
+      }
+    },
+    "primary91": {
+      "full": {
+        "barrier_abs_error_meV": 276.67704501244157,
+        "barrier_signed_error_meV": -167.9458931752201,
+        "high_profile_mae_meV": 251.4760267133715
+      },
+      "energy_weighted": {
+        "barrier_abs_error_meV": 274.28547261074164,
+        "barrier_signed_error_meV": -164.52775674621944,
+        "high_profile_mae_meV": 249.34980633025847
+      },
+      "uniform_weighted": {
+        "barrier_abs_error_meV": 274.46572753647996,
+        "barrier_signed_error_meV": -164.79621082631903,
+        "high_profile_mae_meV": 249.5331633175095
+      }
+    }
+  },
+  "contrasts": {
+    "historical_support": {
+      "energy_weighted_minus_full": {
+        "barrier_abs_error_meV": {
+          "mean": -0.9850588711825284,
+          "seed_means": [
+            -0.7261796431107954,
+            -1.2439380992542615
+          ],
+          "interval95": [
+            -3.3096400174227627,
+            1.0086493058638137
+          ]
+        },
+        "barrier_signed_error_meV": {
+          "mean": 4.531340165571733,
+          "seed_means": [
+            4.022078080610796,
+            5.040602250532671
+          ],
+          "interval95": [
+            2.8375582261519,
+            6.6872076554731885
+          ]
+        },
+        "high_profile_mae_meV": {
+          "mean": -0.5869431929154829,
+          "seed_means": [
+            -0.40089000355113635,
+            -0.7729963822798296
+          ],
+          "interval95": [
+            -2.7492024681784892,
+            1.4188571409745643
+          ]
+        }
+      },
+      "uniform_weighted_minus_full": {
+        "barrier_abs_error_meV": {
+          "mean": -0.9413632479580966,
+          "seed_means": [
+            -0.8236278187144886,
+            -1.0590986772017046
+          ],
+          "interval95": [
+            -2.9810341921719634,
+            0.7314031774347476
+          ]
+        },
+        "barrier_signed_error_meV": {
+          "mean": 3.8169514049183237,
+          "seed_means": [
+            3.8122697310014204,
+            3.821633078835227
+          ],
+          "interval95": [
+            2.350013906305487,
+            5.724308707497334
+          ]
+        },
+        "high_profile_mae_meV": {
+          "mean": -0.6856051358309659,
+          "seed_means": [
+            -0.6429498845880682,
+            -0.7282603870738636
+          ],
+          "interval95": [
+            -2.5324561379172583,
+            0.8954351598566226
+          ]
+        }
+      },
+      "energy_weighted_minus_uniform_weighted": {
+        "barrier_abs_error_meV": {
+          "mean": -0.043695623224431816,
+          "seed_means": [
+            0.09744817560369318,
+            -0.18483942205255682
+          ],
+          "interval95": [
+            -0.37436485290527344,
+            0.36691318858753535
+          ]
+        },
+        "barrier_signed_error_meV": {
+          "mean": 0.7143887606534091,
+          "seed_means": [
+            0.209808349609375,
+            1.2189691716974431
+          ],
+          "interval95": [
+            0.42914477261629974,
+            1.1069817976518106
+          ]
+        },
+        "high_profile_mae_meV": {
+          "mean": 0.09866194291548296,
+          "seed_means": [
+            0.24205988103693182,
+            -0.04473599520596591
+          ],
+          "interval95": [
+            -0.29876882379705255,
+            0.592405145818537
+          ]
+        }
+      }
+    },
+    "primary91": {
+      "energy_weighted_minus_full": {
+        "barrier_abs_error_meV": {
+          "mean": -2.3915724016999094,
+          "seed_means": [
+            -2.047294228193775,
+            -2.735850575206044
+          ],
+          "interval95": [
+            -4.577209137298249,
+            -0.9345570790158025
+          ]
+        },
+        "barrier_signed_error_meV": {
+          "mean": 3.4181364290006866,
+          "seed_means": [
+            2.9695951021634617,
+            3.866677755837912
+          ],
+          "interval95": [
+            2.050194373497596,
+            5.501086895282452
+          ]
+        },
+        "high_profile_mae_meV": {
+          "mean": -2.1262203831130275,
+          "seed_means": [
+            -1.7930928631525662,
+            -2.459347903073489
+          ],
+          "interval95": [
+            -4.276132191958966,
+            -0.7113982046328158
+          ]
+        }
+      },
+      "uniform_weighted_minus_full": {
+        "barrier_abs_error_meV": {
+          "mean": -2.2113174759615855,
+          "seed_means": [
+            -2.120066914491852,
+            -2.302568037431319
+          ],
+          "interval95": [
+            -4.425827884497476,
+            -0.7663867876245776
+          ]
+        },
+        "barrier_signed_error_meV": {
+          "mean": 3.149682348901099,
+          "seed_means": [
+            3.096025068681319,
+            3.203339629120879
+          ],
+          "interval95": [
+            1.7686571393694197,
+            5.283653343116843
+          ]
+        },
+        "high_profile_mae_meV": {
+          "mean": -1.9428633958619974,
+          "seed_means": [
+            -1.8457440693682257,
+            -2.039982722355769
+          ],
+          "interval95": [
+            -4.132972968803657,
+            -0.5284834707460967
+          ]
+        }
+      },
+      "energy_weighted_minus_uniform_weighted": {
+        "barrier_abs_error_meV": {
+          "mean": -0.18025492573832416,
+          "seed_means": [
+            0.07277268629807693,
+            -0.43328253777472525
+          ],
+          "interval95": [
+            -0.35329965444711536,
+            -0.016097184065934064
+          ]
+        },
+        "barrier_signed_error_meV": {
+          "mean": 0.26845408009958793,
+          "seed_means": [
+            -0.12642996651785715,
+            0.663338126717033
+          ],
+          "interval95": [
+            0.09924920050652475,
+            0.4294384966839799
+          ]
+        },
+        "high_profile_mae_meV": {
+          "mean": -0.18335698725103022,
+          "seed_means": [
+            0.052651206215659344,
+            -0.4193651807177198
+          ],
+          "interval95": [
+            -0.3420672573886075,
+            -0.02800029712718925
+          ]
+        }
+      }
+    }
+  },
+  "implementations": {
+    "full": "138bb728aa436ddd13c36dfbfe9aede953927e0f1e53afccda04172cbf210cf2",
+    "energy_weighted": "138bb728aa436ddd13c36dfbfe9aede953927e0f1e53afccda04172cbf210cf2",
+    "uniform_weighted": "138bb728aa436ddd13c36dfbfe9aede953927e0f1e53afccda04172cbf210cf2"
+  },
+  "environment": {
+    "ase": "3.29.0",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "mace": "0.3.14",
+    "numpy": "2.2.6",
+    "threads": 4,
+    "torch": "2.8.0+cu128"
+  },
+  "interval": "Paired material bootstrap conditional on the two seeds"
+}
