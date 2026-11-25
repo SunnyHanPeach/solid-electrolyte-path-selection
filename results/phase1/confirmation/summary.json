@@ -1,0 +1,69 @@
+{
+  "edge": "mp-753143_5_13_0_0_0",
+  "materials": 107,
+  "seeds": [
+    53,
+    67
+  ],
+  "results": {
+    "absolute": {
+      "new_two_seeds": {
+        "mean_meV": 0.3314151942172897,
+        "interval95_meV": [
+          -0.4814486813785696,
+          1.25597748933015
+        ],
+        "seed_means_meV": [
+          0.35965108425817754,
+          0.3031793041764019
+        ],
+        "practical_positive": false
+      },
+      "combined_five_seeds": {
+        "mean_meV": 0.19023574401285046,
+        "interval95_meV": [
+          -0.5305506896687604,
+          0.9950741667631819
+        ],
+        "seed_means_meV": [
+          -0.2535525883469626,
+          0.01597181658878505,
+          0.5259291033878505,
+          0.35965108425817754,
+          0.3031793041764019
+        ],
+        "practical_positive": false
+      }
+    },
+    "net": {
+      "new_two_seeds": {
+        "mean_meV": 1.2442330333674065,
+        "interval95_meV": [
+          0.47978566972124936,
+          2.0336680619297187
+        ],
+        "seed_means_meV": [
+          1.5786429431950935,
+          0.9098231235397196
+        ],
+        "practical_positive": true
+      },
+      "combined_five_seeds": {
+        "mean_meV": 1.1609799393983644,
+        "interval95_meV": [
+          0.4203014345688741,
+          1.893103302208523
+        ],
+        "seed_means_meV": [
+          1.2486538040303738,
+          0.9982385367990654,
+          1.06954128942757,
+          1.5786429431950935,
+          0.9098231235397196
+        ],
+        "practical_positive": true
+      }
+    }
+  },
+  "interpretation": "Same material panel, independent seeds. Positive gains favor the path."
+}

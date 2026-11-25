@@ -1,0 +1,146 @@
+[
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "schedule": "4e5be429294109fc410f606b1bc4266713ac4c97bc1acb2aa480b3ab82ce138b",
+    "seed": 53,
+    "confirmation": "f35c94f6f5abc56604cd63be7ce54c34634c8508ae3718c4922bc1e349cb748a",
+    "implementation": "f1cbb7897222a006ab30ba024c7513277066a18e862b044ca9c3c5ed1a338b11",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "path3",
+    "optimizer_steps": 735,
+    "seconds": 197.32053508609533,
+    "files": {
+      "training_735.csv": "aa3d14cede7f27be29dc9b771aec07565532d75d7b0f7fec7c60c995631d0a99",
+      "predictions_735.csv": "71b98c8cb4792d215fe6d3a1924fa7b1f379de545c0d859814c57f409ec35ae7",
+      "model_735.pt": "b30eef7a793d6ae498b932bcb47a4d2d480ce910a3d9941f9b3841e1bb7dcb91"
+    }
+  },
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "schedule": "c6433ba7c9be37a0758673d143ea13ba0beab0247ba945051eedf79db16e7a91",
+    "seed": 53,
+    "confirmation": "f35c94f6f5abc56604cd63be7ce54c34634c8508ae3718c4922bc1e349cb748a",
+    "implementation": "f1cbb7897222a006ab30ba024c7513277066a18e862b044ca9c3c5ed1a338b11",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "pure",
+    "optimizer_steps": 710,
+    "seconds": 190.55885042995214,
+    "files": {
+      "training_710.csv": "af4576c7acca5437a9c866b7988d704497a47b048393ae85e38e41bc04ea4d1e",
+      "predictions_710.csv": "82e4743c01e88b0268cc89e11cda2bdc097b9d9bd17412f8a5f48b8751d33a47",
+      "model_710.pt": "970c2e919dbb253844827401c405b1b4c557c045f2f29f243d8eec0f8ffd333f"
+    }
+  },
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "schedule": "2f933f93def38f3b0d900c2c31d2ba2cb6e18ef3244d140aa794a240e6aefc9a",
+    "seed": 53,
+    "confirmation": "f35c94f6f5abc56604cd63be7ce54c34634c8508ae3718c4922bc1e349cb748a",
+    "implementation": "f1cbb7897222a006ab30ba024c7513277066a18e862b044ca9c3c5ed1a338b11",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "replay3",
+    "optimizer_steps": 735,
+    "seconds": 195.9313045591116,
+    "files": {
+      "training_735.csv": "6939412f8d1a8e859f2c17e97c1aa5bbcb45f91b5eb8687e2efc8cc8289095b5",
+      "predictions_735.csv": "384392c1c294e68d81a9eb82a64c158ece8cf214b07d56e36557d2f6f82d3ce0",
+      "model_735.pt": "0b6e706bbe2d0bba553245336d4bb18019f53253a3a1a2ef624bd8eb892bdc73"
+    }
+  },
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "schedule": "2a983e212275d07fd409f6276a597a6d5e912383b26dea106a1e6bd30fe61b45",
+    "seed": 67,
+    "confirmation": "f35c94f6f5abc56604cd63be7ce54c34634c8508ae3718c4922bc1e349cb748a",
+    "implementation": "f1cbb7897222a006ab30ba024c7513277066a18e862b044ca9c3c5ed1a338b11",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "path3",
+    "optimizer_steps": 735,
+    "seconds": 194.36408615112305,
+    "files": {
+      "training_735.csv": "28ade360e2ca69b6ab749628de630a66d41b7f3505c65d8bf54dcdeb51ee964a",
+      "predictions_735.csv": "799bbcec244ce77882657be74e6ae720a08c67312a7f9ea050c61de561c415dd",
+      "model_735.pt": "984ea3a5e74145b7a306afaa3078db3986a7207a86cc0dca70e89fd1188d5581"
+    }
+  },
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "schedule": "8a63d88e7a28b7d1e3757cde495417c2df4a7068142220da3e41cf05c046547e",
+    "seed": 67,
+    "confirmation": "f35c94f6f5abc56604cd63be7ce54c34634c8508ae3718c4922bc1e349cb748a",
+    "implementation": "f1cbb7897222a006ab30ba024c7513277066a18e862b044ca9c3c5ed1a338b11",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "pure",
+    "optimizer_steps": 710,
+    "seconds": 191.17097165435553,
+    "files": {
+      "training_710.csv": "178a43b8e9dada4a833fbabd02c291463eeb25d1805625561ab0a147d3c54239",
+      "predictions_710.csv": "11a74862f8fa2d5d989a2288943b8d33196554321a725d2f6532ccce71ebdd63",
+      "model_710.pt": "b187787974662a3f265d1ea2d25bfdbb3f8ecba3f14cb8839909e1c942787b07"
+    }
+  },
+  {
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "schedule": "fa38cc0ac8134ac687de2d1f78e56a0d6c8653520cc326c845275c288abff314",
+    "seed": 67,
+    "confirmation": "f35c94f6f5abc56604cd63be7ce54c34634c8508ae3718c4922bc1e349cb748a",
+    "implementation": "f1cbb7897222a006ab30ba024c7513277066a18e862b044ca9c3c5ed1a338b11",
+    "environment": {
+      "torch": "2.8.0+cu128",
+      "mace": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "device": "cuda",
+      "threads": 4,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "arm": "replay3",
+    "optimizer_steps": 735,
+    "seconds": 197.14195964485407,
+    "files": {
+      "training_735.csv": "d239fb9455080532d63553d9e3defa1322493b1ea06248faead8053e197321c0",
+      "predictions_735.csv": "57c0a1729dcae68f54533830bc40e85d8dc11059dfd5026bfe9879d40c713ff3",
+      "model_735.pt": "70c0792a03498c12cb1f713d12633c248079148408bb2b3fb18de2b41f4154bc"
+    }
+  }
+]

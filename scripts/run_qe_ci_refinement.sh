@@ -85,6 +85,7 @@ cd "$work"
 date --iso-8601=seconds > "$record/started"
 (
     sleep "$((budget - 120))"
+    date --iso-8601=seconds > "$record/budget_stop_requested"
     touch lihop_neb.EXIT scratch/lihop_neb.EXIT
 ) &
 timer=$!
@@ -104,6 +105,8 @@ for name in lihop_neb.path lihop_neb.dat lihop_neb.xyz lihop_neb.int; do
 done
 if (( code == 0 )) && grep -qiE '^[[:space:]]*neb:[[:space:]]+convergence achieved' "$record/ci.log"; then
     status converged
+elif [[ -s "$record/budget_stop_requested" && -s "$record/lihop_neb.path" ]]; then
+    status budget_stopped_checkpoint_saved
 elif (( code == 0 || code == 124 || code == 137 )); then
     status stopped_or_not_converged
 else

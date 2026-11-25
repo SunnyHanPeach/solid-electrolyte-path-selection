@@ -1,0 +1,161 @@
+
+     Program NEB v.6.7MaX starts on 25Nov2026 at 19:19:40 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     9 processors
+
+     MPI processes distributed on     1 nodes
+     path-images division:  nimage    =       3
+     R & G space division:  proc/nbgrp/npool/nimage =       3
+
+     parsing_file_name: ci.in
+     Reading input from pw_1.in
+     file O.pbe-n-kjpaw_psl.0.1.UPF: wavefunction(s)  2P renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+     Reading input from pw_2.in
+     file O.pbe-n-kjpaw_psl.0.1.UPF: wavefunction(s)  2P renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+     Reading input from pw_3.in
+     file O.pbe-n-kjpaw_psl.0.1.UPF: wavefunction(s)  2P renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+     Reading input from pw_4.in
+     file O.pbe-n-kjpaw_psl.0.1.UPF: wavefunction(s)  2P renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+     Reading input from pw_5.in
+     file O.pbe-n-kjpaw_psl.0.1.UPF: wavefunction(s)  2P renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     initial path length           =  8.6371 bohr
+     initial inter-image distance  =  2.1593 bohr
+
+     string_method                 =    neb
+     restart_mode                  =    from_scratch
+     opt_scheme                    =    broyden
+     num_of_images                 =    5
+     nstep_path                    =    32
+     CI_scheme                     =    manual
+     first_last_opt                =    F
+     use_freezing                  =    F
+     ds                            =    1.0000 a.u.
+     k_max                         =    0.1000 a.u.
+     k_min                         =    0.1000 a.u.
+     suggested k_max               =    0.6169 a.u.
+     suggested k_min               =    0.6169 a.u.
+     path_thr                      =    0.1000 eV / A
+
+     list of climbing images :   3,
+
+     ------------------------------ iteration   1 ------------------------------
+
+     cpu =  0   tcpu =      0.7    self-consistency for image   1
+     cpu =  0   tcpu =   1726.1    self-consistency for image   2
+
+     activation energy (->) =   1.871847 eV
+     activation energy (<-) =   1.871851 eV
+
+     image        energy (eV)        error (eV/A)        frozen
+
+         1     -35944.9144870            0.035902            T
+         2     -35943.7542522            0.064307            F
+         3     -35943.0426404            0.110665            F
+         4     -35943.9103929            0.060871            F
+         5     -35944.9144916            0.035291            T
+
+     path length          =  8.637 bohr
+     inter-image distance =  2.159 bohr
+
+     ------------------------------ iteration   2 ------------------------------
+
+     cpu =  0   tcpu =   3015.4    self-consistency for image   2
+
+     activation energy (->) =   1.870730 eV
+     activation energy (<-) =   1.870735 eV
+
+     image        energy (eV)        error (eV/A)        frozen
+
+         1     -35944.9144870            0.035902            T
+         2     -35943.7554878            0.061811            F
+         3     -35943.0437566            0.102824            F
+         4     -35943.9112839            0.057079            F
+         5     -35944.9144916            0.035291            T
+
+     path length          =  8.638 bohr
+     inter-image distance =  2.160 bohr
+
+     ------------------------------ iteration   3 ------------------------------
+
+     cpu =  0   tcpu =   3880.5    self-consistency for image   2
+
+     WARNING :  scf convergence NOT achieved on image   2
+
+     cleaning-up extrapolation files
+
+
+     NEB          :      1h12m CPU      1h13m WALL
+
+
+   This run was terminated on:  20:33:30  25Nov2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+STOP 1
+STOP 1
+STOP 1
+STOP 1
+STOP 1
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+STOP 1
+STOP 1
+STOP 1
+STOP 1
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[7652,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
