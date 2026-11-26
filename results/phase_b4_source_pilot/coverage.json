@@ -1,0 +1,18 @@
+{
+  "initial_eligible_paths": 16155,
+  "initial_eligible_materials": 2647,
+  "centroid_path_records_found": 16155,
+  "materials_with_centroid_and_parent": 2647,
+  "paths_with_centroid_and_parent": 16155,
+  "parent_frames_by_split": {
+    "train": 10159,
+    "val": 1331,
+    "test": 1317
+  },
+  "centroid_frames_by_split": {
+    "train": 96849,
+    "val": 12405,
+    "test": 13167
+  },
+  "full_archive_scan_seconds": 11.503401699941605
+}

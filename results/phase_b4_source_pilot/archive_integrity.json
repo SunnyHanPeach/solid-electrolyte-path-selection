@@ -1,0 +1,28 @@
+{
+  "BVEL13k": {
+    "bytes": 10711383,
+    "sha256": "3d89f921c47101bd3c9050e92829813e57f05b8178ef5bc3ce16dfb58b845c22",
+    "verified_members": [
+      "BVEL13k/BVEL13k_index.csv",
+      "BVEL13k/BVEL13k_val.xyz",
+      "BVEL13k/BVEL13k_test.xyz",
+      "BVEL13k/BVEL13k_train.xyz"
+    ],
+    "prior_prefix_bytes": 4890624,
+    "prior_tail_bytes": 120000,
+    "validation_seconds": 0.1395966000854969
+  },
+  "nebBVSE122k": {
+    "bytes": 199873007,
+    "sha256": "8b90c44902cd799de45b3e30ba70f0cf463f8a60b199fcd3a675caa5316bbe0a",
+    "verified_members": [
+      "nebBVSE122k/nebBVSE122k_index.csv",
+      "nebBVSE122k/nebBVSE122k_val.xyz",
+      "nebBVSE122k/nebBVSE122k_train.xyz",
+      "nebBVSE122k/nebBVSE122k_test.xyz"
+    ],
+    "prior_prefix_bytes": 8445952,
+    "prior_tail_bytes": 120000,
+    "validation_seconds": 2.8352278997190297
+  }
+}

@@ -1,0 +1,389 @@
+{
+  "optimizer": "ASE FIRE",
+  "neb_method": "improvedtangent",
+  "mobile_sites": 1,
+  "step_limit": 60,
+  "fmax_eV_A": 0.1,
+  "image_count": 5,
+  "force_source": "central difference of ions BVSE energy",
+  "difference_step_A": 1e-05,
+  "device": "cpu",
+  "archive_scan_workers": 2,
+  "path_workers": 3,
+  "parallel_pilot_seconds": 2.756895599886775,
+  "versions": {
+    "ase": "3.29.0",
+    "ions": "0.5.1",
+    "pymatgen": "2025.6.14",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "spglib": "2.7.0"
+  },
+  "results": [
+    {
+      "edge_id": "mp-1177164_1_2_0_1_0",
+      "chemsys": "As-Li-O-V",
+      "parent_member": "BVEL13k/BVEL13k_val.xyz",
+      "centroid_member": "nebBVSE122k/nebBVSE122k_val.xyz",
+      "parent_sha256": "95083b86f2cccc3c925ad2a164a95c350433e5dfbe270041ae95622c4945e5cf",
+      "centroid_sha256": "574806f2443cbc287c0a72be744be53475bbf306f363428bdfa4fa6cb680c533",
+      "spacegroup_number": 130,
+      "oxidation_states": [
+        [
+          "As",
+          5.0
+        ],
+        [
+          "Li",
+          1.0
+        ],
+        [
+          "O",
+          -2.0
+        ],
+        [
+          "V",
+          4.0
+        ]
+      ],
+      "atoms": 63,
+      "images": 5,
+      "migrating_Li_0based": 1,
+      "periodic_mapping_error_A": 9.99999905104688e-09,
+      "initial_neb_max_force_eV_A": 1.9526988399954437,
+      "final_neb_max_force_eV_A": 0.05304029835818852,
+      "upstream_force_vs_energy_gradient_error_eV_A": 0.5911443414505222,
+      "half_step_finite_difference_error_eV_A": 2.220446049250313e-10,
+      "steps": 48,
+      "converged": true,
+      "initial": [
+        {
+          "image": 0,
+          "arc_length_A": 0.0,
+          "min_Li_contact_A": 1.9469758256448448,
+          "bvse_energy_eV": -1.6744960295022315,
+          "mobile_force_eV_A": 0.17384043162563367,
+          "reaction_coordinate": 0.0
+        },
+        {
+          "image": 1,
+          "arc_length_A": 0.6865424559970146,
+          "min_Li_contact_A": 1.5838123011247107,
+          "bvse_energy_eV": -0.46544967664696557,
+          "mobile_force_eV_A": 3.4276436703342013,
+          "reaction_coordinate": 0.25
+        },
+        {
+          "image": 2,
+          "arc_length_A": 1.373084911994029,
+          "min_Li_contact_A": 1.4272389815977389,
+          "bvse_energy_eV": 1.2869328093340051,
+          "mobile_force_eV_A": 1.948276614863322,
+          "reaction_coordinate": 0.49999999999999994
+        },
+        {
+          "image": 3,
+          "arc_length_A": 2.0596273679910437,
+          "min_Li_contact_A": 1.56285714133838,
+          "bvse_energy_eV": -0.5977216269784733,
+          "mobile_force_eV_A": 3.8288543349821094,
+          "reaction_coordinate": 0.75
+        },
+        {
+          "image": 4,
+          "arc_length_A": 2.7461698239880583,
+          "min_Li_contact_A": 1.946975825644844,
+          "bvse_energy_eV": -1.6744960295022313,
+          "mobile_force_eV_A": 0.3913551861361122,
+          "reaction_coordinate": 1.0
+        }
+      ],
+      "final": [
+        {
+          "image": 0,
+          "arc_length_A": 0.0,
+          "min_Li_contact_A": 1.9469758256448448,
+          "bvse_energy_eV": -1.6744960295022315,
+          "mobile_force_eV_A": 0.17384043162563367,
+          "reaction_coordinate": 0.0
+        },
+        {
+          "image": 1,
+          "arc_length_A": 0.8770996945173215,
+          "min_Li_contact_A": 1.8182402641407565,
+          "bvse_energy_eV": -1.3205600458935527,
+          "mobile_force_eV_A": 0.17646041712538,
+          "reaction_coordinate": 0.22101369842591193
+        },
+        {
+          "image": 2,
+          "arc_length_A": 1.8805512071437303,
+          "min_Li_contact_A": 1.9008040048362034,
+          "bvse_energy_eV": -1.3700982216053041,
+          "mobile_force_eV_A": 0.19790876655488604,
+          "reaction_coordinate": 0.4738658330041648
+        },
+        {
+          "image": 3,
+          "arc_length_A": 3.0092379375857714,
+          "min_Li_contact_A": 1.92936247854285,
+          "bvse_energy_eV": -1.5078393681435776,
+          "mobile_force_eV_A": 0.1982920173833981,
+          "reaction_coordinate": 0.7582750400972353
+        },
+        {
+          "image": 4,
+          "arc_length_A": 3.968530913532232,
+          "min_Li_contact_A": 1.946975825644844,
+          "bvse_energy_eV": -1.6744960295022313,
+          "mobile_force_eV_A": 0.3913551861361122,
+          "reaction_coordinate": 1.0
+        }
+      ],
+      "status": "converged",
+      "seconds": 2.273345800116658
+    },
+    {
+      "edge_id": "mp-1110579_0_2_0_0_0",
+      "chemsys": "F-In-Li",
+      "parent_member": "BVEL13k/BVEL13k_val.xyz",
+      "centroid_member": "nebBVSE122k/nebBVSE122k_val.xyz",
+      "parent_sha256": "5bef813f4ae26af85a25f4e3965986be029efed692d19b6cc1e90466b47b606b",
+      "centroid_sha256": "1df67b1c7a3ea70b8041a134e3ce29ba0a7cb9949fb35daadae38eaba7181ef3",
+      "spacegroup_number": 225,
+      "oxidation_states": [
+        [
+          "F",
+          -1.0
+        ],
+        [
+          "In",
+          3.0
+        ],
+        [
+          "Li",
+          1.0
+        ]
+      ],
+      "atoms": 79,
+      "images": 5,
+      "migrating_Li_0based": 0,
+      "periodic_mapping_error_A": 1.4344269685021729e-08,
+      "initial_neb_max_force_eV_A": 4.432582520557979e-08,
+      "final_neb_max_force_eV_A": 4.432582520557979e-08,
+      "upstream_force_vs_energy_gradient_error_eV_A": 0.24921368566108976,
+      "half_step_finite_difference_error_eV_A": 2.6645352591003757e-10,
+      "steps": 0,
+      "converged": true,
+      "initial": [
+        {
+          "image": 0,
+          "arc_length_A": 0.0,
+          "min_Li_contact_A": 2.8622598647494435,
+          "bvse_energy_eV": -0.5314105140364236,
+          "mobile_force_eV_A": 0.045101823826185994,
+          "reaction_coordinate": 0.0
+        },
+        {
+          "image": 1,
+          "arc_length_A": 0.8762538127364954,
+          "min_Li_contact_A": 2.1943772346286194,
+          "bvse_energy_eV": -0.6715759606786514,
+          "mobile_force_eV_A": 0.23883954121437315,
+          "reaction_coordinate": 0.24999999999999994
+        },
+        {
+          "image": 2,
+          "arc_length_A": 1.752507625472991,
+          "min_Li_contact_A": 1.724439865877519,
+          "bvse_energy_eV": -0.6303645718893717,
+          "mobile_force_eV_A": 0.4474011580680614,
+          "reaction_coordinate": 0.49999999999999994
+        },
+        {
+          "image": 3,
+          "arc_length_A": 2.6287614382094855,
+          "min_Li_contact_A": 1.6333204654535785,
+          "bvse_energy_eV": -0.6512863917202539,
+          "mobile_force_eV_A": 0.8959793762857179,
+          "reaction_coordinate": 0.7499999999999997
+        },
+        {
+          "image": 4,
+          "arc_length_A": 3.5050152509459824,
+          "min_Li_contact_A": 1.9741884707312416,
+          "bvse_energy_eV": -1.2925455558736532,
+          "mobile_force_eV_A": 0.04510182530640657,
+          "reaction_coordinate": 1.0
+        }
+      ],
+      "final": [
+        {
+          "image": 0,
+          "arc_length_A": 0.0,
+          "min_Li_contact_A": 2.8622598647494435,
+          "bvse_energy_eV": -0.5314105140364236,
+          "mobile_force_eV_A": 0.045101823826185994,
+          "reaction_coordinate": 0.0
+        },
+        {
+          "image": 1,
+          "arc_length_A": 0.8762538127364954,
+          "min_Li_contact_A": 2.1943772346286194,
+          "bvse_energy_eV": -0.6715759606786514,
+          "mobile_force_eV_A": 0.23883954121437315,
+          "reaction_coordinate": 0.24999999999999994
+        },
+        {
+          "image": 2,
+          "arc_length_A": 1.752507625472991,
+          "min_Li_contact_A": 1.724439865877519,
+          "bvse_energy_eV": -0.6303645718893717,
+          "mobile_force_eV_A": 0.4474011580680614,
+          "reaction_coordinate": 0.49999999999999994
+        },
+        {
+          "image": 3,
+          "arc_length_A": 2.6287614382094855,
+          "min_Li_contact_A": 1.6333204654535785,
+          "bvse_energy_eV": -0.6512863917202539,
+          "mobile_force_eV_A": 0.8959793762857179,
+          "reaction_coordinate": 0.7499999999999997
+        },
+        {
+          "image": 4,
+          "arc_length_A": 3.5050152509459824,
+          "min_Li_contact_A": 1.9741884707312416,
+          "bvse_energy_eV": -1.2925455558736532,
+          "mobile_force_eV_A": 0.04510182530640657,
+          "reaction_coordinate": 1.0
+        }
+      ],
+      "status": "converged",
+      "seconds": 0.7702856003306806
+    },
+    {
+      "edge_id": "mp-1191903_0_2_0_0_0",
+      "chemsys": "In-Li-S-Si",
+      "parent_member": "BVEL13k/BVEL13k_val.xyz",
+      "centroid_member": "nebBVSE122k/nebBVSE122k_val.xyz",
+      "parent_sha256": "8f8c4d309657fce2140bc0ad783aaaf327c2bcd688eb6165e526e71eb6410788",
+      "centroid_sha256": "39adf64b977c346d6a0a446ffe9cdb60e96e1952ddab2aff9b56099514bbcccc",
+      "spacegroup_number": 9,
+      "oxidation_states": [
+        [
+          "In",
+          3.0
+        ],
+        [
+          "Li",
+          1.0
+        ],
+        [
+          "S",
+          -2.0
+        ],
+        [
+          "Si",
+          4.0
+        ]
+      ],
+      "atoms": 87,
+      "images": 5,
+      "migrating_Li_0based": 0,
+      "periodic_mapping_error_A": 1.3201700806100436e-08,
+      "initial_neb_max_force_eV_A": 12.900456074857214,
+      "final_neb_max_force_eV_A": 0.09205154708827279,
+      "upstream_force_vs_energy_gradient_error_eV_A": 8.770581144985249,
+      "half_step_finite_difference_error_eV_A": 2.2426505097428162e-09,
+      "steps": 34,
+      "converged": true,
+      "initial": [
+        {
+          "image": 0,
+          "arc_length_A": 0.0,
+          "min_Li_contact_A": 2.530865736931441,
+          "bvse_energy_eV": -2.535685313445237,
+          "mobile_force_eV_A": 0.12479877852799486,
+          "reaction_coordinate": 0.0
+        },
+        {
+          "image": 1,
+          "arc_length_A": 1.2381565131401602,
+          "min_Li_contact_A": 1.7293676786283814,
+          "bvse_energy_eV": -0.32110458588944885,
+          "mobile_force_eV_A": 8.798751257288979,
+          "reaction_coordinate": 0.2500000000000001
+        },
+        {
+          "image": 2,
+          "arc_length_A": 2.4763130262803195,
+          "min_Li_contact_A": 1.6168350486743632,
+          "bvse_energy_eV": 1.0631351886398848,
+          "mobile_force_eV_A": 13.427596604625716,
+          "reaction_coordinate": 0.5
+        },
+        {
+          "image": 3,
+          "arc_length_A": 3.7144695394204783,
+          "min_Li_contact_A": 2.242450740405457,
+          "bvse_energy_eV": -2.1106035038913067,
+          "mobile_force_eV_A": 0.9768391511949984,
+          "reaction_coordinate": 0.7499999999999998
+        },
+        {
+          "image": 4,
+          "arc_length_A": 4.952626052560639,
+          "min_Li_contact_A": 2.5344561232130545,
+          "bvse_energy_eV": -2.6004676661165593,
+          "mobile_force_eV_A": 0.04344966827734292,
+          "reaction_coordinate": 1.0
+        }
+      ],
+      "final": [
+        {
+          "image": 0,
+          "arc_length_A": 0.0,
+          "min_Li_contact_A": 2.530865736931441,
+          "bvse_energy_eV": -2.535685313445237,
+          "mobile_force_eV_A": 0.12479877852799486,
+          "reaction_coordinate": 0.0
+        },
+        {
+          "image": 1,
+          "arc_length_A": 1.5046304053786341,
+          "min_Li_contact_A": 2.2629453412442375,
+          "bvse_energy_eV": -2.0631427367707786,
+          "mobile_force_eV_A": 0.10092793970550058,
+          "reaction_coordinate": 0.25962371399898876
+        },
+        {
+          "image": 2,
+          "arc_length_A": 3.0343459131107786,
+          "min_Li_contact_A": 2.415584747536758,
+          "bvse_energy_eV": -2.172342819807148,
+          "mobile_force_eV_A": 0.09288360786300741,
+          "reaction_coordinate": 0.5235758580335411
+        },
+        {
+          "image": 3,
+          "arc_length_A": 4.551848968153714,
+          "min_Li_contact_A": 2.234392544018162,
+          "bvse_energy_eV": -2.1114134567597675,
+          "mobile_force_eV_A": 0.5822339027306275,
+          "reaction_coordinate": 0.7854207454867596
+        },
+        {
+          "image": 4,
+          "arc_length_A": 5.795427475413493,
+          "min_Li_contact_A": 2.5344561232130545,
+          "bvse_energy_eV": -2.6004676661165593,
+          "mobile_force_eV_A": 0.04344966827734292,
+          "reaction_coordinate": 1.0
+        }
+      ],
+      "status": "converged",
+      "seconds": 1.747705599758774
+    }
+  ]
+}

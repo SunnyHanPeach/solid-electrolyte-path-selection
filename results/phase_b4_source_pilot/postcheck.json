@@ -1,0 +1,72 @@
+{
+  "checkpoint_sha256": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a",
+  "device": "cpu",
+  "path_checks": [
+    {
+      "edge_id": "mp-1177164_1_2_0_1_0",
+      "explicit_pbc_translations": 125,
+      "final_geometry_check": "pass",
+      "feature_image": 2,
+      "shapes": {
+        "soap_geometry": [
+          1,
+          60
+        ],
+        "soap_elements": [
+          1,
+          3200
+        ],
+        "mace_invariants": [
+          1,
+          256
+        ]
+      },
+      "bvse_forward_barrier_eV": 0.35393598360867884,
+      "internal_peak_above_both_endpoints_eV": 0.3539359836086786
+    },
+    {
+      "edge_id": "mp-1110579_0_2_0_0_0",
+      "explicit_pbc_translations": 125,
+      "final_geometry_check": "pass",
+      "feature_image": 2,
+      "shapes": {
+        "soap_geometry": [
+          1,
+          60
+        ],
+        "soap_elements": [
+          1,
+          3200
+        ],
+        "mace_invariants": [
+          1,
+          256
+        ]
+      },
+      "bvse_forward_barrier_eV": 0.0,
+      "internal_peak_above_both_endpoints_eV": -0.09895405785294809
+    },
+    {
+      "edge_id": "mp-1191903_0_2_0_0_0",
+      "explicit_pbc_translations": 125,
+      "final_geometry_check": "pass",
+      "feature_image": 2,
+      "shapes": {
+        "soap_geometry": [
+          1,
+          60
+        ],
+        "soap_elements": [
+          1,
+          3200
+        ],
+        "mace_invariants": [
+          1,
+          256
+        ]
+      },
+      "bvse_forward_barrier_eV": 0.4725425766744582,
+      "internal_peak_above_both_endpoints_eV": 0.4725425766744582
+    }
+  ]
+}
