@@ -50,7 +50,7 @@ def prepare(args):
 
     jobs = {}
 
-    def add_job(name, role, image, text, mesh):
+    def add_job(name, role, image, text, mesh, cutoffs=(50, 400)):
         target = args.output / f"{name}.in"
         target.write_bytes(text)
         geometry = read(target, format="espresso-in")
@@ -59,7 +59,7 @@ def prepare(args):
                 or not np.allclose(geometry.positions, expected.positions, atol=1e-8, rtol=0)
                 or not np.allclose(geometry.cell, expected.cell, atol=1e-8, rtol=0)):
             raise ValueError(f"Geometry mismatch for {name}")
-        jobs[name] = dict(role=role, image=image, grid=list(mesh), sha256=sha(text))
+        jobs[name] = dict(role=role, image=image, grid=list(mesh), cutoffs_Ry=list(cutoffs), sha256=sha(text))
 
     for role, image in (("endpoint", 0), ("peak", 1)):
         orig = (args.grid / f"{role}_k222.in").read_bytes()
@@ -86,6 +86,13 @@ def prepare(args):
             add_job(f"{role}_k333{suffix}", role, image,
                     text.replace(b"disk_io = 'medium'", b"disk_io = 'nowf'", 1)
                     .replace(b"2 2 2 0 0 0", b"3 3 3 0 0 0", 1), dense)
+        cutoff = orig.replace(b"disk_io = 'medium'", b"disk_io = 'nowf'", 1)
+        for old, new in ((b"ecutwfc          = 50\n", b"ecutwfc          = 62.5\n"),
+                         (b"ecutrho          = 400\n", b"ecutrho          = 500\n")):
+            if cutoff.count(old) != 1:
+                raise ValueError(f"Historical cutoff differs for {role}")
+            cutoff = cutoff.replace(old, new, 1)
+        add_job(f"{role}_cut125", role, image, cutoff, (2, 2, 2), (62.5, 500))
 
     # Freeze an interior image before observing the denser-grid forces.
     mid = 2
@@ -121,6 +128,7 @@ def read_result(bundle, manifest, name, run):
         folder = bundle / "baseline" / name
         xml, inp = folder / "schema.xml", folder / "input.in"
         grid = [2, 2, 2]
+        cutoffs = [50, 400]
         details = {}
     else:
         folder = run / name
@@ -128,6 +136,7 @@ def read_result(bundle, manifest, name, run):
         xml = folder / "data-file-schema.xml"
         slot = manifest["jobs"][name]
         grid = slot["grid"]
+        cutoffs = slot.get("cutoffs_Ry", [50, 400])
         if not (folder / "converged").is_file():
             raise ValueError(f"Solver did not complete successfully for {name}")
         if (sha(inp.read_bytes()) != slot["sha256"]
@@ -146,6 +155,10 @@ def read_result(bundle, manifest, name, run):
     mesh = root.find("input/k_points_IBZ/monkhorst_pack").attrib
     if [int(mesh[f"nk{i}"]) for i in (1, 2, 3)] != grid or any(int(mesh[f"k{i}"]) for i in (1, 2, 3)):
         raise ValueError(f"Wrong grid or shift in {name}")
+    basis = root.find("input/basis")
+    if not np.allclose([2 * float(basis.findtext(k)) for k in ("ecutwfc", "ecutrho")], cutoffs, atol=1e-9, rtol=0):
+        raise ValueError(f"Wrong wavefunction or density cutoff in {name}")
+    details["cutoffs_Ry"] = cutoffs
     return verify_grid_xml(folder, name, xml, inp, manifest["spin"], details,
                            expected_nks=8 if grid == [2, 2, 2] else None)
 
@@ -191,21 +204,27 @@ def score(args):
             verdict["io_exact_start_density"] = (
                 row["test"].get("starting_density_sha256") == manifest["prior_input_seed_sha256"]
             )
-    endpoint = next((row for name, row in comparisons.items() if name.startswith("endpoint:endpoint_k333")), None)
     limits = manifest["k_point_screen"]
-    if endpoint:
-        for pair, row in comparisons.items():
-            if pair.startswith(("peak:peak_k333", "middle_k222:middle_k333")):
-                shift = row["total_energy_shift_meV"] - endpoint["total_energy_shift_meV"]
-                checked = (endpoint, row)
-                verdict[pair] = dict(
-                    relative_energy_shift_meV=shift,
-                    pass_gate=abs(shift) <= limits["relative_energy_meV"] and all(
-                        m["force_component_rmse_eV_A"] <= limits["force_component_rmse_eV_A"]
-                        and m["migrating_li_norm_eV_A"] <= limits["migrating_li_force_norm_eV_A"] for m in checked),
-                    all_force_rmse_below_0_01=all(
-                        m["force_component_rmse_eV_A"] <= limits["fine_force_component_rmse_eV_A"] for m in checked),
-                )
+    for pair, row in comparisons.items():
+        if pair.startswith(("peak:peak_k333", "middle_k222:middle_k333")):
+            endpoints = ("endpoint:endpoint_k333", "endpoint:endpoint_k333_cold")
+        elif pair == "peak:peak_cut125":
+            endpoints = ("endpoint:endpoint_cut125",)
+        else:
+            continue
+        endpoint = next((comparisons[k] for k in endpoints if k in comparisons), None)
+        if endpoint is None:
+            continue
+        shift = row["total_energy_shift_meV"] - endpoint["total_energy_shift_meV"]
+        checked = (endpoint, row)
+        verdict[pair] = dict(
+            relative_energy_shift_meV=shift,
+            pass_gate=abs(shift) <= limits["relative_energy_meV"] and all(
+                m["force_component_rmse_eV_A"] <= limits["force_component_rmse_eV_A"]
+                and m["migrating_li_norm_eV_A"] <= limits["migrating_li_force_norm_eV_A"] for m in checked),
+            all_force_rmse_below_0_01=all(
+                m["force_component_rmse_eV_A"] <= limits["fine_force_component_rmse_eV_A"] for m in checked),
+        )
     write_json(args.output / "scores.json", dict(comparisons=comparisons, verdict=verdict))
     print(json.dumps(verdict, indent=2))
 

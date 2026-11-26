@@ -9,7 +9,7 @@ bundle="$(realpath "$1")"
 runtime="$(realpath "$2")"
 run="$(realpath "$3")"
 job="$4"
-[[ "$job" =~ ^(io_k222(_cold)?|(endpoint|peak)_k333(_cold)?|middle_k(222|333))$ ]]
+[[ "$job" =~ ^(io_k222(_cold)?|(endpoint|peak)_(k333(_cold)?|cut125)|middle_k(222|333))$ ]]
 (cd "$bundle" && sha256sum --check --strict checksums.sha256)
 test -d "$run"
 input="$bundle/$job.in"
