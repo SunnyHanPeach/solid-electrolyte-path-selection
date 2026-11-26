@@ -1,0 +1,5 @@
+"job","wavefunction_cutoff_Ry","density_cutoff_Ry","mesh","start_utc","solver_seconds","gpu_peak_sampled_MiB","gpu_sample_count"
+"middle_k222","50","400","2x2x2","2026-11-26T16:39:42Z","4232","21785","2115"
+"middle_k333","50","400","3x3x3","2026-11-26T17:50:15Z","7238","21781","3618"
+"endpoint_cut125","62.5","500","2x2x2","2026-11-26T20:01:16Z","6050","22863","3023"
+"peak_cut125","62.5","500","2x2x2","2026-11-26T21:42:08Z","6091","22863","3044"
