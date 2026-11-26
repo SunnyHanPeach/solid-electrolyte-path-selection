@@ -1,0 +1,13 @@
+{
+  "binary_sha256": "9d4510c4aff6c7340725bdb9244aef5b6011fdcd91f6a7197f526bdb1f0cc702",
+  "original_failed_gpu": "NVIDIA GeForce RTX 3080 Ti 12 GiB",
+  "archive_sha256": "18c937561bf48c850ac697d7699ed7cfb9120f251211cffa8af90d3f90a74f86",
+  "density_bytes": 80504944,
+  "density_sha256": "9e9149eb0bea4408869f39f658e1b8c80128fb46cc0c70b1cded39c7c1771aaa",
+  "wavefunction_temporary_bytes": 7127900160,
+  "warm_input_sha256": "6da7e46c6166803d8eb70ebc236d241f779fe7adfa79516dc9a4c038bdb4f0f4",
+  "runner_sha256": "62abb8ad858556360e128f08a39265b8ce1e039050e073e7b27b8b0a9d77ac55",
+  "warm_input_change": "startingpot='file' only",
+  "old_run_preserved": true,
+  "prepared_recovery_no_solver_started": true
+}

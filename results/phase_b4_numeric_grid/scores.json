@@ -1,0 +1,46 @@
+{
+  "edge_id": "mp-1191903_0_2_0_0_0",
+  "fixed_total_magnetization_muB": 1.0,
+  "baseline_manifest_sha256": "51dcbc389c8b8791354426d34285334193bac16130a0b22892a027ce4108b8a4",
+  "baseline_gamma_50_400_gap_meV": 625.0044477928896,
+  "thresholds": {
+    "energy_screen_meV": 10,
+    "force_component_rmse_screen_eV_A": 0.02,
+    "migrating_li_force_difference_norm_screen_eV_A": 0.02,
+    "two_endpoint_jobs_required_before_peak": true
+  },
+  "comparisons": {
+    "k222": {
+      "status": {
+        "endpoint": "scf_converged_force_oom",
+        "peak": "not_run"
+      },
+      "jobs": [],
+      "force_comparison": {},
+      "incomplete_attempts": [
+        {
+          "job": "endpoint_k222",
+          "input_sha256": "7bc20176d7360deb39139796b2f2154acc2d49dcf4b2de91cc3bca2b7d9d4c1b",
+          "log_sha256": "cb18f1a6f08f0ecba272294bc3937a4952f1685ebc0aabe699cada999b31851a",
+          "elapsed_seconds": 4201,
+          "exit_status": 1,
+          "converged_iterations": 21,
+          "provisional_total_energy_Ry": -3787.9765797,
+          "force_rows": 0,
+          "complete_forces": false,
+          "failure_stage": "USPP force (addusforce_g)",
+          "sampled_peak_device_memory_MiB": 11730
+        }
+      ]
+    },
+    "cut125": {
+      "status": {
+        "endpoint": "not_run",
+        "peak": "not_run"
+      },
+      "jobs": [],
+      "force_comparison": {},
+      "incomplete_attempts": []
+    }
+  }
+}

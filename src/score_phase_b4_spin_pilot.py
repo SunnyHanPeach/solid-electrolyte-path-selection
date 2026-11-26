@@ -23,8 +23,7 @@ def last_number(pattern, text):
     return fnum(values[-1]) if values else None
 
 
-def read_job(root, job, manifest):
-    path = root / "runs" / f"{job['role']}_{job['spin']}"
+def read_job(path, job, manifest):
     raw = (path / "pw.out").read_bytes()
     log = raw.decode()
     if "JOB DONE." not in log or "GPU acceleration is ACTIVE" not in log or not ITERATIONS.search(log):
@@ -74,7 +73,7 @@ def score(root, endpoint_only):
     manifest = json.loads(manifest_path.read_bytes())
     roles = ("endpoint",) if endpoint_only else ("endpoint", "peak")
     jobs = [job for job in manifest["jobs"] if job["role"] in roles]
-    runs = {(job["role"], job["spin"]): read_job(root, job, manifest) for job in jobs}
+    runs = {(job["role"], job["spin"]): read_job(root / "runs" / f"{job['role']}_{job['spin']}", job, manifest) for job in jobs}
     branches = ("nspin1", "spin1muB")
     energy = {}
     forces = {}
