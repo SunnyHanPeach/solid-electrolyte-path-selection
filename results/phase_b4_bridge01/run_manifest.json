@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-26",
+  "historical_reference_edge": "mp-35822_2_5_1_0_0",
+  "source_relaxed_sha256": "240a223847a911a4d16a02f818ee6181c27fe97269f704dcc461441dc88a2daa",
+  "original_input_sha256": {
+    "bridge_frame_00.in": "aecff2b83d2221352527344ac8e9b1f5d81dab599f0e5afb6c8e464a9d238189",
+    "bridge_frame_03.in": "a55b4ba32a7cc02220c702407fcbcad329fb2d1c6afbdfee027e2d3042d00d72",
+    "bridge_frame_04.in": "c40f64cf3cd8105bbd2eb635675b41f1766e199678a616a61c4d798dbace7047",
+    "bridge_frame_01.in": "be3d04721b6c7a27b2411ab5c16f9176f3e7b244fc623983ed1ea3e0e74a7ac7",
+    "bridge_frame_02.in": "0e8fc50c75339e3973b6c01f070a8711d65c61453d84efde97261773c4684064"
+  },
+  "pseudo_sha256": {
+    "Li": "02cc4b3810e28a43b570277840d9631ca24f634d922928200c047b72c0a86bf5",
+    "O": "7c4b6ed541f83d0afdf5c1d3a8c611340f073f3e2b11e95b7963bb2ee26929aa",
+    "Si": "ae3aefd0811f9499dbc4a72f1f9ae02ef4fc7f3568bf6f559b68668719c69e2b"
+  },
+  "moving_Li_0based": 0,
+  "cloud": {
+    "gpu": "RTX 3080 Ti 12 GiB",
+    "driver": "595.71.05",
+    "cuda_runtime": "12.8",
+    "qe_version": "7.3.1",
+    "ngc_amd64_manifest_sha256": "e77e134422f3b242f87056dd2dc0789c931021afe862178c660dc3867f437f03",
+    "pw_binary_sha256": "9d4510c4aff6c7340725bdb9244aef5b6011fdcd91f6a7197f526bdb1f0cc702",
+    "mpi_ranks": 1,
+    "openmp_threads": 2,
+    "one_image_at_a_time": true,
+    "launch_flags": [
+      "OMPI_MCA_ess_singleton_isolated=1",
+      "HWLOC_COMPONENTS=-gl",
+      "DISPLAY and XAUTHORITY unset"
+    ],
+    "preprocessing": "LF line endings only; checked normalized input for all five images"
+  },
+  "accounting": {
+    "completed_bridge_gpu_seconds": 778,
+    "numerical_validation_gpu_seconds": 711,
+    "stopped_local_cpu_runs": [
+      {
+        "image": 0,
+        "status": "stopped_requested",
+        "mpi_ranks": 6,
+        "wall_seconds": 2640.1768177900003,
+        "allocated_rank_seconds": 15841.060906740002,
+        "partial_log_sha256": "00fcee78c3d1860e81d5481832425f4b11f5afc9ad0342fed1c4082107fe4ae4"
+      },
+      {
+        "image": 3,
+        "status": "stopped_requested",
+        "mpi_ranks": 6,
+        "wall_seconds": 2538.409716985,
+        "allocated_rank_seconds": 15230.458301910001,
+        "partial_log_sha256": "37598cd82b899d50de58d71b5cbc51fdff5784a02ab78ef9abd5dcd6ab31d155"
+      }
+    ],
+    "cloud_setup_and_billed_idle": "not included in solver elapsed"
+  },
+  "fixed_geometry_only": true,
+  "reserved_labels_read": 0,
+  "reference_scope": "single public historical Li-O-Si path"
+}

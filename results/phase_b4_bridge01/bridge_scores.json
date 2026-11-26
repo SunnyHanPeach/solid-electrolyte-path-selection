@@ -1,0 +1,215 @@
+{
+  "energy_convention": "primary QE finite-smearing total vs VASP free_energy; secondary Gaussian zero-smearing estimate",
+  "energy_gate_meV": 10.0,
+  "force_component_rmse_gate_eV_A": 0.02,
+  "worst_profile_difference_meV": 4.8244837686297615,
+  "worst_force_rmse_eV_A": 0.013874864487460541,
+  "stage1_done": true,
+  "all_five_done": true,
+  "completed_images_within_gates": true,
+  "material_bridge_quantitative_pass": true,
+  "total_observed_assigned_rank_hours": 0.0,
+  "total_observed_gpu_hours": 0.21611111111111111,
+  "image_peaks_on_observed_subset": {
+    "qe_observed_peak_image": 3,
+    "vasp_observed_peak_image": 3,
+    "observed_peak_match": true,
+    "observed_peak_near_degenerate": false,
+    "peak_choice_gaps_meV": {
+      "QE": 0.0,
+      "VASP": 0.0
+    }
+  },
+  "images": [
+    {
+      "image": 0,
+      "solver_status": "completed",
+      "ranks": 1,
+      "wall_seconds": 156,
+      "gpu_seconds": 156,
+      "device": "NVIDIA RTX 3080 Ti",
+      "qe_version": "7.3.1",
+      "exit_code": 0,
+      "qe_total_energy_eV": -51380.937275694036,
+      "qe_smearing_term_eV": -0.11361515583982006,
+      "vasp_free_energy_eV": -859.09435578,
+      "vasp_potential_energy_eV": -859.0375105,
+      "force_component_rmse_eV_A": 0.012944236918359874,
+      "per_element_force_rmse_eV_A": {
+        "Li": 0.004301014945120525,
+        "O": 0.01824266657289047,
+        "Si": 0.00966897424013656
+      },
+      "migrating_li_qe_force_eV_A": [
+        -0.027724464582168096,
+        -0.013585967235640439,
+        -0.019427771167454495
+      ],
+      "migrating_li_vasp_force_eV_A": [
+        -0.02981244,
+        -0.00836698,
+        -0.01507809
+      ],
+      "migrating_li_force_difference_norm_eV_A": 0.007107544960797394,
+      "migrating_li_force_cosine": 0.9815477016425583,
+      "qe_log_sha256": "d28542d64d27656dca900835acceccf4d6f7805aba91624159dc7d93d2f8286a",
+      "qe_input_sha256": "58b69a3e5d4504d7c3fafe1eeacd5b7964e7c1fcd491b1be1d757cbb310b6e20",
+      "qe_relative_energy_meV": 0.0,
+      "vasp_relative_free_energy_meV": 0.0,
+      "free_energy_profile_difference_meV": 0.0,
+      "gaussian_zero_smearing_profile_difference_meV": 0.0
+    },
+    {
+      "image": 1,
+      "solver_status": "completed",
+      "ranks": 1,
+      "wall_seconds": 163,
+      "gpu_seconds": 163,
+      "device": "NVIDIA RTX 3080 Ti",
+      "qe_version": "7.3.1",
+      "exit_code": 0,
+      "qe_total_energy_eV": -51380.46210584534,
+      "qe_smearing_term_eV": -0.11310467023800294,
+      "vasp_free_energy_eV": -858.61836874,
+      "vasp_potential_energy_eV": -858.56178681,
+      "force_component_rmse_eV_A": 0.01386221668768641,
+      "per_element_force_rmse_eV_A": {
+        "Li": 0.004366888064928838,
+        "O": 0.019430917969387437,
+        "Si": 0.011493916507910642
+      },
+      "migrating_li_qe_force_eV_A": [
+        -0.3592762125684411,
+        -0.277422566173814,
+        -0.19395246710019765
+      ],
+      "migrating_li_vasp_force_eV_A": [
+        -0.35923162,
+        -0.27810192,
+        -0.18916003
+      ],
+      "migrating_li_force_difference_norm_eV_A": 0.004840554046559597,
+      "migrating_li_force_cosine": 0.9999564783733157,
+      "qe_log_sha256": "af41a6e5a5a15a29534aed9fa6e8fd12b91dd29857f70a52f37b1723e76bed7e",
+      "qe_input_sha256": "be3d04721b6c7a27b2411ab5c16f9176f3e7b244fc623983ed1ea3e0e74a7ac7",
+      "qe_relative_energy_meV": 475.16984869434964,
+      "vasp_relative_free_energy_meV": 475.98703999994996,
+      "free_energy_profile_difference_meV": -0.8171913056003177,
+      "gaussian_zero_smearing_profile_difference_meV": -0.8090841107559754
+    },
+    {
+      "image": 2,
+      "solver_status": "completed",
+      "ranks": 1,
+      "wall_seconds": 154,
+      "gpu_seconds": 154,
+      "device": "NVIDIA RTX 3080 Ti",
+      "qe_version": "7.3.1",
+      "exit_code": 0,
+      "qe_total_energy_eV": -51379.84633394872,
+      "qe_smearing_term_eV": -0.10589147603066366,
+      "vasp_free_energy_eV": -858.00074908,
+      "vasp_potential_energy_eV": -857.94775243,
+      "force_component_rmse_eV_A": 0.013584489513385565,
+      "per_element_force_rmse_eV_A": {
+        "Li": 0.0043776579513796965,
+        "O": 0.01922200946748566,
+        "Si": 0.009793423583532813
+      },
+      "migrating_li_qe_force_eV_A": [
+        -0.3362722937451791,
+        -0.098143385917885,
+        -0.28504203096494596
+      ],
+      "migrating_li_vasp_force_eV_A": [
+        -0.33573171,
+        -0.09992966,
+        -0.28235875
+      ],
+      "migrating_li_force_difference_norm_eV_A": 0.003268486288609602,
+      "migrating_li_force_cosine": 0.9999808174935527,
+      "qe_log_sha256": "6ca088811d9069ff0eaa49d3ee1074fba0257e6579fd6171dbbc6dd72f0a7068",
+      "qe_input_sha256": "0e8fc50c75339e3973b6c01f070a8711d65c61453d84efde97261773c4684064",
+      "qe_relative_energy_meV": 1090.9417453149217,
+      "vasp_relative_free_energy_meV": 1093.6067000000094,
+      "free_energy_profile_difference_meV": -2.6649546850876504,
+      "gaussian_zero_smearing_profile_difference_meV": -2.678164589951848
+    },
+    {
+      "image": 3,
+      "solver_status": "completed",
+      "ranks": 1,
+      "wall_seconds": 160,
+      "gpu_seconds": 160,
+      "device": "NVIDIA RTX 3080 Ti",
+      "qe_version": "7.3.1",
+      "exit_code": 0,
+      "qe_total_energy_eV": -51379.614779747804,
+      "qe_smearing_term_eV": -0.10337129351401689,
+      "vasp_free_energy_eV": -857.76703535,
+      "vasp_potential_energy_eV": -857.71528877,
+      "force_component_rmse_eV_A": 0.013874864487460541,
+      "per_element_force_rmse_eV_A": {
+        "Li": 0.004337887307217251,
+        "O": 0.01926881571650242,
+        "Si": 0.01270168362426807
+      },
+      "migrating_li_qe_force_eV_A": [
+        -0.05874148412013966,
+        -0.054736219314462126,
+        -0.010107521507304876
+      ],
+      "migrating_li_vasp_force_eV_A": [
+        -0.05983377,
+        -0.06281461,
+        -0.01425936
+      ],
+      "migrating_li_force_difference_norm_eV_A": 0.009148292047204899,
+      "migrating_li_force_cosine": 0.997552782487405,
+      "qe_log_sha256": "77982b970a0b886a5c4ac9c7e4629bcc1d56be74f39e763918021c26265d40e0",
+      "qe_input_sha256": "e7e3b3793d1b4c0c81700b3c7dbc869288bd96c1884abcb3df6373fb70bad7db",
+      "qe_relative_energy_meV": 1322.4959462313564,
+      "vasp_relative_free_energy_meV": 1327.3204299999861,
+      "free_energy_profile_difference_meV": -4.8244837686297615,
+      "gaussian_zero_smearing_profile_difference_meV": -4.847714933134739
+    },
+    {
+      "image": 4,
+      "solver_status": "completed",
+      "ranks": 1,
+      "wall_seconds": 145,
+      "gpu_seconds": 145,
+      "device": "NVIDIA RTX 3080 Ti",
+      "qe_version": "7.3.1",
+      "exit_code": 0,
+      "qe_total_energy_eV": -51379.641734938625,
+      "qe_smearing_term_eV": -0.1046318609715957,
+      "vasp_free_energy_eV": -857.794678,
+      "vasp_potential_energy_eV": -857.74231883,
+      "force_component_rmse_eV_A": 0.01319860544557388,
+      "per_element_force_rmse_eV_A": {
+        "Li": 0.0043402846534413165,
+        "O": 0.018657766438461797,
+        "Si": 0.009503529571366843
+      },
+      "migrating_li_qe_force_eV_A": [
+        -0.0122713620904723,
+        0.0019231853091839762,
+        0.006920381789036885
+      ],
+      "migrating_li_vasp_force_eV_A": [
+        -0.01507586,
+        -0.00297469,
+        -0.00033154
+      ],
+      "migrating_li_force_difference_norm_eV_A": 0.009189383042575121,
+      "migrating_li_force_cosine": 0.8098351853408828,
+      "qe_log_sha256": "f8c35df1a5d51deab99cbce4e804544d85210cd34929d5a044aae335f274fc04",
+      "qe_input_sha256": "317e1b808a006237305fbf4233c1c53196ce15e65e73c1ba138690c1ab2d1b8a",
+      "qe_relative_energy_meV": 1295.5407554109115,
+      "vasp_relative_free_energy_meV": 1299.6777800000245,
+      "free_energy_profile_difference_meV": -4.137024589113025,
+      "gaussian_zero_smearing_profile_difference_meV": -4.14256202532215
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "bridged_edge": "mp-35822_2_5_1_0_0",
+  "device": "NVIDIA RTX 3080 Ti",
+  "qe_version": "7.3.1",
+  "total_gpu_seconds": 711,
+  "estimated_peak_sampled_GPU_memory_MiB": 9726,
+  "gates": {
+    "profile_meV": 10.0,
+    "force_rmse_eV_A": 0.02
+  },
+  "fixed_geometry_images": [
+    0,
+    3
+  ],
+  "budget": {
+    "start_epoch": 1795670473,
+    "deadline_epoch": 1795671373,
+    "budget_seconds": 900
+  },
+  "comparisons": [
+    {
+      "variant": "cutoff",
+      "baseline_end_to_peak_meV": 1322.4959462313564,
+      "variant_end_to_peak_meV": 1322.3030174995074,
+      "end_to_peak_free_energy_change_meV": -0.19292873184895143,
+      "gaussian_zero_smearing_end_to_peak_change_meV": -0.19218041873341463,
+      "worst_image_force_component_rmse_eV_A": 0.0012542638053847038,
+      "passes_finite_smearing_energy_and_force_gate": true
+    },
+    {
+      "variant": "smearing",
+      "baseline_end_to_peak_meV": 1322.4959462313564,
+      "variant_end_to_peak_meV": 1316.1974627655582,
+      "end_to_peak_free_energy_change_meV": -6.298483465798199,
+      "gaussian_zero_smearing_end_to_peak_change_meV": -4.924512556962782,
+      "worst_image_force_component_rmse_eV_A": 0.0038290007506525596,
+      "passes_finite_smearing_energy_and_force_gate": true
+    }
+  ],
+  "runs": [
+    {
+      "variant": "cutoff",
+      "image": 0,
+      "gpu_wall_seconds": 188,
+      "force_component_rmse_eV_A": 0.0012542638053847038,
+      "migrating_li_force_change_eV_A": 0.00027084178959319,
+      "settings": {
+        "ecutwfc": "62.5",
+        "ecutrho": "500.0"
+      },
+      "verified_input_sha256": "38cb1067af35304e24957dc606f78965f43a95c7c2e541dd09c1dd76e9ab4ff9",
+      "log_sha256": "0d9a8db6bccbc76d0f986fe81fb9a1813e611c58aac6e9211db097d8d5bb8425"
+    },
+    {
+      "variant": "cutoff",
+      "image": 3,
+      "gpu_wall_seconds": 187,
+      "force_component_rmse_eV_A": 0.0012307773332982546,
+      "migrating_li_force_change_eV_A": 0.0002532418034717993,
+      "settings": {
+        "ecutwfc": "62.5",
+        "ecutrho": "500.0"
+      },
+      "verified_input_sha256": "63cef490a532a2f349970de2b0293ebcfdc8770ed0a5b223cd995eef71282a64",
+      "log_sha256": "d2a5ef073d0a7ed6943adf18f3581cf0ead5f9f523086c0c86d85b13969c3295"
+    },
+    {
+      "variant": "smearing",
+      "image": 0,
+      "gpu_wall_seconds": 170,
+      "force_component_rmse_eV_A": 0.002940324905496383,
+      "migrating_li_force_change_eV_A": 0.003156824162690161,
+      "settings": {
+        "degauss": "0.0036749322175638785"
+      },
+      "verified_input_sha256": "a6fdb10d83031f319dcca9a3de5f8a15a034cf75f5a1d8ef5e2685a7eca1ef23",
+      "log_sha256": "ce6e7133058e82fa8aa8b368440b06721e6446ff6bc77d0c6e02a4c2c4763e65"
+    },
+    {
+      "variant": "smearing",
+      "image": 3,
+      "gpu_wall_seconds": 166,
+      "force_component_rmse_eV_A": 0.0038290007506525596,
+      "migrating_li_force_change_eV_A": 0.004427866957639422,
+      "settings": {
+        "degauss": "0.0036749322175638785"
+      },
+      "verified_input_sha256": "dc46ef72130e222938b68c303ba911a8a72f1a94fd8f80fdf3d4893e09c864bd",
+      "log_sha256": "aff70fbe0d54c60eeeb3ae590201dba76e566737bbee17abf1c673edf2357ad8"
+    }
+  ]
+}
