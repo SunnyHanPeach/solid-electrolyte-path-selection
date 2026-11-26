@@ -1,3 +1,4 @@
 experiments/**/*.csv -text whitespace=cr-at-eol
 scripts/run_phase_b4_spin_gpu.sh text eol=lf
 scripts/run_phase_b4_numeric_gpu.sh text eol=lf
+scripts/run_phase_b4_r2_job.sh text eol=lf

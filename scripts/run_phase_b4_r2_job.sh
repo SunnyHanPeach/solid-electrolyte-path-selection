@@ -23,7 +23,13 @@ if [[ -e "$job" || -e "$job.results.tar.gz" ]]; then
     exit 2
 fi
 device="${CUDA_VISIBLE_DEVICES:-0}"
-IFS=',' read -r total used < <(nvidia-smi -i "$device" +    --query-gpu=memory.total,memory.used --format=csv,noheader,nounits)
+memory="$(nvidia-smi -i "$device" --query-gpu=memory.total,memory.used --format=csv,noheader,nounits)"
+if [[ ! "$memory" =~ ^([0-9]+),[[:space:]]*([0-9]+)$ ]]; then
+    echo "Unexpected GPU memory response: $memory" >&2
+    exit 2
+fi
+total="${BASH_REMATCH[1]}"
+used="${BASH_REMATCH[2]}"
 available_mib="$(df -Pm -- "$run" | awk 'END {print $4}')"
 if (( total - used < 22000 || available_mib < 24576 )); then
     echo "Insufficient available VRAM or scratch. Free MiB: GPU $((total-used)), disk $available_mib" >&2
