@@ -1,0 +1,64 @@
+{
+  "comparisons": {
+    "endpoint:io_k222": {
+      "reference": {
+        "electrons": 573.0,
+        "total_magnetization_muB": 0.9999999999583197,
+        "total_energy_eV": -51538.046480734796,
+        "absolute_magnetization_muB": 1.068861837378863,
+        "smearing_term_eV": -0.06978877774388148,
+        "migrating_li_force_eV_A": [
+          -0.00617278041320478,
+          -0.022281936894313816,
+          -0.07767577391725916
+        ],
+        "xml_sha256": "ae1991f102ccd83a54d99025bb221c2613e8e1391f139c3f7e3c91f5d710fccd",
+        "force_reference_log_rows": 87,
+        "xml_stdout_force_max_abs_difference_eV_A": 1.2838982438312385e-07,
+        "complete_xml_force_vectors": 87,
+        "nks_ibz": 8,
+        "scf_error_Ry": 1.3554145584033107e-09,
+        "energy_force_source": "QE data-file-schema.xml, geometry and stdout cross-checked"
+      },
+      "test": {
+        "start_utc": "2026-11-26T12:34:27Z",
+        "elapsed_seconds": "2657",
+        "exit_status": "0",
+        "sampled_peak_device_memory_MiB": 21831,
+        "starting_density_sha256": "9e9149eb0bea4408869f39f658e1b8c80128fb46cc0c70b1cded39c7c1771aaa",
+        "electrons": 573.0,
+        "total_magnetization_muB": 0.9999999999948074,
+        "total_energy_eV": -51538.046480734905,
+        "absolute_magnetization_muB": 1.068861837412924,
+        "smearing_term_eV": -0.0697887777452449,
+        "migrating_li_force_eV_A": [
+          -0.006172780409293479,
+          -0.022281936898323793,
+          -0.07767577392529
+        ],
+        "xml_sha256": "4cb869705643067517c268dcc59400e5481059a5f28de327e08f7c7c5729b5d8",
+        "force_reference_log_rows": 87,
+        "xml_stdout_force_max_abs_difference_eV_A": 1.2838556534555678e-07,
+        "complete_xml_force_vectors": 87,
+        "nks_ibz": 8,
+        "scf_error_Ry": 1.3554143385214877e-09,
+        "energy_force_source": "QE data-file-schema.xml, geometry and stdout cross-checked"
+      },
+      "total_energy_shift_meV": -1.0913936421275139e-07,
+      "force_component_rmse_eV_A": 1.0050435545787511e-11,
+      "max_atomic_force_diff_eV_A": 5.7858169244366586e-11,
+      "max_diff_atom_index_0": 70,
+      "max_diff_element": "In",
+      "migrating_li_diff_eV_A": [
+        3.911300970604881e-12,
+        -4.0099763787271314e-12,
+        -8.030839881989493e-12
+      ],
+      "migrating_li_norm_eV_A": 9.791454184683564e-12
+    }
+  },
+  "verdict": {
+    "io_pass": true,
+    "io_exact_start_density": true
+  }
+}
