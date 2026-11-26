@@ -1,0 +1,26 @@
+{
+  "attempted": 15516,
+  "strata": {
+    "short": {
+      "attempted": 6928,
+      "converged": 6208,
+      "verified_geometry": 6516,
+      "passed": 5330,
+      "failed": 412,
+      "step_limit": 308
+    },
+    "ordinary": {
+      "attempted": 8588,
+      "converged": 7907,
+      "verified_geometry": 7944,
+      "passed": 7112,
+      "failed": 644,
+      "step_limit": 37
+    }
+  },
+  "accepted_directed_paths": 12442,
+  "accepted_materials": 2304,
+  "accepted_direction_pairs": 12442,
+  "accepted_unflagged_direction_pairs": 7801,
+  "interpretation": "cheap geometry and BVSE screening only; family flags are not a proof of independent evaluation"
+}

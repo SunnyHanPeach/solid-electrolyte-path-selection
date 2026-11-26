@@ -1,0 +1,19 @@
+{
+  "unique_materials": 173,
+  "path_failures": 1056,
+  "frozen_material_status": {
+    "unsupported_negative_species": 17,
+    "oxidation_failed: ValueError: Valences cannot be assigned!": 156
+  },
+  "extended_material_status": {
+    "already_assigned": 17,
+    "oxidation_failed: ValueError: Valences cannot be assigned!": 152,
+    "parameterized": 4
+  },
+  "unsupported_negative_species": {
+    "N:-2": 2,
+    "S:-1": 11,
+    "Se:-1": 4
+  },
+  "recorded_primary_results_unchanged": true
+}

@@ -1,0 +1,31 @@
+{
+  "eligible_paths": 66,
+  "materials": 4,
+  "workers": 12,
+  "previously_completed_paths": 0,
+  "oxidation_permutations": 100000,
+  "start_deadline_epoch": 1795721400.0,
+  "priority": "one path per material and initial-contact stratum before repeats, then SHA256",
+  "input_geometry_audit_sha256": "5049a5ecbbd237145fc317fbfc6935b7209a7178ce8ee7b0de0788f1dda5ea23",
+  "versions": {
+    "ase": "3.29.0",
+    "ions": "0.5.1",
+    "pymatgen": "2025.6.14",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "spglib": "2.7.0"
+  },
+  "elapsed_seconds": 74.59410319989547,
+  "strata": {
+    "True": {
+      "evaluated": 26,
+      "converged": 26,
+      "geometry_screen_pass": 8
+    },
+    "False": {
+      "evaluated": 40,
+      "converged": 40,
+      "geometry_screen_pass": 34
+    }
+  }
+}

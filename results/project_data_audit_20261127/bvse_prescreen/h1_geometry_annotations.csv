@@ -1,0 +1,11 @@
+edge_id,material_id,h1_role,h1_position,geometry_record_found,screen_pass,historical_family_flag,geometry_note
+mp-23497_0_5_0_0_0,mp-23497,high_disagreement,1,True,True,True,
+mp-1020013_0_4_0_0_0,mp-1020013,high_disagreement,2,True,True,False,
+mp-1210789_0_3_0_0_0,mp-1210789,high_disagreement,3,True,True,False,
+mp-1111659_2_2_0_0_1,mp-1111659,high_disagreement,4,True,True,False,
+mp-28341_0_1_0_1_0,mp-28341,high_disagreement,5,True,True,False,
+mp-1105934_3_0_1_0_0,mp-1105934,low_disagreement_control,6,True,True,False,
+mp-1222483_0_0_1_1_0,mp-1222483,low_disagreement_control,7,True,True,False,
+mp-768514_1_3_0_0_0,mp-768514,low_disagreement_control,8,True,True,False,
+mp-768361_3_4_0_1_0,mp-768361,low_disagreement_control,9,True,True,False,
+mp-755254_0_0_0_1_0,mp-755254,low_disagreement_control,10,True,True,False,

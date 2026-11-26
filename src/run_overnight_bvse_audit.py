@@ -29,11 +29,11 @@ def order(edge):
 
 
 def run_path(args):
-    row, parent, centroid, output, deadline = args
+    row, parent, centroid, output, deadline, oxidation_permutations = args
     if time() >= deadline:
         return {"edge_id": row["edge_id"], "status": "deferred"}
     try:
-        return pilot(row, parent, centroid, output)
+        return pilot(row, parent, centroid, output, oxidation_permutations=oxidation_permutations)
     except (ValueError, KeyError, RuntimeError, TypeError, IndexError, ArithmeticError) as exc:
         return {"edge_id": row["edge_id"], "status": "failed", "error": f"{type(exc).__name__}: {exc}"}
 
@@ -55,6 +55,7 @@ def main():
     parser.add_argument("--deadline", type=float, required=True)
     parser.add_argument("--limit", type=int)
     parser.add_argument("--exclude-results", type=Path, action="append", default=[])
+    parser.add_argument("--oxidation-permutations", type=int, default=10000)
     args = parser.parse_args()
     start = perf_counter()
     rows = prioritized(read_csv(args.geometry_audit))
@@ -80,6 +81,7 @@ def main():
     metadata = {
         "eligible_paths": len(rows), "materials": len(material_ids), "workers": args.workers,
         "previously_completed_paths": len(already_completed),
+        "oxidation_permutations": args.oxidation_permutations,
         "start_deadline_epoch": args.deadline, "priority": "one path per material and initial-contact stratum before repeats, then SHA256",
         "input_geometry_audit_sha256": hashlib.sha256(args.geometry_audit.read_bytes()).hexdigest(),
         "versions": {name: version(name) for name in ("ase", "ions", "pymatgen", "numpy", "scipy", "spglib")},
@@ -98,7 +100,8 @@ def main():
             if time() >= args.deadline:
                 break
             batch = rows[offset:offset + batch_size]
-            tasks = [(row, parents[row["material_id"]], centroids[row["edge_id"]], geometry, args.deadline)
+            tasks = [(row, parents[row["material_id"]], centroids[row["edge_id"]], geometry, args.deadline,
+                      args.oxidation_permutations)
                      for row in batch]
             for row, item in zip(batch, pool.map(run_path, tasks)):
                 if item["status"] == "deferred":

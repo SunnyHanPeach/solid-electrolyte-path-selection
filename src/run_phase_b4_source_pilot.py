@@ -233,7 +233,7 @@ def bvse_short(images, moving):
     }
 
 
-def pilot(cand, parent_record, centroid_record, output):
+def pilot(cand, parent_record, centroid_record, output, *, oxidation_permutations=10000):
     import spglib
     from ions.decorate import assign_oxidation_states
 
@@ -252,7 +252,7 @@ def pilot(cand, parent_record, centroid_record, output):
     }
     try:
         # Oxidation states refer to the neutral parent before creating the Li vacancy.
-        assign_oxidation_states(parent, max_permutations=10000)
+        assign_oxidation_states(parent, max_permutations=oxidation_permutations)
         states = sorted({(symbol, float(q)) for symbol, q in zip(parent.symbols, parent.arrays["oxi_states"])})
         result["oxidation_states"] = states
         if abs(float(parent.arrays["oxi_states"].sum())) > 1e-5:

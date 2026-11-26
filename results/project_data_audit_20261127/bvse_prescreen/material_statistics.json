@@ -1,0 +1,38 @@
+{
+  "attempted_paths": 15516,
+  "accepted_direction_pairs": 12442,
+  "accepted_materials": 2304,
+  "passed_and_no_historical_family_flag": 7801,
+  "bootstrap": {
+    "replicates": 5000,
+    "seed": 4817,
+    "unit": "material",
+    "metrics": {
+      "short": {
+        "materials": 1777,
+        "mean": 0.7406677890313323,
+        "interval_95": [
+          0.7227274609205567,
+          0.7578303392188835
+        ]
+      },
+      "ordinary": {
+        "materials": 2117,
+        "mean": 0.8624552632431377,
+        "interval_95": [
+          0.8495711802298971,
+          0.8751760835771023
+        ]
+      },
+      "short_minus_ordinary_paired_materials": {
+        "materials": 1360,
+        "mean": -0.13749770536665817,
+        "interval_95": [
+          -0.1552010082885936,
+          -0.1198882858453903
+        ]
+      }
+    }
+  },
+  "h1_rankings": "frozen and unchanged"
+}
