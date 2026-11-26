@@ -1,0 +1,25 @@
+{
+  "source_commit": "4accfc064c610556dd6c34720f2d64eb8599f28a",
+  "feature_input_sha256": "202fbdebbac6999a12af848fd46a5dd2fa0be8606571c35f18a95bb697a46a0a",
+  "label_input_sha256": "3aa54825a8a6a31aaa9bccd2d36d7340297377793216f46702fd7543ebe1abd6",
+  "script_sha256": "72620219900960f0ad34b8743d045f05fd168b220f43e9b11968f12e30714bde",
+  "protocol_sha256": "f3e86f4dac6d23ca790b7e3ca2ac26e5ee1955ae6735390276699bdba003b5a7",
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.8"
+  },
+  "paths": 14,
+  "one_control_formula_verified": true,
+  "output_sha256": {
+    "feature_relations.csv": "7bfbcb836082eb04fbf89997235a5b8d9c5f262f0ae00d8e587e001b7fe50726",
+    "leave_one_path_out.csv": "e4c8aeddd2a6efddd13af05ab1bb4952ac977092ed325418c9bdd7f23654f148",
+    "near_contact_pairs.csv": "20f331facb45bcc3bf600c4800a2aec868b55eb1a7225708772a8cb58f734e74",
+    "paired_inputs.csv": "84a929edbc752d724512a5b54c90a20549a7ca47dd8ca95148d682b2152b4e10",
+    "rank_associations.csv": "e9d03beaf841bf95dcb0f33993a4e15cad47ed0bbe9f0ba20c82a4c6c8a4f619",
+    "residual_associations.csv": "95eeb4aa9083af4ad8260b95d9d859b1effdc505ce6eb11b51e754d1542bc388",
+    "residuals.csv": "a1e9590c433608caae02867e704d9adab21dafc4639badba1d818373eadd4c22",
+    "short_contact_residuals.png": "fd544ba3bac42990ffdac85d32329c74f8c884482fab8bb5201fa400b31e0eb1",
+    "stratified_associations.csv": "9ac4b5a7a61581b9b6090ab901d8d63c418f7963f27ef3e0a88db45fee29ba03"
+  }
+}

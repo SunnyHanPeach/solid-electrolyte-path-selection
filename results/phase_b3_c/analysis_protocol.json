@@ -1,0 +1,36 @@
+{
+  "study": "B3-C short-contact and feature increment audit",
+  "source_commit": "4accfc0",
+  "unit": "one complete migration path",
+  "features": {
+    "SOAP": "soap_geometry__mean",
+    "tangent": "Li_tangent_sd__mean",
+    "contact": "init_Li_min_contact_A",
+    "RDF": "rdf_geometry__mean",
+    "Activation": "mace_invariants__mean",
+    "images": "init_images"
+  },
+  "outcomes": ["Delta_abs", "Delta_net"],
+  "primary": [
+    ["tangent", []],
+    ["tangent", ["contact"]],
+    ["tangent", ["contact", "SOAP"]]
+  ],
+  "sensitivity": [
+    ["tangent", ["contact", "images"]],
+    ["tangent", ["contact", "SOAP", "images"]],
+    ["SOAP", []],
+    ["SOAP", ["contact"]],
+    ["RDF", []],
+    ["RDF", ["SOAP"]],
+    ["Activation", []],
+    ["Activation", ["SOAP", "contact"]],
+    ["contact", []]
+  ],
+  "partial": "Pearson correlation of average-rank residuals after projecting both ranked variables on intercept and ranked controls",
+  "residual": "Semipartial Pearson coefficient of residualized feature ranks and original outcome ranks. Raw force residual versus outcome sensitivity uses Spearman.",
+  "splits": "Shorter versus longer contact, fixed half split sorted on contact and edge ID. Five versus seven images. No split search.",
+  "near_contact_pairs": "Disjoint adjacent pairs in the same contact ordering; preserve all contact gaps; orient within pair by tangent. Compare paired gain signs.",
+  "leave_one": "Recompute ranks, control projections and correlations after each path deletion",
+  "rules": "No regression prediction, new inference or DFT. Report all frozen specifications without p values or causal interpretation. Undefined if fewer than k+3 paths or rank deficiency for k controls."
+}
