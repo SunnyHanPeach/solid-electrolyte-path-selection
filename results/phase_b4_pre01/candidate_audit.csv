@@ -1,0 +1,4 @@
+rank,material_id,edge_id,chemsys,provisional_anion_group,historical_id_overlap,historical_exact_chemsys_overlap,source_split,centroid_archive_member,parent_archive_member,frozen_soap_species_supported,full_path_attempt,selection
+1,mp-1177164,mp-1177164_1_2_0_1_0,As-Li-O-V,O,False,False,val,nebBVSE122k/nebBVSE122k_val.xyz,BVEL13k/BVEL13k_val.xyz,True,True,metadata only; no barrier or training-gain ranking
+2,mp-1110579,mp-1110579_0_2_0_0_0,F-In-Li,F,False,False,val,nebBVSE122k/nebBVSE122k_val.xyz,BVEL13k/BVEL13k_val.xyz,True,False,metadata only; no barrier or training-gain ranking
+3,mp-1191903,mp-1191903_0_2_0_0_0,In-Li-S-Si,S,False,False,val,nebBVSE122k/nebBVSE122k_val.xyz,BVEL13k/BVEL13k_val.xyz,True,False,metadata only; no barrier or training-gain ranking

@@ -1,0 +1,192 @@
+{
+  "status": "pass",
+  "device": "cpu",
+  "image_count": 5,
+  "setup_seconds": 6.125159599818289,
+  "model": {
+    "checkpoint": "D0_17.pt",
+    "checkpoint_sha256": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a",
+    "layers": 2,
+    "mace": "scalar invariants from each interaction layer",
+    "ase": "3.29.0",
+    "torch": "2.10.0+cpu",
+    "dscribe": "2.1.2",
+    "runtime_dtype": "float64"
+  },
+  "threads": 4,
+  "tested": [
+    {
+      "image": 0,
+      "seconds": 0.4218145003542304,
+      "shapes": {
+        "soap_geometry": [
+          1,
+          60
+        ],
+        "soap_elements": [
+          1,
+          3200
+        ],
+        "mace_invariants": [
+          1,
+          256
+        ]
+      },
+      "l2_norm": {
+        "soap_geometry": 10.262506398121516,
+        "soap_elements": 9.441132241258426,
+        "mace_invariants": 2.206452117148642
+      }
+    },
+    {
+      "image": 1,
+      "seconds": 0.6071470999158919,
+      "shapes": {
+        "soap_geometry": [
+          1,
+          60
+        ],
+        "soap_elements": [
+          1,
+          3200
+        ],
+        "mace_invariants": [
+          1,
+          256
+        ]
+      },
+      "l2_norm": {
+        "soap_geometry": 8.862303952603689,
+        "soap_elements": 8.112833989984367,
+        "mace_invariants": 2.057370699118922
+      }
+    },
+    {
+      "image": 2,
+      "seconds": 0.28490389976650476,
+      "shapes": {
+        "soap_geometry": [
+          1,
+          60
+        ],
+        "soap_elements": [
+          1,
+          3200
+        ],
+        "mace_invariants": [
+          1,
+          256
+        ]
+      },
+      "l2_norm": {
+        "soap_geometry": 8.520606566016767,
+        "soap_elements": 7.8394359240337,
+        "mace_invariants": 2.409915352613438
+      }
+    },
+    {
+      "image": 3,
+      "seconds": 0.2084279996342957,
+      "shapes": {
+        "soap_geometry": [
+          1,
+          60
+        ],
+        "soap_elements": [
+          1,
+          3200
+        ],
+        "mace_invariants": [
+          1,
+          256
+        ]
+      },
+      "l2_norm": {
+        "soap_geometry": 8.798473059439454,
+        "soap_elements": 8.108138915345489,
+        "mace_invariants": 2.08103340548383
+      }
+    },
+    {
+      "image": 4,
+      "seconds": 0.2125582997687161,
+      "shapes": {
+        "soap_geometry": [
+          1,
+          60
+        ],
+        "soap_elements": [
+          1,
+          3200
+        ],
+        "mace_invariants": [
+          1,
+          256
+        ]
+      },
+      "l2_norm": {
+        "soap_geometry": 10.257142890347973,
+        "soap_elements": 9.440462208110825,
+        "mace_invariants": 2.215028890531026
+      }
+    }
+  ],
+  "total_seconds": 7.884894699789584,
+  "subsequent_image_seconds_mean": 0.3282593247713521,
+  "primary_edge": "mp-1177164_1_2_0_1_0",
+  "geometry_gate": "pass_geometry",
+  "source_audit": {
+    "index_candidates": [
+      16155,
+      2647
+    ],
+    "index_seconds": 0.33192709973081946,
+    "centroid_paths_found": 464,
+    "centroid_materials_found": 107,
+    "parent_materials_found": 107,
+    "source_members": [
+      {
+        "member": "nebBVSE122k/nebBVSE122k_val.xyz",
+        "status": "partial_zip_prefix",
+        "scanned_frames": 3906,
+        "compressed_read": 6552310,
+        "compressed_declared": 20146776
+      },
+      {
+        "member": "BVEL13k/BVEL13k_val.xyz",
+        "status": "crc_verified",
+        "scanned_frames": 1331,
+        "compressed_read": 1090776,
+        "compressed_declared": 1090776
+      },
+      {
+        "member": "BVEL13k/BVEL13k_test.xyz",
+        "status": "crc_verified",
+        "scanned_frames": 1317,
+        "compressed_read": 1077374,
+        "compressed_declared": 1077374
+      },
+      {
+        "member": "BVEL13k/BVEL13k_train.xyz",
+        "status": "partial_zip_prefix",
+        "scanned_frames": 3091,
+        "compressed_read": 2569131,
+        "compressed_declared": 8389413
+      }
+    ],
+    "source_audit_seconds": 0.5906016998924315
+  },
+  "metadata_compatible_paths_in_prefix": 443,
+  "python": "3.10.20",
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "ase": "3.29.0",
+    "dscribe": "2.1.2",
+    "torch": "2.10.0",
+    "mace-torch": "0.3.14",
+    "ions": null,
+    "spglib": null
+  },
+  "cpu_workflow_elapsed_seconds": 8.571416199672967
+}
