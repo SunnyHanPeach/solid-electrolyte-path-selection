@@ -86,7 +86,7 @@ def recovery_entry(recovery, source, variant, role):
     return folder, digest
 
 
-def verify_grid_xml(folder, role, xml, expected_input, manifest, job):
+def verify_grid_xml(folder, role, xml, expected_input, manifest, job, *, expected_nks=8):
     output = ET.parse(xml).getroot().find("output")
     log = (folder / "pw.out").read_text()
     tol = manifest["electronic_conv_thr_Ry"]
@@ -98,8 +98,9 @@ def verify_grid_xml(folder, role, xml, expected_input, manifest, job):
         raise ValueError(f"Unverified electronic convergence in {xml.name}")
     charge = float(output.findtext("band_structure/nelec"))
     m = float(output.findtext("magnetization/total"))
+    nks = int(output.findtext("band_structure/nks"))
     if (charge != manifest["qe_valence_electrons"] or abs(m - 1.0) > .01
-            or int(output.findtext("band_structure/nks")) != 8):
+            or (expected_nks is not None and nks != expected_nks)):
         raise ValueError(f"Unverified charge, spin or mesh in {xml.name}")
 
     origin = read(expected_input, format="espresso-in")
@@ -134,7 +135,7 @@ def verify_grid_xml(folder, role, xml, expected_input, manifest, job):
                migrating_li_force_eV_A=forces[manifest["migrating_Li_0based"]].tolist(),
                xml_sha256=sha(xml.read_bytes()), force_reference_log_rows=len(partial),
                xml_stdout_force_max_abs_difference_eV_A=max_diff, complete_xml_force_vectors=count,
-               nks_ibz=8, scf_error_Ry=float(state.findtext("scf_error")) * 2,
+               nks_ibz=nks, scf_error_Ry=float(state.findtext("scf_error")) * 2,
                energy_force_source="QE data-file-schema.xml, geometry and stdout cross-checked")
     return job, forces
 
