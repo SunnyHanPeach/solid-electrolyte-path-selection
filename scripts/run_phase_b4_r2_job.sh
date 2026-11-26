@@ -15,6 +15,18 @@ test -d "$run"
 input="$bundle/$job.in"
 test -s "$input"
 
+options=()
+if grep -Eq "startingpot[[:space:]]*=[[:space:]]*'file'" "$input"; then
+    if [[ $# -ne 5 || ! -s "$5" ]]; then
+        echo "A readable starting density is required for $job." >&2
+        exit 2
+    fi
+    options+=("$(realpath "$5")")
+elif [[ $# -ne 4 ]]; then
+    echo "A density was supplied for a cold-start input." >&2
+    exit 2
+fi
+
 cd "$run"
 exec 9>.single_gpu.lock
 flock -n 9 || { echo "A B4-R2 job is already running in $run" >&2; exit 2; }
@@ -36,15 +48,6 @@ if (( total - used < 22000 || available_mib < 24576 )); then
     exit 2
 fi
 
-options=()
-if grep -Eq "startingpot[[:space:]]*=[[:space:]]*'file'" "$input"; then
-    [[ $# -eq 5 ]]
-    options+=("$(realpath "$5")")
-    test -s "${options[0]}"
-elif [[ $# -ne 4 ]]; then
-    echo "A density was supplied for a cold-start input." >&2
-    exit 2
-fi
 nvidia-smi -i "$device" --query-gpu=name,memory.total,driver_version --format=csv > "$job.hardware.csv"
 df -Pm -- "$run" > "$job.disk_before.txt"
 status=0
