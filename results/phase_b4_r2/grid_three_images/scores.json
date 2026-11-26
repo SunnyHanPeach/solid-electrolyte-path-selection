@@ -1,0 +1,211 @@
+{
+  "comparisons": {
+    "endpoint:endpoint_k333": {
+      "reference": {
+        "cutoffs_Ry": [
+          50,
+          400
+        ],
+        "electrons": 573.0,
+        "total_magnetization_muB": 0.9999999999583197,
+        "total_energy_eV": -51538.046480734796,
+        "absolute_magnetization_muB": 1.068861837378863,
+        "smearing_term_eV": -0.06978877774388148,
+        "migrating_li_force_eV_A": [
+          -0.00617278041320478,
+          -0.022281936894313816,
+          -0.07767577391725916
+        ],
+        "xml_sha256": "ae1991f102ccd83a54d99025bb221c2613e8e1391f139c3f7e3c91f5d710fccd",
+        "force_reference_log_rows": 87,
+        "xml_stdout_force_max_abs_difference_eV_A": 1.2838982438312385e-07,
+        "complete_xml_force_vectors": 87,
+        "nks_ibz": 8,
+        "scf_error_Ry": 1.3554145584033107e-09,
+        "energy_force_source": "QE data-file-schema.xml, geometry and stdout cross-checked"
+      },
+      "test": {
+        "start_utc": "2026-11-26T14:58:36Z",
+        "elapsed_seconds": "5729",
+        "exit_status": "0",
+        "sampled_peak_device_memory_MiB": 21835,
+        "starting_density_sha256": "4faf01808fc08b0ebfad4979c0273adfe0f20fca3eefbedc212ec60ce152a502",
+        "cutoffs_Ry": [
+          50,
+          400
+        ],
+        "electrons": 573.0,
+        "total_magnetization_muB": 1.000000000029955,
+        "total_energy_eV": -51538.04673322348,
+        "absolute_magnetization_muB": 1.068188633550874,
+        "smearing_term_eV": -0.07130600544412227,
+        "migrating_li_force_eV_A": [
+          -0.006199916425580306,
+          -0.02321143606036534,
+          -0.078801720667199
+        ],
+        "xml_sha256": "d0b9eb4e1cb81d78f7566cb6eb0b3f7f4f8b704c8fb9674338bf60fa1e342067",
+        "force_reference_log_rows": 87,
+        "xml_stdout_force_max_abs_difference_eV_A": 1.2734442542648716e-07,
+        "complete_xml_force_vectors": 87,
+        "nks_ibz": 14,
+        "scf_error_Ry": 3.375785221097808e-09,
+        "energy_force_source": "QE data-file-schema.xml, geometry and stdout cross-checked"
+      },
+      "total_energy_shift_meV": -0.2524886804167181,
+      "force_component_rmse_eV_A": 0.0021539183293127293,
+      "max_atomic_force_diff_eV_A": 0.014857694694165294,
+      "max_diff_atom_index_0": 29,
+      "max_diff_element": "Si",
+      "migrating_li_diff_eV_A": [
+        -2.7136012375525605e-05,
+        -0.0009294991660515235,
+        -0.0011259467499398351
+      ],
+      "migrating_li_norm_eV_A": 0.0014602948834253307
+    },
+    "peak:peak_k333": {
+      "reference": {
+        "cutoffs_Ry": [
+          50,
+          400
+        ],
+        "electrons": 573.0,
+        "total_magnetization_muB": 1.000000000000471,
+        "total_energy_eV": -51537.41732796436,
+        "absolute_magnetization_muB": 1.068564363860629,
+        "smearing_term_eV": -0.06607843658275846,
+        "migrating_li_force_eV_A": [
+          -0.33389368269877134,
+          -0.15621835509715518,
+          0.37810583399817727
+        ],
+        "xml_sha256": "8250af7faba24f12adecb4adb1329aa666cb229f84be089f4397c15608e1500e",
+        "force_reference_log_rows": 53,
+        "xml_stdout_force_max_abs_difference_eV_A": 1.2683705342790563e-07,
+        "complete_xml_force_vectors": 87,
+        "nks_ibz": 8,
+        "scf_error_Ry": 9.512083342646805e-09,
+        "energy_force_source": "QE data-file-schema.xml, geometry and stdout cross-checked"
+      },
+      "test": {
+        "start_utc": "2026-11-26T13:28:10Z",
+        "elapsed_seconds": "5418",
+        "exit_status": "0",
+        "sampled_peak_device_memory_MiB": 21805,
+        "starting_density_sha256": "b3cb1fc28a1bb6f5617721dd4bb877cec687e4574e5d8ff9860ff6923cf0be06",
+        "cutoffs_Ry": [
+          50,
+          400
+        ],
+        "electrons": 573.0,
+        "total_magnetization_muB": 1.000000000031874,
+        "total_energy_eV": -51537.417555254644,
+        "absolute_magnetization_muB": 1.067759391329591,
+        "smearing_term_eV": -0.06808561516870106,
+        "migrating_li_force_eV_A": [
+          -0.3339098557741155,
+          -0.15719272523348238,
+          0.37828927976954346
+        ],
+        "xml_sha256": "d6ea9a05f1e3630a32e37e64e3a0916368e74e7f1db65002c225c0de82a0d235",
+        "force_reference_log_rows": 87,
+        "xml_stdout_force_max_abs_difference_eV_A": 1.2842663336693622e-07,
+        "complete_xml_force_vectors": 87,
+        "nks_ibz": 14,
+        "scf_error_Ry": 7.35129623742737e-09,
+        "energy_force_source": "QE data-file-schema.xml, geometry and stdout cross-checked"
+      },
+      "total_energy_shift_meV": -0.2272902856930159,
+      "force_component_rmse_eV_A": 0.0019198473770519078,
+      "max_atomic_force_diff_eV_A": 0.013515430587732248,
+      "max_diff_atom_index_0": 29,
+      "max_diff_element": "Si",
+      "migrating_li_diff_eV_A": [
+        -1.6173075344183552e-05,
+        -0.0009743701363272017,
+        0.00018344577136619744
+      ],
+      "migrating_li_norm_eV_A": 0.0009916204324057253
+    },
+    "middle_k222:middle_k333": {
+      "reference": {
+        "start_utc": "2026-11-26T16:39:42Z",
+        "elapsed_seconds": "4232",
+        "exit_status": "0",
+        "sampled_peak_device_memory_MiB": 21785,
+        "cutoffs_Ry": [
+          50,
+          400
+        ],
+        "electrons": 573.0,
+        "total_magnetization_muB": 1.000000000077539,
+        "total_energy_eV": -51537.19843501863,
+        "absolute_magnetization_muB": 1.069544732618354,
+        "smearing_term_eV": -0.06746685784697025,
+        "migrating_li_force_eV_A": [
+          -0.34765297630022884,
+          0.05435178300750351,
+          -0.15307467457253995
+        ],
+        "xml_sha256": "feb3f3f219eeb07b3dc462d1f3afa059994cf64056ddb4e96056c42f3e8f0d2c",
+        "force_reference_log_rows": 87,
+        "xml_stdout_force_max_abs_difference_eV_A": 1.2817441882861935e-07,
+        "complete_xml_force_vectors": 87,
+        "nks_ibz": 8,
+        "scf_error_Ry": 9.912151731603034e-09,
+        "energy_force_source": "QE data-file-schema.xml, geometry and stdout cross-checked"
+      },
+      "test": {
+        "start_utc": "2026-11-26T17:50:15Z",
+        "elapsed_seconds": "7238",
+        "exit_status": "0",
+        "sampled_peak_device_memory_MiB": 21781,
+        "cutoffs_Ry": [
+          50,
+          400
+        ],
+        "electrons": 573.0,
+        "total_magnetization_muB": 0.9999999999562388,
+        "total_energy_eV": -51537.19698499783,
+        "absolute_magnetization_muB": 1.067754192727748,
+        "smearing_term_eV": -0.07223525863723593,
+        "migrating_li_force_eV_A": [
+          -0.34601578677988437,
+          0.05415794869075538,
+          -0.15309356738965207
+        ],
+        "xml_sha256": "0580f6f3b018c0e5a77fd0a1b107a4ffa8d7986c43dba5aa80c2b48c80e0b147",
+        "force_reference_log_rows": 87,
+        "xml_stdout_force_max_abs_difference_eV_A": 1.271933867813546e-07,
+        "complete_xml_force_vectors": 87,
+        "nks_ibz": 14,
+        "scf_error_Ry": 7.068149492111798e-09,
+        "energy_force_source": "QE data-file-schema.xml, geometry and stdout cross-checked"
+      },
+      "total_energy_shift_meV": 1.4500208053505048,
+      "force_component_rmse_eV_A": 0.0018318007580668287,
+      "max_atomic_force_diff_eV_A": 0.013059266156662697,
+      "max_diff_atom_index_0": 29,
+      "max_diff_element": "Si",
+      "migrating_li_diff_eV_A": [
+        0.001637189520344473,
+        -0.00019383431674813156,
+        -1.889281711212054e-05
+      ],
+      "migrating_li_norm_eV_A": 0.0016487323028355491
+    }
+  },
+  "verdict": {
+    "peak:peak_k333": {
+      "relative_energy_shift_meV": 0.025198394723702222,
+      "pass_gate": true,
+      "all_force_rmse_below_0_01": true
+    },
+    "middle_k222:middle_k333": {
+      "relative_energy_shift_meV": 1.702509485767223,
+      "pass_gate": true,
+      "all_force_rmse_below_0_01": true
+    }
+  }
+}

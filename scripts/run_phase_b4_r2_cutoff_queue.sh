@@ -9,12 +9,14 @@ phase="$(realpath -e "$1")"
 scratch="$(realpath -e "$2")"
 runtime="$(realpath -e "$3")"
 middle_pid="$4"
-python="$(realpath -e "$5")"
+python="$(realpath -s "$5")"
+[[ -x "$python" ]]
 [[ "$middle_pid" =~ ^[0-9]+$ ]]
 queue="$(cd -- "$(dirname -- "$0")" && pwd)"
 bundle="$queue/bundle"
 cd "$queue"
 sha256sum -c --strict checksums.sha256
+"$python" -c 'import ase, numpy, scipy; print("Scoring dependencies:", ase.__version__, numpy.__version__, scipy.__version__)'
 
 echo "Waiting for both non-peak grids."
 for job in middle_k222 middle_k333; do
