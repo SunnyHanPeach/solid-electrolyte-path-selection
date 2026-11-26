@@ -1,0 +1,112 @@
+{
+  "source_commit": "fcf0da962a653d51a8ebe0952d76fdea32e53e61",
+  "runtime": {
+    "device": "cpu",
+    "dtype": "float64",
+    "threads": 16,
+    "torch": "2.10.0+cpu",
+    "python": "3.10.20",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "packages": {
+      "mace-torch": "0.3.14",
+      "ase": "3.29.0",
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "e3nn": "0.4.4"
+    }
+  },
+  "script_sha256": "8cbfd231af0409d81aa37d37d5b52b6f8c16014e97af6a4d2f9fbbd9b981effc",
+  "new_paths": 11,
+  "new_images": 61,
+  "model_runs": 183,
+  "raw_atomic_rows": 19533,
+  "batch_seconds": 63.017706600017846,
+  "source_input_sha256": {
+    "results/phase_b3_a/feature_manifest.json": "0442caefeb60a16a4e0fcc18872668f8383a0c56fdbf6cfaf6ff5864d8931a4e",
+    "results/phase_b3_a/analysis_manifest.json": "fd59d2a249eadaa1a170a56936d550f3415a931e237c790c47270485ab8dbe90",
+    "results/phase_b3_a/analysis_protocol.json": "de981b072517be05a7a3999db1722a4c4f6ab2a1bcf578d9f523e702c3884df9",
+    "results/phase_b1/run_manifest.json": "2d326af680d3f140774f99bf02817670fa18f9bafb5771ac81ac4849917a79c1",
+    "results/phase_b1/analysis_manifest.json": "4e8e34c373e2462bdc75856a23cca183f2a3fcf70e1b2162344497e2b7367dd0"
+  },
+  "base_archive_sha256": "b7a99d89337902e9e1da319f57547170fdb132bf15bf6ffef03a0140e2207d7f",
+  "checkpoint_archive_sha256": "80085675d14efde2160f4b2f8c384406da096077114d797d2f84d613c626de45",
+  "source_B1_protocol": {
+    "settings": {
+      "seeds": [
+        17,
+        29,
+        43
+      ],
+      "epochs": 5,
+      "batch_size": 2,
+      "lr": 0.0001,
+      "energy_weight": 1.0,
+      "forces_weight": 100.0,
+      "clip_norm": 10.0
+    },
+    "optimizer": "Adam",
+    "original_e0": true,
+    "steps": 710,
+    "initialization_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+    "D0_sha256": "dda468e74c0dbd46c3d5b07121b900184a917dd319415e826af6e25b56ee7081",
+    "D0_frames": 278,
+    "architecture": "mace.modules.models.ScaleShiftMACE",
+    "source_protocol_sha256": "b7ca0381f37f967d78b9e5ab68e2b3946d9b7d57d5b6565f1107f81931e7c9ea"
+  },
+  "checkpoints": [
+    {
+      "checkpoint_id": "e0-A-17",
+      "member": "D0_17.pt",
+      "sha256": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a",
+      "order_sha256": "e0fd4462a8d7617cad9147f4cbe44fb10851d00922887f204d42f9696a2bfd33",
+      "training_runtime": {
+        "device": "cuda",
+        "hardware": "NVIDIA GeForce RTX 4090",
+        "torch": "2.8.0+cu128",
+        "mace": "0.3.14",
+        "ase": "3.29.0",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "driver": "595.71.05"
+      }
+    },
+    {
+      "checkpoint_id": "e0-A-29",
+      "member": "D0_29.pt",
+      "sha256": "381053e366b56dc07bcb38ae00dce5eae75db22f6ef51cbca26a52b582deb449",
+      "order_sha256": "d5ffb56834a62ea6a4762fe4e6098b1bd3b0a2519751d0513343a7e9509bcb59",
+      "training_runtime": {
+        "device": "cuda",
+        "hardware": "NVIDIA GeForce RTX 4090",
+        "torch": "2.8.0+cu128",
+        "mace": "0.3.14",
+        "ase": "3.29.0",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "driver": "595.71.05"
+      }
+    },
+    {
+      "checkpoint_id": "e0-A-43",
+      "member": "D0_43.pt",
+      "sha256": "a626b7220c9ee8c29be911ce5727d585c2dd3bd1c776154388702b0117bbb644",
+      "order_sha256": "81a288b0583939463affe6fffafaa3574fb3d842f7b4f366b532deb6c2f9ad8b",
+      "training_runtime": {
+        "device": "cuda",
+        "hardware": "NVIDIA GeForce RTX 4090",
+        "torch": "2.8.0+cu128",
+        "mace": "0.3.14",
+        "ase": "3.29.0",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "driver": "595.71.05"
+      }
+    }
+  ],
+  "output_sha256": {
+    "image_geometry.csv": "1b52777a5ef24a010df22c011d4e09a8445ae06dfa2dd59769b0a48d8ffbd067",
+    "raw_image_predictions.csv": "2032c5d41f2e0624de571a83afe670a0d172775a1edfa37444844ca226cce3e5",
+    "raw_atomic_predictions.csv": "08c46bb1fcac60b24b30533761a03c41e57e313191f6976d1bae07efcd52c9ac",
+    "smoke.json": "cbc984787c234c477b2f49545cb11127633933f6673a51f8095cc718cffd482c"
+  }
+}

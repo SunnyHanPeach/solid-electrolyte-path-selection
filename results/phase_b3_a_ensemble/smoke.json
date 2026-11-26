@@ -1,0 +1,68 @@
+{
+  "status": "pass",
+  "image": {
+    "edge_id": "mp-35822_2_5_1_0_0",
+    "stage": "init",
+    "image": 2,
+    "feature_row_0based": 35,
+    "n_atoms": 143,
+    "Li_1based": 1,
+    "arc_A": 0.803043199395314,
+    "reaction_coordinate": 0.2538113745049471,
+    "Li_unwrapped_x_A": 4.7160868,
+    "Li_unwrapped_y_A": 5.8148571,
+    "Li_unwrapped_z_A": 5.49101161,
+    "tangent_x": 0.6311860066219259,
+    "tangent_y": 0.7677961109489848,
+    "tangent_z": 0.10996980065581731
+  },
+  "checks": [
+    {
+      "seed": 17,
+      "repeat_abs_errors": {
+        "energy_eV": 0.0,
+        "atomic_energy_eV": 0.0,
+        "force_eV_per_A": 4.718447854656915e-16
+      },
+      "translate_wrap_abs_errors": {
+        "energy_eV": 0.0,
+        "atomic_energy_eV": 8.881784197001252e-15,
+        "force_eV_per_A": 6.669664820435628e-14
+      },
+      "elements": 143,
+      "energy_eV": -840.1096666523177
+    },
+    {
+      "seed": 29,
+      "repeat_abs_errors": {
+        "energy_eV": 0.0,
+        "atomic_energy_eV": 0.0,
+        "force_eV_per_A": 0.0
+      },
+      "translate_wrap_abs_errors": {
+        "energy_eV": 0.0,
+        "atomic_energy_eV": 8.881784197001252e-15,
+        "force_eV_per_A": 6.929179452441758e-14
+      },
+      "elements": 143,
+      "energy_eV": -840.5511822963132
+    },
+    {
+      "seed": 43,
+      "repeat_abs_errors": {
+        "energy_eV": 0.0,
+        "atomic_energy_eV": 0.0,
+        "force_eV_per_A": 0.0
+      },
+      "translate_wrap_abs_errors": {
+        "energy_eV": 0.0,
+        "atomic_energy_eV": 7.993605777301127e-15,
+        "force_eV_per_A": 6.634276461525701e-14
+      },
+      "elements": 143,
+      "energy_eV": -840.731741403096
+    }
+  ],
+  "repeat_tolerance": 1e-09,
+  "wrap_tolerance": 1e-08
+}
