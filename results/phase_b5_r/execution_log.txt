@@ -1,0 +1,11 @@
+2026-11-26 Asia/Shanghai
+14:32 B5-R started. QE grid already running independently.
+Candidate protocol locked before generating novel path features. User later withdrew the B5-R cutoff.
+Recovered relevant BVEL and BVSE geometries and checked the 867 historical parents. Frozen candidates 24, trajectory images 120. Historical geometry was read only from the 14 B2 initial trajectories.
+Prepared 50 D0 reference geometries after checking the canonical frame-prefix SHA256. Verified the 17 seed checkpoint hash before computation.
+SOAP: 248 images, eight local CPU workers, 2.513 seconds feature extraction.
+Cloud benchmark: 16 images, float64, cloud CPU four threads. Memory-protected GPU batch 1 validated; larger sizes hit the allocation cap while QE remained active. Larger batch errors retained as benchmark outcomes.
+Cloud CPU full extraction: 248 images, batch 1 and four threads, 54.017 seconds. Archive SHA256 c4900a6f9e903ec469490d6b38cd4223428e8b04532daf4ae39381b616a78ab2.
+Audit: snapshot of the historical utility input hashed; cached Li features reproduced, then reused. Matrix PSD, fold predictions, candidate coverage, and device parity checked. Same-lambda SOAP and combined kernel comparisons were added as an explicit model-form control without tuning.
+Panel metadata audit: 619 public records checked. No project reserved test labels accessed.
+B5-R did not launch a DFT solver, training, or an evaluation run. QE grid and its conditional cutoff remain an independent pre-authorized queue.

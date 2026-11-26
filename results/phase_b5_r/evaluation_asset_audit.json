@@ -1,0 +1,325 @@
+{
+  "local_dataset_sha256": "fe8347abbbdb6d941805f645b7d5651eb919ecd3649c12f44535b948a737d8cd",
+  "public_records": 619,
+  "method": "same atomic symbols and cell, minimum-image motion, largest Li >=0.75 A, all other displacements <=max permitted",
+  "threshold_other": "min(0.6 A, half largest displacement)",
+  "initial_status": {
+    "Li_mover_candidate": 152,
+    "no_Li": 317,
+    "endpoint_cell_or_order_differs": 150
+  },
+  "exchange_correlation_all": {
+    "GGA": 545,
+    "GGA+U": 45,
+    "SCAN": 19,
+    "LDA": 10
+  },
+  "exchange_correlation_Li": {
+    "GGA": 127,
+    "LDA": 10,
+    "GGA+U": 15
+  },
+  "exchange_correlation_disjoint_exact_chemistry": {
+    "GGA": 42
+  },
+  "exact_chemistry_disjoint_systems": 22,
+  "exact_chemistry_disjoint_source_BibTeX_strings": 13,
+  "disjoint_candidate_metadata": [
+    {
+      "public_id": 4,
+      "chemsys": "Li-O-Ru",
+      "reference_xc": "GGA",
+      "crystal_class": "RUTILE",
+      "space_group": "Pnnm"
+    },
+    {
+      "public_id": 17,
+      "chemsys": "Li-Ni-S",
+      "reference_xc": "GGA",
+      "crystal_class": "SULPHIDES",
+      "space_group": "I42d"
+    },
+    {
+      "public_id": 61,
+      "chemsys": "B-Fe-Li-O",
+      "reference_xc": "GGA",
+      "crystal_class": "BORATES",
+      "space_group": "P21/c"
+    },
+    {
+      "public_id": 92,
+      "chemsys": "Li-O-Ru",
+      "reference_xc": "GGA",
+      "crystal_class": "RUTILE",
+      "space_group": "Pnnm"
+    },
+    {
+      "public_id": 99,
+      "chemsys": "B-Fe-Li-O",
+      "reference_xc": "GGA",
+      "crystal_class": "BORATES",
+      "space_group": "P21/c"
+    },
+    {
+      "public_id": 105,
+      "chemsys": "F-Li-Mg-O-S",
+      "reference_xc": "GGA",
+      "crystal_class": "TAVORITE",
+      "space_group": "P-1"
+    },
+    {
+      "public_id": 109,
+      "chemsys": "In-Li-O-Si",
+      "reference_xc": "GGA",
+      "crystal_class": "OLIVINE",
+      "space_group": "Pnma"
+    },
+    {
+      "public_id": 111,
+      "chemsys": "Al-F-Li-O-P",
+      "reference_xc": "GGA",
+      "crystal_class": "TAVORITE",
+      "space_group": "P-1"
+    },
+    {
+      "public_id": 115,
+      "chemsys": "Li-O-Ru",
+      "reference_xc": "GGA",
+      "crystal_class": "RUTILE",
+      "space_group": "P42/mnm"
+    },
+    {
+      "public_id": 127,
+      "chemsys": "Li-O-Ru",
+      "reference_xc": "GGA",
+      "crystal_class": "RUTILE",
+      "space_group": "P42/mnm"
+    },
+    {
+      "public_id": 167,
+      "chemsys": "Li-S-Sc",
+      "reference_xc": "GGA",
+      "crystal_class": "SULPHIDES",
+      "space_group": "I42d"
+    },
+    {
+      "public_id": 194,
+      "chemsys": "As-Li-Mg-O",
+      "reference_xc": "GGA",
+      "crystal_class": "OLIVINE",
+      "space_group": "Pnma"
+    },
+    {
+      "public_id": 199,
+      "chemsys": "Li-O-Ru",
+      "reference_xc": "GGA",
+      "crystal_class": "RUTILE",
+      "space_group": "P42/mnm"
+    },
+    {
+      "public_id": 203,
+      "chemsys": "F-Li-Mg-O-S",
+      "reference_xc": "GGA",
+      "crystal_class": "TAVORITE",
+      "space_group": "P-1"
+    },
+    {
+      "public_id": 223,
+      "chemsys": "B-Fe-Li-O",
+      "reference_xc": "GGA",
+      "crystal_class": "BORATES",
+      "space_group": "P21/c"
+    },
+    {
+      "public_id": 242,
+      "chemsys": "F-Li-Mg-O-S",
+      "reference_xc": "GGA",
+      "crystal_class": "TAVORITE",
+      "space_group": "P-1"
+    },
+    {
+      "public_id": 251,
+      "chemsys": "La-Li-O-Zr",
+      "reference_xc": "GGA",
+      "crystal_class": "GARNETS",
+      "space_group": "I41/acd"
+    },
+    {
+      "public_id": 253,
+      "chemsys": "Br-Li-O",
+      "reference_xc": "GGA",
+      "crystal_class": "ANTI-PEROVSKITE",
+      "space_group": "Pm-3m"
+    },
+    {
+      "public_id": 258,
+      "chemsys": "Li-O-P-Zr",
+      "reference_xc": "GGA",
+      "crystal_class": "ELECTROLYTES",
+      "space_group": "R-3c"
+    },
+    {
+      "public_id": 277,
+      "chemsys": "Ge-Li-O-Sc",
+      "reference_xc": "GGA",
+      "crystal_class": "OLIVINE",
+      "space_group": "Pnma"
+    },
+    {
+      "public_id": 278,
+      "chemsys": "F-Li-Mg-O-S",
+      "reference_xc": "GGA",
+      "crystal_class": "TAVORITE",
+      "space_group": "P-1"
+    },
+    {
+      "public_id": 287,
+      "chemsys": "B-Fe-Li-O",
+      "reference_xc": "GGA",
+      "crystal_class": "BORATES",
+      "space_group": "C2/c "
+    },
+    {
+      "public_id": 290,
+      "chemsys": "I-Li-S",
+      "reference_xc": "GGA",
+      "crystal_class": "ANTI-PEROVSKITE",
+      "space_group": "Pm-3m"
+    },
+    {
+      "public_id": 301,
+      "chemsys": "Li-Mg-O-P",
+      "reference_xc": "GGA",
+      "crystal_class": "OLIVINE",
+      "space_group": "Pnma"
+    },
+    {
+      "public_id": 326,
+      "chemsys": "Cr-Li-S",
+      "reference_xc": "GGA",
+      "crystal_class": "SULPHIDES",
+      "space_group": "I42d"
+    },
+    {
+      "public_id": 331,
+      "chemsys": "Li-O-Si-Tm",
+      "reference_xc": "GGA",
+      "crystal_class": "OLIVINE",
+      "space_group": "Pnma"
+    },
+    {
+      "public_id": 346,
+      "chemsys": "Br-Li-O",
+      "reference_xc": "GGA",
+      "crystal_class": "ANTI-PEROVSKITE",
+      "space_group": "Pm-3m"
+    },
+    {
+      "public_id": 350,
+      "chemsys": "Li-S-Sc",
+      "reference_xc": "GGA",
+      "crystal_class": "SPINEL CHALCOGENIDES",
+      "space_group": "Fd-3m"
+    },
+    {
+      "public_id": 361,
+      "chemsys": "Cl-Li-Se",
+      "reference_xc": "GGA",
+      "crystal_class": "ANTI-PEROVSKITE",
+      "space_group": "Pm-3m"
+    },
+    {
+      "public_id": 364,
+      "chemsys": "La-Li-O-Zr",
+      "reference_xc": "GGA",
+      "crystal_class": "GARNETS",
+      "space_group": "I41/acd"
+    },
+    {
+      "public_id": 405,
+      "chemsys": "Al-F-Li-O-P",
+      "reference_xc": "GGA",
+      "crystal_class": "TAVORITE",
+      "space_group": "P-1"
+    },
+    {
+      "public_id": 419,
+      "chemsys": "Al-F-Li-O-P",
+      "reference_xc": "GGA",
+      "crystal_class": "TAVORITE",
+      "space_group": "P-1"
+    },
+    {
+      "public_id": 447,
+      "chemsys": "Li-P-Se",
+      "reference_xc": "GGA",
+      "crystal_class": "ELECTROLYTES",
+      "space_group": "P-1"
+    },
+    {
+      "public_id": 454,
+      "chemsys": "Li-O-Ru",
+      "reference_xc": "GGA",
+      "crystal_class": "RUTILE",
+      "space_group": "Pnnm"
+    },
+    {
+      "public_id": 467,
+      "chemsys": "Li-O-Sc-Si",
+      "reference_xc": "GGA",
+      "crystal_class": "OLIVINE",
+      "space_group": "Pnma"
+    },
+    {
+      "public_id": 480,
+      "chemsys": "B-Fe-Li-O",
+      "reference_xc": "GGA",
+      "crystal_class": "BORATES",
+      "space_group": "P21/c"
+    },
+    {
+      "public_id": 492,
+      "chemsys": "Al-F-Li-O-P",
+      "reference_xc": "GGA",
+      "crystal_class": "TAVORITE",
+      "space_group": "P-1"
+    },
+    {
+      "public_id": 516,
+      "chemsys": "Li-Sc-Se",
+      "reference_xc": "GGA",
+      "crystal_class": "SPINEL CHALCOGENIDES",
+      "space_group": "Fd-3m"
+    },
+    {
+      "public_id": 592,
+      "chemsys": "La-Li-O-Zr",
+      "reference_xc": "GGA",
+      "crystal_class": "GARNETS",
+      "space_group": "I41/acd"
+    },
+    {
+      "public_id": 594,
+      "chemsys": "Ge-In-Li-O",
+      "reference_xc": "GGA",
+      "crystal_class": "OLIVINE",
+      "space_group": "Pnma"
+    },
+    {
+      "public_id": 605,
+      "chemsys": "Co-Li-S",
+      "reference_xc": "GGA",
+      "crystal_class": "SULPHIDES",
+      "space_group": "I42d"
+    },
+    {
+      "public_id": 618,
+      "chemsys": "B-Fe-Li-O",
+      "reference_xc": "GGA",
+      "crystal_class": "BORATES",
+      "space_group": "C2/c "
+    }
+  ],
+  "release_for_primary_panel": false,
+  "reserved_project_labels_accessed": 0
+}

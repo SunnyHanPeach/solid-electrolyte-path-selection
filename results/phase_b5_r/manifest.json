@@ -1,0 +1,48 @@
+{
+  "checkpoint_sha256": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a",
+  "untouched_utility_label_sha256": "3aa54825a8a6a31aaa9bccd2d36d7340297377793216f46702fd7543ebe1abd6",
+  "frozen_candidate_manifest_sha256": "65fb77d321f6e47f37d4ddde9a75257e13d6995698c1022cc0e4c9118b518880",
+  "geometry_sha256": {
+    "historical_images.xyz": "ed4f937af1b37d99da9593a8de3ff758e48f8a29aa0ab551c26ec1f05912b27c",
+    "candidate_images.xyz": "b3164da5eb43fdc456ad35e5bcec08da5d805c7de607b5a2c3c6d4ecd9e21dfb",
+    "reference_images.xyz": "7d593091b66365c720e14435e22b992f2eca3c5a14427e6dec6e83b2275e6769"
+  },
+  "features_sha256": {
+    "act": "a3f6175baba1a7c955e9d5123c7a11a68559b7b3e3a74dff13d19c257a9e19e2",
+    "soap": "db38afe66c5efced3e19d2404cb5010f1670289cc250d9af95aef108286ccd26"
+  },
+  "cache_parity_max_relative_l2": {
+    "activation_li": 7.466847482677742e-16,
+    "soap_li": 0.0
+  },
+  "history_paths": 14,
+  "candidate_paths": 24,
+  "references": 50,
+  "activation_runtime": {
+    "ase": "3.29.0",
+    "numpy": "2.2.6",
+    "torch": "2.8.0+cu128",
+    "mace": "0.3.14"
+  },
+  "soap_runtime": {
+    "ase": "3.29.0",
+    "numpy": "2.2.6",
+    "dscribe": "2.1.2"
+  },
+  "new_DFT": 0,
+  "reserved_test_labels_read": 0,
+  "new_MACE_training": 0,
+  "device_parity_relative_l2": {
+    "activation_full": 3.506849790674063e-16,
+    "activation_li": 6.869210464983725e-16
+  },
+  "cloud_gpu_name": "NVIDIA GeForce RTX 3080 Ti",
+  "benchmark_concurrent_QE": true,
+  "activation_selected_device": "cloud CPU, batch 1, 4 threads",
+  "benchmark_gpu_allocation_fraction_cap": 0.075,
+  "candidate_history_parents_checked": 867,
+  "candidate_history_parent_count": 867,
+  "public_panel_decision": "unreleased",
+  "additional_controls": "Equal-lambda SOAP, Activation and equal-weight combined KRR comparator; no tuning.",
+  "protocol_sha256": "b731bfb7456bc7ca5294adfa76f31c92e3eabac3ea4cf9a01cf5e28f12b1e404"
+}

@@ -1,0 +1,9 @@
+status,device,batch,images,seconds,images_per_second,graph_build_seconds,relative_L2_vs_batch1,cpu_threads,peak_allocated_MiB,peak_reserved_MiB,cloud,concurrent_QE
+ok,cpu,1,16,2.662387927994132,6.009642633879635,0.11990941315889359,0.0,4,,,True,True
+ok,cpu,4,16,3.6460165921598673,4.388350846895555,0.11990941315889359,8.929660489516262e-17,4,,,True,True
+ok,cpu,8,16,3.87174323387444,4.132505446129199,0.11990941315889359,8.929660489516262e-17,4,,,True,True
+ok,cuda,1,16,1.5528593640774488,10.303573118165517,0.10969441570341587,0.0,4,447.173828125,644.0,True,True
+memory_limit,cuda,2,16,,,,,4,,,True,True
+memory_limit,cuda,4,16,,,,,4,,,True,True
+memory_limit,cuda,8,16,,,,,4,,,True,True
+full_extraction_ok,cpu,1,248,54.016927724704146,,,,4,,,True,True

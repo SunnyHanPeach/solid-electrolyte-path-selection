@@ -1,0 +1,94 @@
+{
+  "project": "Phase B5-R",
+  "started_utc": "2026-11-26T06:32:36Z",
+  "deadline_utc": null,
+  "start_commit": "e9e7159",
+  "candidate_pool": {
+    "novel_against": "all historic LiTraj material IDs and exact chemical systems, excluding B4's three explored candidates",
+    "seed": "b5r-20261126",
+    "one_edge_per_material": true,
+    "one_material_per_exact_chemsys": true,
+    "groups": "round-robin frozen low-fidelity index material-family metadata",
+    "attempts": 96,
+    "maximum_selected": 24,
+    "atoms_max": 180,
+    "li_contact_floor_A": 1.4,
+    "minimum_internal_peak_above_both_ends_eV": 0.02,
+    "max_bvse_steps": 60,
+    "images": 5,
+    "geometry": "B4 bounded BVSE preprocessing, followed by exact periodic checks",
+    "family_screen": "anonymous reduced parent stoichiometry, space-group number and anion elements; compare with historical parent structures and within pilot"
+  },
+  "molecular_activation_ref": "Varga-Umbrich et al 2026 arXiv:2605.03964v1 Appendix A and Eq. 6",
+  "features": {
+    "main": "mean image pooling, structures use mean all atom scalar activations and mean SOAP outer power spectra",
+    "sensitivity": [
+      "P90 components",
+      "concatenation resampled to fixed five-point reaction coordinate"
+    ],
+    "soap": "A1 settings with geometry SOAP and fixed element mu1nu1 compression available, primary element SOAP",
+    "historical_activation_cache": "B3-A D0_17 Li site; full structure from same checkpoint using Eq.6-style pooling",
+    "reference_bank": "one first canonical D0 frame per material; global and average over all Li for corresponding local acquisition anchor",
+    "layers": 2,
+    "dimension": 256
+  },
+  "historical": {
+    "n": 14,
+    "protocol": "paired B2 utility labels unchanged",
+    "folds": "leave one path out, with follow-up leave anion-family out",
+    "response": [
+      "Delta_abs",
+      "Delta_net"
+    ],
+    "covariates": [
+      "contact",
+      "anion_family",
+      "image_count",
+      "optimizer_steps",
+      "supervised_atom_presentations"
+    ],
+    "ridge_lambda": 1,
+    "kernel_ridge_lambda": 0.1,
+    "model_training": false
+  },
+  "ranking": {
+    "strategies": [
+      "Random seeded",
+      "BVSE ascending",
+      "SOAP diversity",
+      "Activation diversity",
+      "SOAP + Activation diversity",
+      "Activation LCMD",
+      "Activation PV"
+    ],
+    "posterior_lambda": 0.001,
+    "top_k": [
+      3,
+      5,
+      8
+    ],
+    "cost_proxy": "atom-images for reporting only",
+    "real_DFT_budget_frozen": false
+  },
+  "gpu_benchmark": {
+    "batches": [
+      1,
+      4,
+      8
+    ],
+    "required_devices": [
+      "cpu",
+      "cuda"
+    ],
+    "dtype": "float64",
+    "relative_l2_tolerance": 0.000001,
+    "memory_protected_gpu_retry_batches": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "initial_deadline_utc": "2026-11-26T09:32:36Z",
+  "deadline_override": "User removed the cutoff. Stop after specified B5-R outputs."
+}
