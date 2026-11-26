@@ -3,10 +3,13 @@ import argparse
 import csv
 import json
 from pathlib import Path
+from xml.etree import ElementTree as ET
 
 import numpy as np
+from ase.io import read
+from ase.units import Bohr, Hartree, Ry
 
-from score_phase_b4_bridge import FORCE_RE, TOTAL_RE, fnum, sha
+from score_phase_b4_bridge import FORCE_RE, SMEAR_RE, TOTAL_RE, fnum, sha
 from score_phase_b4_spin_pilot import ITERATIONS, read_job
 
 
@@ -49,12 +52,94 @@ def describe_incomplete(folder, job_name, input_hash):
         converged_iterations=int(iterations[-1]) if iterations else None,
         provisional_total_energy_Ry=fnum(energy[-1]) if energy else None,
         force_rows=len(FORCE_RE.findall(log)), complete_forces=complete_forces,
-        failure_stage="USPP force (addusforce_g)" if "addusforce_g" in log and oom else None,
+        failure_stage=("USPP force (addusforce_g)" if "addusforce_g" in log and oom else
+                      "wavefunction output (ENOSPC)" if "No space left on device" in log else None),
         sampled_peak_device_memory_MiB=peak,
     )
 
 
-def score(baseline, numeric):
+def recovery_entry(recovery, source, variant, role):
+    if recovery is None:
+        return None
+    name = f"{role}_{variant}"
+    old = source.read_bytes()
+    if variant == "k222":
+        name += "_warm"
+        expected = old.replace(b"&ELECTRONS\n", b"&ELECTRONS\n   startingpot      = 'file'\n")
+        archived = recovery / f"{name}.in"
+        if archived.exists() and archived.read_bytes() != expected:
+            raise ValueError(f"{name} used unexpected warm-start fields")
+    else:
+        expected = old
+    folder = recovery / name
+    if not folder.is_dir():
+        return None
+    digest_file = folder / "input.sha256"
+    if not digest_file.is_file():
+        raise ValueError(f"{name} is missing its executed input checksum")
+    digest = digest_file.read_text().split()[0]
+    if digest != sha(expected):
+        raise ValueError(f"{name} input checksum differs")
+    if variant == "k222" and (folder / "converged").is_file():
+        if "The initial density is read from file" not in (folder / "pw.out").read_text():
+            raise ValueError(f"{name} did not read the starting density")
+    return folder, digest
+
+
+def verify_grid_xml(folder, role, xml, expected_input, manifest, job):
+    output = ET.parse(xml).getroot().find("output")
+    log = (folder / "pw.out").read_text()
+    tol = manifest["electronic_conv_thr_Ry"]
+    state = output.find("convergence_info/scf_conv")
+    if (state.findtext("convergence_achieved") != "true"
+            or float(state.findtext("scf_error")) * 2 > tol
+            or int(state.findtext("n_scf_steps")) != int(ITERATIONS.findall(log)[-1])
+            or "GPU acceleration is ACTIVE" not in log):
+        raise ValueError(f"Unverified electronic convergence in {xml.name}")
+    charge = float(output.findtext("band_structure/nelec"))
+    m = float(output.findtext("magnetization/total"))
+    if (charge != manifest["qe_valence_electrons"] or abs(m - 1.0) > .01
+            or int(output.findtext("band_structure/nks")) != 8):
+        raise ValueError(f"Unverified charge, spin or mesh in {xml.name}")
+
+    origin = read(expected_input, format="espresso-in")
+    geometry = output.find("atomic_structure")
+    atoms = list(geometry.find("atomic_positions"))
+    pos = np.array([np.fromstring(a.text, sep=" ") for a in atoms])
+    cell = np.array([np.fromstring(a.text, sep=" ") for a in geometry.find("cell")])
+    count = manifest["first_atom_count"]
+    if ([a.attrib["name"] for a in atoms] != origin.get_chemical_symbols()
+            or [int(a.attrib["index"]) for a in atoms] != list(range(1, count+1))
+            or not np.allclose(pos * Bohr, origin.positions, atol=1e-7, rtol=0)
+            or not np.allclose(cell * Bohr, origin.cell.array, atol=1e-7, rtol=0)):
+        raise ValueError(f"XML atomic geometry differs from the frozen input in {xml.name}")
+
+    node = output.find("forces")
+    if tuple(map(int, node.attrib["dims"].split())) != (3, count):
+        raise ValueError(f"Invalid XML force shape in {xml.name}")
+    forces = np.fromstring(node.text, sep=" ").reshape(count, 3) * Hartree / Bohr
+    energy = float(output.findtext("total_energy/etot")) * Hartree
+    smear = float(output.findtext("total_energy/demet")) * Hartree
+    partial = FORCE_RE.findall(log)
+    if not partial or [int(row[0]) for row in partial] != list(range(1, len(partial)+1)):
+        raise ValueError(f"Failed log force consistency check in {xml.name}")
+    reference = np.array([[fnum(x) for x in row[1:]] for row in partial]) * Ry / Bohr
+    max_diff = float(np.max(np.abs(forces[:len(partial)] - reference)))
+    if (max_diff > 1.4e-7 or abs(energy - fnum(TOTAL_RE.findall(log)[-1]) * Ry) > 1e-7
+            or abs(smear - fnum(SMEAR_RE.findall(log)[-1]) * Ry) > 1e-7
+            or not np.isfinite(forces).all()):
+        raise ValueError(f"XML does not agree with the stdout prefix in {xml.name}")
+    job.update(electrons=charge, total_magnetization_muB=m, total_energy_eV=energy,
+               absolute_magnetization_muB=float(output.findtext("magnetization/absolute")), smearing_term_eV=smear,
+               migrating_li_force_eV_A=forces[manifest["migrating_Li_0based"]].tolist(),
+               xml_sha256=sha(xml.read_bytes()), force_reference_log_rows=len(partial),
+               xml_stdout_force_max_abs_difference_eV_A=max_diff, complete_xml_force_vectors=count,
+               nks_ibz=8, scf_error_Ry=float(state.findtext("scf_error")) * 2,
+               energy_force_source="QE data-file-schema.xml, geometry and stdout cross-checked")
+    return job, forces
+
+
+def score(baseline, numeric, recovery=None):
     manifest_file = baseline / "manifest.json"
     manifest = json.loads(manifest_file.read_bytes())
     frozen = {job["role"]: job for job in manifest["jobs"] if job["spin"] == "spin1muB"}
@@ -72,15 +157,40 @@ def score(baseline, numeric):
             name = f"{role}_{variant}"
             input_hash = check_input(baseline / old["input_file"], numeric / "inputs" / f"{name}.in", variant)
             folder = numeric / name
+            old_status = "converged"
             if not (folder / "converged").is_file():
-                status[role], attempt = describe_incomplete(folder, name, input_hash)
+                old_status, attempt = describe_incomplete(folder, name, input_hash)
                 if attempt is not None:
                     incomplete_attempts.append(attempt)
-                continue
-            run, new_forces = read_job(folder, dict(old, sha256=input_hash), manifest)
+            replacement = recovery_entry(recovery, numeric / "inputs" / f"{name}.in", variant, role)
+            if replacement is not None:
+                if old_status == "converged":
+                    raise ValueError(f"Unexpected duplicate of the approved result for {name}")
+                folder, input_hash = replacement
+            xml = recovery / f"{role}_schema.xml" if replacement is not None and variant == "k222" else None
+            if (folder / "converged").is_file():
+                run, new_forces = read_job(folder, dict(old, sha256=input_hash), manifest)
+                if xml is not None and xml.is_file():
+                    run, new_forces = verify_grid_xml(folder, role, xml, numeric / "inputs" / f"{name}.in", manifest, run)
+                status[role] = "converged"
+            else:
+                if replacement is None:
+                    status[role] = old_status
+                    continue
+                status[role], attempt = describe_incomplete(folder, folder.name, input_hash)
+                if attempt is not None:
+                    incomplete_attempts.append(attempt)
+                if xml is None or not xml.is_file() or attempt is None or attempt["failure_stage"] != "wavefunction output (ENOSPC)":
+                    continue
+                run, new_forces = verify_grid_xml(
+                    folder, role, xml, numeric / "inputs" / f"{name}.in", manifest,
+                    dict(role=role, image=old["original_image"], spin=old["spin"],
+                         input_sha256=input_hash, log_sha256=attempt["log_sha256"], elapsed_seconds=attempt["elapsed_seconds"],
+                         iterations=attempt["converged_iterations"], sampled_peak_device_memory_MiB=attempt["sampled_peak_device_memory_MiB"],
+                         exit_status=attempt["exit_status"], wavefunction_save_incomplete=True))
+                status[role] = "complete_scf_and_forces_from_xml_checkpoint_write_failed"
             run["numeric_variant"] = variant
             jobs[role] = (run, new_forces)
-            status[role] = "converged"
             delta = new_forces - base[role][1]
             comparisons[role] = dict(force_component_rmse_eV_A=float(np.sqrt(np.mean(delta ** 2))),
                                      migrating_li_force_difference_norm_eV_A=float(np.linalg.norm(delta[moving])))
@@ -109,8 +219,9 @@ def main():
     parser.add_argument("baseline", type=Path)
     parser.add_argument("numerical_runs", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--recovery", type=Path)
     args = parser.parse_args()
-    result = score(args.baseline, args.numerical_runs)
+    result = score(args.baseline, args.numerical_runs, args.recovery)
     with args.output.open("x", encoding="utf-8") as f:
         json.dump(result, f, indent=2, allow_nan=False)
         f.write("\n")

@@ -1,0 +1,13 @@
+{
+  "device": "NVIDIA GeForce RTX 3090",
+  "gpu_memory_MiB": 24576,
+  "driver": "580.105.08",
+  "endpoint_seconds": 2655,
+  "peak_seconds": 5233,
+  "recovery_wall_seconds": 7888,
+  "total_attempted_gpu_wall_seconds": 12089,
+  "endpoint_xml_sha256": "ae1991f102ccd83a54d99025bb221c2613e8e1391f139c3f7e3c91f5d710fccd",
+  "peak_xml_sha256": "8250af7faba24f12adecb4adb1329aa666cb229f84be089f4397c15608e1500e",
+  "recovery_outputs_tar_sha256": "59c1818d1a254a6f8baefec4c1f52905f4843e155ee6c52b8c9afa7a09f2e96b",
+  "no_new_solver_after_archive": true
+}
