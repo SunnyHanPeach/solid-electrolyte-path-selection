@@ -1,0 +1,14 @@
+source_key,source_url,method_audit,primary_full_neb_status,evidence_note
+jung2014density,https://doi.org/10.1063/1.4861583,incompatible_xc,unverified,Zenodo metadata specifies GGA-PW91 and explicit Li semicore electrons.
+xu2018licrs2,https://doi.org/10.1021/acsami.8b12026,pbe_path_unverified,unverified,Zenodo reports PAW PBE and a Li vacancy in CI-NEB. Full coordinates and barrier-to-path mapping remain open.
+loftager2016density,https://doi.org/10.1021/acs.jpcc.6b03456,pbe_correction_unresolved,unverified,Zenodo reports PAW PBE. Check Fe Hubbard treatment for the particular hops against the paper before classifying the label domain.
+jalem2014lithium,https://doi.org/10.1016/j.ssi.2013.10.007,incompatible_xc,unverified,Zenodo specifies PBEsol PAW for the fluorophosphate and fluorosulfate entries.
+xiao2015high,https://www.nature.com/articles/srep14227,pbe_path_unverified,unverified,Zenodo reports PBE and molecular-dynamics settings. Match each barrier against the original calculation type and directed geometry.
+eggestad2021computational,https://doi.org/10.5281/zenodo.17240095,mixed_xc_unresolved,unverified,Curated record cites an NTNU thesis and lists multiple functionals. The functional and force tolerance of each hop are unresolved.
+zhang2013ab,https://doi.org/10.1103/PhysRevB.87.134303,pbe_path_unverified,unverified,Zenodo reports PBE CI-NEB with a 40-atom supercell and a 0.01 eV/Å force threshold.
+shi2014lithium,https://doi.org/10.1142/S0217979214501768,pbe_path_unverified,unverified,Zenodo reports a PBE NEB protocol. The force threshold and downloadable path remain to be checked.
+seo2011first,https://doi.org/10.1103/PhysRevB.83.205127,pbe_correction_unresolved,unverified,Zenodo records Hubbard U values including Fe 4.3 eV. Verify which energy domain produced each barrier.
+wang2018anti,https://doi.org/10.1039/C7TA08698A,pbe_path_unverified,unverified,Zenodo reports PBE CI-NEB. The number of images and force tolerance are missing in the curated entry.
+dillenz2022unravelling,https://publikationen.bibliothek.kit.edu/en/1000148020,pbe_path_unverified,unverified,Zenodo reports PBE and a 0.05 eV/Å NEB force target. Path-level assets and direction have not been matched.
+kim2019correlating,https://doi.org/10.1039/C8TA10989C,pbe_path_unverified,unverified,Zenodo reports one-electron Li PAW PBE and a 0.03 eV/Å force threshold. Obtain the matching original ordered path.
+wang2017computational,https://ceder.berkeley.edu/publications/2017_yan_superionics.pdf,migrating_species_unresolved,unverified,Curated row is titled Li7P3Se11 while its source calculation note describes Na migration. Resolve the source and migrating-ion mapping.

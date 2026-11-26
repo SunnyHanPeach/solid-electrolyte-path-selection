@@ -1,0 +1,75 @@
+{
+  "catalogues": {
+    "original_count": 619,
+    "published_count": 621,
+    "original_sha256": "fe8347abbbdb6d941805f645b7d5651eb919ecd3649c12f44535b948a737d8cd",
+    "published_md5": "878646be7126dd30175576a494b726b4",
+    "published_sha256": "1fae0e22f837e33cf1384ef5624a920d383565d9100714ca8b42e7bade974e2b"
+  },
+  "references": {
+    "history_materials": 867,
+    "b5_parent_materials": 24,
+    "h1_review_materials": 10,
+    "d0_frames": 278,
+    "d0_scope": "canonical_first_278_training_frames",
+    "history_metadata_sha256": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7",
+    "parent_geometry_sha256": "3d89f921c47101bd3c9050e92829813e57f05b8178ef5bc3ce16dfb58b845c22",
+    "b5_reference_geometry_sha256": "7d593091b66365c720e14435e22b992f2eca3c5a14427e6dec6e83b2275e6769",
+    "d0_bundle_sha256": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862"
+  },
+  "sources": 13,
+  "rows_audited": 42,
+  "method_audit": {
+    "incompatible_xc": 14,
+    "pbe_path_unverified": 18,
+    "pbe_correction_unresolved": 6,
+    "mixed_xc_unresolved": 3,
+    "migrating_species_unresolved": 1
+  },
+  "geometry_mapping_verified": 42,
+  "directed_source_label_verified": 0,
+  "primary_released": 0,
+  "overlap": {
+    "historical_parent": {
+      "attempted": 1049,
+      "anonymous_matches": 74,
+      "exact_matches": 0,
+      "affected_public_records": 21
+    },
+    "D0_geometry": {
+      "attempted": 512,
+      "anonymous_matches": 0,
+      "exact_matches": 0,
+      "affected_public_records": 0
+    },
+    "H1_shortlist": {
+      "attempted": 0,
+      "anonymous_matches": 0,
+      "exact_matches": 0,
+      "affected_public_records": 0
+    },
+    "B5_other_candidate": {
+      "attempted": 23,
+      "anonymous_matches": 0,
+      "exact_matches": 0,
+      "affected_public_records": 0
+    },
+    "public_internal": {
+      "attempted": 142,
+      "anonymous_matches": 79,
+      "exact_matches": 30,
+      "affected_public_records": 40
+    }
+  },
+  "matcher": {
+    "ltol": 0.15,
+    "stol": 0.2,
+    "angle_tol": 5.0,
+    "primitive_cell": true,
+    "scale": true
+  },
+  "barrier_values_read_for_analysis": 0,
+  "reserved_dft_labels_read": 0,
+  "workers": 8,
+  "elapsed_seconds": 76.843
+}

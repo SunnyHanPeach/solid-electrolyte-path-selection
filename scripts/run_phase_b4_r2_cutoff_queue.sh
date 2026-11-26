@@ -45,6 +45,33 @@ then
 fi
 
 for job in endpoint_cut125 peak_cut125; do
+    deadline="${B4_R2_DEADLINE_EPOCH:-}"
+    if [[ -n "${B4_R2_DEADLINE_FILE:-}" ]]; then
+        read -r deadline < "$B4_R2_DEADLINE_FILE"
+    fi
+    if [[ -n "$deadline" ]]; then
+        [[ "$deadline" =~ ^[0-9]+$ ]]
+        # The larger cutoff has not been benchmarked. Require 135 minutes per
+        # cold job, increasing that window if the first cold job ran longer.
+        reserve_seconds=8100
+        if [[ "$job" == peak_cut125 ]]; then
+            elapsed="$("$python" - "$scratch/endpoint_cut125/runtime.txt" <<'PY'
+import re
+import sys
+from pathlib import Path
+
+data = Path(sys.argv[1]).read_text(encoding="utf-8")
+match = re.search(r"^elapsed_seconds=(\d+)$", data, re.MULTILINE)
+print(int(match.group(1)) if match else 0)
+PY
+)"
+            reserve_seconds=$(( reserve_seconds > elapsed * 5 / 4 + 600 ? reserve_seconds : elapsed * 5 / 4 + 600 ))
+        fi
+        if (( $(date +%s) + reserve_seconds > deadline )); then
+            printf 'held=%s\nreason=insufficient_time_before_deadline\n' "$job" | tee "$queue/${job}_budget_hold.txt"
+            exit 0
+        fi
+    fi
     echo "Starting $job at $(date -u +%FT%TZ)"
     status=0
     bash "$bundle/run_phase_b4_r2_job.sh" "$bundle" "$runtime" "$scratch" "$job" || status=$?

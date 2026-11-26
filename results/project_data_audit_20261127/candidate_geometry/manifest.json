@@ -1,0 +1,23 @@
+{
+  "path_count": 16155,
+  "material_count": 2647,
+  "audited": 16155,
+  "status_counts": {
+    "geometry_verified": 16144,
+    "mapping_issue": 11
+  },
+  "geometry_risks": {
+    "short_contact": 7322,
+    "large_supercell": 628
+  },
+  "workers": 12,
+  "source_hashes": {
+    "BVEL13k.zip": "3d89f921c47101bd3c9050e92829813e57f05b8178ef5bc3ce16dfb58b845c22",
+    "nebBVSE122k.zip": "8b90c44902cd799de45b3e30ba70f0cf463f8a60b199fcd3a675caa5316bbe0a",
+    "nebBVSE122k_\u4f4e\u4fdd\u771f\u8fc1\u79fb\u7d22\u5f15.csv": "21d7a5791a1e2b181c78f0f47f13e7ea8c8d058c7f90fcfb2ad67f42df142bff",
+    "init_features.csv": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7"
+  },
+  "deadline": "2026-11-27T07:30:00+08:00",
+  "elapsed_seconds": 49.54451490007341,
+  "geometry_only": true
+}

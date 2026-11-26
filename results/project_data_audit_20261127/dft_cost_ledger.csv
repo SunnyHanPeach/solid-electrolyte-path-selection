@@ -1,0 +1,24 @@
+material,phase,role,hardware,grid,cutoff_Ry,solver_wall_s,gpu_occupied_s,assigned_rank_s,outcome,source
+mp-35822,fixed_geometry_bridge,0,RTX 3080 Ti,Gamma,50/400,156.0,156.0,,complete,phase_b4_bridge01/bridge_scores.json
+mp-35822,fixed_geometry_bridge,1,RTX 3080 Ti,Gamma,50/400,163.0,163.0,,complete,phase_b4_bridge01/bridge_scores.json
+mp-35822,fixed_geometry_bridge,2,RTX 3080 Ti,Gamma,50/400,154.0,154.0,,complete,phase_b4_bridge01/bridge_scores.json
+mp-35822,fixed_geometry_bridge,3,RTX 3080 Ti,Gamma,50/400,160.0,160.0,,complete,phase_b4_bridge01/bridge_scores.json
+mp-35822,fixed_geometry_bridge,4,RTX 3080 Ti,Gamma,50/400,145.0,145.0,,complete,phase_b4_bridge01/bridge_scores.json
+mp-35822,bridge_cutoff,0,RTX 3080 Ti,Gamma,62.5/500,188.0,188.0,,complete,phase_b4_bridge01/numeric15_scores.json
+mp-35822,bridge_cutoff,3,RTX 3080 Ti,Gamma,62.5/500,187.0,187.0,,complete,phase_b4_bridge01/numeric15_scores.json
+mp-35822,bridge_smearing,0,RTX 3080 Ti,Gamma,50/400,170.0,170.0,,complete,phase_b4_bridge01/numeric15_scores.json
+mp-35822,bridge_smearing,3,RTX 3080 Ti,Gamma,50/400,166.0,166.0,,complete,phase_b4_bridge01/numeric15_scores.json
+mp-1191903,spin_nspin1,endpoint,RTX 3080 Ti,Gamma,50/400,128.0,128.0,,complete,phase_b4_spin_pilot/scores.json
+mp-1191903,spin_spin1muB,endpoint,RTX 3080 Ti,Gamma,50/400,261.0,261.0,,complete,phase_b4_spin_pilot/scores.json
+mp-1191903,spin_nspin1,peak,RTX 3080 Ti,Gamma,50/400,122.0,122.0,,complete,phase_b4_spin_pilot/scores.json
+mp-1191903,spin_spin1muB,peak,RTX 3080 Ti,Gamma,50/400,262.0,262.0,,complete,phase_b4_spin_pilot/scores.json
+mp-1191903,mesh,endpoint,RTX 3090,2x2x2,50/400,2655.0,2655.0,,complete,phase_b4_numeric_grid_recovered/scores.json
+mp-1191903,mesh,peak,RTX 3090,2x2x2,50/400,5233.0,5233.0,,SCF_and_forces_verified_with_partial_wavefunction_output,phase_b4_numeric_grid_recovered/scores.json
+mp-1191903,mesh,endpoint,RTX 3080 Ti,2x2x2,50/400,4201.0,4201.0,,GPU_OOM,phase_b4_numeric_grid_recovered/scores.json
+mp-1191903,io_k222,endpoint,RTX 3090,2x2x2,50/400,2657.0,2657.0,,complete,phase_b4_r2/io_k222/scores.json
+mp-1191903,grid_pair,endpoint,RTX 3090,3x3x3,50/400,5729.0,5729.0,,complete,phase_b4_r2/grid_pair/scores.json
+mp-1191903,grid_pair,peak,RTX 3090,3x3x3,50/400,5418.0,5418.0,,complete,phase_b4_r2/grid_pair/scores.json
+mp-35822,bridge_cpu,0,CPU,Gamma,50/400,2640.1768177900003,,15841.060906740002,stopped,phase_b4_bridge01/run_manifest.json
+mp-35822,bridge_cpu,3,CPU,Gamma,50/400,2538.409716985,,15230.458301910001,stopped,phase_b4_bridge01/run_manifest.json
+mp-5012,CI_pilot,band,CPU,,,4432.0,,39888,CI_partial,dft/mp5012_ci/cost.json
+mp-5012,CI_pilot,band,CPU,,,0.0,,0,CI_mpi_preflight_exit,dft/mp5012_ci/initial_launch_cost.json

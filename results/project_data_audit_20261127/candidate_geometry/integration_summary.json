@@ -1,0 +1,14 @@
+{
+  "path_mapping_issues": 11,
+  "affected_materials": 5,
+  "origin_search_status": {
+    "framework_maps_after_origin_search": 11
+  },
+  "materials": 2647,
+  "at_least_one_path_with_initial_contact_and_size_pass": 2117,
+  "historical_parent_flags": 645,
+  "historical_framework_flags": 723,
+  "both_flags": 612,
+  "h1_materials": 10,
+  "h1_framework_flags": 1
+}

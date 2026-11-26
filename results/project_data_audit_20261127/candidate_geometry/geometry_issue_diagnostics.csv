@@ -1,0 +1,12 @@
+edge_id,material_id,chemsys,baseline_max_periodic_match_error_A,searched_anchor_origins,best_alternative_framework_error_A,minimal_shift_from_published_centroid_A,status,released_as_path
+mp-1177706_1_2_0_0_0,mp-1177706,Fe-Li-O-W,3.048467011479497,8,1.4142136793856499e-08,3.0484670200000012,framework_maps_after_origin_search,False
+mp-1236870_0_2_0_0_0,mp-1236870,F-Li-Ta,3.1177904545944264,8,1.3429453248837267e-08,4.990559221560227,framework_maps_after_origin_search,False
+mp-1236870_1_2_0_0_0,mp-1236870,F-Li-Ta,3.1177904545944273,8,1.2693050486275419e-08,3.11779045,framework_maps_after_origin_search,False
+mp-38008_0_1_0_0_0,mp-38008,Cd-Cl-Li,3.7282794010352736,16,1.4067245627438292e-08,5.346463793965159,framework_maps_after_origin_search,False
+mp-38008_0_1_1_0_0,mp-38008,Cd-Cl-Li,3.728279401035274,16,1.4067245627438292e-08,5.3464637939651585,framework_maps_after_origin_search,False
+mp-38008_1_2_0_0_1,mp-38008,Cd-Cl-Li,3.728279404177886,16,1.4142136793856603e-08,5.346463793292939,framework_maps_after_origin_search,False
+mp-772004_0_1_0_0_0,mp-772004,Co-Li-O-Te,3.025129229557807,8,1.0909718969095797e-08,3.025129235000001,framework_maps_after_origin_search,False
+mp-772004_0_1_0_1_0,mp-772004,Co-Li-O-Te,3.0251292294243335,8,1.0909718663795432e-08,3.0251292260178593,framework_maps_after_origin_search,False
+mp-772004_0_2_0_0_0,mp-772004,Co-Li-O-Te,3.025129229557809,8,1.4171329328035112e-08,5.256836002420147,framework_maps_after_origin_search,False
+mp-772004_0_2_0_0_1,mp-772004,Co-Li-O-Te,3.025129228738958,8,1.1741692877194766e-08,5.267610605317327,framework_maps_after_origin_search,False
+mp-772208_0_2_0_0_0,mp-772208,Co-Li-O-Sb,3.000269038585631,8,1.3463383045331095e-08,7.944154687297749,framework_maps_after_origin_search,False

@@ -1,0 +1,78 @@
+{
+  "index_results": {
+    "status": "complete",
+    "tracked_files": 608,
+    "types": {
+      "report": 54,
+      "table": 233,
+      "metadata": 185,
+      "asset": 15,
+      "log": 93,
+      "figure": 22,
+      "features": 6
+    }
+  },
+  "audit_training": {
+    "status": "complete",
+    "fits": 88,
+    "fit_metadata_verified": 88,
+    "paired_rows_all_analyses": 4494,
+    "regular_rows": 4494,
+    "outcomes_verified": 14,
+    "max_formula_deviation_meV": 0.0,
+    "abs_classes": {
+      "unresolved": 6,
+      "negative": 8
+    },
+    "net_classes": {
+      "positive": 1,
+      "negative": 4,
+      "unresolved": 9
+    }
+  },
+  "audit_archives": {
+    "status": "complete",
+    "trajectory_24": {
+      "asset": "trajectory_24",
+      "local_subpath": "trajectory_replay/trajectory_checkpoints.tar.xz",
+      "bytes": 317423844,
+      "archive_sha256": "9f66d1d44e1731ef554a7b62ecba320412226ae365c55b5e07cc6aedc9cbc370",
+      "archive_hash_verified": true,
+      "member_count": 24,
+      "verified_members": 24,
+      "raw_weight_members": 24
+    },
+    "B2_predictions": {
+      "asset": "B2_predictions",
+      "local_subpath": "b2-overnight-01/compact.tar.gz",
+      "bytes": 3965646,
+      "archive_sha256": "aedc9a4819d4a6c114fa11c5fe39adae5d495e56bd0d4d4df8c215231d9d3e48",
+      "archive_hash_verified": true,
+      "member_count": 93,
+      "verified_members": 93,
+      "raw_weight_members": 0
+    }
+  },
+  "cost_events": {
+    "status": "complete",
+    "events": 23,
+    "gpu_solver_seconds": 28155.0,
+    "assigned_cpu_rank_seconds": 70959.51920865,
+    "estimated_costs_filled": 0,
+    "cost_scope": "observed events in cited sources, not billing or complete programme totals"
+  },
+  "compile_candidates": {
+    "status": "complete",
+    "candidates": 24,
+    "h1_review": 10,
+    "all_element_precedent": 3,
+    "evaluation_primary_released": 0
+  },
+  "audit": {
+    "deadline": "2026-11-27T08:00:00+08:00",
+    "finished": "2026-11-27T01:06:43.606633+08:00",
+    "input_commit": "6b6d4a37c2a368b8f31b8c0596a7405b7e098efe",
+    "workers": 5,
+    "reserved_evaluation_label_files_opened": 0
+  }
+}

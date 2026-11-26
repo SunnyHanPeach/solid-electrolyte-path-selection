@@ -1,0 +1,3 @@
+asset,local_subpath,bytes,archive_sha256,archive_hash_verified,member_count,verified_members,raw_weight_members
+trajectory_24,trajectory_replay/trajectory_checkpoints.tar.xz,317423844,9f66d1d44e1731ef554a7b62ecba320412226ae365c55b5e07cc6aedc9cbc370,True,24,24,24
+B2_predictions,b2-overnight-01/compact.tar.gz,3965646,aedc9a4819d4a6c114fa11c5fe39adae5d495e56bd0d4d4df8c215231d9d3e48,True,93,93,0
