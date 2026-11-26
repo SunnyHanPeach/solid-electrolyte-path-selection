@@ -1,0 +1,196 @@
+{
+  "edge_id": "mp-1191903_0_2_0_0_0",
+  "geometry_source_sha256": "7d6c52b8d3224c8e8fce79852155536a7ec3a8d0feab166271aa644e15b5719b",
+  "pre02_manifest_sha256": "0816475a9a394f01b0a089c70141475e9acb0a64a719a700a0a34a41a2043889",
+  "bvse_pilot_sha256": "dee6fc7e90952bb7643555660dfa8adc98520ec41441befb2faef784250179b6",
+  "environment": {
+    "python": "3.10.20",
+    "ase": "3.29.0",
+    "numpy": "2.2.6"
+  },
+  "geometry_type": "fixed_BVSE_preconditioned_5_image_path",
+  "atom_counts": {
+    "Li": 15,
+    "In": 16,
+    "Si": 8,
+    "S": 48
+  },
+  "migrating_Li_0based": 0,
+  "total_charge_e": 0,
+  "qe_valence_electrons": 573,
+  "fixed_spin_population": [
+    287,
+    286
+  ],
+  "cell_volume_A3": 2006.9573139667134,
+  "first_atom_count": 87,
+  "sssp_release": "SSSP 1.3.0 PBE Efficiency",
+  "sssp_metadata_md5": "3153c4b20fc90a44fba0236627525644",
+  "b4_bridge_qe": "7.3.1",
+  "k_points": "Gamma",
+  "smearing": "Gaussian",
+  "smearing_eV": 0.1,
+  "chosen_cutoffs_Ry": [
+    50,
+    400
+  ],
+  "electronic_conv_thr_Ry": 1e-08,
+  "selected_images": {
+    "endpoint": 0,
+    "bvse_peak": 1
+  },
+  "pseudopotentials": {
+    "In": {
+      "filename": "In.pbe-dn-rrkjus_psl.0.2.2.UPF",
+      "sssp_md5": "25e7c42c3b55b68f4bf926be2e7201a4",
+      "sha256": "ac76860606654bf63d2950129329ee50267d50ad92296728a7d42e9355bcfb39",
+      "source_release": "031US",
+      "format": "2.0.1",
+      "xc": "PBE",
+      "reported_xc": "PBE",
+      "relativity": "scalar",
+      "spin_orbit": false,
+      "pseudo_type": "USPP",
+      "z_valence": 13.0,
+      "reference_orbital_occupations": {
+        "5S": 2.0,
+        "5P": 1.0,
+        "4D": 10.0
+      },
+      "explicit_semicore": "4D",
+      "header_cutoffs_Ry": [
+        47.5872086279819,
+        190.3488345119276
+      ],
+      "sssp_cutoffs_Ry": [
+        50.0,
+        400.0
+      ]
+    },
+    "Li": {
+      "filename": "li_pbe_v1.4.uspp.F.UPF",
+      "sssp_md5": "e912e257baa3777c20ea3d68f190483c",
+      "sha256": "02cc4b3810e28a43b570277840d9631ca24f634d922928200c047b72c0a86bf5",
+      "source_release": "GBRV-1.4",
+      "format": "UPF v1",
+      "xc": "PBE",
+      "reported_xc": "SLA  PW   PBX  PBC    PBE",
+      "relativity": "nonrelativistic",
+      "spin_orbit": false,
+      "pseudo_type": "USPP",
+      "z_valence": 3.0,
+      "reference_orbital_occupations": {
+        "1S": 2.0,
+        "2S": 0.55,
+        "2P": 0.0
+      },
+      "explicit_semicore": "1S",
+      "header_cutoffs_Ry": [
+        0.0,
+        0.0
+      ],
+      "sssp_cutoffs_Ry": [
+        40.0,
+        320.0
+      ]
+    },
+    "S": {
+      "filename": "s_pbe_v1.4.uspp.F.UPF",
+      "sssp_md5": "88d86576ff6df21479756cfb9bdac1df",
+      "sha256": "84ad731864187f416f714e961c3ad2f04dcbf811618e724d277885c18cb470df",
+      "source_release": "GBRV-1.4",
+      "format": "UPF v1",
+      "xc": "PBE",
+      "reported_xc": "SLA  PW   PBX  PBC    PBE",
+      "relativity": "scalar",
+      "spin_orbit": false,
+      "pseudo_type": "USPP",
+      "z_valence": 6.0,
+      "reference_orbital_occupations": {
+        "3S": 2.0,
+        "3P": 4.0
+      },
+      "explicit_semicore": null,
+      "header_cutoffs_Ry": [
+        0.0,
+        0.0
+      ],
+      "sssp_cutoffs_Ry": [
+        35.0,
+        280.0
+      ]
+    },
+    "Si": {
+      "filename": "Si.pbe-n-rrkjus_psl.1.0.0.UPF",
+      "sssp_md5": "0b0bb1205258b0d07b9f9672cf965d36",
+      "sha256": "ae3aefd0811f9499dbc4a72f1f9ae02ef4fc7f3568bf6f559b68668719c69e2b",
+      "source_release": "100US",
+      "format": "2.0.1",
+      "xc": "PBE",
+      "reported_xc": "PBE",
+      "relativity": "scalar",
+      "spin_orbit": false,
+      "pseudo_type": "USPP",
+      "z_valence": 4.0,
+      "reference_orbital_occupations": {
+        "3S": 2.0,
+        "3P": 2.0
+      },
+      "explicit_semicore": null,
+      "header_cutoffs_Ry": [
+        43.74353160781668,
+        174.9741264312667
+      ],
+      "sssp_cutoffs_Ry": [
+        30.0,
+        240.0
+      ]
+    }
+  },
+  "jobs": [
+    {
+      "role": "endpoint",
+      "original_image": 0,
+      "spin": "nspin1",
+      "nspin": 1,
+      "tot_magnetization_muB": null,
+      "input_file": "endpoint_nspin1.in",
+      "sha256": "3d9c66affe6e35c86708522456825bcf89f629e006b5f3c186c077eb2e7e4c70"
+    },
+    {
+      "role": "endpoint",
+      "original_image": 0,
+      "spin": "spin1muB",
+      "nspin": 2,
+      "tot_magnetization_muB": 1.0,
+      "input_file": "endpoint_spin1muB.in",
+      "sha256": "f30c484b8ddf9a7adb647cdf6229f72ff1a53d10755731d9a661ef1acb80bbfe"
+    },
+    {
+      "role": "peak",
+      "original_image": 1,
+      "spin": "nspin1",
+      "nspin": 1,
+      "tot_magnetization_muB": null,
+      "input_file": "peak_nspin1.in",
+      "sha256": "9d81cf7d3ecbf1930860211047c73472d81d1fdfa62b09b0c1260d300eefb1e9"
+    },
+    {
+      "role": "peak",
+      "original_image": 1,
+      "spin": "spin1muB",
+      "nspin": 2,
+      "tot_magnetization_muB": 1.0,
+      "input_file": "peak_spin1muB.in",
+      "sha256": "8211c61610ce87f1c85001be80cf1a97f65fa653adeff20c6aff041a158d0129"
+    }
+  ],
+  "started_dft": false,
+  "reserved_test_labels_read": 0,
+  "gate": {
+    "energy_screen_meV": 10,
+    "force_component_rmse_screen_eV_A": 0.02,
+    "migrating_li_force_difference_norm_screen_eV_A": 0.02,
+    "two_endpoint_jobs_required_before_peak": true
+  }
+}
