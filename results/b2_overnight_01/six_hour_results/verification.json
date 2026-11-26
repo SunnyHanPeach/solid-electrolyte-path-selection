@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "compact_sha256": "aedc9a4819d4a6c114fa11c5fe39adae5d495e56bd0d4d4df8c215231d9d3e48",
+  "matrix_sha256": "6d05623a2aed03a2199bbcb409c9e6c12eb32b8d7cc07c76bf99461373b5964b",
+  "complete_fits": 88,
+  "complete_paths": 14,
+  "material_rows": 5243,
+  "evaluation_materials": 107,
+  "paired_intervals": 32,
+  "legacy_component_unavailable": [
+    "path1/seed17",
+    "path1/seed29",
+    "replay1/seed17",
+    "replay1/seed29"
+  ],
+  "elapsed_seconds": 19249.0,
+  "scoring_seconds": 2584.0
+}

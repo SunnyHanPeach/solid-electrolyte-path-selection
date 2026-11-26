@@ -1,0 +1,38 @@
+{
+  "seed": 29,
+  "arm": "path7",
+  "schedule_sha256": "48a5cb30bdc3e8238e839a12b13bca232e3d801d38ab9389932dc48c52d2ec4e",
+  "frozen_steps": 735,
+  "matrix_sha256": "6d05623a2aed03a2199bbcb409c9e6c12eb32b8d7cc07c76bf99461373b5964b",
+  "source_base_sha256": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "vram_bytes": 23069917184,
+    "capability": [
+      7,
+      5
+    ],
+    "torch": "2.8.0+cu128",
+    "mace": "0.3.14",
+    "ase": "3.29.0",
+    "numpy": "2.2.6",
+    "threads": 4,
+    "dtype": "float32",
+    "allow_tf32": false,
+    "deterministic": true,
+    "python": "3.12.3",
+    "cuda": "12.8"
+  },
+  "fit_seconds": 361.86191659234464,
+  "setup_seconds": 5.170110436156392,
+  "total_seconds": 367.1165128201246,
+  "seconds_per_step": 0.49232913822087704,
+  "steps": 735,
+  "peak_allocated_bytes": 7266528768,
+  "peak_reserved_bytes": 7438598144,
+  "smoke_force_gradient": null,
+  "files": {
+    "model.pt": "29e54cca7fce2ab47863e4e539ad6913aedd136b35f00531d07889e26ac1eef2",
+    "training.csv": "a6ed57114acee899c6dc6e5b2d00ae46c7d6c1755189a6521077758d8f183348"
+  }
+}

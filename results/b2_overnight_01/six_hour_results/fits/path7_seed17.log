@@ -1,0 +1,16 @@
+/root/autodl-tmp/project1_batch_pilot_20261124/.venv/lib/python3.12/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Using head Default out of ['Default']
+Default dtype float32 does not match model dtype float64, converting models to float32.
+step 70/735, E/F loss 4.08302
+step 140/735, E/F loss 9.4058
+step 210/735, E/F loss 1.57056
+step 280/735, E/F loss 0.473321
+step 350/735, E/F loss 0.304299
+step 420/735, E/F loss 0.358245
+step 490/735, E/F loss 0.232198
+step 560/735, E/F loss 0.274219
+step 630/735, E/F loss 0.522649
+step 700/735, E/F loss 0.665265
+{"fit_seconds": 360.82935082167387, "setup_seconds": 5.229469086974859, "total_seconds": 366.1450755931437, "seconds_per_step": 0.49092428683220934, "steps": 735, "peak_allocated_bytes": 7210668032, "peak_reserved_bytes": 7396655104, "smoke_force_gradient": null}

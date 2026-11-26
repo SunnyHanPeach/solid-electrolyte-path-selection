@@ -1,0 +1,60 @@
+/root/autodl-tmp/project1_batch_pilot_20261124/.venv/lib/python3.12/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Using head Default out of ['Default']
+Default dtype float32 does not match model dtype float64, converting models to float32.
+step 70/735, E/F loss 7.00128
+step 140/735, E/F loss 0.376716
+step 210/735, E/F loss 0.381087
+step 280/735, E/F loss 0.146894
+step 350/735, E/F loss 0.222393
+Traceback (most recent call last):
+  File "/root/autodl-tmp/project1_b2_overnight_01_20261126/run_b2_overnight_v2_fixed.py", line 373, in <module>
+    v1.fit_task(a)
+  File "/root/autodl-tmp/project1_b2_overnight_01_20261126/src/run_b2_overnight_01.py", line 104, in fit_task
+    model, trace, _, grad, _, elapsed = fit(
+                                        ^^^^
+  File "/root/autodl-tmp/project1_b2_overnight_01_20261126/run_b2_overnight_v2_fixed.py", line 45, in instrumented_fit
+    result = v1_fit(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/project1_phase1_p0_20261125/src/run_ef.py", line 106, in fit
+    pred = model(batch.to_dict(), training=True, compute_force=supervise_forces)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/project1_batch_pilot_20261124/.venv/lib/python3.12/site-packages/mace/modules/models.py", line 537, in forward
+    node_feats, sc = interaction(
+                     ^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/project1_batch_pilot_20261124/.venv/lib/python3.12/site-packages/mace/modules/blocks.py", line 728, in forward
+    message = scatter_sum(
+              ^^^^^^^^^^^^
+  File "/root/autodl-tmp/project1_batch_pilot_20261124/.venv/lib/python3.12/site-packages/mace/tools/scatter.py", line 46, in scatter_sum
+    return out.scatter_add_(dim, index, src)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.21 GiB. GPU 0 has a total capacity of 21.49 GiB of which 169.38 MiB is free. Process 2810 has 14.78 GiB memory in use. Including non-PyTorch memory, this process has 6.54 GiB memory in use. Of the allocated memory 5.11 GiB is allocated by PyTorch, and 1.19 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+/root/autodl-tmp/project1_batch_pilot_20261124/.venv/lib/python3.12/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Using head Default out of ['Default']
+Default dtype float32 does not match model dtype float64, converting models to float32.
+step 70/735, E/F loss 7.00128
+step 140/735, E/F loss 0.376716
+step 210/735, E/F loss 0.381087
+step 280/735, E/F loss 0.146894
+step 350/735, E/F loss 0.222393
+step 420/735, E/F loss 0.406405
+step 490/735, E/F loss 0.23941
+step 560/735, E/F loss 0.384309
+step 630/735, E/F loss 1.67544
+step 700/735, E/F loss 0.691506
+{"fit_seconds": 172.65192346274853, "setup_seconds": 4.759720982983708, "total_seconds": 177.49078604578972, "seconds_per_step": 0.23490057613979393, "steps": 735, "peak_allocated_bytes": 7862033408, "peak_reserved_bytes": 8088715264, "smoke_force_gradient": null}
