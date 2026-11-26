@@ -1,0 +1,10 @@
+{
+  "prediction_identities": 93,
+  "unique_checkpoint_hashes": 84,
+  "archive_or_weight_files_scanned": 2,
+  "readable": 2,
+  "checkpoint_members_hashed": 93,
+  "candidate_arms_and_seeds_found": 93,
+  "unique_expected_hashes_found": 84,
+  "source_ledger_sha256": "80bc8d831a3d2ee967e63001a065e97ecb0abfb2f9eceea22f477769aa1aa3dd"
+}

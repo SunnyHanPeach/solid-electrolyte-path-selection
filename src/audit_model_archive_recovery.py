@@ -60,6 +60,7 @@ def main():
     for name in ("assets", "b2_checkpoint_hashes", "output"):
         parser.add_argument(name, type=Path)
     parser.add_argument("--deadline", type=datetime.fromisoformat, required=True)
+    parser.add_argument("--only-archive", type=Path, action="append")
     args = parser.parse_args()
     args.output.mkdir()
     expected = read_csv(args.b2_checkpoint_hashes)
@@ -67,14 +68,20 @@ def main():
     if len(expected) != 93:
         raise ValueError("Expected the frozen 93 B2 prediction identities")
 
-    # Restrict the search to curated project snapshots and known training outputs.
-    paths = [p for p in args.assets.glob("MACE_*")
-             if p.is_file() and p.name.endswith((".zip", ".tar", ".tar.gz", ".tar.xz"))]
-    for folder in ("phase1-p0", "b5-r-work", "phase-b0-verification", "b2-overnight-01", "b3-a-label-check"):
-        root = args.assets / folder
-        if root.is_dir():
-            paths.extend(p for p in root.rglob("*") if p.is_file()
-                         and (is_checkpoint(p.name) or p.name in ("compact.tar.gz", "forces.zip")))
+    if args.only_archive:
+        args.assets = args.assets.resolve()
+        paths = [path.resolve(strict=True) for path in args.only_archive]
+        if not all(path.is_relative_to(args.assets) and path.is_file() for path in paths):
+            parser.error("explicit archive is outside the asset root or is unreadable")
+    else:
+        # Restrict the search to curated project snapshots and known training outputs.
+        paths = [p for p in args.assets.glob("MACE_*")
+                 if p.is_file() and p.name.endswith((".zip", ".tar", ".tar.gz", ".tar.xz"))]
+        for folder in ("phase1-p0", "b5-r-work", "phase-b0-verification", "b2-overnight-01", "b3-a-label-check"):
+            root = args.assets / folder
+            if root.is_dir():
+                paths.extend(p for p in root.rglob("*") if p.is_file()
+                             and (is_checkpoint(p.name) or p.name in ("compact.tar.gz", "forces.zip")))
     paths = sorted(set(paths))
     print(f"Checking {len(paths)} curated local snapshots and weight files against {len(wanted)} B2 hashes.", flush=True)
     inventory, matches = [], []
