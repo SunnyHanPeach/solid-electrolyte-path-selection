@@ -1,0 +1,127 @@
+{
+  "edge_id": "mp-1191903_0_2_0_0_0",
+  "input_manifest_sha256": "51dcbc389c8b8791354426d34285334193bac16130a0b22892a027ce4108b8a4",
+  "energies": "QE finite Gaussian smearing energy, with secondary E-0.5*(-TS) estimate",
+  "jobs": [
+    {
+      "role": "endpoint",
+      "image": 0,
+      "spin": "nspin1",
+      "input_sha256": "3d9c66affe6e35c86708522456825bcf89f629e006b5f3c186c077eb2e7e4c70",
+      "log_sha256": "3f3a1cba1529e92c3d4f62e1615ad3d3926b85306603c96d7bd9206db793d0e7",
+      "electrons": 573.0,
+      "total_magnetization_muB": null,
+      "absolute_magnetization_muB": null,
+      "total_energy_eV": -51537.189914471615,
+      "smearing_term_eV": -0.09905692825985347,
+      "migrating_li_force_eV_A": [
+        -0.005416029216304874,
+        -0.011937632875055082,
+        -0.07798053630137208
+      ],
+      "iterations": 20,
+      "threads_per_rank": 2,
+      "start_utc": "2026-11-26T06:02:00Z",
+      "elapsed_seconds": 128,
+      "sampled_peak_device_memory_MiB": 11716
+    },
+    {
+      "role": "endpoint",
+      "image": 0,
+      "spin": "spin1muB",
+      "input_sha256": "f30c484b8ddf9a7adb647cdf6229f72ff1a53d10755731d9a661ef1acb80bbfe",
+      "log_sha256": "4b38cf48be55c34bb46313b1a41b57d75f600d0153e4bee88b7bde870e99193b",
+      "electrons": 573.0,
+      "total_magnetization_muB": 1.0,
+      "absolute_magnetization_muB": 1.08,
+      "total_energy_eV": -51537.18223269734,
+      "smearing_term_eV": -0.0701195240199606,
+      "migrating_li_force_eV_A": [
+        -0.003545294415553188,
+        -0.01624268833187012,
+        -0.07850092762032775
+      ],
+      "iterations": 21,
+      "threads_per_rank": 2,
+      "start_utc": "2026-11-26T06:04:08Z",
+      "elapsed_seconds": 261,
+      "sampled_peak_device_memory_MiB": 11340
+    },
+    {
+      "role": "peak",
+      "image": 1,
+      "spin": "nspin1",
+      "input_sha256": "9d81cf7d3ecbf1930860211047c73472d81d1fdfa62b09b0c1260d300eefb1e9",
+      "log_sha256": "e93f83d81ba62c970ec93e5156626489ebf0613e475f770a6c8108773077c91a",
+      "electrons": 573.0,
+      "total_magnetization_muB": null,
+      "absolute_magnetization_muB": null,
+      "total_energy_eV": -51536.56466512135,
+      "smearing_term_eV": -0.09960142809420106,
+      "migrating_li_force_eV_A": [
+        -0.3516744883904553,
+        -0.15395329799319638,
+        0.3764912921889922
+      ],
+      "iterations": 20,
+      "threads_per_rank": 2,
+      "start_utc": "2026-11-26T06:09:54Z",
+      "elapsed_seconds": 122,
+      "sampled_peak_device_memory_MiB": 11716
+    },
+    {
+      "role": "peak",
+      "image": 1,
+      "spin": "spin1muB",
+      "input_sha256": "8211c61610ce87f1c85001be80cf1a97f65fa653adeff20c6aff041a158d0129",
+      "log_sha256": "0fb03a6844b33cc14a884a7c4e3b4b734968d86e8b0c60de062e4e39c5c1c3e9",
+      "electrons": 573.0,
+      "total_magnetization_muB": 1.0,
+      "absolute_magnetization_muB": 1.08,
+      "total_energy_eV": -51536.55722824955,
+      "smearing_term_eV": -0.06906630732388748,
+      "migrating_li_force_eV_A": [
+        -0.34939109150130254,
+        -0.15915284030705032,
+        0.3768126801083077
+      ],
+      "iterations": 21,
+      "threads_per_rank": 2,
+      "start_utc": "2026-11-26T06:11:57Z",
+      "elapsed_seconds": 262,
+      "sampled_peak_device_memory_MiB": 11358
+    }
+  ],
+  "force_comparison": {
+    "endpoint": {
+      "force_component_rmse_eV_A": 0.009738968688847797,
+      "migrating_li_force_difference_norm_eV_A": 0.004722706671585776
+    },
+    "peak": {
+      "force_component_rmse_eV_A": 0.009708190785528724,
+      "migrating_li_force_difference_norm_eV_A": 0.0056879198149791125
+    }
+  },
+  "thresholds": {
+    "energy_screen_meV": 10,
+    "force_component_rmse_screen_eV_A": 0.02,
+    "migrating_li_force_difference_norm_screen_eV_A": 0.02,
+    "two_endpoint_jobs_required_before_peak": true
+  },
+  "total_gpu_wall_seconds": 773,
+  "geometric_gap_by_spin": {
+    "nspin1": {
+      "fixed_image_gap_meV": 625.2493502688594,
+      "smearing_difference_meV": -0.544499834347581
+    },
+    "spin1muB": {
+      "fixed_image_gap_meV": 625.0044477928896,
+      "smearing_difference_meV": 1.0532166960731253
+    }
+  },
+  "spin_minus_nonspin_gap_meV": -0.24490247596986592,
+  "gaussian_zero_smearing_gap_shift_meV": -1.043760741180219,
+  "spin_screen_pass": true,
+  "archived_outputs_sha256": "bcfcff49e146801a047d8369f1c025fb6449a5f3c3b0018bb4853be8cb9cf590",
+  "independent_recomputation": "Matched energy shift and both force metrics against a line-based parser."
+}
