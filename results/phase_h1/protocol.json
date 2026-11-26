@@ -1,0 +1,94 @@
+{
+  "source_commit": "8f7c076e8ae95af290f5f770490b4122ef4939ca",
+  "protocol_version": 1,
+  "scope": "retrospective audit and prospective shortlist only",
+  "primary": {
+    "target": "Delta_net",
+    "features": "frozen B5-R mean, all-atom pooled, element SOAP and scalar Activation cosine kernels",
+    "comparators": [
+      "SOAP",
+      "SOAP+Activation",
+      "Activation"
+    ],
+    "combined_weights": [
+      0.5,
+      0.5
+    ],
+    "ridge_lambda": 0.1,
+    "folds": [
+      "LOPO",
+      "anion-family-held-out"
+    ],
+    "covariates": [
+      "min_Li_contact_A",
+      "anion_family_one_hot",
+      "optimizer_steps",
+      "log_added_atom_presentations"
+    ],
+    "success_gate": "SOAP+Activation must improve MAE in both fold schemes, avoid ranking deterioration in both, show positive lower 95% paired improvement in both and blocked permutation p<=0.05 in both. Delta_abs is secondary."
+  },
+  "sensitivity": {
+    "permutations": 999,
+    "seed": 20261126,
+    "blocking": [
+      "anion_family",
+      "optimizer_steps"
+    ],
+    "heldout_loss_bootstrap": 4000,
+    "bootstrap_unit": {
+      "LOPO": "path",
+      "anion-family-held-out": "held-out anion family; descriptive with 4 clusters"
+    },
+    "ablations": [
+      "Activation kernel removed (SOAP only)",
+      "Activation-only",
+      "Li-centered kernels",
+      "remove schedule and dose covariates",
+      "remove all confounder covariates"
+    ],
+    "seed_specific": [
+      17,
+      29,
+      43
+    ]
+  },
+  "candidate": {
+    "shortlist_target": 10,
+    "minimum": 8,
+    "maximum": 12,
+    "primary_rank_aggregation": "mean",
+    "strategies": [
+      "SOAP",
+      "SOAP+Activation",
+      "Activation_LCMD",
+      "Activation_PV"
+    ],
+    "ranking_disagreement_min_span": 5,
+    "best_rank_max": 8,
+    "family_cap": 3,
+    "family_stratification": "frozen B5-R broad anion category",
+    "strategy_rank_ties": "within category prefer split Top-5 membership, then larger rank span, then better best rank, then edge ID; round robin across categories, no eligibility relaxation.",
+    "parent_anonymous_match": {
+      "ltol": 0.15,
+      "stol": 0.2,
+      "angle_tol_deg": 5,
+      "primitive_cell": true,
+      "scale": true
+    },
+    "local_four_anion_screen": {
+      "max_path_mean_rms_A": 0.1,
+      "max_hop_difference_A": 0.35,
+      "allow_reversal": true,
+      "restrict_same_anion_signature": true,
+      "interpretation": "flag for review, not independently a confirmed duplicate"
+    },
+    "li_soap_confirm": {
+      "max_mean_cosine_distance": 0.03,
+      "max_hop_difference_A": 0.35,
+      "allow_reversal": true,
+      "restrict_same_anion_signature": true,
+      "scope": "24 new candidates and 14 development pathways with identical cached SOAP layout"
+    },
+    "active_QE_separate": true
+  }
+}

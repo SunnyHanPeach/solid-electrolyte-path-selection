@@ -1,0 +1,3 @@
+candidate_edge,other_edge,other_cohort,delta_hop_A,cosine_distance,reversed_orientation
+mp-34457_4_5_1_0_0,mp-34148_1_2_0_1_0,candidate,0.027286206960655868,0.014161935069228582,False
+mp-1210789_0_3_0_0_0,mp-555186_1_2_0_1_0,candidate,0.04171988361244283,0.028752138741654498,True

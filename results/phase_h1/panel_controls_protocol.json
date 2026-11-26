@@ -1,0 +1,12 @@
+{
+  "role": "Complete the 8–12 entry review panel with secondary controls if fewer than 8 pass the frozen disagreement rule",
+  "primary": "Keep all paths in the original H1-B prospective_shortlist, original status/threshold unchanged",
+  "targets": {
+    "shortlist_count": 10,
+    "maximum_per_broad_family": 3
+  },
+  "control_eligibility": "Only entries with original 'insufficient_disagreement' status that are not structurally linked to any panel entry.",
+  "control_order": "Choose nonempty strata with lowest current panel count, break family ties by Unicode. Within family favor smallest span across four strategy ranks, then lower median rank, then edge ID. No DFT labels, gains, metrics, or other model outputs enter selection.",
+  "interpretation": "Controls are low-disagreement comparators relative to other eligible entries in their stratum. They are separate rows, not substitutes for additional qualifying high-disagreement entries.",
+  "version": 1
+}

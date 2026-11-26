@@ -1,0 +1,6 @@
+shortlist_position,edge_id,material_id,chemsys,anion_family,crystal_family_proxy,rank_SOAP,rank_SOAP+Activation,rank_Activation_LCMD,rank_Activation_PV,best_rank,worst_rank,rank_span,top5_strategies,radial_historical_flags,atoms,images,structural_exclusion,linked_candidate_count,status,reason
+1,mp-23497_0_5_0_0_0,mp-23497,I-Li-Zn,卤化物,"[62,[1,2,4],[""I""]]",1,2,8,11,1,11,10,SOAP;SOAP+Activation,0,55,5,,0,selected,卤化物: SOAP rank 1 vs Activation_PV rank 11
+2,mp-1020013_0_4_0_0_0,mp-1020013,Li-O-S,复合/其他,"[62,[2,2,7],[""O"",""S""]]",12,7,2,2,2,12,10,Activation_LCMD;Activation_PV,0,87,5,,0,selected,复合/其他: Activation_LCMD rank 2 vs SOAP rank 12
+3,mp-1210789_0_3_0_0_0,mp-1210789,Li-S-Si,硫化物,"[36,[1,2,3],[""S""]]",10,12,14,7,7,14,7,,2,95,5,,1,selected,硫化物: Activation_PV rank 7 vs Activation_LCMD rank 14
+4,mp-1111659_2_2_0_0_1,mp-1111659,Bi-Cl-Li-Na,卤化物,"[225,[1,1,2,6],[""Cl""]]",6,6,1,10,1,10,9,Activation_LCMD,0,79,5,,0,selected,卤化物: Activation_LCMD rank 1 vs Activation_PV rank 10
+5,mp-28341_0_1_0_1_0,mp-28341,Cl-Ga-Li,卤化物,"[14,[1,1,4],[""Cl""]]",9,11,13,5,5,13,8,Activation_PV,0,95,5,,0,selected,卤化物: Activation_PV rank 5 vs Activation_LCMD rank 13

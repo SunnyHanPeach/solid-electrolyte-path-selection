@@ -1,0 +1,12 @@
+{
+  "total": 10,
+  "high_disagreement": 5,
+  "control_count": 5,
+  "family_count": {
+    "卤化物": 3,
+    "复合/其他": 3,
+    "硫化物": 2,
+    "氧化物": 2
+  },
+  "panel_minimum_met": true
+}

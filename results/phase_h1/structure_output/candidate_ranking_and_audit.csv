@@ -1,0 +1,25 @@
+edge_id,material_id,chemsys,anion_family,crystal_family_proxy,rank_SOAP,rank_SOAP+Activation,rank_Activation_LCMD,rank_Activation_PV,best_rank,worst_rank,rank_span,top5_strategies,radial_historical_flags,atoms,images,structural_exclusion,linked_candidate_count,status,shortlist_position,reason
+mp-753824_7_0_0_1_0,mp-753824,Cr-F-Li,卤化物,"[14,[1,4,6],[""F""]]",16,14,15,16,14,16,2,,0,87,5,,0,insufficient_disagreement,,
+mp-756198_1_4_0_1_0,mp-756198,Li-Mn-S,硫化物,"[147,[2,9,14],[""S""]]",20,21,21,14,14,21,7,,5,99,5,,0,insufficient_disagreement,,
+mp-2356674_0_0_0_0_1,mp-2356674,F-Li-Nb,卤化物,"[2,[1,2,6],[""F""]]",22,24,24,23,22,24,2,,1,71,5,anonymous-parent match: mp-4002,0,structural_exclusion,,
+mp-34457_4_5_1_0_0,mp-34457,Cl-Co-Li,卤化物,"[1,[1,2,4],[""Cl""]]",13,13,10,13,10,13,3,,3,167,5,,1,insufficient_disagreement,,
+mp-777767_6_0_0_0_1,mp-777767,Cu-Li-O-S,复合/其他,"[14,[2,3,3,12],[""O"",""S""]]",23,22,22,19,19,23,4,,4,79,5,anonymous-parent match: mp-26085 | anonymous-parent match: mp-542008,0,structural_exclusion,,
+mp-1105934_3_0_1_0_0,mp-1105934,As-Li-Mn-O,氧化物,"[1,[1,1,1,5],[""O""]]",18,18,17,15,15,18,3,,7,127,5,,0,insufficient_disagreement,,
+mp-23497_0_5_0_0_0,mp-23497,I-Li-Zn,卤化物,"[62,[1,2,4],[""I""]]",1,2,8,11,1,11,10,SOAP;SOAP+Activation,0,55,5,,0,selected,1,卤化物: SOAP rank 1 vs Activation_PV rank 11
+mp-768514_1_3_0_0_0,mp-768514,Li-Mn-O-P-Ti,氧化物,"[1,[1,3,6,9,24],[""O""]]",21,23,23,24,21,24,3,,0,85,5,,0,insufficient_disagreement,,
+mp-557142_0_1_0_0_0,mp-557142,Li-S,硫化物,"[194,[1,2],[""S""]]",15,16,9,20,9,20,11,,0,107,5,,0,insufficient_disagreement,,
+mp-34148_1_2_0_1_0,mp-34148,Cl-Li-Mn,卤化物,"[74,[1,2,4],[""Cl""]]",14,17,18,17,14,18,4,,3,111,5,anonymous-parent match: mp-29582,1,structural_exclusion,,
+mp-555874_0_1_0_0_0,mp-555874,As-Li-S,硫化物,"[9,[1,1,2],[""S""]]",8,8,6,4,4,8,4,Activation_PV,2,63,5,,0,insufficient_disagreement,,
+mp-556020_2_9_1_0_0,mp-556020,Al-F-Li,卤化物,"[33,[1,3,6],[""F""]]",19,20,19,18,18,20,2,,0,79,5,,0,insufficient_disagreement,,
+mp-755254_0_0_0_1_0,mp-755254,Cl-Fe-Li-O,复合/其他,"[25,[1,2,2,2],[""Cl"",""O""]]",4,5,5,8,4,8,4,SOAP;SOAP+Activation;Activation_LCMD,0,62,5,,0,insufficient_disagreement,,
+mp-1210789_0_3_0_0_0,mp-1210789,Li-S-Si,硫化物,"[36,[1,2,3],[""S""]]",10,12,14,7,7,14,7,,2,95,5,,1,selected,3,硫化物: Activation_PV rank 7 vs Activation_LCMD rank 14
+mp-1111659_2_2_0_0_1,mp-1111659,Bi-Cl-Li-Na,卤化物,"[225,[1,1,2,6],[""Cl""]]",6,6,1,10,1,10,9,Activation_LCMD,0,79,5,,0,selected,4,卤化物: Activation_LCMD rank 1 vs Activation_PV rank 10
+mp-1222483_0_0_1_1_0,mp-1222483,Bi-Br-Li-O,复合/其他,"[38,[1,2,3,4],[""Br"",""O""]]",3,1,3,3,1,3,2,SOAP;SOAP+Activation;Activation_LCMD;Activation_PV,0,79,5,,0,insufficient_disagreement,,
+mp-778261_0_3_0_0_0,mp-778261,Cr-Li-Mn-O-P-Ti,氧化物,"[1,[1,2,3,4,6,24],[""O""]]",24,19,20,22,19,24,5,,0,159,5,,0,insufficient_disagreement,,
+mp-555186_1_2_0_1_0,mp-555186,Li-S-Sn-Zn,硫化物,"[7,[1,1,2,4],[""S""]]",7,9,12,9,7,12,5,,1,63,5,anonymous-parent match: mp-754923 | anonymous-parent match: mp-8184,1,structural_exclusion,,
+mp-28341_0_1_0_1_0,mp-28341,Cl-Ga-Li,卤化物,"[14,[1,1,4],[""Cl""]]",9,11,13,5,5,13,8,Activation_PV,0,95,5,,0,selected,5,卤化物: Activation_PV rank 5 vs Activation_LCMD rank 13
+mp-1210957_0_0_0_0_1,mp-1210957,F-Li-Ni-Ti,卤化物,"[150,[1,1,1,6],[""F""]]",17,15,16,12,12,17,5,,2,107,5,,0,insufficient_disagreement,,
+mp-770642_0_2_0_0_0,mp-770642,F-Li-Mn-O-S,复合/其他,"[60,[1,1,2,3,4],[""F"",""O"",""S""]]",11,10,11,21,10,21,11,,0,175,5,,0,insufficient_disagreement,,
+mp-36125_0_0_0_0_1,mp-36125,Br-Li-Mn,卤化物,"[139,[1,2,4],[""Br""]]",2,4,7,6,2,7,5,SOAP;SOAP+Activation,0,83,5,,0,family_cap,,
+mp-1020013_0_4_0_0_0,mp-1020013,Li-O-S,复合/其他,"[62,[2,2,7],[""O"",""S""]]",12,7,2,2,2,12,10,Activation_LCMD;Activation_PV,0,87,5,,0,selected,2,复合/其他: Activation_LCMD rank 2 vs SOAP rank 12
+mp-768361_3_4_0_1_0,mp-768361,Fe-Li-S,硫化物,"[15,[2,2,3],[""S""]]",5,3,4,1,1,5,4,SOAP;SOAP+Activation;Activation_LCMD;Activation_PV,2,55,5,,0,insufficient_disagreement,,
