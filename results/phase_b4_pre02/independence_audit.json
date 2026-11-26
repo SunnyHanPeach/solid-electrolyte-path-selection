@@ -1,0 +1,197 @@
+{
+  "historical_geometry_archive": "nebDFT2k.zip",
+  "historical_materials": 867,
+  "historical_parent_materials": 867,
+  "unavailable_parent_materials": 0,
+  "historical_paths": 1681,
+  "historical_usable_paths": 1681,
+  "historical_images_compared": 9261,
+  "rejected_paths": 0,
+  "candidate_results": {
+    "mp-1177164": {
+      "history_hosts_compared": 867,
+      "same_anonymous_reduced_formula": 0,
+      "thresholds": {
+        "strict": {
+          "ltol": 0.1,
+          "stol": 0.15,
+          "angle_tol": 3
+        },
+        "screen": {
+          "ltol": 0.2,
+          "stol": 0.3,
+          "angle_tol": 5
+        }
+      },
+      "history_matches": {
+        "strict": 0,
+        "screen": 0
+      },
+      "local_geometry": [
+        {
+          "image": 0,
+          "min_geometric_cosine_distance": 0.000709649813632085,
+          "same_local_element_counts": 0,
+          "min_distance_with_same_local_element_counts": null,
+          "close_same_element_structure_counts": {
+            "0.005": 0,
+            "0.01": 0,
+            "0.02": 0
+          }
+        },
+        {
+          "image": 1,
+          "min_geometric_cosine_distance": 0.0007734800983230095,
+          "same_local_element_counts": 0,
+          "min_distance_with_same_local_element_counts": null,
+          "close_same_element_structure_counts": {
+            "0.005": 0,
+            "0.01": 0,
+            "0.02": 0
+          }
+        },
+        {
+          "image": 2,
+          "min_geometric_cosine_distance": 0.0008652750950509658,
+          "same_local_element_counts": 0,
+          "min_distance_with_same_local_element_counts": null,
+          "close_same_element_structure_counts": {
+            "0.005": 0,
+            "0.01": 0,
+            "0.02": 0
+          }
+        },
+        {
+          "image": 3,
+          "min_geometric_cosine_distance": 0.0005894222708500152,
+          "same_local_element_counts": 0,
+          "min_distance_with_same_local_element_counts": null,
+          "close_same_element_structure_counts": {
+            "0.005": 0,
+            "0.01": 0,
+            "0.02": 0
+          }
+        },
+        {
+          "image": 4,
+          "min_geometric_cosine_distance": 0.0005748385871483519,
+          "same_local_element_counts": 0,
+          "min_distance_with_same_local_element_counts": null,
+          "close_same_element_structure_counts": {
+            "0.005": 0,
+            "0.01": 0,
+            "0.02": 0
+          }
+        }
+      ]
+    },
+    "mp-1191903": {
+      "history_hosts_compared": 867,
+      "same_anonymous_reduced_formula": 15,
+      "thresholds": {
+        "strict": {
+          "ltol": 0.1,
+          "stol": 0.15,
+          "angle_tol": 3
+        },
+        "screen": {
+          "ltol": 0.2,
+          "stol": 0.3,
+          "angle_tol": 5
+        }
+      },
+      "history_matches": {
+        "strict": 0,
+        "screen": 0
+      },
+      "local_geometry": [
+        {
+          "image": 0,
+          "min_geometric_cosine_distance": 0.00025496251303191997,
+          "same_local_element_counts": 81,
+          "min_distance_with_same_local_element_counts": 0.00025496251303191997,
+          "close_same_element_structure_counts": {
+            "0.005": 13,
+            "0.01": 26,
+            "0.02": 39
+          }
+        },
+        {
+          "image": 1,
+          "min_geometric_cosine_distance": 0.0005136597823865996,
+          "same_local_element_counts": 0,
+          "min_distance_with_same_local_element_counts": null,
+          "close_same_element_structure_counts": {
+            "0.005": 0,
+            "0.01": 0,
+            "0.02": 0
+          }
+        },
+        {
+          "image": 2,
+          "min_geometric_cosine_distance": 0.0014946068914726274,
+          "same_local_element_counts": 0,
+          "min_distance_with_same_local_element_counts": null,
+          "close_same_element_structure_counts": {
+            "0.005": 0,
+            "0.01": 0,
+            "0.02": 0
+          }
+        },
+        {
+          "image": 3,
+          "min_geometric_cosine_distance": 0.000467145588875173,
+          "same_local_element_counts": 0,
+          "min_distance_with_same_local_element_counts": null,
+          "close_same_element_structure_counts": {
+            "0.005": 0,
+            "0.01": 0,
+            "0.02": 0
+          }
+        },
+        {
+          "image": 4,
+          "min_geometric_cosine_distance": 0.000334549984082555,
+          "same_local_element_counts": 81,
+          "min_distance_with_same_local_element_counts": 0.000334549984082555,
+          "close_same_element_structure_counts": {
+            "0.005": 17,
+            "0.01": 26,
+            "0.02": 40
+          }
+        }
+      ]
+    }
+  },
+  "reserved_test_label_reads": 0,
+  "scope": "All source archive Init images as a historical superset. No relaxed structures or target labels.",
+  "wall_seconds": 47.09894590033218,
+  "reserved_geometry_only": {
+    "manifest_sha256": "a47442e74f8851e8bf2eba898dc28382c28c803bb199142ada3381f3a1f687e4",
+    "materials_count": 4,
+    "initial_images": 24,
+    "loaded_dft_label_count": 0,
+    "results": {
+      "mp-1177164": {
+        "same_exact_chemistry_count": 0,
+        "same_legacy_anion_category_count": 4,
+        "matched_anonymous_frameworks": {
+          "strict": 0,
+          "screen": 0
+        },
+        "same_anonymous_reduced_formula": 0,
+        "queried_images_with_close_geometry_and_same_chem_counts": 0
+      },
+      "mp-1191903": {
+        "same_exact_chemistry_count": 0,
+        "same_legacy_anion_category_count": 0,
+        "matched_anonymous_frameworks": {
+          "strict": 0,
+          "screen": 0
+        },
+        "same_anonymous_reduced_formula": 0,
+        "queried_images_with_close_geometry_and_same_chem_counts": 0
+      }
+    }
+  }
+}

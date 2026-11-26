@@ -1,0 +1,29 @@
+{
+  "edge_id": "mp-35822_2_5_1_0_0",
+  "existing_cohort": "B2 public Path/Replay development",
+  "source_member": "nebDFT2k/mp-35822_2_5_1_0_0_relaxed.xyz",
+  "source_sha256": "240a223847a911a4d16a02f818ee6181c27fe97269f704dcc461441dc88a2daa",
+  "atoms": 143,
+  "images_prepared": [
+    0,
+    3,
+    4
+  ],
+  "reference_geometry": "DFT_relaxed_public_development",
+  "reference_energy_field": "ASE potential_energy (recorded with free_energy separately)",
+  "image_rule": "Both endpoints and highest internal VASP image; 0-based",
+  "stage": "inputs written and round-trip checked; solver not called",
+  "ecutwfc_Ry": 50.0,
+  "ecutrho_Ry": 400.0,
+  "conv_thr_Ry": 1e-08,
+  "pseudo_sha256": {
+    "Li": "02cc4b3810e28a43b570277840d9631ca24f634d922928200c047b72c0a86bf5",
+    "O": "7c4b6ed541f83d0afdf5c1d3a8c611340f073f3e2b11e95b7963bb2ee26929aa",
+    "Si": "ae3aefd0811f9499dbc4a72f1f9ae02ef4fc7f3568bf6f559b68668719c69e2b"
+  },
+  "input_sha256": {
+    "bridge_frame_00.in": "aecff2b83d2221352527344ac8e9b1f5d81dab599f0e5afb6c8e464a9d238189",
+    "bridge_frame_03.in": "a55b4ba32a7cc02220c702407fcbcad329fb2d1c6afbdfee027e2d3042d00d72",
+    "bridge_frame_04.in": "c40f64cf3cd8105bbd2eb635675b41f1766e199678a616a61c4d798dbace7047"
+  }
+}
