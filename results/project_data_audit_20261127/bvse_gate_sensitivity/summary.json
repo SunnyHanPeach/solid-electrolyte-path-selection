@@ -1,0 +1,28 @@
+{
+  "paths": 15516,
+  "frozen_candidates": 24,
+  "original_gate": [
+    {
+      "initial_stratum": "ordinary",
+      "final_min_contact_A": 1.4,
+      "peak_margin_eV": 0.02,
+      "screened_paths": 8588,
+      "passing_paths": 7112,
+      "material_weighted_pass": 0.8624552632431377,
+      "frozen_candidates": 18,
+      "frozen_candidates_passing": 18
+    },
+    {
+      "initial_stratum": "short",
+      "final_min_contact_A": 1.4,
+      "peak_margin_eV": 0.02,
+      "screened_paths": 6928,
+      "passing_paths": 5330,
+      "material_weighted_pass": 0.7406677890313323,
+      "frozen_candidates": 6,
+      "frozen_candidates_passing": 6
+    }
+  ],
+  "convergence_limit_eV_A": 0.1,
+  "thresholds_changed_in_frozen_screen": false
+}
