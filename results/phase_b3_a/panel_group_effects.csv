@@ -1,0 +1,141 @@
+edge_id,utility,panel_group,materials,mean_meV
+mp-753143_5_13_0_0_0,Delta_abs,F-containing oxide,18,-0.9646945529513888
+mp-753143_5_13_0_0_0,Delta_abs,P-containing oxide without Si,3,-1.5597873263888886
+mp-753143_5_13_0_0_0,Delta_abs,Si-containing oxide,7,-0.03487723214285689
+mp-753143_5_13_0_0_0,Delta_abs,non-oxide,27,-0.004521122685185235
+mp-753143_5_13_0_0_0,Delta_abs,other oxide,52,0.6285447340745193
+mp-753143_5_13_0_0_0,Delta_net,F-containing oxide,18,-0.20288538049768512
+mp-753143_5_13_0_0_0,Delta_net,P-containing oxide without Si,3,0.9290907118055555
+mp-753143_5_13_0_0_0,Delta_net,Si-containing oxide,7,0.9009951636904764
+mp-753143_5_13_0_0_0,Delta_net,non-oxide,27,0.4061475212191357
+mp-753143_5_13_0_0_0,Delta_net,other oxide,52,1.9623193985376604
+mp-1177833_2_3_0_0_1,Delta_abs,F-containing oxide,18,-3.1370940031828702
+mp-1177833_2_3_0_0_1,Delta_abs,P-containing oxide without Si,3,-12.498643663194443
+mp-1177833_2_3_0_0_1,Delta_abs,Si-containing oxide,7,-6.399972098214286
+mp-1177833_2_3_0_0_1,Delta_abs,non-oxide,27,-2.9059777990021103
+mp-1177833_2_3_0_0_1,Delta_abs,other oxide,52,-14.72903520633013
+mp-1177833_2_3_0_0_1,Delta_net,F-containing oxide,18,-3.3190691912615744
+mp-1177833_2_3_0_0_1,Delta_net,P-containing oxide without Si,3,-10.15896267361111
+mp-1177833_2_3_0_0_1,Delta_net,Si-containing oxide,7,-5.7111467633928585
+mp-1177833_2_3_0_0_1,Delta_net,non-oxide,27,-2.8909073900514928
+mp-1177833_2_3_0_0_1,Delta_net,other oxide,52,-13.214306953625801
+mp-768690_0_0_1_0_0,Delta_abs,F-containing oxide,18,8.817319516782408
+mp-768690_0_0_1_0_0,Delta_abs,P-containing oxide without Si,3,-30.897352430555557
+mp-768690_0_0_1_0_0,Delta_abs,Si-containing oxide,7,-27.265276227678573
+mp-768690_0_0_1_0_0,Delta_abs,non-oxide,27,-2.1259410870001894
+mp-768690_0_0_1_0_0,Delta_abs,other oxide,52,-22.450515570414776
+mp-768690_0_0_1_0_0,Delta_net,F-containing oxide,18,8.140846535011574
+mp-768690_0_0_1_0_0,Delta_net,P-containing oxide without Si,3,-29.106987847222225
+mp-768690_0_0_1_0_0,Delta_net,Si-containing oxide,7,-27.250744047619047
+mp-768690_0_0_1_0_0,Delta_net,non-oxide,27,-1.5608976851850729
+mp-768690_0_0_1_0_0,Delta_net,other oxide,52,-21.55200764523448
+mp-753677_0_1_0_0_0,Delta_abs,F-containing oxide,18,0.23114239728009262
+mp-753677_0_1_0_0_0,Delta_abs,P-containing oxide without Si,3,-2.0819769965277777
+mp-753677_0_1_0_0_0,Delta_abs,Si-containing oxide,7,-0.23542131696428573
+mp-753677_0_1_0_0_0,Delta_abs,non-oxide,27,-0.8209605275848766
+mp-753677_0_1_0_0_0,Delta_abs,other oxide,52,-1.3701610076121793
+mp-753677_0_1_0_0_0,Delta_net,F-containing oxide,18,-1.6151710792824074
+mp-753677_0_1_0_0_0,Delta_net,P-containing oxide without Si,3,2.5702582465277777
+mp-753677_0_1_0_0_0,Delta_net,Si-containing oxide,7,-2.0810081845238093
+mp-753677_0_1_0_0_0,Delta_net,non-oxide,27,-0.059528115354938294
+mp-753677_0_1_0_0_0,Delta_net,other oxide,52,1.2977795723157053
+mp-765559_1_0_0_0_1,Delta_abs,F-containing oxide,18,-1.1421486183449074
+mp-765559_1_0_0_0_1,Delta_abs,P-containing oxide without Si,3,-1.9124348958333333
+mp-765559_1_0_0_0_1,Delta_abs,Si-containing oxide,7,-0.06394159226190467
+mp-765559_1_0_0_0_1,Delta_abs,non-oxide,27,1.0334400125385053
+mp-765559_1_0_0_0_1,Delta_abs,other oxide,52,-0.025040064102564097
+mp-765559_1_0_0_0_1,Delta_net,F-containing oxide,18,-2.2961651837384256
+mp-765559_1_0_0_0_1,Delta_net,P-containing oxide without Si,3,0.7798936631944443
+mp-765559_1_0_0_0_1,Delta_net,Si-containing oxide,7,2.002534412202381
+mp-765559_1_0_0_0_1,Delta_net,non-oxide,27,1.3449038618843732
+mp-765559_1_0_0_0_1,Delta_net,other oxide,52,1.737545698116987
+mp-6326_3_4_0_0_0,Delta_abs,F-containing oxide,18,0.22888183593750014
+mp-6326_3_4_0_0_0,Delta_abs,P-containing oxide without Si,3,-0.8002387152777777
+mp-6326_3_4_0_0_0,Delta_abs,Si-containing oxide,7,-2.857026599702381
+mp-6326_3_4_0_0_0,Delta_abs,non-oxide,27,-0.4069010416666667
+mp-6326_3_4_0_0_0,Delta_abs,other oxide,52,-0.9834093925280449
+mp-6326_3_4_0_0_0,Delta_net,F-containing oxide,18,0.1910174334490741
+mp-6326_3_4_0_0_0,Delta_net,P-containing oxide without Si,3,1.2003580729166667
+mp-6326_3_4_0_0_0,Delta_net,Si-containing oxide,7,-4.906063988095239
+mp-6326_3_4_0_0_0,Delta_net,non-oxide,27,0.20005967881944442
+mp-6326_3_4_0_0_0,Delta_net,other oxide,52,0.09996463090945515
+mp-35822_2_5_1_0_0,Delta_abs,F-containing oxide,18,0.48658582899305547
+mp-35822_2_5_1_0_0,Delta_abs,P-containing oxide without Si,3,-3.6146375868055554
+mp-35822_2_5_1_0_0,Delta_abs,Si-containing oxide,7,-6.254650297619047
+mp-35822_2_5_1_0_0,Delta_abs,non-oxide,27,0.18623640624826765
+mp-35822_2_5_1_0_0,Delta_abs,other oxide,52,-2.794119027944711
+mp-35822_2_5_1_0_0,Delta_net,F-containing oxide,18,-1.411155418113426
+mp-35822_2_5_1_0_0,Delta_net,P-containing oxide without Si,3,-0.37299262152777785
+mp-35822_2_5_1_0_0,Delta_net,Si-containing oxide,7,-4.885718936011905
+mp-35822_2_5_1_0_0,Delta_net,non-oxide,27,0.1753103597590701
+mp-35822_2_5_1_0_0,Delta_net,other oxide,52,0.58746337890625
+mp-1298695_3_6_1_0_0,Delta_abs,F-containing oxide,18,5.246762876157407
+mp-1298695_3_6_1_0_0,Delta_abs,P-containing oxide without Si,3,-1.105414496527778
+mp-1298695_3_6_1_0_0,Delta_abs,Si-containing oxide,7,-0.6481352306547619
+mp-1298695_3_6_1_0_0,Delta_abs,non-oxide,27,-0.7678373360339505
+mp-1298695_3_6_1_0_0,Delta_abs,other oxide,52,-0.4256810897435901
+mp-1298695_3_6_1_0_0,Delta_net,F-containing oxide,18,5.321926540798611
+mp-1298695_3_6_1_0_0,Delta_net,P-containing oxide without Si,3,0.888400607638889
+mp-1298695_3_6_1_0_0,Delta_net,Si-containing oxide,7,-0.2964564732142857
+mp-1298695_3_6_1_0_0,Delta_net,non-oxide,27,-0.27426152102612206
+mp-1298695_3_6_1_0_0,Delta_net,other oxide,52,0.7022955478766028
+mp-760164_0_2_0_0_1,Delta_abs,F-containing oxide,18,-0.49788863570601843
+mp-760164_0_2_0_0_1,Delta_abs,P-containing oxide without Si,3,-6.924099392361112
+mp-760164_0_2_0_0_1,Delta_abs,Si-containing oxide,7,-6.992885044642856
+mp-760164_0_2_0_0_1,Delta_abs,non-oxide,27,-0.6887438821425427
+mp-760164_0_2_0_0_1,Delta_abs,other oxide,52,-2.817594088040866
+mp-760164_0_2_0_0_1,Delta_net,F-containing oxide,18,-2.584386754918982
+mp-760164_0_2_0_0_1,Delta_net,P-containing oxide without Si,3,-3.7638346354166665
+mp-760164_0_2_0_0_1,Delta_net,Si-containing oxide,7,-5.47572544642857
+mp-760164_0_2_0_0_1,Delta_net,non-oxide,27,-1.0430153481901931
+mp-760164_0_2_0_0_1,Delta_net,other oxide,52,-0.47028370392628216
+mp-2878_1_10_0_0_0,Delta_abs,F-containing oxide,18,0.5058006004050927
+mp-2878_1_10_0_0_0,Delta_abs,P-containing oxide without Si,3,-2.020941840277778
+mp-2878_1_10_0_0_0,Delta_abs,Si-containing oxide,7,-1.572381882440476
+mp-2878_1_10_0_0_0,Delta_abs,non-oxide,27,-0.6320867997702508
+mp-2878_1_10_0_0_0,Delta_abs,other oxide,52,-0.9728456154847757
+mp-2878_1_10_0_0_0,Delta_net,F-containing oxide,18,0.5809642650462964
+mp-2878_1_10_0_0_0,Delta_net,P-containing oxide without Si,3,-0.027126736111111122
+mp-2878_1_10_0_0_0,Delta_net,Si-containing oxide,7,-1.220703125
+mp-2878_1_10_0_0_0,Delta_net,non-oxide,27,-0.13851098476242216
+mp-2878_1_10_0_0_0,Delta_net,other oxide,52,0.15513102213541663
+mp-1176988_4_6_0_0_0,Delta_abs,F-containing oxide,18,-1.2246591073495372
+mp-1176988_4_6_0_0_0,Delta_abs,P-containing oxide without Si,3,-6.015353732638888
+mp-1176988_4_6_0_0_0,Delta_abs,Si-containing oxide,7,-0.8283342633928573
+mp-1176988_4_6_0_0_0,Delta_abs,non-oxide,27,-0.6254219714506172
+mp-1176988_4_6_0_0_0,Delta_abs,other oxide,52,-1.6925518329326923
+mp-1176988_4_6_0_0_0,Delta_net,F-containing oxide,18,-1.3518156828703705
+mp-1176988_4_6_0_0_0,Delta_net,P-containing oxide without Si,3,-3.7027994791666665
+mp-1176988_4_6_0_0_0,Delta_net,Si-containing oxide,7,-0.3168015252976191
+mp-1176988_4_6_0_0_0,Delta_net,non-oxide,27,-0.30291521990740733
+mp-1176988_4_6_0_0_0,Delta_net,other oxide,52,-0.36229842748397434
+mp-4657_19_31_0_0_0,Delta_abs,F-containing oxide,18,-1.187359845196759
+mp-4657_19_31_0_0_0,Delta_abs,P-containing oxide without Si,3,-3.248426649305556
+mp-4657_19_31_0_0_0,Delta_abs,Si-containing oxide,7,-2.2495814732142856
+mp-4657_19_31_0_0_0,Delta_abs,non-oxide,27,0.24225682388117284
+mp-4657_19_31_0_0_0,Delta_abs,other oxide,52,-2.6505299103565707
+mp-4657_19_31_0_0_0,Delta_net,F-containing oxide,18,-1.3145164207175926
+mp-4657_19_31_0_0_0,Delta_net,P-containing oxide without Si,3,-0.9358723958333334
+mp-4657_19_31_0_0_0,Delta_net,Si-containing oxide,7,-1.7380487351190474
+mp-4657_19_31_0_0_0,Delta_net,non-oxide,27,0.5647635754243827
+mp-4657_19_31_0_0_0,Delta_net,other oxide,52,-1.3202765049078526
+mp-771365_12_15_0_0_0,Delta_abs,F-containing oxide,18,0.5182336877893519
+mp-771365_12_15_0_0_0,Delta_abs,P-containing oxide without Si,3,-4.21142578125
+mp-771365_12_15_0_0_0,Delta_abs,Si-containing oxide,7,-1.9502185639880951
+mp-771365_12_15_0_0_0,Delta_abs,non-oxide,27,-0.19440827546296294
+mp-771365_12_15_0_0_0,Delta_abs,other oxide,52,0.32708583733974367
+mp-771365_12_15_0_0_0,Delta_net,F-containing oxide,18,-1.3795075593171289
+mp-771365_12_15_0_0_0,Delta_net,P-containing oxide without Si,3,-0.9697808159722223
+mp-771365_12_15_0_0_0,Delta_net,Si-containing oxide,7,-0.5812872023809523
+mp-771365_12_15_0_0_0,Delta_net,non-oxide,27,-0.20533432195216056
+mp-771365_12_15_0_0_0,Delta_net,other oxide,52,3.708668244190706
+mp-1290989_0_1_1_-1_0,Delta_abs,F-containing oxide,18,1.0387279369212967
+mp-1290989_0_1_1_-1_0,Delta_abs,P-containing oxide without Si,3,-21.08425564236111
+mp-1290989_0_1_1_-1_0,Delta_abs,Si-containing oxide,7,-17.121814546130956
+mp-1290989_0_1_1_-1_0,Delta_abs,non-oxide,27,-5.737330880599332
+mp-1290989_0_1_1_-1_0,Delta_abs,other oxide,52,-21.025965149740447
+mp-1290989_0_1_1_-1_0,Delta_net,F-containing oxide,18,-0.9432192201967593
+mp-1290989_0_1_1_-1_0,Delta_net,P-containing oxide without Si,3,-16.438802083333332
+mp-1290989_0_1_1_-1_0,Delta_net,Si-containing oxide,7,-20.673479352678573
+mp-1290989_0_1_1_-1_0,Delta_net,non-oxide,27,-5.236733398923218
+mp-1290989_0_1_1_-1_0,Delta_net,other oxide,52,-18.98519992538147

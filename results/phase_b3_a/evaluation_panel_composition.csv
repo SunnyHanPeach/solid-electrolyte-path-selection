@@ -1,0 +1,57 @@
+chemsys,panel_group,materials
+Ag-F-Li,non-oxide,3
+Al-Co-Li-O,other oxide,1
+Al-Li-Ni-O,other oxide,2
+Al-Li-O-Si,Si-containing oxide,4
+Bi-Li-S,non-oxide,1
+Ca-Li-N-Si,non-oxide,1
+Cl-Li-O,other oxide,1
+Co-Cr-Li-O,other oxide,3
+Co-F-Li,non-oxide,2
+Co-F-Li-O,F-containing oxide,1
+Co-Li-Mn-Ni-O,other oxide,2
+Co-Li-Mn-O,other oxide,3
+Co-Li-Mn-O-P,P-containing oxide without Si,3
+Co-Li-O,other oxide,1
+Co-Li-O-Si,Si-containing oxide,3
+Co-Li-O-Sn,other oxide,4
+Co-Li-O-V,other oxide,2
+Cr-Li-Mn-O,other oxide,2
+Cu-F-Li,non-oxide,2
+Cu-Li-O,other oxide,4
+Cu-Li-S,non-oxide,1
+F-Fe-Li,non-oxide,1
+F-Fe-Li-O,F-containing oxide,1
+F-Li-Mn,non-oxide,2
+F-Li-Mn-O,F-containing oxide,4
+F-Li-Mn-O-P,F-containing oxide,2
+F-Li-Mn-O-P-V,F-containing oxide,3
+F-Li-Nb-O,F-containing oxide,1
+F-Li-Ni-O,F-containing oxide,1
+F-Li-Ni-O-P,F-containing oxide,1
+F-Li-O-P-V,F-containing oxide,1
+F-Li-O-V,F-containing oxide,3
+F-Li-V,non-oxide,1
+F-Li-Zr,non-oxide,1
+Fe-Li-Nb-O,other oxide,1
+Fe-Li-O-Sn,other oxide,4
+Fe-Li-O-Sn-Ti,other oxide,1
+Fe-Li-O-V,other oxide,1
+I-Li-O,other oxide,3
+Li-Mn-Ni-O-Ti,other oxide,2
+Li-Mn-O,other oxide,2
+Li-Mo-O,other oxide,1
+Li-N-Na,non-oxide,1
+Li-N-Sr,non-oxide,1
+Li-Nb-O,other oxide,2
+Li-Nb-S,non-oxide,2
+Li-Ni-O-Sn,other oxide,1
+Li-Ni-O-Sn-V,other oxide,2
+Li-Ni-O-Ti,other oxide,2
+Li-O-S-Ti,other oxide,2
+Li-O-S-V,other oxide,1
+Li-O-Ti,other oxide,2
+Li-P-S,non-oxide,1
+Li-P-S-Zn,non-oxide,2
+Li-S-Ti,non-oxide,4
+Li-S-V,non-oxide,1

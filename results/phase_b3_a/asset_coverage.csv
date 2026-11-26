@@ -1,0 +1,197 @@
+edge_id,feature,initial_status,final_status,images_available,images_required,profile_available,source
+mp-753143_5_13_0_0_0,soap_geometry,A,A,5,5,True,"A1, Init"
+mp-753143_5_13_0_0_0,soap_elements,A,A,5,5,True,"A1, Init"
+mp-753143_5_13_0_0_0,coordination_hard,A,A,5,5,True,"A1, Init"
+mp-753143_5_13_0_0_0,coordination_smooth,A,A,5,5,True,"A1, Init"
+mp-753143_5_13_0_0_0,rdf_geometry,A,A,5,5,True,"A1, Init"
+mp-753143_5_13_0_0_0,rdf_elements,A,A,5,5,True,"A1, Init"
+mp-753143_5_13_0_0_0,mace_invariants,A,A,5,5,True,"A1, Init"
+mp-753143_5_13_0_0_0,Li_force_sd,A,A,5,5,True,B1 cached image profiles
+mp-753143_5_13_0_0_0,Li_tangent_sd,A,A,5,5,True,B1 cached image profiles
+mp-753143_5_13_0_0_0,Li_normal_sd,A,A,5,5,True,B1 cached image profiles
+mp-753143_5_13_0_0_0,energy_centered_sd,A,A,5,5,True,B1 cached image profiles
+mp-753143_5_13_0_0_0,energy_raw_sd,A,A,5,5,True,B1 cached image profiles
+mp-753143_5_13_0_0_0,energy_from_start_sd,A,A,5,5,True,B1 cached image profiles
+mp-753143_5_13_0_0_0,forward_barrier_sd_meV,B,A,5,5,False,B1 path statistic from cached three seed barriers
+mp-1177833_2_3_0_0_1,soap_geometry,A,A,5,5,True,"A1, Init"
+mp-1177833_2_3_0_0_1,soap_elements,A,A,5,5,True,"A1, Init"
+mp-1177833_2_3_0_0_1,coordination_hard,A,A,5,5,True,"A1, Init"
+mp-1177833_2_3_0_0_1,coordination_smooth,A,A,5,5,True,"A1, Init"
+mp-1177833_2_3_0_0_1,rdf_geometry,A,A,5,5,True,"A1, Init"
+mp-1177833_2_3_0_0_1,rdf_elements,A,A,5,5,True,"A1, Init"
+mp-1177833_2_3_0_0_1,mace_invariants,A,A,5,5,True,"A1, Init"
+mp-1177833_2_3_0_0_1,Li_force_sd,A,A,5,5,True,B1 cached image profiles
+mp-1177833_2_3_0_0_1,Li_tangent_sd,A,A,5,5,True,B1 cached image profiles
+mp-1177833_2_3_0_0_1,Li_normal_sd,A,A,5,5,True,B1 cached image profiles
+mp-1177833_2_3_0_0_1,energy_centered_sd,A,A,5,5,True,B1 cached image profiles
+mp-1177833_2_3_0_0_1,energy_raw_sd,A,A,5,5,True,B1 cached image profiles
+mp-1177833_2_3_0_0_1,energy_from_start_sd,A,A,5,5,True,B1 cached image profiles
+mp-1177833_2_3_0_0_1,forward_barrier_sd_meV,B,A,5,5,False,B1 path statistic from cached three seed barriers
+mp-768690_0_0_1_0_0,soap_geometry,A,A,7,7,True,"A1, Init"
+mp-768690_0_0_1_0_0,soap_elements,A,A,7,7,True,"A1, Init"
+mp-768690_0_0_1_0_0,coordination_hard,A,A,7,7,True,"A1, Init"
+mp-768690_0_0_1_0_0,coordination_smooth,A,A,7,7,True,"A1, Init"
+mp-768690_0_0_1_0_0,rdf_geometry,A,A,7,7,True,"A1, Init"
+mp-768690_0_0_1_0_0,rdf_elements,A,A,7,7,True,"A1, Init"
+mp-768690_0_0_1_0_0,mace_invariants,A,A,7,7,True,"A1, Init"
+mp-768690_0_0_1_0_0,Li_force_sd,A,A,7,7,True,B1 cached image profiles
+mp-768690_0_0_1_0_0,Li_tangent_sd,A,A,7,7,True,B1 cached image profiles
+mp-768690_0_0_1_0_0,Li_normal_sd,A,A,7,7,True,B1 cached image profiles
+mp-768690_0_0_1_0_0,energy_centered_sd,A,A,7,7,True,B1 cached image profiles
+mp-768690_0_0_1_0_0,energy_raw_sd,A,A,7,7,True,B1 cached image profiles
+mp-768690_0_0_1_0_0,energy_from_start_sd,A,A,7,7,True,B1 cached image profiles
+mp-768690_0_0_1_0_0,forward_barrier_sd_meV,B,A,7,7,False,B1 path statistic from cached three seed barriers
+mp-753677_0_1_0_0_0,soap_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-753677_0_1_0_0_0,soap_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-753677_0_1_0_0_0,coordination_hard,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-753677_0_1_0_0_0,coordination_smooth,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-753677_0_1_0_0_0,rdf_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-753677_0_1_0_0_0,rdf_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-753677_0_1_0_0_0,mace_invariants,C,A,5,5,True,"B3-A CPU, frozen A1 D0 Activation"
+mp-753677_0_1_0_0_0,Li_force_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-753677_0_1_0_0_0,Li_tangent_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-753677_0_1_0_0_0,Li_normal_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-753677_0_1_0_0_0,energy_centered_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-753677_0_1_0_0_0,energy_raw_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-753677_0_1_0_0_0,energy_from_start_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-753677_0_1_0_0_0,forward_barrier_sd_meV,C,C,0,5,False,requires 3-member CPU inference on complete path
+mp-765559_1_0_0_0_1,soap_geometry,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-765559_1_0_0_0_1,soap_elements,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-765559_1_0_0_0_1,coordination_hard,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-765559_1_0_0_0_1,coordination_smooth,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-765559_1_0_0_0_1,rdf_geometry,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-765559_1_0_0_0_1,rdf_elements,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-765559_1_0_0_0_1,mace_invariants,C,A,7,7,True,"B3-A CPU, frozen A1 D0 Activation"
+mp-765559_1_0_0_0_1,Li_force_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-765559_1_0_0_0_1,Li_tangent_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-765559_1_0_0_0_1,Li_normal_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-765559_1_0_0_0_1,energy_centered_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-765559_1_0_0_0_1,energy_raw_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-765559_1_0_0_0_1,energy_from_start_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-765559_1_0_0_0_1,forward_barrier_sd_meV,C,C,0,7,False,requires 3-member CPU inference on complete path
+mp-6326_3_4_0_0_0,soap_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-6326_3_4_0_0_0,soap_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-6326_3_4_0_0_0,coordination_hard,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-6326_3_4_0_0_0,coordination_smooth,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-6326_3_4_0_0_0,rdf_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-6326_3_4_0_0_0,rdf_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-6326_3_4_0_0_0,mace_invariants,C,A,5,5,True,"B3-A CPU, frozen A1 D0 Activation"
+mp-6326_3_4_0_0_0,Li_force_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-6326_3_4_0_0_0,Li_tangent_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-6326_3_4_0_0_0,Li_normal_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-6326_3_4_0_0_0,energy_centered_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-6326_3_4_0_0_0,energy_raw_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-6326_3_4_0_0_0,energy_from_start_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-6326_3_4_0_0_0,forward_barrier_sd_meV,C,C,0,5,False,requires 3-member CPU inference on complete path
+mp-35822_2_5_1_0_0,soap_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-35822_2_5_1_0_0,soap_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-35822_2_5_1_0_0,coordination_hard,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-35822_2_5_1_0_0,coordination_smooth,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-35822_2_5_1_0_0,rdf_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-35822_2_5_1_0_0,rdf_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-35822_2_5_1_0_0,mace_invariants,C,A,5,5,True,"B3-A CPU, frozen A1 D0 Activation"
+mp-35822_2_5_1_0_0,Li_force_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-35822_2_5_1_0_0,Li_tangent_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-35822_2_5_1_0_0,Li_normal_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-35822_2_5_1_0_0,energy_centered_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-35822_2_5_1_0_0,energy_raw_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-35822_2_5_1_0_0,energy_from_start_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-35822_2_5_1_0_0,forward_barrier_sd_meV,C,C,0,5,False,requires 3-member CPU inference on complete path
+mp-1298695_3_6_1_0_0,soap_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1298695_3_6_1_0_0,soap_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1298695_3_6_1_0_0,coordination_hard,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1298695_3_6_1_0_0,coordination_smooth,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1298695_3_6_1_0_0,rdf_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1298695_3_6_1_0_0,rdf_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1298695_3_6_1_0_0,mace_invariants,C,A,5,5,True,"B3-A CPU, frozen A1 D0 Activation"
+mp-1298695_3_6_1_0_0,Li_force_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1298695_3_6_1_0_0,Li_tangent_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1298695_3_6_1_0_0,Li_normal_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1298695_3_6_1_0_0,energy_centered_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1298695_3_6_1_0_0,energy_raw_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1298695_3_6_1_0_0,energy_from_start_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1298695_3_6_1_0_0,forward_barrier_sd_meV,C,C,0,5,False,requires 3-member CPU inference on complete path
+mp-760164_0_2_0_0_1,soap_geometry,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-760164_0_2_0_0_1,soap_elements,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-760164_0_2_0_0_1,coordination_hard,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-760164_0_2_0_0_1,coordination_smooth,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-760164_0_2_0_0_1,rdf_geometry,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-760164_0_2_0_0_1,rdf_elements,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-760164_0_2_0_0_1,mace_invariants,C,A,7,7,True,"B3-A CPU, frozen A1 D0 Activation"
+mp-760164_0_2_0_0_1,Li_force_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-760164_0_2_0_0_1,Li_tangent_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-760164_0_2_0_0_1,Li_normal_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-760164_0_2_0_0_1,energy_centered_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-760164_0_2_0_0_1,energy_raw_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-760164_0_2_0_0_1,energy_from_start_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-760164_0_2_0_0_1,forward_barrier_sd_meV,C,C,0,7,False,requires 3-member CPU inference on complete path
+mp-2878_1_10_0_0_0,soap_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-2878_1_10_0_0_0,soap_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-2878_1_10_0_0_0,coordination_hard,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-2878_1_10_0_0_0,coordination_smooth,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-2878_1_10_0_0_0,rdf_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-2878_1_10_0_0_0,rdf_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-2878_1_10_0_0_0,mace_invariants,C,A,5,5,True,"B3-A CPU, frozen A1 D0 Activation"
+mp-2878_1_10_0_0_0,Li_force_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-2878_1_10_0_0_0,Li_tangent_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-2878_1_10_0_0_0,Li_normal_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-2878_1_10_0_0_0,energy_centered_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-2878_1_10_0_0_0,energy_raw_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-2878_1_10_0_0_0,energy_from_start_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-2878_1_10_0_0_0,forward_barrier_sd_meV,C,C,0,5,False,requires 3-member CPU inference on complete path
+mp-1176988_4_6_0_0_0,soap_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1176988_4_6_0_0_0,soap_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1176988_4_6_0_0_0,coordination_hard,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1176988_4_6_0_0_0,coordination_smooth,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1176988_4_6_0_0_0,rdf_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1176988_4_6_0_0_0,rdf_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1176988_4_6_0_0_0,mace_invariants,C,A,5,5,True,"B3-A CPU, frozen A1 D0 Activation"
+mp-1176988_4_6_0_0_0,Li_force_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1176988_4_6_0_0_0,Li_tangent_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1176988_4_6_0_0_0,Li_normal_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1176988_4_6_0_0_0,energy_centered_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1176988_4_6_0_0_0,energy_raw_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1176988_4_6_0_0_0,energy_from_start_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-1176988_4_6_0_0_0,forward_barrier_sd_meV,C,C,0,5,False,requires 3-member CPU inference on complete path
+mp-4657_19_31_0_0_0,soap_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-4657_19_31_0_0_0,soap_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-4657_19_31_0_0_0,coordination_hard,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-4657_19_31_0_0_0,coordination_smooth,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-4657_19_31_0_0_0,rdf_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-4657_19_31_0_0_0,rdf_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-4657_19_31_0_0_0,mace_invariants,C,A,5,5,True,"B3-A CPU, frozen A1 D0 Activation"
+mp-4657_19_31_0_0_0,Li_force_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-4657_19_31_0_0_0,Li_tangent_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-4657_19_31_0_0_0,Li_normal_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-4657_19_31_0_0_0,energy_centered_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-4657_19_31_0_0_0,energy_raw_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-4657_19_31_0_0_0,energy_from_start_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-4657_19_31_0_0_0,forward_barrier_sd_meV,C,C,0,5,False,requires 3-member CPU inference on complete path
+mp-771365_12_15_0_0_0,soap_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-771365_12_15_0_0_0,soap_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-771365_12_15_0_0_0,coordination_hard,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-771365_12_15_0_0_0,coordination_smooth,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-771365_12_15_0_0_0,rdf_geometry,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-771365_12_15_0_0_0,rdf_elements,B,A,5,5,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-771365_12_15_0_0_0,mace_invariants,C,A,5,5,True,"B3-A CPU, frozen A1 D0 Activation"
+mp-771365_12_15_0_0_0,Li_force_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-771365_12_15_0_0_0,Li_tangent_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-771365_12_15_0_0_0,Li_normal_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-771365_12_15_0_0_0,energy_centered_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-771365_12_15_0_0_0,energy_raw_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-771365_12_15_0_0_0,energy_from_start_sd,C,C,0,5,False,requires 3-member CPU inference
+mp-771365_12_15_0_0_0,forward_barrier_sd_meV,C,C,0,5,False,requires 3-member CPU inference on complete path
+mp-1290989_0_1_1_-1_0,soap_geometry,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1290989_0_1_1_-1_0,soap_elements,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1290989_0_1_1_-1_0,coordination_hard,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1290989_0_1_1_-1_0,coordination_smooth,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1290989_0_1_1_-1_0,rdf_geometry,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1290989_0_1_1_-1_0,rdf_elements,B,A,7,7,True,"B3-A from archived Init geometry, frozen A1 settings"
+mp-1290989_0_1_1_-1_0,mace_invariants,C,A,7,7,True,"B3-A CPU, frozen A1 D0 Activation"
+mp-1290989_0_1_1_-1_0,Li_force_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-1290989_0_1_1_-1_0,Li_tangent_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-1290989_0_1_1_-1_0,Li_normal_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-1290989_0_1_1_-1_0,energy_centered_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-1290989_0_1_1_-1_0,energy_raw_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-1290989_0_1_1_-1_0,energy_from_start_sd,C,C,0,7,False,requires 3-member CPU inference
+mp-1290989_0_1_1_-1_0,forward_barrier_sd_meV,C,C,0,7,False,requires 3-member CPU inference on complete path

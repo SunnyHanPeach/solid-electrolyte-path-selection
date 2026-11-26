@@ -1,0 +1,80 @@
+{
+  "source_commit": "82ba1b4f509f527a56d004781482ac7ad5c3e988",
+  "scoring_script_sha256": "e2601938f4900621bf05697e9ca87fb6789c5e116d3d0777bb79d0f276036a18",
+  "protocol_sha256": "de981b072517be05a7a3999db1722a4c4f6ab2a1bcf578d9f523e702c3884df9",
+  "feature_manifest_sha256": "0442caefeb60a16a4e0fcc18872668f8383a0c56fdbf6cfaf6ff5864d8931a4e",
+  "B2_input_sha256": {
+    "intervals.csv": "2defcb391c3f94c275a0759cd9fac2faa2688206f48ad68fbc433a974419e32b",
+    "material_gains.csv": "ebb6483f4a73843570bfa5d5ff74ddb5cca0fb65c9196fa05478d23bf43ac6f6",
+    "verification.json": "e65f05e7e60f92f7065cf1d3a7eb2337aa6be332d5be53a9d08ead3e8d4d781b",
+    "status.json": "4ca74a841ac89ec8dc2734e3200d6ca3a4d343d48a75f33dfd9df0b686e9ab02",
+    "training_diagnostics.csv": "0cc0739f97a2628239801fa495530ed50fa8bf7149ba5f0e3a82b20cdf631632"
+  },
+  "B2_independent_verification": {
+    "status": "pass",
+    "compact_sha256": "aedc9a4819d4a6c114fa11c5fe39adae5d495e56bd0d4d4df8c215231d9d3e48",
+    "matrix_sha256": "6d05623a2aed03a2199bbcb409c9e6c12eb32b8d7cc07c76bf99461373b5964b",
+    "complete_fits": 88,
+    "complete_paths": 14,
+    "material_rows": 5243,
+    "evaluation_materials": 107,
+    "paired_intervals": 32,
+    "legacy_component_unavailable": [
+      "path1/seed17",
+      "path1/seed29",
+      "replay1/seed17",
+      "replay1/seed29"
+    ],
+    "elapsed_seconds": 19249.0,
+    "scoring_seconds": 2584.0
+  },
+  "B1_reverified": {
+    "status": "pass",
+    "inputs": {
+      "predictions": 51,
+      "images": 17,
+      "atomic_rows": 5277,
+      "paths": 3
+    },
+    "max_absolute_difference": {
+      "node_to_total_eV": 1.1368683772161603e-13,
+      "barrier_meV": 1.1368683772161603e-10,
+      "barrier_mean_meV": 3.7971403799019754e-11,
+      "barrier_sd_meV": 5.865774532765045e-11,
+      "Li_force_sd_eV_per_A": 1.3877787807814457e-17,
+      "Li_tangent_sd_eV_per_A": 3.8207284558389176e-16,
+      "Li_normal_sd_eV_per_A": 1.0408340855860843e-17,
+      "energy_raw_sd_meV": 6.130562724138144e-11,
+      "energy_centered_sd_meV": 1.5305090528272558e-10,
+      "energy_from_start_sd_meV": 6.472777869248603e-11
+    },
+    "verification_script_sha256": "59a368db17913a855629e4e5184a2235049fc72e34b04177dbf290047c0e1c12"
+  },
+  "regular_path_labels": 14,
+  "regular_material_rows": 4494,
+  "analysis_outputs": {
+    "a2_parameter_audit.csv": "e882937e951e76a8120bfa769d1c9108404fd29027ecf56c7ad5b20c5b22ac41",
+    "asset_counts.csv": "9d31b040853d2a2c58a32db45884be72721a437e4b25083103ad8dd465707a43",
+    "asset_coverage.csv": "aac42048c708ccd4a4ff39a4f6d4996a7d61033ef838b0ebc71ea3944ebbbd39",
+    "evaluation_panel_composition.csv": "e148e5a8a9a20dc1a426a58e43dd5a646bf4e70ec1a659526505ed3c24fd470c",
+    "feature_correlation.csv": "c81337078653eb5c09fc9aa4163550602aa9f6d31e74e9ed34e7c586b888bb58",
+    "feature_pair_matrix.csv": "1edd97c29f29a77afddc6a6e643aa58d10fb332237e1158c10b28651ff48f581",
+    "figures/ensemble_utility.png": "4321a6fbb6e868446cd1017fc7c98c5f22374c7eb92900e39e5343e20d58489f",
+    "figures/feature_correlation_matrix.png": "e5cfdcd46f66ca9ce24bf9af986f084b3ef4b86aba7a291116dab0e916d74954",
+    "figures/static_utility.png": "1d26543886368c33eeb39b60a934c676d3bc242dc7165fea6a1c152e949a0fdd",
+    "image_coordination_counts.csv": "1519331639b238eaeeb8e83ce0202b5fade9407d61482d625a581af42e020210",
+    "image_feature_index.csv": "bf923351916432dc8f13d0e45bd57878d956b83e5a9da70bfd18a23bd2a51ccb",
+    "image_static_profiles.csv": "071ff0b5b0236e82c63c5f06f13d49fb0219d0e59ed6cf39540b6559cad65d85",
+    "leave_one_path_out.csv": "c8e52ed8f6cd19caed64ec6fac58ace03fa94faf607bcabb2e345b77eb59478e",
+    "paired_material_gains.csv": "27d8ff4ca37ee38de07ca7bb4641e4b93bbc41858ec094433f5e3bdf6d8d98ad",
+    "panel_group_effects.csv": "66e66da8aa79d2eeaefa3b75866aefcf23e66def58b00762fd8f4e9b83920e4b",
+    "path_feature_matrix.csv": "289dea53de4e2b8efec6f774b8b318e0459517c4ab433f3e3ba5b609545619e8",
+    "path_id_manifest.csv": "51f7493565c0ccc893376523888129682c20370af50c2eb08a2b460b39f8f17b",
+    "path_identity.csv": "67ea61c3da9f48440bbaa3e9806b7b7b6e2725f1078588b1f54503f49add2a34",
+    "path_utility_labels.csv": "3aa54825a8a6a31aaa9bccd2d36d7340297377793216f46702fd7543ebe1abd6",
+    "protocol_compatibility.csv": "cd8464c216fd2f3f82d718eb8a1d5f1cd0db910d43f3aa5551bb79dc73ba8e80",
+    "spearman_ranking.csv": "7d678ec06fdb92512c4a9739c974814dc2d264010df531596e2151572823f2cf",
+    "supplemental_utility_labels.csv": "5a1653b01ff4a503defc0ddcc39893f8118b242776dd54c9cc6f0d5efcc07dfd",
+    "utility_class_contrast.csv": "5edf469f6976a4e4a23934822b8ffaccac4a7713b4a6272e38aed75525b5fdad"
+  }
+}

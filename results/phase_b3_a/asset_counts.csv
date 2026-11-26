@@ -1,0 +1,15 @@
+feature,complete,available_from_cache_or_source,needs_inference,unrecoverable
+soap_geometry,14,0,0,0
+soap_elements,14,0,0,0
+coordination_hard,14,0,0,0
+coordination_smooth,14,0,0,0
+rdf_geometry,14,0,0,0
+rdf_elements,14,0,0,0
+mace_invariants,14,0,0,0
+Li_force_sd,3,0,11,0
+Li_tangent_sd,3,0,11,0
+Li_normal_sd,3,0,11,0
+energy_centered_sd,3,0,11,0
+energy_raw_sd,3,0,11,0
+energy_from_start_sd,3,0,11,0
+forward_barrier_sd_meV,3,0,11,0

@@ -1,0 +1,202 @@
+{
+  "source_git_commit": "82ba1b4f509f527a56d004781482ac7ad5c3e988",
+  "source_script_sha256": "414707de48c08fc106574c0033f432c961d1222cd9d94f15f1ab87e945f79535",
+  "a1_extractor_sha256": "51baa07e63c31fb8d0c5d777923db135369910d627fe17fb4c73b92f116a3051",
+  "geometry_helpers_sha256": "8905d452f655e02249a246668300fedc25d50f1366a223c0143bdd32cee374bf",
+  "runtime": {
+    "checkpoint": "D0_17.pt",
+    "checkpoint_sha256": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a",
+    "layers": 2,
+    "mace": "scalar invariants from each interaction layer",
+    "ase": "3.29.0",
+    "torch": "2.10.0+cpu",
+    "dscribe": "2.1.2",
+    "runtime_dtype": "float64",
+    "device": "cpu",
+    "threads": 12,
+    "python": "3.10.20",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "packages": {
+      "ase": "3.29.0",
+      "dscribe": "2.1.2",
+      "mace-torch": "0.3.14",
+      "torch": "2.10.0",
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "e3nn": "0.4.4"
+    }
+  },
+  "checkpoint_sha256": {
+    "e0-A-17": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a",
+    "e0-A-29": "381053e366b56dc07bcb38ae00dce5eae75db22f6ef51cbca26a52b582deb449",
+    "e0-A-43": "a626b7220c9ee8c29be911ce5727d585c2dd3bd1c776154388702b0117bbb644"
+  },
+  "frozen_settings": {
+    "species": [
+      "Ag",
+      "Al",
+      "As",
+      "B",
+      "Bi",
+      "Br",
+      "Ca",
+      "Cl",
+      "Co",
+      "Cr",
+      "Cu",
+      "Eu",
+      "F",
+      "Fe",
+      "Ga",
+      "I",
+      "In",
+      "Li",
+      "Mn",
+      "N",
+      "Na",
+      "Nb",
+      "Ni",
+      "O",
+      "P",
+      "S",
+      "Si",
+      "Sn",
+      "Ti",
+      "V",
+      "Zn",
+      "Zr"
+    ],
+    "rdf_grid_A": [
+      1.0,
+      1.15,
+      1.2999999999999998,
+      1.4499999999999997,
+      1.5999999999999996,
+      1.7499999999999996,
+      1.8999999999999995,
+      2.0499999999999994,
+      2.1999999999999993,
+      2.349999999999999,
+      2.499999999999999,
+      2.649999999999999,
+      2.799999999999999,
+      2.949999999999999,
+      3.0999999999999988,
+      3.2499999999999987,
+      3.3999999999999986,
+      3.5499999999999985,
+      3.6999999999999984,
+      3.8499999999999983,
+      3.9999999999999982,
+      4.149999999999999,
+      4.299999999999998,
+      4.4499999999999975,
+      4.599999999999998,
+      4.749999999999998,
+      4.899999999999998
+    ],
+    "soap_settings": {
+      "r_cut": 4.0,
+      "n_max": 5,
+      "l_max": 3,
+      "sigma": 0.4,
+      "periodic": true,
+      "dtype": "float64"
+    },
+    "coordination_A": {
+      "hard": 3.0,
+      "smooth": [
+        2.6,
+        3.4
+      ]
+    },
+    "rdf_sigma_A": 0.12,
+    "rdf_upper_taper_A": [
+      4.6,
+      5.0
+    ],
+    "chemical_soap_compression": "mu1nu1",
+    "reference_dedup_radius_A": 3.0,
+    "methods": {
+      "rdf_geometry": [
+        "geometry",
+        "cosine"
+      ],
+      "soap_geometry": [
+        "geometry",
+        "cosine"
+      ],
+      "coordination_hard": [
+        "chemistry",
+        "euclidean"
+      ],
+      "coordination_smooth": [
+        "chemistry",
+        "euclidean"
+      ],
+      "rdf_elements": [
+        "chemistry",
+        "cosine"
+      ],
+      "soap_elements": [
+        "chemistry",
+        "cosine"
+      ],
+      "mace_invariants": [
+        "model",
+        "cosine"
+      ]
+    }
+  },
+  "input_sha256": {
+    "neb": "b7a99d89337902e9e1da319f57547170fdb132bf15bf6ffef03a0140e2207d7f",
+    "index": "28342dda89b697f6b11ecc6c4d5b0233b77be49b68658ca7e9ea79858384e1c7",
+    "bundle": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "results/phase_a0/geometry_manifest.csv": "75f4303c22cf3218dc4488e34fdb6a3a1f2ce7c88b5c8122d9f0f553ea1ad63e",
+    "results/phase_a1/manifest.json": "f779833458644e6cba6e67605009585862d99ed74e220832877f3e7451acfcf9",
+    "results/phase_a1/feature_index.csv": "34eb2970a474c8211470754526cee2703e826c1f96e1f7a2e5d3f4caa5fd69c9",
+    "results/phase_a1/novelty_profiles.csv": "83ab150a5c943c3ee83575cb3ae45ee6c1466e4fcfbc58b3fc124427b2e07d2a",
+    "results/phase_a1/path_features.npz": "9c82a274fe56c010f7bbf174b52b8769fe41e48c25fb7c5f2e064c3766bf6376",
+    "results/phase_a2/manifest.json": "b317424eedb24e1ac4741c88f46d1b310792b22e93a8f1fbf0749b10c0916518",
+    "results/phase_a2/reference_sensitivity.csv": "fa6277361933436a3a251afe52b6a3141d9bad0a4af52bfcd6e7fdd99ca82700",
+    "results/phase_b0/checkpoint_inventory.csv": "c6aa39fb74a89c7f71212f644f4af3c3a04fbfc1db069d5a5c736cfe0ca7238b",
+    "results/phase_b0/checkpoint_provenance.csv": "7bb01e2d6273d3a139dbc684cb249da11adec36a6bdb73e7053a51cea3a961a8",
+    "weights_archive": "80085675d14efde2160f4b2f8c384406da096077114d797d2f84d613c626de45",
+    "training_archive": "d93a0d05b766da721037a405cdbf5c4f325f03514f2e9af9c78984f36fc48a01",
+    "training_protocol_archive": "e42b6a4dc09db0dc25ea297b0b1190a6298adc625cb0551a2eb5916aa1733483",
+    "B2_candidates": "b3bda033c0bb4f9a57e6be4fa2eb468cfe60a6fe32d2b9712823f05f83dfad19",
+    "A2_parameter_sensitivity": "5db08ad9ab18aec244b3a04b78131246f859c1b35a1503ae1e354a3ba6cfc9c3",
+    "D0_XYZ": "dda468e74c0dbd46c3d5b07121b900184a917dd319415e826af6e25b56ee7081",
+    "reference_representatives": "fd42a5cd62a40056774f64ca3c7961aa244dae2fe82527a6b767cc62bd9965e2",
+    "aggregation": "de981b072517be05a7a3999db1722a4c4f6ab2a1bcf578d9f523e702c3884df9"
+  },
+  "reference_counts": {
+    "raw": 9517,
+    "deduplicated": 2469,
+    "materials": 50
+  },
+  "path_count": 14,
+  "image_count": 78,
+  "cached_initial_images": 17,
+  "smoke_cached_vector_abs_error": {
+    "rdf_geometry": 0.0,
+    "soap_geometry": 0.0,
+    "coordination_hard": 0.0,
+    "coordination_smooth": 0.0,
+    "rdf_elements": 0.0,
+    "soap_elements": 0.0,
+    "mace_invariants": 1.6653345369377348e-16
+  },
+  "anchor_reference_profile_abs_error": {
+    "raw_nearest": 1.3322676295501878e-15,
+    "dedup_nearest": 8.881784197001252e-16
+  },
+  "output_sha256": {
+    "path_id_manifest.csv": "51f7493565c0ccc893376523888129682c20370af50c2eb08a2b460b39f8f17b",
+    "image_static_profiles.csv": "071ff0b5b0236e82c63c5f06f13d49fb0219d0e59ed6cf39540b6559cad65d85",
+    "image_feature_index.csv": "bf923351916432dc8f13d0e45bd57878d956b83e5a9da70bfd18a23bd2a51ccb",
+    "image_coordination_counts.csv": "1519331639b238eaeeb8e83ce0202b5fade9407d61482d625a581af42e020210",
+    "initial_image_features.npz": "d74bbd6e784c08907f60de523b0a84aa811e076275a234436cc9ff24e955f962"
+  },
+  "elapsed_seconds": 162.69245409965515
+}
