@@ -8,9 +8,13 @@
 
 ## 路径驱动及自动队列
 
-在 NVIDIA 发布的同版 amd64 镜像清单中复核了 QE 二进制层（镜像 SHA256 `e77e134422f3b242f87056dd2dc0789c931021afe862178c660dc3867f437f03`，QE 层 SHA256 `3a30ac5f828acc4d2828622255d95944e25d6e5deac9962b237aaf56c0e6caca`）。该层包含现有 GPU `pw.x`，未包含 `neb.x)。路径试点保留同一 GPU 力和能量求解器，采用 ASE 3.29.0 的 improved-tangent/FIRE 驱动，作为项目单独记录的实现变更。端点与内部图像共用 XML 能量和力单位转换。核验了历史端点 XML 的几何解析，模拟测试验证了五图像检查点续跑和七图像补点。正式 ASE 路径进程仍在等待端点放行。[NVIDIA 镜像](https://catalog.ngc.nvidia.com/orgs/hpc/-/containers/quantum_espresso/-/tags) · [ASE NEB 方法](https://docs.ase-lib.org/ase/neb.html)
+在 NVIDIA 发布的同版 amd64 镜像清单中复核了 QE 二进制层（镜像 SHA256 `e77e134422f3b242f87056dd2dc0789c931021afe862178c660dc3867f437f03`，QE 层 SHA256 `3a30ac5f828acc4d2828622255d95944e25d6e5deac9962b237aaf56c0e6caca`）。该层包含现有 GPU `pw.x`，未包含 `neb.x`。路径试点保留同一 GPU 力和能量求解器，采用 ASE 3.29.0 的 improved-tangent/FIRE 驱动，作为项目单独记录的实现变更。端点与内部图像共用 XML 能量和力单位转换。核验了历史端点 XML 的几何解析，模拟测试验证了五图像检查点续跑和七图像补点。正式 ASE 路径进程仍在等待端点放行。[NVIDIA 镜像](https://catalog.ngc.nvidia.com/orgs/hpc/-/containers/quantum_espresso/-/tags) · [ASE NEB 方法](https://docs.ase-lib.org/ase/neb.html)
 
 两个端点通过后自动验收原子映射与 Li 所在端点，再启动实际固定几何路径短测。已排队的任务从首个完整带的采样开始，然后重开驱动并做一次路径更新。该短测用于记录冷启和续算计时、能量与有效力，完整五图像 CI、七图像和最终数值验收单列。云端端点和路径队列共用单 GPU 锁。保留旧实验的原始数据。
+
+## 运行资源复核
+
+12:31（北京时间）查询到容器主机内存配额 90 GiB、已用约 10.7 GiB，内存不足事件为 0。RTX 3090 的显存总量为 24 GiB，当前端点采样峰值约 15.3 GiB，尚处于第一次电子迭代。历史同协议固定图像峰值约 21.3 GiB，加大截断能的峰值约 22.3 GiB。路径驱动逐图串行调用单个 `pw.x`，保持相同精度。当前系统盘和数据盘分别有约 23 GiB、20 GiB 可用。修正了等待队列的端点 XML 参数并重新排队，端点 A 保持原进程运行。
 
 ## 公开评估面板
 

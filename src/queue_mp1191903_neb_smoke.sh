@@ -18,8 +18,9 @@ sha256sum -c --strict path_seed.sha256
 gpu_free=$(nvidia-smi -i 0 --query-gpu=memory.free --format=csv,noheader,nounits)
 (( gpu_free >= 22000 ))
 (( $(df -Pm -- "$run" | awk 'END {print $4}') >= 4096 ))
-export OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1
-"$python" prepare_mp1191903_neb.py path5_seed.traj five seed.extxyz +    endpoint_a_receipt/data-file-schema.xml endpoint_b_receipt/data-file-schema.xml
+export OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES=0
+endpoint_xml=(endpoint_a_receipt/data-file-schema.xml endpoint_b_receipt/data-file-schema.xml)
+"$python" prepare_mp1191903_neb.py path5_seed.traj five seed.extxyz "${endpoint_xml[@]}"
 args=(path5_seed.traj "$baseline/io_k222.in" "$runtime" "$baseline/pseudo" path5_probe --fmax 0.10)
 "$python" run_mp1191903_ase_neb.py "${args[@]}" --steps 0
 if [[ ! -f path5_probe/passed ]]; then
