@@ -1,7 +1,7 @@
 {
   "phase": "H3",
   "pilot": "mp-1191903",
-  "status": "live_remote_evidence_A_resume_in_progress",
+  "status": "endpoint_A_resumed_from_window02_without_explicit_8h_limit",
   "source_sha256": {
     "results/mp1191903_ci_pilot/first_acceptance_20261127_2000.json": "efe4de066dfd797f703dd56344289c0d4e5073b1ef6e33f82423515bef99e52e",
     "results/mp1191903_ci_pilot/launch_report.md": "e57c0e09c9d3527f8bf08b2d625f218b39877b5a9272451d1a36b17a732ea28c",
@@ -107,6 +107,27 @@
     "approximate_window_boundary_local": "2026-11-28T05:07+08:00",
     "endpoint_A_validation_required_before_B": true,
     "gpu_utilization_percent_at_process_check": 98
+  },
+  "continuation_without_8h": {
+    "input_change_verified_at": "2026-11-28T02:22:29+08:00",
+    "removed_only": "max_seconds = 28800",
+    "continuation_script_sha256": "b0a717dd4ad275f149a8c938e304267c40b8ec366d586662351f46260e02108d",
+    "endpoint_a_previous_input_sha256": "de4a78f52411bec9bd2c39cd762b8d927e456c60dfbc31cc5841b7ecefd233dd",
+    "endpoint_a_new_restart_input_sha256": "25c9fcf2e77f1bb2aa8c111babc734e26d4f430688ecdbfa0e1023d26b639256",
+    "endpoint_b_queued_input_sha256": "677083c80639657ef4b75cc6c662b5486b66931b67fe6472f77d90e94d2acac3",
+    "window02_start_utc": "2026-11-27T13:07:03Z",
+    "window02_end_utc_from_queue_receipt": "2026-11-27T21:07:08Z",
+    "window02_solver_elapsed_seconds": 28805,
+    "window02_solver_process_exit_status": 0,
+    "window02_endpoint_queue_exit_status": 1,
+    "continuation_start_utc": "2026-11-27T21:15:32Z",
+    "seconds_between_queue_exit_and_continuation": 504,
+    "continued_from_scf_iteration": 11,
+    "existing_wavefunctions_read": true,
+    "active_processes_last_verified_at": "2026-11-28T05:16:28+08:00",
+    "endpoint_a_ionically_converged": false,
+    "endpoint_b_queued_after_A_validation": true,
+    "five_image_probe_queued_after_both_endpoints": true
   },
   "calibration_complete": false,
   "end_to_end_solver_wall_seconds": null,
