@@ -1,0 +1,60 @@
+{
+  "phase": "H3",
+  "pilot": "mp-1191903",
+  "status": "partial_local_evidence_remote_authentication_unavailable",
+  "source_sha256": {
+    "results/mp1191903_ci_pilot/first_acceptance_20261127_2000.json": "efe4de066dfd797f703dd56344289c0d4e5073b1ef6e33f82423515bef99e52e",
+    "results/mp1191903_ci_pilot/launch_report.md": "e57c0e09c9d3527f8bf08b2d625f218b39877b5a9272451d1a36b17a732ea28c",
+    "results/mp1191903_ci_pilot/geometry_receipt.json": "7f59c5fcf6b8b75c52813fa9a9970dc0fd83441a1cd1cd48ce33d4feeba6a2b4",
+    "results/phase_h2_cost_reuse/recorded_costs.json": "161f0402021c052b988367077736c8c4c3d9a2b0a26a3a1aa638162f7e04c071"
+  },
+  "latest_local_observations": {
+    "first_A_window": {
+      "observed_at": "2026-11-27T20:00:00.132344+08:00",
+      "observed_process_elapsed_seconds": 27689,
+      "elapsed_scope": "Point observation before the first time-limit exit; not final solver wall time",
+      "completed_scf_cycles_at_snapshot": 9,
+      "latest_full_force_max_eV_per_A_at_snapshot": 0.08664874383911074,
+      "required_endpoint_max_force_eV_per_A": 0.05,
+      "time_limit_exit_local_minute": "2026-11-27T20:18+08:00",
+      "solver_wall_seconds": null,
+      "validated_endpoint_at_snapshot": false
+    },
+    "A_resumption": {
+      "restart_local_minute": "2026-11-27T21:06+08:00",
+      "interval_since_time_limit_minutes_approx": 48,
+      "confirmed_restart_from_electronic_iteration": 11,
+      "solver_wall_seconds": null,
+      "gpu_allocation_seconds_in_interval": null,
+      "endpoint_final_validation": null
+    },
+    "B_endpoint": {
+      "started_at_first_acceptance_snapshot": false,
+      "current_status": null,
+      "solver_wall_seconds": null
+    },
+    "ordinary_neb": {
+      "progress": null,
+      "per_band_update_seconds": null,
+      "solver_wall_seconds": null
+    },
+    "ci_neb": {
+      "progress": null,
+      "per_band_update_seconds": null,
+      "solver_wall_seconds": null
+    },
+    "quality_checks": {
+      "production_geometry_solver_wall_seconds": null
+    }
+  },
+  "historical_single_image_anchor": {
+    "sample_count_same_material": 4,
+    "solver_wall_seconds_min": 2655,
+    "solver_wall_seconds_max": 5233,
+    "hardware": "RTX 3090",
+    "scope": "Fixed geometries only; excluded from the pilot end-to-end sum"
+  },
+  "calibration_complete": false,
+  "end_to_end_solver_wall_seconds": null,
+  "instance_billed_seconds": null
+}
