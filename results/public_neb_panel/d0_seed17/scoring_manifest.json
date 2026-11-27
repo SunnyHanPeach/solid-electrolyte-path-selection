@@ -1,0 +1,28 @@
+{
+  "assignment": "D0-only baseline",
+  "metrics": "fixed DFT geometries, listed forward endpoint, family macro average",
+  "smoke_only": false,
+  "checkpoint_sha256": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a",
+  "reference_sha256": "e211dc4a88fe5739218d6b1e47404624225c5a0d787f4dcce3ef61a5574087c4",
+  "panel_sha256": "533d2ce16c7c51ccb19b5c9fa45661b4deeb421a33306899dfc496d16d551936",
+  "script_sha256": "00233413ea11ec174cc77319a2d11b20add278bfefe74f61d12f75d0b64d018a",
+  "dtype": "float64",
+  "device": "cpu",
+  "seeds": [
+    17
+  ],
+  "n_paths": 62,
+  "n_images": 434,
+  "first_path_repeated": true,
+  "software": {
+    "mace-torch": "0.3.14",
+    "torch": "2.10.0",
+    "ase": "3.29.0",
+    "pymatgen": "2025.6.14"
+  },
+  "cpu_threads": 4,
+  "elapsed_seconds": 190.909,
+  "n_families": 42,
+  "path_mean_barrier_MAE_meV": 123.7109403411939,
+  "family_macro_barrier_MAE_meV": 121.30011567877608
+}
