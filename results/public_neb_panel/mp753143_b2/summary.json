@@ -1,0 +1,124 @@
+{
+  "candidate": "mp-753143_5_13_0_0_0",
+  "seeds": [
+    17,
+    29,
+    43,
+    53,
+    67
+  ],
+  "n_paths": 62,
+  "n_families": 42,
+  "images_per_model": 434,
+  "excluded_for_training_framework_overlap": [],
+  "reference_sha256": "e211dc4a88fe5739218d6b1e47404624225c5a0d787f4dcce3ef61a5574087c4",
+  "panel_sha256": "533d2ce16c7c51ccb19b5c9fa45661b4deeb421a33306899dfc496d16d551936",
+  "base_sha256": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+  "matrix_sha256": "6d05623a2aed03a2199bbcb409c9e6c12eb32b8d7cc07c76bf99461373b5964b",
+  "script_sha256": "444b80219072d486be444ce941288e0ec04311df91872749b94ec02a674e441c",
+  "source_checkpoint_ledger_sha256": "80bc8d831a3d2ee967e63001a065e97ecb0abfb2f9eceea22f477769aa1aa3dd",
+  "cpu_workers": 2,
+  "cpu_threads_per_worker": 3,
+  "inference_dtype": "float64",
+  "practical_margin_meV": 0.25,
+  "family_macro_MAE_meV": {
+    "pure": 121.87890048571495,
+    "replay1": 122.14406150820851,
+    "path1": 121.79135473834454
+  },
+  "gains": {
+    "net": {
+      "mean_meV": 0.35270676986396127,
+      "interval95_meV": [
+        0.06152375770567525,
+        0.6660682579303228
+      ],
+      "seed_means_meV": {
+        "17": 0.4503096974258505,
+        "29": 0.3355458297457674,
+        "43": 0.4317168915507961,
+        "53": 0.4129376884292927,
+        "67": 0.13302374216809965
+      },
+      "favorable_families": 26,
+      "favorable_paths": 39,
+      "leave_one_family_out_meV": [
+        0.260075718006215,
+        0.40006026168037706
+      ],
+      "practical_positive": false
+    },
+    "absolute": {
+      "mean_meV": 0.08754574737039889,
+      "interval95_meV": [
+        -0.07824149798295144,
+        0.26897233318676855
+      ],
+      "seed_means_meV": {
+        "17": 0.0907827908302276,
+        "29": 0.027565242654920958,
+        "43": 0.25000790895939456,
+        "53": 0.06713143642124286,
+        "67": 0.0022413579862084025
+      },
+      "favorable_families": 21,
+      "favorable_paths": 28,
+      "leave_one_family_out_meV": [
+        0.033483676249160196,
+        0.1080553456628486
+      ],
+      "practical_positive": false
+    }
+  },
+  "near_duplicate_sensitivity": {
+    "net": {
+      "mean_meV": 0.35254212010453473,
+      "interval95_meV": [
+        0.061194963898633506,
+        0.6659324282572716
+      ],
+      "seed_means_meV": {
+        "17": 0.4502889413523627,
+        "29": 0.3354001365272056,
+        "43": 0.43163092158260774,
+        "53": 0.41259341094268887,
+        "67": 0.1327971901178088
+      },
+      "favorable_families": 26,
+      "favorable_paths": 39,
+      "leave_one_family_out_meV": [
+        0.25990705239899753,
+        0.3998915960731596
+      ],
+      "practical_positive": false
+    },
+    "absolute": {
+      "mean_meV": 0.0873019220181489,
+      "interval95_meV": [
+        -0.07856493775425624,
+        0.2686864457324496
+      ],
+      "seed_means_meV": {
+        "17": 0.09066170852002467,
+        "29": 0.026987052654436714,
+        "43": 0.2500914364014017,
+        "53": 0.06701609196694464,
+        "67": 0.0017533205479367965
+      },
+      "favorable_families": 21,
+      "favorable_paths": 28,
+      "leave_one_family_out_meV": [
+        0.03323390393709925,
+        0.10780557335078765
+      ],
+      "practical_positive": false
+    }
+  },
+  "elapsed_seconds": 868.82,
+  "software": {
+    "mace-torch": "0.3.14",
+    "torch": "2.10.0",
+    "ase": "3.29.0",
+    "pymatgen": "2025.6.14"
+  }
+}
