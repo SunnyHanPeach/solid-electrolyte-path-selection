@@ -1,0 +1,141 @@
+{
+  "seed": 17,
+  "device": "cpu",
+  "four_arms_passed": true,
+  "same_parameter_starting_predictions_loss_and_gradients_agree": true,
+  "adam_exchange_changes_postupdate_prediction_bytes": true,
+  "optimizer_step": 201,
+  "scored_images": 5,
+  "cloud_package_sha256": "a0c5fbdb9677b53c31619ae8d599a8b17fd09a6e3fb492edcb07289ef28e8f5a",
+  "cloud_package_size_bytes": 123875443,
+  "arms": {
+    "replay-replay": {
+      "identity": {
+        "seed": 17,
+        "weights": "replay",
+        "adam": "replay",
+        "bundle": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+        "states": "6185d79bc1a4c1dd5581ea2715d3032189815d9ac802b8368d02ceed35897b27",
+        "schedule": "591e2ac4a23418344d65d6c6cc0288983abd542277d83bae262d39d3ada0b42c",
+        "runtime": {
+          "torch": "2.10.0+cpu",
+          "device": "cpu",
+          "threads": 6,
+          "hardware": "cpu"
+        },
+        "smoke": true,
+        "source_script_sha256": "14feb39549bdc98ba666174400ce6bcf8003c8dcc1af32e32475865084c87aaa"
+      },
+      "predictions": {
+        "200": "b3a8e81c5029d9a24a48e52b0f16a17a69e5bf46d219d6b229def4b8fb05c2ff",
+        "201": "f509f2c7c61801814f2e2a61f8a0952b0a2c175491f3b01c086c100d1d88a1dc"
+      },
+      "training": [
+        {
+          "step": 201,
+          "loss": 0.5424807667732239,
+          "preclip_grad_norm": 3.1795313358306885,
+          "clipped": false
+        }
+      ],
+      "seconds": 5.0,
+      "peak_memory_bytes": null
+    },
+    "replay-added": {
+      "identity": {
+        "seed": 17,
+        "weights": "replay",
+        "adam": "added",
+        "bundle": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+        "states": "6185d79bc1a4c1dd5581ea2715d3032189815d9ac802b8368d02ceed35897b27",
+        "schedule": "591e2ac4a23418344d65d6c6cc0288983abd542277d83bae262d39d3ada0b42c",
+        "runtime": {
+          "torch": "2.10.0+cpu",
+          "device": "cpu",
+          "threads": 6,
+          "hardware": "cpu"
+        },
+        "smoke": true,
+        "source_script_sha256": "14feb39549bdc98ba666174400ce6bcf8003c8dcc1af32e32475865084c87aaa"
+      },
+      "predictions": {
+        "200": "b3a8e81c5029d9a24a48e52b0f16a17a69e5bf46d219d6b229def4b8fb05c2ff",
+        "201": "b60f370b5fe1b2b9b03a9a7c67856a0af46e258fdc2aafbb76a49ca297c6b29c"
+      },
+      "training": [
+        {
+          "step": 201,
+          "loss": 0.5424807667732239,
+          "preclip_grad_norm": 3.1795313358306885,
+          "clipped": false
+        }
+      ],
+      "seconds": 3.8119999999180436,
+      "peak_memory_bytes": null
+    },
+    "added-replay": {
+      "identity": {
+        "seed": 17,
+        "weights": "added",
+        "adam": "replay",
+        "bundle": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+        "states": "6185d79bc1a4c1dd5581ea2715d3032189815d9ac802b8368d02ceed35897b27",
+        "schedule": "591e2ac4a23418344d65d6c6cc0288983abd542277d83bae262d39d3ada0b42c",
+        "runtime": {
+          "torch": "2.10.0+cpu",
+          "device": "cpu",
+          "threads": 6,
+          "hardware": "cpu"
+        },
+        "smoke": true,
+        "source_script_sha256": "14feb39549bdc98ba666174400ce6bcf8003c8dcc1af32e32475865084c87aaa"
+      },
+      "predictions": {
+        "200": "8703387a50d7a1b62fc56b9df614bda6839a54c48d053940e5d5db13eeef6d23",
+        "201": "370ed842313ec2e682ee46e661056eb30586a4a8c17cdf3f9b157df8b054190f"
+      },
+      "training": [
+        {
+          "step": 201,
+          "loss": 0.6630527377128601,
+          "preclip_grad_norm": 4.359662055969238,
+          "clipped": false
+        }
+      ],
+      "seconds": 3.875,
+      "peak_memory_bytes": null
+    },
+    "added-added": {
+      "identity": {
+        "seed": 17,
+        "weights": "added",
+        "adam": "added",
+        "bundle": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+        "states": "6185d79bc1a4c1dd5581ea2715d3032189815d9ac802b8368d02ceed35897b27",
+        "schedule": "591e2ac4a23418344d65d6c6cc0288983abd542277d83bae262d39d3ada0b42c",
+        "runtime": {
+          "torch": "2.10.0+cpu",
+          "device": "cpu",
+          "threads": 6,
+          "hardware": "cpu"
+        },
+        "smoke": true,
+        "source_script_sha256": "14feb39549bdc98ba666174400ce6bcf8003c8dcc1af32e32475865084c87aaa"
+      },
+      "predictions": {
+        "200": "8703387a50d7a1b62fc56b9df614bda6839a54c48d053940e5d5db13eeef6d23",
+        "201": "f065f0056a848eb552fbb18ebf91d870d2ab6e49c4b9615106e080002cac7b68"
+      },
+      "training": [
+        {
+          "step": 201,
+          "loss": 0.6630527377128601,
+          "preclip_grad_norm": 4.359662055969238,
+          "clipped": false
+        }
+      ],
+      "seconds": 3.9219999997876585,
+      "peak_memory_bytes": null
+    }
+  }
+}
