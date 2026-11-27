@@ -1,0 +1,27 @@
+{
+  "gap_meV": 13.438880540660605,
+  "composition_meV": 4.6481813142114845,
+  "within_bins_meV": 8.79069922644912,
+  "by_bias": [
+    {
+      "group": "under",
+      "composition_meV": 1.4471006090255687,
+      "within_bin_meV": 0.6269057069241057
+    },
+    {
+      "group": "within_25_meV",
+      "composition_meV": 0.20664156615141205,
+      "within_bin_meV": 0.3664901551730746
+    },
+    {
+      "group": "over",
+      "composition_meV": 2.9944391390345038,
+      "within_bin_meV": 7.797303364351941
+    }
+  ],
+  "rule": "Symmetric standardization on step-200 mean signed-error bins, <−25, [−25,+25), ≥+25 meV",
+  "bootstrap": "10,000 resamples of materials with seeds held fixed; group intervals for n>=5",
+  "bundle_sha256": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+  "metrics_sha256": "d45166fd7ca5c347acc4b962f9d27e74fec0e7f96d2e3de6da7121109ea47f3d",
+  "script_sha256": "e46c2d27b3d9246cf6b6f7137028ae1e1d7fea909f7dd6fce1c190014f8f1883"
+}
