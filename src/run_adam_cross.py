@@ -5,7 +5,10 @@ import io
 import json
 import os
 from pathlib import Path
+from importlib.metadata import version
+import random
 from shutil import copyfile
+import subprocess
 from time import monotonic
 from zipfile import ZipFile
 
@@ -14,6 +17,7 @@ import numpy as np
 from audit_signed_barriers import ARMS, SEEDS, file_sha, rows, sha
 from run_ef import build_batch, make_graphs, write_csv
 from run_force_weighting import atomic_json, frozen_schedules, load_bundle, score_profiles
+from step200_protocol import BRANCHES, branch_design
 
 
 FACTORS = ("replay", "added")
@@ -64,6 +68,20 @@ def main(args):
     index = rows(files["training_frames.csv"])
     replay, _augmented, _added = frozen_schedules(index, files, args.seed)
     order = replay[200:201 if args.smoke else 400]
+    if args.branch_protocol:
+        replay_branch, augmented_branch, weights, smoke_slot = branch_design(
+            args.branch_protocol, args.bundle, args.states, index, files, args.seed)
+        orders = {name: replay_branch if name == "replay" else augmented_branch for name in BRANCHES}
+        if args.smoke:
+            orders = {name: [batch[smoke_slot]] for name, batch in orders.items()}
+        names = BRANCHES
+    else:
+        names = tuple(f"{model_name}-{adam_name}" for model_name in FACTORS for adam_name in FACTORS)
+        orders = dict.fromkeys(names, order)
+        weights = dict.fromkeys(names, {})
+    selected = args.arm or names
+    if not set(selected).issubset(names) or len(set(selected)) != len(selected):
+        raise ValueError(f"Expected distinct arms from {names}")
     with ZipFile(args.states) as archive:
         manifest = json.loads(archive.read("manifest.json"))
         provenance = next(r for r in manifest["start_states"] if r["seed"] == args.seed)
@@ -88,7 +106,7 @@ def main(args):
     calc = MACECalculator(model_paths=str(foundation), device=args.device, default_dtype="float32")
     model = calc.models[0].train().requires_grad_(True)
     train_atoms = read(io.StringIO(files["training.xyz"].decode()), index=":", format="extxyz")
-    graphs = make_graphs(train_atoms, index, sorted({i for ids in order for i in ids}), calc)
+    graphs = make_graphs(train_atoms, index, sorted({i for name in selected for ids in orders[name] for i in ids}), calc)
     eval_graphs = {}
     eval_rows = rows(files["evaluation_frames.csv"])
     blind = read(io.StringIO(files["evaluation.xyz"].decode()), index=":", format="extxyz")
@@ -105,17 +123,32 @@ def main(args):
     recipe = plan["training"]
     loss = WeightedEnergyForcesLoss(recipe["energy_weight"], recipe["forces_weight"]).to(args.device)
 
-    names = [f"{model_name}-{adam_name}" for model_name in FACTORS for adam_name in FACTORS]
+    runtime = dict(torch=str(torch.__version__), device=args.device, threads=args.threads,
+                   hardware=torch.cuda.get_device_name() if args.device == "cuda" else "cpu")
+    if args.branch_protocol:
+        runtime.update(ase=ase.__version__, mace=mace.__version__, numpy=np.__version__,
+                       e3nn=version("e3nn"), cuda=torch.version.cuda, python=os.sys.version)
+        if args.device == "cuda":
+            runtime["gpu_driver"] = subprocess.check_output(
+                ["nvidia-smi", "--query-gpu=driver_version", "--format=csv,noheader"],
+                text=True).splitlines()[0].strip()
     initial_predictions = {}
-    for name in args.arm or names:
+    for name in selected:
         t0 = monotonic()
-        parameters, moments = name.split("-")
+        parameters, moments = ("added", "added") if args.branch_protocol else name.split("-")
         identity = dict(seed=args.seed, weights=parameters, adam=moments,
                         bundle=manifest["bundle_sha256"], states=file_sha(args.states),
                         schedule=provenance["replay_steps_201_400_sha256"],
-                        runtime=dict(torch=str(torch.__version__), device=args.device, threads=args.threads,
-                                     hardware=torch.cuda.get_device_name() if args.device == "cuda" else "cpu"),
+                        runtime=runtime,
                         smoke=args.smoke, source_script_sha256=file_sha(Path(__file__)))
+        if args.branch_protocol:
+            identity.update(arm=name, protocol_sha256=file_sha(args.branch_protocol),
+                            start_state_sha256=provenance["augmentation_hash"],
+                            rng_state_sha256=provenance["replay_hash"],
+                            schedule=sha(json.dumps(orders[name]).encode()),
+                            smoke_source_step=201 + smoke_slot if args.smoke else None)
+            random.seed(args.seed)
+            np.random.seed(args.seed)
         folder = output / name
         folder.mkdir(exist_ok=True)
         model.load_state_dict(origin[parameters]["model"], strict=True)
@@ -161,10 +194,16 @@ def main(args):
                 copyfile(initial_predictions[parameters], temporary)
                 temporary.replace(target)
                 predictions[200] = file_sha(target)
-        for step, ids in enumerate(order, 201):
+        for step, ids in enumerate(orders[name], 201):
             if step <= start:
                 continue
-            result = step_model(model, optimizer, loss, build_batch(graphs, ids, args.device), recipe["clip_norm"], torch)
+            batch = build_batch(graphs, ids, args.device)
+            multipliers = [weights[name].get(i, 1.) for i in ids]
+            if weights[name]:
+                batch.forces_weight.mul_(batch.forces_weight.new_tensor(multipliers).reshape_as(batch.forces_weight))
+            result = step_model(model, optimizer, loss, batch, recipe["clip_norm"], torch)
+            if args.branch_protocol:
+                result.update(frame_indices=ids, force_multipliers=multipliers)
             history.append(dict(step=step, **result))
             if step in STEPS:
                 if any(v["step"].item() != step for v in optimizer.state.values()):
@@ -189,6 +228,7 @@ if __name__ == "__main__":
     parser.add_argument("--seed", type=int, required=True, choices=SEEDS)
     parser.add_argument("--device", choices=("cpu", "cuda"), required=True)
     parser.add_argument("--threads", type=int, default=4)
-    parser.add_argument("--arm", action="append", choices=tuple(f"{x}-{y}" for x in FACTORS for y in FACTORS))
+    parser.add_argument("--arm", action="append")
+    parser.add_argument("--branch-protocol", type=Path)
     parser.add_argument("--smoke", action="store_true")
     main(parser.parse_args())

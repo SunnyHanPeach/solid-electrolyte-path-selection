@@ -1,0 +1,55 @@
+{
+  "reuse_approved": false,
+  "planned_continuations": 8,
+  "historical_runtime": {
+    "device": "cuda",
+    "hardware": "NVIDIA GeForce RTX 3090",
+    "threads": 4,
+    "torch": "2.8.0+cu128"
+  },
+  "historical_script_sha256": "29d98379eb3cc5d896369bb99607565f703fe12718098d0ad9f48d37e92b7474",
+  "verified": [
+    {
+      "seed": 17,
+      "added_state_sha256": "6cb47359c3fb8e10302ea22e962d914b3a45d14cd146113ac40f804504441231",
+      "replay_state_sha256": "3879afc8b864795982a59717ac443be2a91422de8495f9dab7d457fae7cf0aa3",
+      "adam_step": 200,
+      "adam_parameter_states": 26,
+      "model_tensors": 69,
+      "replay_order_sha256": "591e2ac4a23418344d65d6c6cc0288983abd542277d83bae262d39d3ada0b42c",
+      "prediction_hashes": {
+        "200": "5a29b47ea33344b187d9f512595b4d05d6d8c112841b734e0e170ec9cf43251c",
+        "201": "3e457d74e6d4266cbe0e6b329693e32e9df0c91b1b8d2b3ee4b7e36d815a2bdb",
+        "210": "826f1fe00ddaec61ff8b9b927725e33312683e2a05c63b344a2e407ad5ed03e0",
+        "250": "760ddde6dc44d474e85cf13a21d04555279845ea22ba5168bd0ab1b602eb1ca1",
+        "300": "a6245dbeb4e3e29ea708b49e454fe637b6753d581ac06cbd67fe7463eeb37dfe",
+        "400": "b2f7f553ff37a153c3388eb723c0b01f5930086b0ed3f571af3ec9e91b8fa57f"
+      },
+      "torch_cpu_rng_sha256": "2ec21778d7ec931a32a99bae8b2f255bd23a3f1f9a0fee4c3790af628910b976",
+      "torch_cuda_rng_sha256": "8b47fb8c37b46edd9f7329da45697f422f78543f594538e47b07768e1629457e"
+    },
+    {
+      "seed": 29,
+      "added_state_sha256": "a19fe7c8908f8faaa181b953ed99437f8bf2e419317ab2d48e05dc5a68c7be31",
+      "replay_state_sha256": "eb6648d6a08aeab4a17be39ded545aa89e64fc3b5b411ffec18296ac73f68d90",
+      "adam_step": 200,
+      "adam_parameter_states": 26,
+      "model_tensors": 69,
+      "replay_order_sha256": "3cd6e35d09d0e9a1a1693e0ac3eea5cc1e5ae6e74be767e0ab178dece9be10e1",
+      "prediction_hashes": {
+        "200": "c9a1420532f8146d03483fd73cea59fc17bed19078e3365131bc76f9095edf27",
+        "201": "6571f980662e68a4f09c446e6b5affa5416e126c0ed90690e562cccacea41cff",
+        "210": "48de4af1596a59f2dca086a6acdb992932a9a497239b6390998f4f36b3ba571a",
+        "250": "f4635db8cb39e5be3011363f94727162f97f05836d6254c27e0b6dc7aec26644",
+        "300": "d1f07f3ebb8dfa7dfbadaf1eb45e6b6e199209d91a3c1d12e1bf8c679e7cb150",
+        "400": "0522ef15f9586022937e771191582004de0016a58f24dc2473966c06f01eedee"
+      },
+      "torch_cpu_rng_sha256": "755b35514e7b75d8f2d87c63d226938600eb2d1db80cdcc18936b375e030028e",
+      "torch_cuda_rng_sha256": "107ab18e04495ed662be5db77760c470f1c2d6999810fe7531df7e5d3f8e0bd4"
+    }
+  ],
+  "reuse_blockers": [
+    "Historical Python and NumPy RNG states were not archived",
+    "Exact runtime parity with the new GPU execution is not verified"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "test": "one weighted insertion, five assessment images per arm",
+  "completed": {
+    "17": {
+      "source_step": 206,
+      "baseline_prediction_sha256": "8703387a50d7a1b62fc56b9df614bda6839a54c48d053940e5d5db13eeef6d23",
+      "runtime": {
+        "torch": "2.10.0+cpu",
+        "device": "cpu",
+        "threads": 4,
+        "hardware": "cpu",
+        "ase": "3.29.0",
+        "mace": "0.3.14",
+        "numpy": "2.2.6",
+        "e3nn": "0.4.4",
+        "cuda": null,
+        "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:42:35) [MSC v.1942 64 bit (AMD64)]"
+      },
+      "arms": {
+        "energy_weighted": {
+          "step": 201,
+          "loss": 0.7722200155258179,
+          "preclip_grad_norm": 8.019001007080078,
+          "clipped": false,
+          "frame_indices": [
+            348,
+            291
+          ],
+          "force_multipliers": [
+            1.0,
+            0.7008472516585076
+          ]
+        },
+        "full": {
+          "step": 201,
+          "loss": 0.8264538049697876,
+          "preclip_grad_norm": 8.513386726379395,
+          "clipped": false,
+          "frame_indices": [
+            348,
+            291
+          ],
+          "force_multipliers": [
+            1.0,
+            1.0
+          ]
+        },
+        "matched_uniform": {
+          "step": 201,
+          "loss": 0.6219607591629028,
+          "preclip_grad_norm": 6.236052513122559,
+          "clipped": false,
+          "frame_indices": [
+            348,
+            291
+          ],
+          "force_multipliers": [
+            0.7702839756592292,
+            0.5728368735164744
+          ]
+        },
+        "replay": {
+          "step": 201,
+          "loss": 0.9832366704940796,
+          "preclip_grad_norm": 10.555740356445312,
+          "clipped": true,
+          "frame_indices": [
+            259,
+            55
+          ],
+          "force_multipliers": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "29": {
+      "source_step": 206,
+      "baseline_prediction_sha256": "ef91dfb000e6a7f181a6b41df5fcb3689aa110b6ecbdd2348e466f35386869f3",
+      "runtime": {
+        "torch": "2.10.0+cpu",
+        "device": "cpu",
+        "threads": 4,
+        "hardware": "cpu",
+        "ase": "3.29.0",
+        "mace": "0.3.14",
+        "numpy": "2.2.6",
+        "e3nn": "0.4.4",
+        "cuda": null,
+        "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:42:35) [MSC v.1942 64 bit (AMD64)]"
+      },
+      "arms": {
+        "energy_weighted": {
+          "step": 201,
+          "loss": 2.4280736446380615,
+          "preclip_grad_norm": 14.123809814453125,
+          "clipped": true,
+          "frame_indices": [
+            355,
+            348
+          ],
+          "force_multipliers": [
+            0.25,
+            1.0
+          ]
+        },
+        "full": {
+          "step": 201,
+          "loss": 6.521274566650391,
+          "preclip_grad_norm": 28.004737854003906,
+          "clipped": true,
+          "frame_indices": [
+            355,
+            348
+          ],
+          "force_multipliers": [
+            1.0,
+            1.0
+          ]
+        },
+        "matched_uniform": {
+          "step": 201,
+          "loss": 4.631679534912109,
+          "preclip_grad_norm": 19.775331497192383,
+          "clipped": true,
+          "frame_indices": [
+            355,
+            348
+          ],
+          "force_multipliers": [
+            0.6988202854907766,
+            0.7408466819221969
+          ]
+        },
+        "replay": {
+          "step": 201,
+          "loss": 0.7916613221168518,
+          "preclip_grad_norm": 6.223018646240234,
+          "clipped": false,
+          "frame_indices": [
+            77,
+            48
+          ],
+          "force_multipliers": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    }
+  }
+}
