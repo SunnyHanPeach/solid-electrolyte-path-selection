@@ -1,0 +1,57 @@
+{
+  "scheduled_at": "2026-11-27T20:00:00+08:00",
+  "observed_at": "2026-11-27T20:00:00.132344+08:00",
+  "status": "in_progress",
+  "input_checks": {
+    "endpoint_a.in": true,
+    "endpoint_b.in": true,
+    "seed.extxyz": true
+  },
+  "endpoint_a": {
+    "started": true,
+    "live_process": [
+      "  2450   2429    07:41:29 Rl   /root/autodl-tmp/b4_bridge04/gpu_runtime/usr/local/qe/bin/pw.x -in /root/autodl-tmp/mp1191903-ci-pilot-20261127/endpoint_a.in"
+    ],
+    "completed_scf_cycles": 9,
+    "last_electronic_iteration": 5,
+    "latest_full_force_max_eV_A": 0.08664874383911074,
+    "validated": false,
+    "output_checks": {},
+    "persistent_files": {
+      "qe_xml": true,
+      "density": true,
+      "wavefunction_file_count": 0
+    },
+    "error_markers": []
+  },
+  "endpoint_b": {
+    "started": false,
+    "live_process": [],
+    "completed_scf_cycles": 0,
+    "last_electronic_iteration": null,
+    "latest_full_force_max_eV_A": null,
+    "validated": false,
+    "output_checks": {},
+    "persistent_files": {
+      "qe_xml": false,
+      "density": false,
+      "wavefunction_file_count": 0
+    },
+    "error_markers": []
+  },
+  "endpoint_queue_exit": "",
+  "path_probe_exit": "",
+  "path_probe": null,
+  "gpu": "NVIDIA GeForce RTX 3090, 23445, 24576, 100",
+  "gpu_query_exit": 0,
+  "free_disk_bytes": {
+    "system": 24076005376,
+    "data": 21028483072
+  },
+  "container_memory": {
+    "current_bytes": "11783622656",
+    "limit_bytes": "96636764160",
+    "events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0"
+  },
+  "scope": "endpoint and path timing acceptance; checkpoint presence alone does not certify restart"
+}
