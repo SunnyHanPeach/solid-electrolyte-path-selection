@@ -1,0 +1,50 @@
+{
+  "fp_sha256": "e211dc4a88fe5739218d6b1e47404624225c5a0d787f4dcce3ef61a5574087c4",
+  "literature_sha256": "1fae0e22f837e33cf1384ef5624a920d383565d9100714ca8b42e7bade974e2b",
+  "protected_D0_bundle_sha256": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+  "parent_archive_sha256": "3d89f921c47101bd3c9050e92829813e57f05b8178ef5bc3ce16dfb58b845c22",
+  "FP_total": 154,
+  "complete_DFT_paths": 154,
+  "mobile": {
+    "Li": 109,
+    "Na": 45
+  },
+  "eligible_direct_Li": 107,
+  "eligible_direct_Li_icsd": 77,
+  "no_exact_overlap_paths": 87,
+  "no_anonymous_overlap_paths": 62,
+  "no_anonymous_overlap_icsd": 45,
+  "overlap_screen": {
+    "candidate_parent": {
+      "pairs": 154,
+      "anonymous_hit_paths": 12,
+      "exact_hit_paths": 5
+    },
+    "historical_parent": {
+      "pairs": 3070,
+      "anonymous_hit_paths": 41,
+      "exact_hit_paths": 15
+    },
+    "literature_same_elements": {
+      "pairs": 50,
+      "anonymous_hit_paths": 4,
+      "exact_hit_paths": 4
+    },
+    "protected_D0": {
+      "pairs": 1379,
+      "anonymous_hit_paths": 7,
+      "exact_hit_paths": 2
+    }
+  },
+  "pilot_BVSE_edges": [
+    "mp-1191903_0_3_0_0_0",
+    "mp-1191903_0_2_0_0_0",
+    "mp-1191903_2_1_1_0_0"
+  ],
+  "pilot_dft2k_edges": [],
+  "pilot_fp_same_chemical_system": 0,
+  "pilot_literature_same_chemical_system": 0,
+  "FP_reference_method_metadata": {
+    "note": "Preserved as-is from the legacy DFT-NEB source; no additional DFT calculation metadata was present in the source to carry forward."
+  }
+}
