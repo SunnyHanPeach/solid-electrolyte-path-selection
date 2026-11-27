@@ -92,6 +92,22 @@
     "endpoint_queue_process_present": true,
     "path_probe_queue_process_present": true
   },
+  "remote_followup_read_only": {
+    "observed_at": "2026-11-28T02:13:25+08:00",
+    "live_process_snapshot_at": "2026-11-28T02:12:10+08:00",
+    "endpoint_A_process_elapsed_seconds": 18308,
+    "endpoint_A_next_scf_iteration": 1,
+    "last_complete_bfgs_step": 15,
+    "last_bfgs_energy_error_Ry": 0.000052,
+    "last_bfgs_gradient_error_Ry_per_bohr": 0.0012,
+    "input_etot_conv_thr_Ry": 0.0001,
+    "input_forc_conv_thr_Ry_per_bohr": 0.0009,
+    "ionally_converged_at_check": false,
+    "configured_segment_max_seconds": 28800,
+    "approximate_window_boundary_local": "2026-11-28T05:07+08:00",
+    "endpoint_A_validation_required_before_B": true,
+    "gpu_utilization_percent_at_process_check": 98
+  },
   "calibration_complete": false,
   "end_to_end_solver_wall_seconds": null,
   "instance_billed_seconds": null
