@@ -1,0 +1,13 @@
+{
+  "seed_sha256": "7d6c52b8d3224c8e8fce79852155536a7ec3a8d0feab166271aa644e15b5719b",
+  "warm_input_sha256": "c778cba2fc732d5857088ba8b4ba6e3a867151440b9f1457fbc62bdf8f078ebb",
+  "input_sha256": {
+    "endpoint_a.in": "dd2014d4d6e782e4475aef82f2f5ecdc97892083ca1e7e4596724f790c09c1b3",
+    "endpoint_b.in": "bca9c9965a9c3321aa5aa54e61c26ed3f2321882ee81d2dad1148538982521db"
+  },
+  "n_images": 5,
+  "atoms": 87,
+  "migrating_li_index_0": 0,
+  "unwrapped_endpoint_distance_A": 4.952626054110267,
+  "purpose": "fixed-cell ionic relax on seed endpoints, first branch 1 muB"
+}
