@@ -19,3 +19,7 @@
 ## 公开评估面板
 
 18 条接近本项目 PBE 口径的记录分布于 7 篇文献。本次核查了文献与附件入口，暂未取得能够同时核对完整有序坐标、A→B 方向和参考能垒的新增条目。Xiao 等既包含 BV 筛查也包含 DFT，逐条来源还需核对。RSC、APS 和 Wiley 已找到输入线索或文章入口，当前无法把图形和汇总表直接用于固定几何评分。四个封存材料仍保持封存。此面板和 mp-1191903 工程试点各自放行。[原 H2 审计](../phase_h2_evaluation/H2_evaluation_audit.md) · [Xiao 及附件入口](https://pmc.ncbi.nlm.nih.gov/articles/PMC4585693/#sec17) · [Kim 及附件入口](https://pubs.rsc.org/en/content/articlelanding/2019/ta/c8ta10989c) · [Zhang](https://doi.org/10.1103/PhysRevB.87.134303) · [Dillenz 存档](https://publikationen.bibliothek.kit.edu/en/1000148020)
+
+## 第一次定时验收
+
+2026-11-27 20:00（北京时间）已排定云端一次性验收。在当前算力实例上运行，检查输入哈希、端点电子与离子收敛、最近完整的原子力、求解进程状态、内存和暂存、续算文件及路径短测状态。12:43 预检成功，三份输入哈希通过，端点 A 仍在运行。定时结果写入 `first_acceptance_20261127_2000.json`。单次验收记录当时状态，端点和路径是否放行仍按原收敛条件判定。验收脚本为只读操作，和正在运行的队列共存。
