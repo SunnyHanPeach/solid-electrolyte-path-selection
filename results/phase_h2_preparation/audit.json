@@ -1,0 +1,33 @@
+{
+  "equal_prefix_k": {
+    "after_H1_structural_exclusions": [
+      5,
+      6,
+      11,
+      12,
+      15,
+      16,
+      20
+    ],
+    "all_H1_candidates": [
+      5,
+      6,
+      12,
+      13,
+      17,
+      18,
+      24
+    ]
+  },
+  "input_sha256": {
+    "candidates": "d2ac71e5f20706c1e7ccafe0519ce068ad4c4a7a0ab5aa2c7d7e12363c6f2268",
+    "rankings": "e3db1ffe38c4bb3e3c4b1fa1896c97d605cf2a1901898d4b9c13f05814b8c4f7",
+    "records": "43a4bd3bab6bf6df2ccffa092d5409ffab11d531f2977e2674acc566c87a08b7",
+    "sources": "4df372bcd1c496c583a752260e277d3b45494dad9bd8737ad0c7d40f67b0b4e3"
+  },
+  "newly_released": 0,
+  "pbe_rows": 18,
+  "sources": 7,
+  "top_k_replay": "fixed ordering, equal item count, no budget or utility estimate",
+  "without_prior_framework_hits": 8
+}
