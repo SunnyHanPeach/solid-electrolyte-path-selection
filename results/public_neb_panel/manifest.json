@@ -1,0 +1,31 @@
+{
+  "source_sha256": "e211dc4a88fe5739218d6b1e47404624225c5a0d787f4dcce3ef61a5574087c4",
+  "prior_path_audit_sha256": "f1aca94905311ce35ee41f8170b73e36d49ee663b97dc6778e4bda5fb53e45c8",
+  "prior_overlap_audit_sha256": "a33448c857c1ad5ef8f998363ce339e097dce68161fe487d1b827a2a3911a061",
+  "script_sha256": "b156f228d11457e366be7b2e533bdf874878556c13d00618ffd0c801cf98062b",
+  "matcher": {
+    "ltol": 0.15,
+    "stol": 0.2,
+    "angle_tol": 5.0,
+    "primitive_cell": true,
+    "scale": true
+  },
+  "n_paths": 62,
+  "n_icsd_ids": 45,
+  "n_screened_framework_families": 42,
+  "n_family_link_pairs": 25,
+  "n_anonymous_framework_matches": 25,
+  "n_source_hop_match_pairs": 1,
+  "n_identical_geometry_omissions": 0,
+  "n_literature_overlap_paths": 4,
+  "n_literature_overlap_paths_in_panel": 0,
+  "dft_barrier_values_used_for_panel_selection": 0,
+  "model_scores_used_for_panel_selection": 0,
+  "software": {
+    "ase": "3.29.0",
+    "numpy": "2.2.6",
+    "pymatgen": "2025.6.14"
+  },
+  "python": "3.10.20",
+  "elapsed_seconds": 5.814
+}
