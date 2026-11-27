@@ -1,0 +1,60 @@
+{
+  "reference_sha256": "e211dc4a88fe5739218d6b1e47404624225c5a0d787f4dcce3ef61a5574087c4",
+  "panel_sha256": "533d2ce16c7c51ccb19b5c9fa45661b4deeb421a33306899dfc496d16d551936",
+  "predictions_sha256": "c797a3dcddeaf554b8a47cc220adfa149d306ae33444306f9cb0584f8b11f6f9",
+  "script_sha256": "c0b5511948229187f970fd8c58b868312683777791b24e935f5d4ee54eef9439",
+  "trained_seeds": [
+    17,
+    29,
+    43,
+    53,
+    67
+  ],
+  "descriptive_only": true,
+  "results": {
+    "net": {
+      "family_macro": {
+        "barrier_gain_meV": 0.35270676986396127,
+        "fixed_DFT_peak_gain_meV": 0.3542422167994923,
+        "peak_selection_residual_meV": -0.00153544693553104,
+        "final_relative_energy_gain_meV": 0.03982291538876543,
+        "other_internal_relative_energy_gain_meV": 0.12931982558237887
+      },
+      "all_seed_positive_families": 19,
+      "all_seed_negative_families": 11,
+      "top_3_net_contribution_percent": 51.8639909848099,
+      "top_3_share_of_positive_contributions_percent": 33.550013224333995,
+      "gain_excluding_top_3_families_meV": 0.18283888273420232,
+      "top_3_families": [
+        "202778|1",
+        "243529|7",
+        "415135|3"
+      ],
+      "path_seed_cells": 310,
+      "peak_changes_between_arms": 0,
+      "dft_peaks_internal_path_count": 62
+    },
+    "absolute": {
+      "family_macro": {
+        "barrier_gain_meV": 0.08754574737039889,
+        "fixed_DFT_peak_gain_meV": 0.07613955646691904,
+        "peak_selection_residual_meV": 0.011406190903479845,
+        "final_relative_energy_gain_meV": 0.019674967433814573,
+        "other_internal_relative_energy_gain_meV": -0.005850299253945799
+      },
+      "all_seed_positive_families": 14,
+      "all_seed_negative_families": 9,
+      "top_3_net_contribution_percent": 107.84680599105904,
+      "top_3_share_of_positive_contributions_percent": 35.736911543119504,
+      "gain_excluding_top_3_families_meV": -0.007397971484160793,
+      "top_3_families": [
+        "415135|3",
+        "252226|94",
+        "35732|7"
+      ],
+      "path_seed_cells": 310,
+      "peak_changes_between_arms": 0,
+      "dft_peaks_internal_path_count": 62
+    }
+  }
+}
