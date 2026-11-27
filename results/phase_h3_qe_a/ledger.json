@@ -1,7 +1,7 @@
 {
   "phase": "H3",
   "pilot": "mp-1191903",
-  "status": "partial_local_evidence_remote_authentication_unavailable",
+  "status": "live_remote_evidence_A_resume_in_progress",
   "source_sha256": {
     "results/mp1191903_ci_pilot/first_acceptance_20261127_2000.json": "efe4de066dfd797f703dd56344289c0d4e5073b1ef6e33f82423515bef99e52e",
     "results/mp1191903_ci_pilot/launch_report.md": "e57c0e09c9d3527f8bf08b2d625f218b39877b5a9272451d1a36b17a732ea28c",
@@ -53,6 +53,44 @@
     "solver_wall_seconds_max": 5233,
     "hardware": "RTX 3090",
     "scope": "Fixed geometries only; excluded from the pilot end-to-end sum"
+  },
+  "remote_read_only_audit": {
+    "observed_at": "2026-11-28T02:08:00+08:00",
+    "first_A": {
+      "start_utc": "2026-11-27T04:18:34Z",
+      "end_utc_from_queue": "2026-11-27T12:18:45Z",
+      "elapsed_seconds_from_runtime_receipt": 28811,
+      "solver_process_exit_status": 0,
+      "endpoint_queue_exit_status": 1,
+      "QE_time_limit_marker": true,
+      "geometry_converged": false,
+      "completed_scf_cycles": 9,
+      "complete_force_blocks": 9,
+      "last_complete_max_atom_force_eV_A": 0.086648744,
+      "runtime_receipt_sha256": "ecaf47a609663a7cbe7ba4127e648e0f831a2354bcc06ebd3fe7f28fd2940d21",
+      "pw_output_sha256": "ca8426c202f60d50688e6a115acbad47bb98ae664b91b547750c04657ea91e5c"
+    },
+    "resumed_A": {
+      "start_from_queue_local": "2026-11-27T21:06:52+08:00",
+      "observed_solver_process_elapsed_seconds": 18057,
+      "completed_scf_cycles_in_resume_log": 7,
+      "complete_force_blocks_in_resume_log": 6,
+      "last_complete_max_atom_force_eV_A": 0.039844519,
+      "atom_index_one_based_for_max": 4,
+      "geometry_convergence_marker_present": false,
+      "normal_exit_marker_present": false,
+      "mpi_ranks": 1,
+      "threads_per_rank": 2,
+      "pw_output_snapshot_sha256": "b46b9b1eb66cbb1f00293c094b4ef3897d1bea1038cc46bc92889ddb7915dfa5"
+    },
+    "gpu_at_observation": {
+      "hardware": "NVIDIA GeForce RTX 3090",
+      "utilization_percent": 100,
+      "memory_MiB": 23561
+    },
+    "endpoint_B_output_seen_at_checked_paths": false,
+    "endpoint_queue_process_present": true,
+    "path_probe_queue_process_present": true
   },
   "calibration_complete": false,
   "end_to_end_solver_wall_seconds": null,
