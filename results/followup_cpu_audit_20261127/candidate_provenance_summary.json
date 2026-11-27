@@ -1,0 +1,12 @@
+{
+  "all_screened_paths": 15516,
+  "audited_candidates": 24,
+  "audited_images": 120,
+  "initial_short_contact": 6,
+  "geometry_pass": 24,
+  "geometry_matches": 24,
+  "input_matches": 24,
+  "byte_matches": 24,
+  "historical_family_flags": 6,
+  "maximum_periodic_residual_A": 0.0
+}

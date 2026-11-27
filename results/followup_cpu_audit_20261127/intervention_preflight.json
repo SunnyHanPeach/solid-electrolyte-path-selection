@@ -1,0 +1,30 @@
+{
+  "start_states": [
+    {
+      "seed": 17,
+      "start_step": 200,
+      "model_tensors": 69,
+      "adam_parameter_states": 26,
+      "replay_hash": "3879afc8b864795982a59717ac443be2a91422de8495f9dab7d457fae7cf0aa3",
+      "augmentation_hash": "6cb47359c3fb8e10302ea22e962d914b3a45d14cd146113ac40f804504441231",
+      "replay_steps_201_400_sha256": "591e2ac4a23418344d65d6c6cc0288983abd542277d83bae262d39d3ada0b42c"
+    },
+    {
+      "seed": 29,
+      "start_step": 200,
+      "model_tensors": 69,
+      "adam_parameter_states": 26,
+      "replay_hash": "eb6648d6a08aeab4a17be39ded545aa89e64fc3b5b411ffec18296ac73f68d90",
+      "augmentation_hash": "a19fe7c8908f8faaa181b953ed99437f8bf2e419317ab2d48e05dc5a68c7be31",
+      "replay_steps_201_400_sha256": "3cd6e35d09d0e9a1a1693e0ac3eea5cc1e5ae6e74be767e0ab178dece9be10e1"
+    }
+  ],
+  "optimizer_updates_executed": 0,
+  "bundle_sha256": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+  "matched_insertions": {
+    "17:high": 37,
+    "17:other": 37,
+    "29:high": 42,
+    "29:other": 42
+  }
+}
