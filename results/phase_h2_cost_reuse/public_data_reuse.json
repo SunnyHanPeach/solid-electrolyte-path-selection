@@ -1,0 +1,196 @@
+{
+  "nebDFT2k": {
+    "archive_sha256": "b7a99d89337902e9e1da319f57547170fdb132bf15bf6ffef03a0140e2207d7f",
+    "path_count": 1681,
+    "material_count": 867,
+    "per_split_paths": {
+      "train": 1220,
+      "val": 241,
+      "test": 220
+    },
+    "path_pairs_complete": 1681,
+    "training_frame_samples": [
+      {
+        "edge_id": "mp-1020015_0_14_1_0_0",
+        "images": 7,
+        "label_keys": [
+          "dipole",
+          "energy",
+          "forces",
+          "free_energy",
+          "magmom",
+          "magmoms",
+          "stress"
+        ]
+      },
+      {
+        "edge_id": "mp-1246806_9_15_0_0_0",
+        "images": 5,
+        "label_keys": [
+          "dipole",
+          "energy",
+          "forces",
+          "free_energy",
+          "magmom",
+          "magmoms",
+          "stress"
+        ]
+      },
+      {
+        "edge_id": "mp-559240_4_6_0_0_0",
+        "images": 5,
+        "label_keys": [
+          "dipole",
+          "energy",
+          "forces",
+          "free_energy",
+          "magmom",
+          "magmoms",
+          "stress"
+        ]
+      },
+      {
+        "edge_id": "mp-758412_7_3_1_0_0",
+        "images": 7,
+        "label_keys": [
+          "dipole",
+          "energy",
+          "forces",
+          "free_energy",
+          "magmom",
+          "magmoms",
+          "stress"
+        ]
+      },
+      {
+        "edge_id": "mp-770805_0_1_0_0_0",
+        "images": 5,
+        "label_keys": [
+          "dipole",
+          "energy",
+          "forces",
+          "free_energy",
+          "magmom",
+          "magmoms",
+          "stress"
+        ]
+      },
+      {
+        "edge_id": "mp-850949_0_2_0_0_0",
+        "images": 5,
+        "label_keys": [
+          "dipole",
+          "energy",
+          "forces",
+          "free_energy",
+          "magmom",
+          "magmoms",
+          "stress"
+        ]
+      }
+    ],
+    "qe_a_exact_material_present": false,
+    "h1_exact_candidate_edges_in_archive": 0,
+    "h1_exact_candidate_materials_in_archive": 0,
+    "matching_D0_exact_edges": 50,
+    "matching_D0_exact_materials": 50,
+    "training_barrier_definition_audit": {
+      "forward_first_image": {
+        "within_1_meV": 670,
+        "max_absolute_difference_meV": 1964.7035899999992
+      },
+      "lower_endpoint": {
+        "within_1_meV": 1033,
+        "max_absolute_difference_meV": 1427.9838899999504
+      },
+      "full_profile_range": {
+        "within_1_meV": 1220,
+        "max_absolute_difference_meV": 8.881784197001252e-13
+      }
+    },
+    "training_paths_with_reconstructed_barrier": 1220,
+    "scope": "Index and member names only for validation and test; label samples from official train."
+  },
+  "MPLiTrj_subsample_train_prefix": {
+    "prefix_sha256": "af53d637002060022b22fa720c46d01bc2240683aef26f1b03b2a80cd1a398c3",
+    "compressed_prefix_bytes": 4194304,
+    "member": "MPLiTrj_subsample/MPLiTrj_subsample_train.xyz",
+    "complete_train_frames": 1033,
+    "material_count": 13,
+    "material_id_histogram": {
+      "mp-1020015": 460,
+      "mp-1020023": 77,
+      "mp-1020030": 90,
+      "mp-1100483": 41,
+      "mp-1100511": 54,
+      "mp-1100557": 40,
+      "mp-1100702": 53,
+      "mp-1101478": 41,
+      "mp-1101531": 43,
+      "mp-1101555": 36,
+      "mp-1147685": 38,
+      "mp-1147693": 33,
+      "mp-1147695": 27
+    },
+    "metadata_fields_by_frame": {
+      "material_id": 1033
+    },
+    "labels_by_frame": {
+      "magmom": 1033,
+      "free_energy": 1033,
+      "magmoms": 1033,
+      "energy": 1033,
+      "stress": 1033,
+      "forces": 1033,
+      "dipole": 1033
+    },
+    "material_ids_linked_to_nebDFT2k": 9,
+    "linked_materials_with_multiple_nebDFT2k_paths": 3,
+    "count_of_nebDFT2k_paths_by_matching_material": {
+      "mp-1020015": 10,
+      "mp-1020023": 2,
+      "mp-1020030": 2,
+      "mp-1100483": 0,
+      "mp-1100511": 1,
+      "mp-1100557": 0,
+      "mp-1100702": 1,
+      "mp-1101478": 1,
+      "mp-1101531": 0,
+      "mp-1101555": 0,
+      "mp-1147685": 1,
+      "mp-1147693": 1,
+      "mp-1147695": 1
+    },
+    "has_path_id_in_sample": false,
+    "has_iteration_in_sample": false,
+    "has_job_timing_in_sample": false,
+    "scope": "Contiguous prefix of official subsample train member; no inference about unsampled fields."
+  },
+  "script_sha256": "3ed7b1c1856ca03f570788cc95e723c658097c8399341e46a2d27fdfcf335ae4",
+  "MPLiTrj_subsample_train_full": {
+    "member": "MPLiTrj_subsample/MPLiTrj_subsample_train.xyz",
+    "archive_crc32": "7514e464",
+    "decoded_sha256": "1040035d65620c40c011d53e7cb1eee1d925ee92fbc91d87b22c92017fb84f64",
+    "complete_train_frames": 94044,
+    "distinct_materials": 1009,
+    "same_material_in_nebDFT2k": 607,
+    "shared_materials_with_multiple_nebDFT2k_paths": 240,
+    "header_fields_by_frame": {
+      "free_energy": 94044,
+      "pbc": 94044,
+      "energy": 94044,
+      "dipole": 94044,
+      "magmom": 94044,
+      "Properties": 94044,
+      "stress": 94044,
+      "Lattice": 94044,
+      "material_id": 94044
+    },
+    "labels_present_by_frame": {
+      "energy": 94044,
+      "stress": 94044,
+      "forces": 94044
+    },
+    "scope": "All subsample train headers; finite atomic labels checked on bounded sample only."
+  }
+}
