@@ -1,0 +1,34 @@
+{
+  "bundle_sha256": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+  "start_step": 200,
+  "final_step": 400,
+  "peak_discount": 0.75,
+  "groups": [
+    "replay",
+    "full",
+    "energy_weighted",
+    "matched_uniform"
+  ],
+  "summaries": [
+    {
+      "seed": 17,
+      "distinct_insertion_batches": 24,
+      "represented_paths": 8,
+      "replay_order_sha256": "591e2ac4a23418344d65d6c6cc0288983abd542277d83bae262d39d3ada0b42c",
+      "augmented_order_sha256": "0a46c7b4affe10f65c85dfa6a6d0158e4753bf814563e3a4b88881f3b7f545ac",
+      "unweighted_interior_dose": 15.602649006622517,
+      "reduced_interior_dose": 8.941407323290766
+    },
+    {
+      "seed": 29,
+      "distinct_insertion_batches": 24,
+      "represented_paths": 8,
+      "replay_order_sha256": "3cd6e35d09d0e9a1a1693e0ac3eea5cc1e5ae6e74be767e0ab178dece9be10e1",
+      "augmented_order_sha256": "b431c6ade20d9c03d8d9ab56b5ad25bd9463eb63be18885aaed85c793e822f4f",
+      "unweighted_interior_dose": 15.735099337748345,
+      "reduced_interior_dose": 9.447978929384309
+    }
+  ],
+  "dose_definition": "sum of exposure times atom count divided by total batch atoms, times the force multiplier",
+  "training_started": false
+}
