@@ -1,0 +1,13 @@
+{
+  "gpu_manifest_sha256": "ab79daa870308bc38be422b2c43b41da16138f333ff3c567192714f6e09bd461",
+  "energy_contrasts_sha256": "3f286dc5f3de889c3d0fabdfc8a791522d4b750679f15b1ca7e5404dcf61e892",
+  "source_sha256": "3a4bff0700810a1ae0577f41110346d4bdc21c49283ec33c4cec01692a86e472",
+  "excluded_for_migrating_Li": [
+    "mp-778830_4_0_1_-1_-1"
+  ],
+  "panels": [
+    "primary91",
+    "historical_support"
+  ],
+  "bootstrap": "10,000 paired material resamples conditional on fixed seeds 17 and 29"
+}

@@ -1,0 +1,105 @@
+{
+  "bundle_sha256": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+  "batch_size": 4,
+  "torch": "2.8.0+cu128",
+  "hardware": "NVIDIA GeForce RTX 3090",
+  "source_sha256": "5ad3aa9874a109d117bff72fab502fa291b9257d43c5f9ad23b6951337b513d5",
+  "models": [
+    {
+      "seed": 17,
+      "arm": "replay",
+      "frames": 997,
+      "atoms": 121889,
+      "file": "seed17-replay.npy",
+      "file_sha256": "522519e2d37e95069ecb9cc7745802ce41d56ca5af7e7c5fa14c6a11081c4dd4",
+      "checkpoint_sha256": "4daf666b2e92dca7d02aaeb4b4f30389a6ef6c7df3c44eb5a7094a9c70bafb73",
+      "max_energy_difference_eV": 0.0001220703125,
+      "seconds": 36.76607169210911,
+      "peak_memory_bytes": 12271713792
+    },
+    {
+      "seed": 17,
+      "arm": "full",
+      "frames": 997,
+      "atoms": 121889,
+      "file": "seed17-full.npy",
+      "file_sha256": "3cfcdd6f5d2d80666d494e3abad561eda77f5c35c617a63deef14f7dff6af16e",
+      "checkpoint_sha256": "bf47066bd0fad2e854531a61ba99ee81a99f6dd6a1115b09afb0553037dff743",
+      "max_energy_difference_eV": 0.0001220703125,
+      "seconds": 33.8179946243763,
+      "peak_memory_bytes": 12271713792
+    },
+    {
+      "seed": 17,
+      "arm": "energy_weighted",
+      "frames": 997,
+      "atoms": 121889,
+      "file": "seed17-energy_weighted.npy",
+      "file_sha256": "6fb780638548a3912c1d80a11cb5ee304415f51d2b0d0832b1b96a2d0b685f7d",
+      "checkpoint_sha256": "9b9590f3770ec7d0ae0dd873b442d4d78f6662f57bb2da813599df26de47187c",
+      "max_energy_difference_eV": 0.0001220703125,
+      "seconds": 33.89151043444872,
+      "peak_memory_bytes": 12271713792
+    },
+    {
+      "seed": 17,
+      "arm": "matched_uniform",
+      "frames": 997,
+      "atoms": 121889,
+      "file": "seed17-matched_uniform.npy",
+      "file_sha256": "82c22fddd2dff06ef65a3b1b6fe27ae456b0dc2f9ee9a9bf50d40b7985f36fc3",
+      "checkpoint_sha256": "0ed757da1a9b2e5f9be321c5b1501616a61201c35c79e3980a24f0de112b08b7",
+      "max_energy_difference_eV": 0.0001220703125,
+      "seconds": 34.07009993866086,
+      "peak_memory_bytes": 12271713792
+    },
+    {
+      "seed": 29,
+      "arm": "replay",
+      "frames": 997,
+      "atoms": 121889,
+      "file": "seed29-replay.npy",
+      "file_sha256": "31408354acad1cc0ae6a6db9b10699130542ae9cdca2fa813651c4a9e5842f51",
+      "checkpoint_sha256": "aec656bf63d5ad28e61e50c1b5a4db7d7a8a1b6c97f327c2d34c45227d6c4cd9",
+      "max_energy_difference_eV": 0.0001220703125,
+      "seconds": 33.96453619748354,
+      "peak_memory_bytes": 12271713792
+    },
+    {
+      "seed": 29,
+      "arm": "full",
+      "frames": 997,
+      "atoms": 121889,
+      "file": "seed29-full.npy",
+      "file_sha256": "cdc9bb578b1a645c243a35ad390902ace9b5893b45d2c0918e066efc36d826b9",
+      "checkpoint_sha256": "d7734f3263475eb4fccace9fd2cdf702863fdaed1bfe9c0cf32e7d6d456cded4",
+      "max_energy_difference_eV": 0.0001220703125,
+      "seconds": 33.84639049321413,
+      "peak_memory_bytes": 12271713792
+    },
+    {
+      "seed": 29,
+      "arm": "energy_weighted",
+      "frames": 997,
+      "atoms": 121889,
+      "file": "seed29-energy_weighted.npy",
+      "file_sha256": "6d95735cac5bf1ba9c9de5ea30d8755096557db5fc57c9095f5297cea464ee1e",
+      "checkpoint_sha256": "8e4e8caf5a790a45dade8d38e0ace13b997da2bef625c2a384e69260ddad9f10",
+      "max_energy_difference_eV": 0.0001220703125,
+      "seconds": 33.77876257896423,
+      "peak_memory_bytes": 12271713792
+    },
+    {
+      "seed": 29,
+      "arm": "matched_uniform",
+      "frames": 997,
+      "atoms": 121889,
+      "file": "seed29-matched_uniform.npy",
+      "file_sha256": "de32f83b460acae7e50e64c00548bdb3ef73508e4d1b3a3641f1f455acd1ad85",
+      "checkpoint_sha256": "5661d21a3029aada6e1840a2bbcaf800c1220baa16ffede3ae6c3f37525df9b2",
+      "max_energy_difference_eV": 0.0001220703125,
+      "seconds": 33.81282767653465,
+      "peak_memory_bytes": 12271713792
+    }
+  ]
+}
