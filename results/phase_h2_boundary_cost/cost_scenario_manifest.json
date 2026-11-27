@@ -1,0 +1,134 @@
+{
+  "inputs_sha256": {
+    "recorded_costs.json": "161f0402021c052b988367077736c8c4c3d9a2b0a26a3a1aa638162f7e04c071",
+    "h1c_cost_inputs.csv": "28e0668ca168155799fc9b0f5589003f01834c2d856e6adee01037bd0cdc16e6",
+    "candidate_ranking_and_audit.csv": "d2ac71e5f20706c1e7ccafe0519ce068ad4c4a7a0ab5aa2c7d7e12363c6f2268",
+    "independent_candidate_ranking.csv": "e3db1ffe38c4bb3e3c4b1fa1896c97d605cf2a1901898d4b9c13f05814b8c4f7",
+    "matrix_index.csv": "561749005017e54975ebdb46ab2ccb34d42a098eb8f61fdb543a357c6e0f673e",
+    "mean.npz": "043dae78b8b17d98d769643394e22bb5463f8696547399e687ea41f87b0f3112",
+    "candidate_images.xyz": "b3164da5eb43fdc456ad35e5bcec08da5d805c7de607b5a2c3c6d4ecd9e21dfb"
+  },
+  "seed_spread_model_hashes": {
+    "17": "c0ed6bed7c168f24b0c9392dd2d786c10f209072493858aa04dbcc1ab3c4e69a",
+    "29": "381053e366b56dc07bcb38ae00dce5eae75db22f6ef51cbca26a52b582deb449",
+    "43": "a626b7220c9ee8c29be911ce5727d585c2dd3bd1c776154388702b0117bbb644"
+  },
+  "candidate_paths": 24,
+  "currently_eligible": 20,
+  "k333_over_k222_same_material_ratios": [
+    1.7103024574669188,
+    2.1561911930748967
+  ],
+  "design_assumptions": {
+    "low": {
+      "anchor_seconds": 2655.0,
+      "atom_power": 1.0,
+      "grid_power": 0.4411972159491687,
+      "endpoint_steps_per_side": 8,
+      "neb_updates": 6,
+      "ci_updates": 3,
+      "warm_band_fraction": 0.25,
+      "retry_fraction": 0.0
+    },
+    "middle": {
+      "anchor_seconds": 3444.5,
+      "atom_power": 1.5,
+      "grid_power": 0.5419298061670031,
+      "endpoint_steps_per_side": 16,
+      "neb_updates": 12,
+      "ci_updates": 8,
+      "warm_band_fraction": 0.5,
+      "retry_fraction": 0.1
+    },
+    "high": {
+      "anchor_seconds": 5233.0,
+      "atom_power": 2.0,
+      "grid_power": 0.6316559372467601,
+      "endpoint_steps_per_side": 32,
+      "neb_updates": 24,
+      "ci_updates": 16,
+      "warm_band_fraction": 0.85,
+      "retry_fraction": 0.25
+    }
+  },
+  "budgets_reference_scenario_h": [
+    66.83286805555555,
+    133.6657361111111,
+    267.3314722222222
+  ],
+  "activation_sets": [
+    {
+      "budget_h": 66.83286805555555,
+      "scenario": "low",
+      "same_set": false,
+      "soap_paths": 3,
+      "combined_paths": 4,
+      "shared_paths": 2
+    },
+    {
+      "budget_h": 66.83286805555555,
+      "scenario": "middle",
+      "same_set": true,
+      "soap_paths": 1,
+      "combined_paths": 1,
+      "shared_paths": 1
+    },
+    {
+      "budget_h": 66.83286805555555,
+      "scenario": "high",
+      "same_set": true,
+      "soap_paths": 0,
+      "combined_paths": 0,
+      "shared_paths": 0
+    },
+    {
+      "budget_h": 133.6657361111111,
+      "scenario": "low",
+      "same_set": true,
+      "soap_paths": 6,
+      "combined_paths": 6,
+      "shared_paths": 6
+    },
+    {
+      "budget_h": 133.6657361111111,
+      "scenario": "middle",
+      "same_set": false,
+      "soap_paths": 2,
+      "combined_paths": 1,
+      "shared_paths": 0
+    },
+    {
+      "budget_h": 133.6657361111111,
+      "scenario": "high",
+      "same_set": true,
+      "soap_paths": 0,
+      "combined_paths": 0,
+      "shared_paths": 0
+    },
+    {
+      "budget_h": 267.3314722222222,
+      "scenario": "low",
+      "same_set": true,
+      "soap_paths": 11,
+      "combined_paths": 11,
+      "shared_paths": 11
+    },
+    {
+      "budget_h": 267.3314722222222,
+      "scenario": "middle",
+      "same_set": false,
+      "soap_paths": 3,
+      "combined_paths": 3,
+      "shared_paths": 1
+    },
+    {
+      "budget_h": 267.3314722222222,
+      "scenario": "high",
+      "same_set": true,
+      "soap_paths": 1,
+      "combined_paths": 1,
+      "shared_paths": 1
+    }
+  ],
+  "scope": "Illustrative candidate acquisition under assumed solver hours; actual caps remain unset."
+}

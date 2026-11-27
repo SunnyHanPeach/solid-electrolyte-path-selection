@@ -1,0 +1,84 @@
+{
+  "anonymous_match_pairs": 2424,
+  "cross_split": {
+    "train__test": {
+      "shared_materials": 0,
+      "shared_structural_families": 38
+    },
+    "train__val": {
+      "shared_materials": 0,
+      "shared_structural_families": 42
+    },
+    "val__test": {
+      "shared_materials": 0,
+      "shared_structural_families": 18
+    }
+  },
+  "d0_source_sha256": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+  "fp_panel_structural_overlap_matches_from_prior_full_parent_audit": 0,
+  "matching": {
+    "angle_tol": 5.0,
+    "ltol": 0.15,
+    "primitive_cell": true,
+    "scale": true,
+    "stol": 0.2
+  },
+  "new_primary_panel_released": 0,
+  "nonsealed_label_audit": {
+    "test": {
+      "forward_matches_index_within_1meV": 113,
+      "full_profile_range_matches_index_within_1meV": 216,
+      "max_forward_difference_meV": 2587.906299999986,
+      "paths_recomputed": 216
+    },
+    "val": {
+      "forward_matches_index_within_1meV": 133,
+      "full_profile_range_matches_index_within_1meV": 241,
+      "max_forward_difference_meV": 2532.642200000055,
+      "paths_recomputed": 241
+    }
+  },
+  "parent_archive_sha256": "3d89f921c47101bd3c9050e92829813e57f05b8178ef5bc3ce16dfb58b845c22",
+  "parent_pairs": 12743,
+  "prior_project_registry_new_val_test_materials": 0,
+  "prior_registry_source": "experiments/phase1/absolute_gain_readiness.md",
+  "prior_registry_source_sha256": "882341caffc2cd993911e3e81ad7f3a4b44851e792dd178ee97ca6a54675c73d",
+  "reserved_dft_labels_read": 0,
+  "sealed_geometry_manifest_sha256": "a47442e74f8851e8bf2eba898dc28382c28c803bb199142ada3381f3a1f687e4",
+  "source_DFT_archive_sha256": "b7a99d89337902e9e1da319f57547170fdb132bf15bf6ffef03a0140e2207d7f",
+  "split_summary": {
+    "test": {
+      "distinct_materials": 136,
+      "exact_D0_materials": 0,
+      "exact_D0_paths": 0,
+      "materials_in_train_families": 57,
+      "nonsealed_materials_in_D0_families": 11,
+      "paths": 220,
+      "reserved_materials": 4,
+      "structural_families": 109,
+      "structural_families_shared_with_D0": 5
+    },
+    "train": {
+      "distinct_materials": 607,
+      "exact_D0_materials": 50,
+      "exact_D0_paths": 50,
+      "materials_in_train_families": 607,
+      "nonsealed_materials_in_D0_families": 114,
+      "paths": 1220,
+      "reserved_materials": 0,
+      "structural_families": 377,
+      "structural_families_shared_with_D0": 47
+    },
+    "val": {
+      "distinct_materials": 124,
+      "exact_D0_materials": 0,
+      "exact_D0_paths": 0,
+      "materials_in_train_families": 61,
+      "nonsealed_materials_in_D0_families": 21,
+      "paths": 241,
+      "reserved_materials": 0,
+      "structural_families": 104,
+      "structural_families_shared_with_D0": 10
+    }
+  }
+}
