@@ -1,0 +1,86 @@
+[
+  {
+    "panel": "primary91",
+    "contrast": "full_minus_replay",
+    "mean_meV": 11.725241484374703,
+    "material_count": 91,
+    "max_discrepancy_meV": 0.0
+  },
+  {
+    "panel": "primary91",
+    "contrast": "energy_weighted_minus_full",
+    "mean_meV": -0.8764581365899725,
+    "material_count": 91,
+    "max_discrepancy_meV": 0.0
+  },
+  {
+    "panel": "primary91",
+    "contrast": "matched_uniform_minus_full",
+    "mean_meV": -0.28153304215315933,
+    "material_count": 91,
+    "max_discrepancy_meV": 0.0
+  },
+  {
+    "panel": "primary91",
+    "contrast": "energy_weighted_minus_matched_uniform",
+    "mean_meV": -0.5949250944368132,
+    "material_count": 91,
+    "max_discrepancy_meV": 0.0
+  },
+  {
+    "panel": "primary91",
+    "contrast": "energy_weighted_minus_replay",
+    "mean_meV": 10.848783347784728,
+    "material_count": 91,
+    "max_discrepancy_meV": 1.7763568394002505e-15
+  },
+  {
+    "panel": "primary91",
+    "contrast": "matched_uniform_minus_replay",
+    "mean_meV": 11.443708442221542,
+    "material_count": 91,
+    "max_discrepancy_meV": 0.0
+  },
+  {
+    "panel": "historical_support",
+    "contrast": "full_minus_replay",
+    "mean_meV": -1.7136390562859043,
+    "material_count": 88,
+    "max_discrepancy_meV": 0.0
+  },
+  {
+    "panel": "historical_support",
+    "contrast": "energy_weighted_minus_full",
+    "mean_meV": -0.12637013494363394,
+    "material_count": 88,
+    "max_discrepancy_meV": 0.0
+  },
+  {
+    "panel": "historical_support",
+    "contrast": "matched_uniform_minus_full",
+    "mean_meV": 0.19492832919096062,
+    "material_count": 88,
+    "max_discrepancy_meV": 0.0
+  },
+  {
+    "panel": "historical_support",
+    "contrast": "energy_weighted_minus_matched_uniform",
+    "mean_meV": -0.3212984641345945,
+    "material_count": 88,
+    "max_discrepancy_meV": 5.551115123125783e-17
+  },
+  {
+    "panel": "historical_support",
+    "contrast": "energy_weighted_minus_replay",
+    "mean_meV": -1.8400091912295382,
+    "material_count": 88,
+    "max_discrepancy_meV": 0.0
+  },
+  {
+    "panel": "historical_support",
+    "contrast": "matched_uniform_minus_replay",
+    "mean_meV": -1.5187107270949438,
+    "material_count": 88,
+    "max_discrepancy_meV": 0.0
+  }
+]

@@ -2,7 +2,7 @@
 import argparse
 from collections import defaultdict
 import json
-from math import ceil
+from math import ceil, isclose
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -50,7 +50,11 @@ def read_runs(args, frames):
             expected_steps = [(step, ids, [weights[arm].get(i, 1.) for i in ids])
                               for step, ids in enumerate(order, 201)]
             actual_steps = [(r["step"], r["frame_indices"], r["force_multipliers"]) for r in done["training"]]
-            if actual_steps != expected_steps:
+            # Per-path dose totals can differ at floating-point rounding precision across hosts.
+            if len(actual_steps) != len(expected_steps) or any(
+                    (step, ids) != (ref_step, ref_ids) or len(values) != len(ref_values) or any(
+                        not isclose(a, b, rel_tol=0, abs_tol=1e-12) for a, b in zip(values, ref_values))
+                    for (step, ids, values), (ref_step, ref_ids, ref_values) in zip(actual_steps, expected_steps)):
                 raise ValueError(f"Executed schedule or force multipliers differ for {seed}/{arm}")
             runtime.add(json.dumps(identity["runtime"], sort_keys=True))
             scripts.add(identity["source_script_sha256"])

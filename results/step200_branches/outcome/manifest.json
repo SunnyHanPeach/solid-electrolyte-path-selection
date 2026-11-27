@@ -1,0 +1,34 @@
+{
+  "runtime": {
+    "ase": "3.29.0",
+    "cuda": "12.8",
+    "device": "cuda",
+    "e3nn": "0.4.4",
+    "gpu_driver": "580.105.08",
+    "hardware": "NVIDIA GeForce RTX 3090",
+    "mace": "0.3.14",
+    "numpy": "2.2.6",
+    "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+    "threads": 4,
+    "torch": "2.8.0+cu128"
+  },
+  "runner_sha256": "76452b7e3d44a3aee705ddc1c454c68920f7c2b3cdbfb189572ff052b6e41340",
+  "source_bundle_sha256": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+  "protocol_sha256": "36ceb1381b469a0745c6a21d6df3efcab6dc0524e8a7b628bd91f67dd824a3af",
+  "scorer_sha256": "d801a8987cec7eb3a10a5ff1a048b47c43f1c4653643b1ffa6d20849657b33b9",
+  "seeds": [
+    17,
+    29
+  ],
+  "milestones": [
+    200,
+    201,
+    210,
+    250,
+    300,
+    400
+  ],
+  "threshold_meV": 0.25,
+  "decision_endpoint": "primary91 forward barrier MAE at step 400",
+  "bootstrap": "10,000 paired resamples by material, conditional on fixed seeds 17 and 29"
+}
