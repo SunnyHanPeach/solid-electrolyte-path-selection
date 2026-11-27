@@ -5,6 +5,7 @@ import io
 import json
 import os
 from pathlib import Path
+from shutil import copyfile
 from time import monotonic
 from zipfile import ZipFile
 
@@ -105,6 +106,7 @@ def main(args):
     loss = WeightedEnergyForcesLoss(recipe["energy_weight"], recipe["forces_weight"]).to(args.device)
 
     names = [f"{model_name}-{adam_name}" for model_name in FACTORS for adam_name in FACTORS]
+    initial_predictions = {}
     for name in args.arm or names:
         t0 = monotonic()
         parameters, moments = name.split("-")
@@ -146,8 +148,19 @@ def main(args):
             for step, digest in predictions.items():
                 if file_sha(folder / f"predictions_{step}.csv") != digest:
                     raise ValueError(f"Prediction hash differs in {folder}")
+            initial = initial_predictions.setdefault(parameters, folder / "predictions_200.csv")
+            if file_sha(initial) != predictions[200]:
+                raise ValueError(f"Shared step-200 prediction differs in {folder}")
         else:
-            predictions[200] = record_prediction(folder, 200, model, eval_graphs, eval_rows, args.device, torch)
+            if parameters not in initial_predictions:
+                predictions[200] = record_prediction(folder, 200, model, eval_graphs, eval_rows, args.device, torch)
+                initial_predictions[parameters] = folder / "predictions_200.csv"
+            else:
+                target = folder / "predictions_200.csv"
+                temporary = target.with_suffix(".partial")
+                copyfile(initial_predictions[parameters], temporary)
+                temporary.replace(target)
+                predictions[200] = file_sha(target)
         for step, ids in enumerate(order, 201):
             if step <= start:
                 continue

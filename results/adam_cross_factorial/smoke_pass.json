@@ -1,0 +1,16 @@
+{
+  "peak_allocated_gib": 5.376436710357666,
+  "status": "pass",
+  "raw_comparisons": [
+    {
+      "parameters": "replay",
+      "max_initial_absolute_energy_delta_eV": 6.103515625e-05,
+      "max_peak_allocated_gib": 5.318291187286377
+    },
+    {
+      "parameters": "added",
+      "max_initial_absolute_energy_delta_eV": 0.0,
+      "max_peak_allocated_gib": 5.376436710357666
+    }
+  ]
+}

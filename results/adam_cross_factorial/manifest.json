@@ -1,0 +1,26 @@
+{
+  "bundle_sha256": "e37516df396b723498618a601b2a6333ea65320c7691a8763af77d9e18d8978b",
+  "frames": 997,
+  "models": 8,
+  "optimizer_steps": [
+    201,
+    400
+  ],
+  "milestones": [
+    200,
+    201,
+    210,
+    250,
+    300,
+    400
+  ],
+  "hardware": {
+    "device": "cuda",
+    "hardware": "NVIDIA GeForce RTX 3090",
+    "threads": 4,
+    "torch": "2.8.0+cu128"
+  },
+  "bootstrap": "paired historical materials, conditional on seeds 17 and 29, 10,000 replicates",
+  "source_script_sha256": "29d98379eb3cc5d896369bb99607565f703fe12718098d0ad9f48d37e92b7474",
+  "state_archive_sha256": "6185d79bc1a4c1dd5581ea2715d3032189815d9ac802b8368d02ceed35897b27"
+}
