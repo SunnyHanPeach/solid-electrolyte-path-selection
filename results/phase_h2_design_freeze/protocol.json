@@ -1,0 +1,22 @@
+{
+  "prospective_pool": "H1-filtered subset of the existing 24 B5-R candidates",
+  "prospective_expected_paths": 20,
+  "historical_pool": "B2 regular paths with single-path utility measured under the common 107-material protocol",
+  "historical_expected_paths": 14,
+  "methods": ["Random", "BVSE", "D0 coverage", "SOAP", "SOAP+Activation", "Model Disagreement"],
+  "historical_paths_per_policy": 1,
+  "random_order_draws": 256,
+  "primary_random_order_salt": "h2-random-01",
+  "candidate_specific_stress_draws": 128,
+  "cost_disturbance_fractions": [0.2, 0.3],
+  "planning_budgets": "unchanged H2 reference budgets",
+  "purchase_cap_h": null,
+  "primary_increment_contrast": "SOAP+Activation versus SOAP",
+  "training_seeds": [17, 29, 43],
+  "primary_outcome": "family-macro forward migration barrier MAE on the locked independent panel",
+  "panel_bootstrap_draws": 10000,
+  "panel_bootstrap_seed": 20261128,
+  "practical_margin_meV": 0.25,
+  "capture_actual_cost": ["qualification_for_candidate", "endpoint_relaxation", "ordinary_neb", "ci_neb", "failed_attempts", "restarts"],
+  "sealed_labels_allowed": false
+}
