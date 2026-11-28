@@ -3,10 +3,15 @@
 set -euo pipefail
 
 mode=${1:?Expected dry or run}
+shift
 ranks=${QE_RANKS:-8}
 pools=${QE_POOLS:-2}
 parallel_jobs=${QE_CONCURRENT_JOBS:-1}
 branches=(neutral_fixed neutral_local negative)
+if (( $# > 0 )); then
+    branches=("$@")
+    [[ "$parallel_jobs" == 1 ]]
+fi
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 export OMPI_ALLOW_RUN_AS_ROOT=1 OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
 
@@ -23,7 +28,10 @@ if [[ "$mode" == dry ]]; then
             sed -e '/^&CONTROL/a\  nstep = 0,' -e 's|./scratch|./dry_scratch|' pw.in > dry.in
             mpirun -np "$ranks" --bind-to none pw.x -nk "$pools" -in dry.in > dry.log 2>&1
             grep -Fq 'JOB DONE.' dry.log
-            ! grep -Fq 'iteration #' dry.log
+            if grep -Fq 'iteration #' dry.log; then
+                echo "Electronic iterations started in dry mode for $branch" >&2
+                exit 1
+            fi
             printf '\n%s\n' "$branch"
             grep -E 'Program PWSCF|number of electrons|number of k points|RAM|JOB DONE' dry.log
         )
@@ -34,13 +42,17 @@ fi
 for branch in "${branches[@]}"; do
     test ! -e "$branch/pw.log"
 done
-python3 - <<'PY'
+python3 - "${branches[@]}" <<'PY'
 import hashlib
 import json
 from pathlib import Path
+import sys
 
 m = json.loads(Path("input_manifest.json").read_bytes())
-entries = [(Path(name) / "pw.in", rec["input_sha256"]) for name, rec in m["branches"].items()]
+selected = sys.argv[1:]
+if len(set(selected)) != len(selected) or set(selected) - m["branches"].keys():
+    raise SystemExit("The requested calculation list does not match the input manifest")
+entries = [(Path(name) / "pw.in", m["branches"][name]["input_sha256"]) for name in selected]
 entries += [(Path("pseudo") / rec["filename"], rec["sha256"]) for rec in m["pseudopotentials"].values()]
 for path, expected in entries:
     if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
@@ -71,10 +83,11 @@ if [[ $parallel_jobs == 2 ]]; then
     solve neutral_local & local_spin=$!
     wait "$fixed" || status=1
     wait "$local_spin" || status=1
+    solve negative || status=1
 else
-    solve neutral_fixed || status=1
-    solve neutral_local || status=1
+    for branch in "${branches[@]}"; do
+        solve "$branch" || status=1
+    done
 fi
-solve negative || status=1
 printf 'end_utc=%s\nqualification_batch_exit=%s\n' "$(date -u +%FT%TZ)" "$status" > started/completion
 exit "$status"

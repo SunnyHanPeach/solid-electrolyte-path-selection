@@ -11,8 +11,6 @@ from ase.data import atomic_masses, atomic_numbers
 from ase.io import read
 import numpy as np
 
-from audit_public_neb_reuse import checked
-from prepare_h2_eval_geometry_panel import save_json
 from prepare_phase_b4_spin_pilot import RY_EV, SMEARING_EV
 
 
@@ -70,6 +68,9 @@ def prepare_input(primary, atoms, references, name, settings):
 
 
 def main():
+    from audit_public_neb_reuse import checked
+    from prepare_h2_eval_geometry_panel import save_json
+
     p = argparse.ArgumentParser(description=__doc__)
     for key in ("audit", "geometry", "upf_inventory", "archive", "output"):
         p.add_argument(key, type=Path)
