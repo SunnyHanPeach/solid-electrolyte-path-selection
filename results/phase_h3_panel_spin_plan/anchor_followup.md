@@ -13,3 +13,9 @@ The qualification reference stays at neutral total charge and 1 μB to match the
 The local queue started on 28 November at **19:37:02 (UTC+08:00)**. It evaluates the image closest to half of the Li arc, then endpoint B. A is reused. The three anchors use the same neutral branch, PBE, verified UPFs, 60/480 Ry, a Γ-centered 3×2×3 grid and 0.10 eV Gaussian smearing. The queue uses the same verified QE binary with eight MPI ranks and two k-point pools, one job at a time.
 
 The denser 4×3×4 grid and the separate 75/600 Ry series are staged for all three anchors. Their relative energies should be compared with the baseline relative to both endpoints. The qualification limits are 10 meV for relative energies and 0.020 eV/Å for the full-atom force-component RMSE and the moving-Li force-vector difference. Changes to spin character require review. The interior anchor was selected by arc position before labels and does not determine the saddle point.
+
+## First denser-grid pair
+
+On 29 November at **00:42 (UTC+08:00)**, the checksums of all six staged convergence inputs matched their manifest. Endpoint B has a closed, converged XML record, 35 three-component forces, the frozen geometry and a total magnetization of 1.00 μB. The original midpoint attempts exited during initialization. The 22:50 restart on 28 November continued in a held WSL session, and the queue waits for its successful completion receipt.
+
+The continuation audits the three baseline results before starting the denser-grid A and midpoint jobs in sequence. A successful pair produces the change in the midpoint energy relative to A and both force comparisons. The paired numerical result and the spin diagnostics can then be reviewed before denser-grid B and the separate cutoff series. [Queue](../../src/queue_h3_panel_dense_pair.sh) · [Audit](../../src/audit_h3_panel_anchor_checks.py)
