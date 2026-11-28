@@ -1,0 +1,16 @@
+{
+  "public_figure": "Figure 2, arXiv:2504.03962v1, PDF page 10, rightmost column",
+  "public_url": "https://arxiv.org/pdf/2504.03962v1",
+  "journal_doi": "10.1038/s41524-026-02097-8",
+  "analysis_tool_archive_md5": "47f17918c35a392ba4113481febfc473",
+  "lookup": "Linear interpolation of log relative wall time against log k-point spacing between adjacent published values; no extrapolation",
+  "prospective_k_exponent_proxy": "Log relative cost between 0.30 and 0.20 inverse angstrom divided by log of cubed spacing ratio; use for nominal 3D k-point counts as a sensitivity scenario",
+  "eval06_fixed_geometry": {
+    "reference_spacing_inv_A": 0.28913920884131167,
+    "dense_spacing_inv_A": 0.2168544066309776,
+    "reference_wall_seconds": {"A": 7506, "middle": 7524}
+  },
+  "own_neb_reference": "mp-1191903, with A and B relaxation, ordinary and climbing NEB, and failed or restarted segments accounted separately",
+  "timing_comparison": "Compare public predictions with the completed in-house ratios before replacing the cost coefficient; no absolute wall times transferred across hardware.",
+  "purpose": "Diagnostic prediction frozen before the first completed dense eval-06 result. Published data are aggregate, include 2D metals, and use small parent cells rather than vacancy NEB supercells."
+}

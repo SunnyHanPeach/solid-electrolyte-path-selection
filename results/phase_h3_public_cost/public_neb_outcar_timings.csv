@@ -1,0 +1,12 @@
+public_path,image,elapsed_seconds,electronic_loop_count,ionic_loop_count,vasp_parallel_header,input_member
+0.YtoY,0,3311.251,168,25,running on  256 total cores,1.surface/1.diffusion/0.YtoY/00/OUTCAR.gz
+0.YtoY,1,1085.009,35,2,running on  384 total cores,1.surface/1.diffusion/0.YtoY/01/OUTCAR.gz
+0.YtoY,2,1088.060,35,2,running on  384 total cores,1.surface/1.diffusion/0.YtoY/02/OUTCAR.gz
+0.YtoY,3,1086.603,35,2,running on  384 total cores,1.surface/1.diffusion/0.YtoY/03/OUTCAR.gz
+0.YtoY,4,4549.131,159,22,running on  128 total cores,1.surface/1.diffusion/0.YtoY/04/OUTCAR.gz
+1.YtoX,0,3311.251,168,25,running on  256 total cores,1.surface/1.diffusion/1.YtoX/00/OUTCAR.gz
+1.YtoX,1,4415.756,234,32,running on  256 total cores,1.surface/1.diffusion/1.YtoX/01/OUTCAR.gz
+1.YtoX,2,819.334,35,2,running on  256 total cores,1.surface/1.diffusion/1.YtoX/02/OUTCAR.gz
+2.XtoZ,0,819.334,35,2,running on  256 total cores,1.surface/1.diffusion/2.XtoZ/00/OUTCAR.gz
+2.XtoZ,1,2493.973,124,18,running on  256 total cores,1.surface/1.diffusion/2.XtoZ/01/OUTCAR.gz
+2.XtoZ,2,3744.430,242,34,running on  384 total cores,1.surface/1.diffusion/2.XtoZ/02/OUTCAR.gz
