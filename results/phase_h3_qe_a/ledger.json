@@ -129,6 +129,31 @@
     "endpoint_b_queued_after_A_validation": true,
     "five_image_probe_queued_after_both_endpoints": true
   },
+  "endpoint_a_validation_and_neb_schedule": {
+    "observed_at": "2026-11-28T09:32:36+08:00",
+    "endpoint_a": {
+      "geometry_converged": true,
+      "validated_receipt_hashes_match": true,
+      "bfgs_steps": 24,
+      "cumulative_scf_cycles_reported_by_qe": 25,
+      "max_atomic_force_eV_A": 0.02543637625320454,
+      "final_scf_error_Ha": 3.572734538101628e-11,
+      "final_segment_elapsed_seconds": 14906,
+      "segment_solver_wall_seconds": [28811, 28805, 14906],
+      "total_solver_wall_seconds": 72522
+    },
+    "endpoint_b": {
+      "start_utc": "2026-11-28T01:23:58Z",
+      "status": "active"
+    },
+    "ordinary_neb": {
+      "short_test_status": "queued_after_endpoint_B_validation",
+      "production_status": "queued_after_short_test",
+      "optimizer_updates_in_initial_continuation_block": 12,
+      "fmax_eV_A": 0.10,
+      "continuation_script_sha256": "b52089c43f3b2d389c1b967721e3c8c23a59547e46397ac88f8282a182f72ce3"
+    }
+  },
   "calibration_complete": false,
   "end_to_end_solver_wall_seconds": null,
   "instance_billed_seconds": null
