@@ -1,0 +1,111 @@
+{
+  "paths": 20,
+  "qualification_paths": 12,
+  "reserves": 8,
+  "production_qualified_paths": 0,
+  "clean_primary_panel_labeled_paths": 0,
+  "required_elements": 33,
+  "upf_status": {
+    "verified_pbe_header": 33
+  },
+  "archives": [
+    {
+      "file": "SSSP_1.3.0_PBE_efficiency_verified.tar.gz",
+      "official_full_archive_md5_match": true,
+      "required_members_read": 33
+    }
+  ],
+  "roles": {
+    "pilot": {
+      "paths": 12,
+      "complete_upf_headers": 12,
+      "odd_neutral_valence": 12,
+      "odd_neutral_all_electron": 12,
+      "spin_screen_flagged": 6
+    },
+    "reserve": {
+      "paths": 8,
+      "complete_upf_headers": 8,
+      "odd_neutral_valence": 8,
+      "odd_neutral_all_electron": 8,
+      "spin_screen_flagged": 3
+    }
+  },
+  "one_or_more_pending_upf": 0,
+  "comparison_references": {
+    "H1": 24,
+    "FP-DeErr_relaxed_geometry": 57
+  },
+  "fp_references_with_ambiguous_mover": 5,
+  "local_path_pairs": 1810,
+  "baseline": [
+    {
+      "radius_A": 3.0,
+      "encoding": "chemical",
+      "tolerance_A": 0.1,
+      "reference": "candidate",
+      "pairs": 190,
+      "middle_anchor_hits": 0,
+      "all_anchor_hits": 0,
+      "panel_paths_with_all_anchor_hit": 0,
+      "candidate_clusters": 20
+    },
+    {
+      "radius_A": 3.0,
+      "encoding": "chemical",
+      "tolerance_A": 0.1,
+      "reference": "H1",
+      "pairs": 480,
+      "middle_anchor_hits": 0,
+      "all_anchor_hits": 0,
+      "panel_paths_with_all_anchor_hit": 0,
+      "candidate_clusters": null
+    },
+    {
+      "radius_A": 3.0,
+      "encoding": "chemical",
+      "tolerance_A": 0.1,
+      "reference": "FP-DeErr_relaxed_geometry",
+      "pairs": 1140,
+      "middle_anchor_hits": 0,
+      "all_anchor_hits": 0,
+      "panel_paths_with_all_anchor_hit": 0,
+      "candidate_clusters": null
+    },
+    {
+      "radius_A": 3.0,
+      "encoding": "geometry",
+      "tolerance_A": 0.1,
+      "reference": "candidate",
+      "pairs": 190,
+      "middle_anchor_hits": 0,
+      "all_anchor_hits": 0,
+      "panel_paths_with_all_anchor_hit": 0,
+      "candidate_clusters": 20
+    },
+    {
+      "radius_A": 3.0,
+      "encoding": "geometry",
+      "tolerance_A": 0.1,
+      "reference": "H1",
+      "pairs": 480,
+      "middle_anchor_hits": 0,
+      "all_anchor_hits": 0,
+      "panel_paths_with_all_anchor_hit": 0,
+      "candidate_clusters": null
+    },
+    {
+      "radius_A": 3.0,
+      "encoding": "geometry",
+      "tolerance_A": 0.1,
+      "reference": "FP-DeErr_relaxed_geometry",
+      "pairs": 1140,
+      "middle_anchor_hits": 0,
+      "all_anchor_hits": 0,
+      "panel_paths_with_all_anchor_hit": 0,
+      "candidate_clusters": null
+    }
+  ],
+  "source_panel_sha256": "860701e2782b9f5fa38676c173366407a864b04402f40dbbc7cbf0c4f56e8121",
+  "code_sha256": "ec74e7872713f5634a1dd1ef27cefd1f06601a54675314ef0ee9d4b8be842228"
+}
