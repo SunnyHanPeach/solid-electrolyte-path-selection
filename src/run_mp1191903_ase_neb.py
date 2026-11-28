@@ -72,7 +72,7 @@ def run(args):
     env = os.environ.copy()
     env.update(LD_LIBRARY_PATH=":".join(str(runtime / loc) for loc in (
         "opt/nvidia/hpc_sdk/Linux_x86_64/24.7/compilers/lib", "usr/local/openmpi/lib", "usr/local/ucx/lib",
-        "usr/local/fftw/lib")) + ":/usr/local/cuda/lib64",
+        "usr/local/fftw/lib", "usr/local/cuda/lib64")) + ":/usr/local/cuda/lib64",
         OPAL_PREFIX=str(runtime / "usr/local/openmpi"), OMPI_MCA_ess_singleton_isolated="1", OMPI_MCA_pml="ob1",
         OMPI_MCA_btl="self", UCX_MEMTYPE_CACHE="n", HWLOC_COMPONENTS="-gl", OMP_NUM_THREADS="2",
         OPENBLAS_NUM_THREADS="1", NVCOMPILER_FIO_UNBUFFERED="1")
