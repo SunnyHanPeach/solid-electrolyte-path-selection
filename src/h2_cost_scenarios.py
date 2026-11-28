@@ -10,11 +10,6 @@ from zipfile import ZipFile
 
 import numpy as np
 
-from audit_phase_h2_evaluation import digest, rows
-from phase_b1_inference import load_calculators
-from run_force_weighting import score_profiles
-
-
 def save_csv(path, values):
     with path.open("x", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(values[0]), lineterminator="\n")
@@ -65,6 +60,10 @@ def disagreement(results, geometry, weights, threads):
     from ase.io import read
     from mace import data
     import torch
+
+    from audit_phase_h2_evaluation import digest
+    from phase_b1_inference import load_calculators
+    from run_force_weighting import score_profiles
 
     torch.set_num_threads(threads)
     torch.set_num_interop_threads(1)
@@ -134,6 +133,8 @@ def simulate(pool, methods, costs, budget, keys, refs, kernels):
 
 
 def main():
+    from audit_phase_h2_evaluation import digest, rows
+
     p = argparse.ArgumentParser(description=__doc__)
     for name in ("results", "geometry", "weights", "output"):
         p.add_argument(name, type=Path)
