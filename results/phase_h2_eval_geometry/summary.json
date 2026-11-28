@@ -1,0 +1,82 @@
+{
+  "rule": {
+    "salt": "h2-independent-evaluation-geometry-v1",
+    "representatives_per_stratum_screened": 40,
+    "requested_per_stratum": {
+      "pilot": 3,
+      "reserve": 2
+    },
+    "matching": {
+      "ltol": 0.15,
+      "stol": 0.2,
+      "angle_tol": 5.0,
+      "primitive_cell": true,
+      "scale": true
+    },
+    "selection_uses_DFT_labels": false
+  },
+  "prior_filters": {
+    "passed_previous_geometry_and_family_checks": 7801,
+    "blocked_material_or_chemical_system": 260
+  },
+  "eligible_materials_by_stratum": {
+    "氧化物": 921,
+    "硫化物": 60,
+    "卤化物": 319,
+    "复合/其他": 291
+  },
+  "material_count_screened": 160,
+  "matching_pairs": 5821,
+  "strata": {
+    "pilot": {
+      "氧化物": 3,
+      "硫化物": 3,
+      "卤化物": 3,
+      "复合/其他": 3
+    },
+    "reserve": {
+      "氧化物": 2,
+      "硫化物": 2,
+      "卤化物": 2,
+      "复合/其他": 2
+    }
+  },
+  "matching_hits_by_scope": {
+    "FP-DeErr": 14,
+    "training_candidates": 27,
+    "within_panel_candidates": 276
+  },
+  "candidate_clusters_blocked_by_reference": 11,
+  "independent_geometry_candidates": 20,
+  "verified_seed_images": 100,
+  "all_elements_previously_used_in_QE": 0,
+  "strict_primary_panel_labeled_paths": 0,
+  "reserved_DFT_labels_read": 0,
+  "precision_planning_from_existing_external_case": {
+    "net": {
+      "families": 42,
+      "sd_meV": 1.0084097352386099,
+      "idealized_half_width_with_12_families_meV": 0.5705615194515816,
+      "idealized_n_for_half_width_0_25_meV": 63
+    },
+    "absolute": {
+      "families": 42,
+      "sd_meV": 0.5837652523161551,
+      "idealized_half_width_with_12_families_meV": 0.33029628505691633,
+      "idealized_n_for_half_width_0_25_meV": 21
+    }
+  },
+  "sha256": {
+    "verified_geometry.csv": "a92aedba53a648616a582cf78979e66197d519fa621e1f46696eade8bbb79592",
+    "nebBVSE122k_低保真迁移索引.csv": "21d7a5791a1e2b181c78f0f47f13e7ea8c8d058c7f90fcfb2ad67f42df142bff",
+    "nebDFT2k_index.csv": "503530a2aa839751f8799a2fec30fa26c141bb460264a055262fd0ef98e59f86",
+    "bundle.zip": "6bfd1a816609771b8a5124b6e3000262eb5258969b6756243997b8d632126862",
+    "candidate_ranking_and_audit.csv": "d2ac71e5f20706c1e7ccafe0519ce068ad4c4a7a0ab5aa2c7d7e12363c6f2268",
+    "panel_paths.csv": "533d2ce16c7c51ccb19b5c9fa45661b4deeb421a33306899dfc496d16d551936",
+    "family_gains.csv": "95719cb86406af03a43d753369015d9741624dd506358c4b489618394c775222",
+    "geometry_manifest.json": "860701e2782b9f5fa38676c173366407a864b04402f40dbbc7cbf0c4f56e8121",
+    "geometry_match_hits.json": "8fb2c5e9a3367d4a36f6bb61583044707a420c1c47ebadb8e3eef893cc7949f8"
+  },
+  "BVEL_parent_archive_sha256": "3d89f921c47101bd3c9050e92829813e57f05b8178ef5bc3ce16dfb58b845c22",
+  "FP_DFT_source_archive_sha256": "e211dc4a88fe5739218d6b1e47404624225c5a0d787f4dcce3ef61a5574087c4"
+}
