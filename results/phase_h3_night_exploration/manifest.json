@@ -1,0 +1,18 @@
+{
+  "cost_rows": 120,
+  "planning_rows": 56,
+  "random_seeds": [
+    20261129,
+    20261130
+  ],
+  "source_sha256": {
+    "phase_h3_public_cost/candidate_cost_overlay.csv": "38ad3c1538d9a022238c3fa54a79012f58e58a886a4eb21dc8eb4692fc33f2f0",
+    "public_neb_panel/mp753143_effects/family_gains.csv": "95719cb86406af03a43d753369015d9741624dd506358c4b489618394c775222",
+    "phase_h2_design_freeze/protocol.json": "50d8a04e3b91d7091bde0cf28a1bfddc9f75a44bdf20406ba2810416f2c45f68",
+    "phase_h2_boundary_cost/cost_scenario_manifest.json": "f1df20f1d68e9716894a8cae840108da75f8205d82f02182c95b355807240451",
+    "phase_h2_boundary_cost/candidate_model_disagreement.csv": "a7ae5c0eba7ecd55d3741d82f50d9b8c87af187589a91c7c38eff3ed317f7872",
+    "phase_b5_r/independent_candidate_ranking.csv": "e3db1ffe38c4bb3e3c4b1fa1896c97d605cf2a1901898d4b9c13f05814b8c4f7",
+    "phase_b5_r/kernel_matrices/matrix_index.csv": "561749005017e54975ebdb46ab2ccb34d42a098eb8f61fdb543a357c6e0f673e",
+    "phase_b5_r/kernel_matrices/mean.npz": "043dae78b8b17d98d769643394e22bb5463f8696547399e687ea41f87b0f3112"
+  }
+}
